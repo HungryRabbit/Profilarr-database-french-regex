@@ -3,5 +3,6 @@ pattern: (?<=^|[\s.-])TayTo\b
 description: ''
 tags:
 - Release Group
+- French
 - Bluray
 tests: []
