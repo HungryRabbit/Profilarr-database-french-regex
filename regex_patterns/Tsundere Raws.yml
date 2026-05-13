@@ -1,5 +1,5 @@
 name: Tsundere Raws
-pattern: '(?<=^|[\s.-])Tsundere[.-]?Raws\b'
+pattern: '(?<=^|[\s.-])Tsundere[ .-]?Raws\b'
 description: Matches "Tsundere Raws" when preceded by whitespace, a hyphen or dot
 tags:
 - Release Group

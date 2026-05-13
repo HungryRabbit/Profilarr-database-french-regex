@@ -1,0 +1,73 @@
+name: FR Anime Tier 03
+description: Matches French anime release groups who fall under Anime Tier 03
+tags:
+- Release Group Tier
+- French
+- Anime
+conditions:
+- name: BLV
+  negate: false
+  pattern: BLV
+  required: false
+  type: release_title
+- name: D3T3R10R1TY
+  negate: false
+  pattern: D3T3R10R1TY
+  required: false
+  type: release_title
+- name: Galactic
+  negate: false
+  pattern: Galactic
+  required: false
+  type: release_title
+- name: HANAMi
+  negate: false
+  pattern: HANAMi
+  required: false
+  type: release_title
+- name: kazuizui
+  negate: false
+  pattern: kazuizui
+  required: false
+  type: release_title
+- name: KHAYA
+  negate: false
+  pattern: KHAYA
+  required: false
+  type: release_title
+- name: KushEnthusiast
+  negate: false
+  pattern: KushEnthusiast
+  required: false
+  type: release_title
+- name: matheousse
+  negate: false
+  pattern: matheousse
+  required: false
+  type: release_title
+- name: Monkey-D.Lulu
+  negate: false
+  pattern: Monkey D Lulu
+  required: false
+  type: release_title
+- name: NeoSG
+  negate: false
+  pattern: NeoSG
+  required: false
+  type: release_title
+- name: RONiN
+  negate: false
+  pattern: RONiN
+  required: false
+  type: release_title
+- name: TheFantastics
+  negate: false
+  pattern: TheFantastics
+  required: false
+  type: release_title
+- name: TTN
+  negate: false
+  pattern: TTN
+  required: false
+  type: release_title
+tests: []

@@ -1,0 +1,8 @@
+name: KHFR
+pattern: '(?<=^|[\s.-])KHFR\b'
+description: Matches "KHFR" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Anime
+tests: []

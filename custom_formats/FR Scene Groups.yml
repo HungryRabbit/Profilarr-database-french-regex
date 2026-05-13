@@ -600,11 +600,6 @@ conditions:
   pattern: UNSKiLLED
   required: false
   type: release_group
-- name: USURY
-  negate: false
-  pattern: USURY
-  required: false
-  type: release_group
 - name: URY
   negate: false
   pattern: URY

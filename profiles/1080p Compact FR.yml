@@ -22,6 +22,10 @@ custom_formats:
   score: 60000
 - name: FR Scene Groups
   score: 100
+- name: FR Tracker Tier 01
+  score: 101000
+- name: FR Tracker Tier 02
+  score: 100000
 - name: French VFQ
   score: -999999
 - name: FR LQ

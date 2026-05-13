@@ -1,5 +1,5 @@
 name: Monkey D Lulu
-pattern: '(?<=^|[\s.-])Monkey[.-]?D[ .-]?Lulu\b'
+pattern: '(?<=^|[\s.-])Monkey[ .-]?D[ .-]?Lulu\b'
 description: Matches "Monkey D Lulu" when preceded by whitespace, a hyphen or dot
 tags:
 - Release Group

@@ -1,0 +1,53 @@
+name: FR Anime Tier 02
+description: Matches French anime release groups who fall under Anime Tier 02
+tags:
+- Release Group Tier
+- French
+- Anime
+conditions:
+- name: Aoi-Project
+  negate: false
+  pattern: Aoi Project
+  required: false
+  type: release_title
+- name: Elecman
+  negate: false
+  pattern: Elecman
+  required: false
+  type: release_title
+- name: FUJiSAN
+  negate: false
+  pattern: FUJiSAN
+  required: false
+  type: release_title
+- name: GundamGuy
+  negate: false
+  pattern: GundamGuy
+  required: false
+  type: release_title
+- name: IssouCorp
+  negate: false
+  pattern: IssouCorp
+  required: false
+  type: release_title
+- name: KAF
+  negate: false
+  pattern: KAF
+  required: false
+  type: release_title
+- name: Nagutos
+  negate: false
+  pattern: Nagutos
+  required: false
+  type: release_title
+- name: OECUF
+  negate: false
+  pattern: OECUF
+  required: false
+  type: release_title
+- name: XSPITFIRE911
+  negate: false
+  pattern: XSPITFIRE911
+  required: false
+  type: release_title
+tests: []

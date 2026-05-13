@@ -345,6 +345,11 @@ conditions:
   pattern: EZTV re
   required: false
   type: release_group
+- name: FGT
+  negate: false
+  pattern: FGT
+  required: false
+  type: release_group
 - name: Firetown
   negate: false
   pattern: Firetown
@@ -380,6 +385,11 @@ conditions:
   pattern: NG
   required: false
   type: release_group
+- name: RARBG
+  negate: false
+  pattern: RARBG
+  required: false
+  type: release_group
 - name: STVFRV
   negate: false
   pattern: STVFRV
@@ -413,6 +423,16 @@ conditions:
 - name: WebAnime
   negate: false
   pattern: WebAnime
+  required: false
+  type: release_group
+- name: YIFY
+  negate: false
+  pattern: YIFY
+  required: false
+  type: release_group
+- name: YTS
+  negate: false
+  pattern: YTS
   required: false
   type: release_group
 - name: ZONE
