@@ -1,0 +1,8 @@
+name: ZW
+pattern: '(?<=^|[\s.-])ZW\b'
+description: Matches "ZW" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

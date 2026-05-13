@@ -1,0 +1,8 @@
+name: ViKi47
+pattern: '(?<=^|[\s.-])ViKi47\b'
+description: Matches "ViKi47" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

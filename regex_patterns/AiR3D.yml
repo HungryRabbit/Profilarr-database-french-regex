@@ -1,0 +1,7 @@
+name: AiR3D
+pattern: '(?<=^|[\s.-])AiR3D\b'
+description: Matches "AiR3D" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

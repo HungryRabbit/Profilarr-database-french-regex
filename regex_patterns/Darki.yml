@@ -1,0 +1,8 @@
+name: Darki
+pattern: '(?<=^|[\s.-])Darki\b'
+description: Matches "Darki" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Anime
+tests: []

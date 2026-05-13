@@ -1,0 +1,7 @@
+name: VFC
+pattern: '(?<=^|[\s.-])VFC\b'
+description: Matches "VFC" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

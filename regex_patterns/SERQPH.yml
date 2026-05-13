@@ -1,0 +1,10 @@
+name: SERQPH
+pattern: '(?<=^|[\s.-])SERQPH\b'
+description: Matches "SERQPH" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Anime
+- Bluray
+- WEB-DL
+tests: []

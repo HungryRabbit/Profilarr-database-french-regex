@@ -1,0 +1,9 @@
+name: MARBLECAKE
+pattern: '(?<=^|[\s.-])MARBLECAKE\b'
+description: Matches "MARBLECAKE" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Bluray
+- Remux
+tests: []

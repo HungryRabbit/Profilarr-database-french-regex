@@ -1,0 +1,7 @@
+name: HYBRiS
+pattern: '(?<=^|[\s.-])HYBRiS\b'
+description: Matches "HYBRiS" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

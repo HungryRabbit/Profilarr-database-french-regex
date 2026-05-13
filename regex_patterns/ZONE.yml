@@ -1,0 +1,8 @@
+name: ZONE
+pattern: '(?<=^|[\s.-])ZONE\b'
+description: Matches "ZONE" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

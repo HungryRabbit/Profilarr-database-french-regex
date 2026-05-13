@@ -1,0 +1,7 @@
+name: FiDO
+pattern: '(?<=^|[\s.-])FiDO\b'
+description: Matches "FiDO" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

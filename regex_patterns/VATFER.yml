@@ -1,0 +1,8 @@
+name: VATFER
+pattern: '(?<=^|[\s.-])VATFER\b'
+description: Matches "VATFER" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

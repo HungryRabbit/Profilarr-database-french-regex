@@ -1,0 +1,8 @@
+name: Galactic
+pattern: '(?<=^|[\s.-])Galactic\b'
+description: Matches "Galactic" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Anime
+tests: []

@@ -1,0 +1,7 @@
+name: Penrose
+pattern: '(?<=^|[\s.-])Penrose\b'
+description: Matches "Penrose" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

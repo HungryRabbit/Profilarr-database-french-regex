@@ -1,0 +1,7 @@
+name: SHEEEiT
+pattern: '(?<=^|[\s.-])SHEEEiT\b'
+description: Matches "SHEEEiT" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

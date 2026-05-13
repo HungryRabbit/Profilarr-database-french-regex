@@ -1,0 +1,8 @@
+name: N3TFL1X
+pattern: '(?<=^|[\s.-])N3TFL1X\b'
+description: Matches "N3TFL1X" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

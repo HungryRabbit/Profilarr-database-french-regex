@@ -1,0 +1,8 @@
+name: AViTECH
+pattern: '(?<=^|[\s.-])AViTECH\b'
+description: Matches "AViTECH" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

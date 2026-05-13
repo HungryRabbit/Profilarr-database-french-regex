@@ -1,0 +1,7 @@
+name: JoKeR
+pattern: '(?<=^|[\s.-])JoKeR\b'
+description: Matches "JoKeR" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

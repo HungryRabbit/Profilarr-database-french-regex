@@ -1,0 +1,7 @@
+name: NERDHD
+pattern: '(?<=^|[\s.-])NERDHD\b'
+description: Matches "NERDHD" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

@@ -1,0 +1,7 @@
+name: BLACKPANTERS
+pattern: '(?<=^|[\s.-])BLACKPANTERS\b'
+description: Matches "BLACKPANTERS" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

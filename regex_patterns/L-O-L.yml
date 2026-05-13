@@ -1,0 +1,8 @@
+name: L-O-L
+pattern: '(?<=^|[\s.-])L-?O-?L\b'
+description: Matches "L-O-L" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

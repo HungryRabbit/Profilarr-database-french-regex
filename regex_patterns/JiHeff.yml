@@ -1,0 +1,8 @@
+name: JiHeff
+pattern: '(?<=^|[\s.-])JiHeff\b'
+description: Matches "JiHeff" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

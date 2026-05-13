@@ -1,0 +1,8 @@
+name: nutella
+pattern: '(?<=^|[\s.-])nutella\b'
+description: Matches "nutella" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

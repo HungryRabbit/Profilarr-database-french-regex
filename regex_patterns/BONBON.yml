@@ -1,0 +1,9 @@
+name: BONBON
+pattern: '(?<=^|[\s.-])BONBON\b'
+description: Matches "BONBON" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Bluray
+- WEB-DL
+tests: []

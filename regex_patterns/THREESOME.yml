@@ -1,0 +1,7 @@
+name: THREESOME
+pattern: '(?<=^|[\s.-])THREESOME\b'
+description: Matches "THREESOME" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

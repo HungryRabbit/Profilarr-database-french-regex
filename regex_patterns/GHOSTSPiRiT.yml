@@ -1,0 +1,8 @@
+name: GHOSTSPiRiT
+pattern: '(?<=^|[\s.-])GHOSTSPiRiT\b'
+description: Matches "GHOSTSPiRiT" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

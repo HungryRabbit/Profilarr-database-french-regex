@@ -1,0 +1,8 @@
+name: Obi
+pattern: '(?<=^|[\s.-])Obi\b'
+description: Matches "Obi" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Remux
+tests: []

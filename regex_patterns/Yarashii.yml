@@ -1,0 +1,8 @@
+name: Yarashii
+pattern: '(?<=^|[\s.-])Yarashii\b'
+description: Matches "Yarashii" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Anime
+tests: []

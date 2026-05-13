@@ -1,0 +1,9 @@
+name: DUSTiN
+pattern: '(?<=^|[\s.-])DUSTiN\b'
+description: Matches "DUSTiN" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- 2160p
+- Bluray
+tests: []

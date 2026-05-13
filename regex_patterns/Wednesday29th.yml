@@ -1,0 +1,7 @@
+name: Wednesday29th
+pattern: '(?<=^|[\s.-])Wednesday29th\b'
+description: Matches "Wednesday29th" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

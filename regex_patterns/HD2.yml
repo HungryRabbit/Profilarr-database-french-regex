@@ -1,0 +1,8 @@
+name: HD2
+pattern: '(?<=^|[\s.-])HD2\b'
+description: Matches "HD2" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

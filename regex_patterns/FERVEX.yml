@@ -1,0 +1,8 @@
+name: FERVEX
+pattern: '(?<=^|[\s.-])FERVEX\b'
+description: Matches "FERVEX" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

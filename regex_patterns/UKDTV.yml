@@ -1,0 +1,7 @@
+name: UKDTV
+pattern: '(?<=^|[\s.-])UKDTV\b'
+description: Matches "UKDTV" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

@@ -1,0 +1,7 @@
+name: SLEEPINGFOREST
+pattern: '(?<=^|[\s.-])SLEEPINGFOREST\b'
+description: Matches "SLEEPINGFOREST" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

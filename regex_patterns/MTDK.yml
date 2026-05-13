@@ -1,0 +1,8 @@
+name: MTDK
+pattern: '(?<=^|[\s.-])MTDK\b'
+description: Matches "MTDK" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- WEB-DL
+tests: []

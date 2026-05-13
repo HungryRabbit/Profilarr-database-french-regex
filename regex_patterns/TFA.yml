@@ -1,0 +1,8 @@
+name: TFA
+pattern: '(?<=^|[\s.-])TFA\b'
+description: Matches "TFA" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- WEB-DL
+tests: []

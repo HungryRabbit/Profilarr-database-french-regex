@@ -1,0 +1,8 @@
+name: Slay3R
+pattern: '(?<=^|[\s.-])Slay3R\b'
+description: Matches "Slay3R" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- WEB-DL
+tests: []

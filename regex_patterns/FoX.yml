@@ -1,0 +1,10 @@
+name: FoX
+pattern: '(?<=^|[\s.-])FoX\b'
+description: Matches "FoX" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- 2160p
+- Bluray
+- WEB-DL
+tests: []

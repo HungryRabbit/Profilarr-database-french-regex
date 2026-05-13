@@ -1,0 +1,8 @@
+name: NoLo
+pattern: '(?<=^|[\s.-])NoLo\b'
+description: Matches "NoLo" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- WEB-DL
+tests: []

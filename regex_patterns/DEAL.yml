@@ -1,0 +1,7 @@
+name: DEAL
+pattern: '(?<=^|[\s.-])DEAL\b'
+description: Matches "DEAL" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

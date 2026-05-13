@@ -1,0 +1,7 @@
+name: MULTiPLY
+pattern: '(?<=^|[\s.-])MULTiPLY\b'
+description: Matches "MULTiPLY" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

@@ -1,0 +1,8 @@
+name: Tonyk
+pattern: '(?<=^|[\s.-])Tonyk\b'
+description: Matches "Tonyk" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

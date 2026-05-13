@@ -1,0 +1,7 @@
+name: PiXEL
+pattern: '(?<=^|[\s.-])PiXEL\b'
+description: Matches "PiXEL" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

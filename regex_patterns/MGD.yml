@@ -1,0 +1,8 @@
+name: MGD
+pattern: '(?<=^|[\s.-])MGD\b'
+description: Matches "MGD" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

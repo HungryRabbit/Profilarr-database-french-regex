@@ -1,0 +1,8 @@
+name: FtLi
+pattern: '(?<=^|[\s.-])FtLi\b'
+description: Matches "FtLi" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Remux
+tests: []

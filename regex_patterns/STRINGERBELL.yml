@@ -1,0 +1,7 @@
+name: STRINGERBELL
+pattern: '(?<=^|[\s.-])STRINGERBELL\b'
+description: Matches "STRINGERBELL" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

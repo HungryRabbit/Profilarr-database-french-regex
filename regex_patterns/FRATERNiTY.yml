@@ -1,0 +1,10 @@
+name: FRATERNiTY
+pattern: '(?<=^|[\s.-])FRATERNiTY\b'
+description: Matches "FRATERNiTY" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- 2160p
+- Bluray
+- WEB-DL
+tests: []

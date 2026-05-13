@@ -1,0 +1,7 @@
+name: LKT
+pattern: '(?<=^|[\s.-])LKT\b'
+description: Matches "LKT" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

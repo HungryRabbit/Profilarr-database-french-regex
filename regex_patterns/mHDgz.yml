@@ -1,0 +1,7 @@
+name: mHDgz
+pattern: '(?<=^|[\s.-])mHDgz\b'
+description: Matches "mHDgz" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

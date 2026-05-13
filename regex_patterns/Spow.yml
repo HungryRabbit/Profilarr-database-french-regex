@@ -1,0 +1,8 @@
+name: Spow
+pattern: '(?<=^|[\s.-])Spow\b'
+description: Matches "Spow" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

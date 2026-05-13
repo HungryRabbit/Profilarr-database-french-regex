@@ -1,0 +1,8 @@
+name: Anime Heart
+pattern: '(?<=^|[\s.-])Anime[ .-]?Heart\b'
+description: Matches "Anime Heart" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Anime
+tests: []

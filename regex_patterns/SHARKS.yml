@@ -1,0 +1,8 @@
+name: SHARKS
+pattern: '(?<=^|[\s.-])SHARKS\b'
+description: Matches "SHARKS" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

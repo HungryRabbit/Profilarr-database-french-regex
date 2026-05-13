@@ -1,0 +1,8 @@
+name: Goldenyann
+pattern: '(?<=^|[\s.-])Goldenyann\b'
+description: Matches "Goldenyann" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Remux
+tests: []

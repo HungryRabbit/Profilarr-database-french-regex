@@ -1,0 +1,8 @@
+name: PIKACHU
+pattern: '(?<=^|[\s.-])PIKACHU\b'
+description: Matches "PIKACHU" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

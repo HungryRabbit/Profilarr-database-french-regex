@@ -1,0 +1,7 @@
+name: LOFiDEL
+pattern: '(?<=^|[\s.-])LOFiDEL\b'
+description: Matches "LOFiDEL" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

@@ -1,0 +1,8 @@
+name: AT
+pattern: '(?<=^|[\s.-])AT\b'
+description: Matches "AT" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

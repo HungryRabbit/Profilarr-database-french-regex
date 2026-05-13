@@ -1,0 +1,7 @@
+name: BAWLS
+pattern: '(?<=^|[\s.-])BAWLS\b'
+description: Matches "BAWLS" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

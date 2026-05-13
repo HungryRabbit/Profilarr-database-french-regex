@@ -1,0 +1,8 @@
+name: SCREEN
+pattern: '(?<=^|[\s.-])SCREEN\b'
+description: Matches "SCREEN" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

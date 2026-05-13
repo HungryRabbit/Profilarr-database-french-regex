@@ -1,0 +1,9 @@
+name: ONLYMOViE
+pattern: '(?<=^|[\s.-])ONLYMOViE\b'
+description: Matches "ONLYMOViE" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Bluray
+- WEB-DL
+tests: []

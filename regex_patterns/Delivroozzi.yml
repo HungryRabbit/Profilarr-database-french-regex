@@ -1,0 +1,8 @@
+name: Delivroozzi
+pattern: '(?<=^|[\s.-])Delivroozzi\b'
+description: Matches "Delivroozzi" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Anime
+tests: []

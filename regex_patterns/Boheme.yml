@@ -1,0 +1,8 @@
+name: Boheme
+pattern: '(?<=^|[\s.-])Boheme\b'
+description: Matches "Boheme" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

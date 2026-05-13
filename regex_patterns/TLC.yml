@@ -1,0 +1,7 @@
+name: TLC
+pattern: '(?<=^|[\s.-])TLC\b'
+description: Matches "TLC" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

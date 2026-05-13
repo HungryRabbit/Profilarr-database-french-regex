@@ -1,0 +1,7 @@
+name: D4RK
+pattern: '(?<=^|[\s.-])D4RK\b'
+description: Matches "D4RK" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

@@ -1,0 +1,9 @@
+name: NoNE
+pattern: '(?<=^|[\s.-])(?:NoNE|NoNe)\b'
+description: Matches "NoNE" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Bluray
+- WEB-DL
+tests: []

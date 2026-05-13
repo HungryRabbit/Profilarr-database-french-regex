@@ -1,0 +1,7 @@
+name: CRYPT0
+pattern: '(?<=^|[\s.-])CRYPT0\b'
+description: Matches "CRYPT0" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

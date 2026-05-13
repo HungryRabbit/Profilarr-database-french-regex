@@ -1,0 +1,8 @@
+name: POTO
+pattern: '(?<=^|[\s.-])POTO\b'
+description: Matches "POTO" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- WEB-DL
+tests: []

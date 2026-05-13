@@ -1,0 +1,7 @@
+name: PUREWASTEOFBW
+pattern: '(?<=^|[\s.-])PUREWASTEOFBW\b'
+description: Matches "PUREWASTEOFBW" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

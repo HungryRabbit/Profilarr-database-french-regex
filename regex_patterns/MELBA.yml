@@ -1,0 +1,7 @@
+name: MELBA
+pattern: '(?<=^|[\s.-])MELBA\b'
+description: Matches "MELBA" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

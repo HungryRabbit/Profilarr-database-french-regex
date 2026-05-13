@@ -1,0 +1,8 @@
+name: KAF
+pattern: '(?<=^|[\s.-])KAF\b'
+description: Matches "KAF" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Anime
+tests: []

@@ -1,0 +1,8 @@
+name: Punisher694
+pattern: '(?<=^|[\s.-])Punisher694\b'
+description: Matches "Punisher694" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Anime
+tests: []

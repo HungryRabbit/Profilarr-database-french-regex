@@ -1,0 +1,7 @@
+name: FHD
+pattern: '(?<=^|[\s.-])FHD\b'
+description: Matches "FHD" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

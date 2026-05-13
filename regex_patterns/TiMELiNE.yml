@@ -1,0 +1,7 @@
+name: TiMELiNE
+pattern: '(?<=^|[\s.-])TiMELiNE\b'
+description: Matches "TiMELiNE" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

@@ -1,0 +1,8 @@
+name: FUN
+pattern: '(?<=^|[\s.-])FUN\b'
+description: Matches "FUN" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

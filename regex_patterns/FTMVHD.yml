@@ -1,0 +1,9 @@
+name: FTMVHD
+pattern: '(?<=^|[\s.-])FTMVHD\b'
+description: Matches "FTMVHD" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Bluray
+- WEB-DL
+tests: []

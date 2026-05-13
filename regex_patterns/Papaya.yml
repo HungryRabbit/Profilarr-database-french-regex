@@ -1,0 +1,8 @@
+name: Papaya
+pattern: '(?<=^|[\s.-])Papaya\b'
+description: Matches "Papaya" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

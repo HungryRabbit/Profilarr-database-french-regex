@@ -1,0 +1,8 @@
+name: TSN999
+pattern: '(?<=^|[\s.-])TSN999\b'
+description: Matches "TSN999" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

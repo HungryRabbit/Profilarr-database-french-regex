@@ -1,0 +1,8 @@
+name: STR4NGE
+pattern: '(?<=^|[\s.-])STR4NGE\b'
+description: Matches "STR4NGE" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

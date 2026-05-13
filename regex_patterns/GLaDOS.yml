@@ -1,0 +1,8 @@
+name: GLaDOS
+pattern: '(?<=^|[\s.-])GLaDOS\b'
+description: Matches "GLaDOS" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

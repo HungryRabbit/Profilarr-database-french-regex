@@ -1,0 +1,8 @@
+name: TeV
+pattern: '(?<=^|[\s.-])TeV\b'
+description: Matches "TeV" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

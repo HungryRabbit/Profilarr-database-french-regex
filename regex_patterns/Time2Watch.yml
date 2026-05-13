@@ -1,0 +1,8 @@
+name: Time2Watch
+pattern: '(?<=^|[\s.-])Time2Watch\b'
+description: Matches "Time2Watch" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

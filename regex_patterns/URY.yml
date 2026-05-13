@@ -1,0 +1,7 @@
+name: URY
+pattern: '(?<=^|[\s.-])URY\b'
+description: Matches "URY" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

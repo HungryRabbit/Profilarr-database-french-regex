@@ -1,0 +1,8 @@
+name: Kaerizaki Fansub
+pattern: '(?<=^|[\s.-])Kaerizaki[ .-]?Fansub\b'
+description: Matches "Kaerizaki Fansub" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Anime
+tests: []

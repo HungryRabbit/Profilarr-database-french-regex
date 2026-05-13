@@ -1,0 +1,7 @@
+name: N3ZUKO
+pattern: '(?<=^|[\s.-])N3ZUKO\b'
+description: Matches "N3ZUKO" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

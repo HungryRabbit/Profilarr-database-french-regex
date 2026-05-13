@@ -1,0 +1,8 @@
+name: matheousse
+pattern: '(?<=^|[\s.-])matheousse\b'
+description: Matches "matheousse" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Anime
+tests: []

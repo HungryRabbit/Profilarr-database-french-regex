@@ -1,0 +1,8 @@
+name: FW
+pattern: '(?<=^|[\s.-])FW\b'
+description: Matches "FW" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- WEB-DL
+tests: []

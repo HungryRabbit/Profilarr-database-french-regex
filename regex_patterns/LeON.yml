@@ -1,0 +1,7 @@
+name: LeON
+pattern: '(?<=^|[\s.-])LeON\b'
+description: Matches "LeON" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

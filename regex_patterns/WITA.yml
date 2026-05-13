@@ -1,0 +1,8 @@
+name: WITA
+pattern: '(?<=^|[\s.-])WITA\b'
+description: Matches "WITA" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

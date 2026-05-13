@@ -1,0 +1,8 @@
+name: DOLL4R
+pattern: '(?<=^|[\s.-])DOLL4R\b'
+description: Matches "DOLL4R" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

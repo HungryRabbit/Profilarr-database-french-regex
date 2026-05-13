@@ -1,0 +1,7 @@
+name: DREAM
+pattern: '(?<=^|[\s.-])DREAM\b'
+description: Matches "DREAM" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

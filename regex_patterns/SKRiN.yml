@@ -1,0 +1,8 @@
+name: SKRiN
+pattern: '(?<=^|[\s.-])SKRiN\b'
+description: Matches "SKRiN" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

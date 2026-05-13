@@ -1,0 +1,8 @@
+name: LNA3d
+pattern: '(?<=^|[\s.-])LNA3d\b'
+description: Matches "LNA3d" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

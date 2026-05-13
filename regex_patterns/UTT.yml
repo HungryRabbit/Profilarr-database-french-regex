@@ -1,0 +1,8 @@
+name: UTT
+pattern: '(?<=^|[\s.-])UTT\b'
+description: Matches "UTT" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Bluray
+tests: []

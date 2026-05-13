@@ -1,0 +1,8 @@
+name: CPB
+pattern: '(?<=^|[\s.-])CPB\b'
+description: Matches "CPB" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

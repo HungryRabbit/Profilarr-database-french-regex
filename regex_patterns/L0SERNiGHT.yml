@@ -1,0 +1,7 @@
+name: L0SERNiGHT
+pattern: '(?<=^|[\s.-])L0SERNiGHT\b'
+description: Matches "L0SERNiGHT" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

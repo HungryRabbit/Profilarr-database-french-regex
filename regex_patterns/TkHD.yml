@@ -1,0 +1,9 @@
+name: TkHD
+pattern: '(?<=^|[\s.-])TkHD\b'
+description: Matches "TkHD" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Bluray
+- WEB-DL
+tests: []

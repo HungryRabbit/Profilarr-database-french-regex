@@ -1,0 +1,8 @@
+name: Fuceo
+pattern: '(?<=^|[\s.-])Fuceo\b'
+description: Matches "Fuceo" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Anime
+tests: []

@@ -1,0 +1,8 @@
+name: TheFantastics
+pattern: '(?<=^|[\s.-])TheFantastics\b'
+description: Matches "TheFantastics" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Anime
+tests: []

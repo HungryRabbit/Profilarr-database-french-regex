@@ -1,0 +1,9 @@
+name: MYSTERiON
+pattern: '(?<=^|[\s.-])MYSTERiON\b'
+description: Matches "MYSTERiON" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Bluray
+- WEB-DL
+tests: []

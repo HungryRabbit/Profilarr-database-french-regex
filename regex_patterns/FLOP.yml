@@ -1,0 +1,10 @@
+name: FLOP
+pattern: '(?<=^|[\s.-])FLOP\b'
+description: Matches "FLOP" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- 2160p
+- Bluray
+- WEB-DL
+tests: []

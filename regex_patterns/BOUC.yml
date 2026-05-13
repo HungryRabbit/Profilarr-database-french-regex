@@ -1,0 +1,7 @@
+name: BOUC
+pattern: '(?<=^|[\s.-])BOUC\b'
+description: Matches "BOUC" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

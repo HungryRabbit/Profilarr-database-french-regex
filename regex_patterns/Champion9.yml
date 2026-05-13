@@ -1,0 +1,8 @@
+name: Champion9
+pattern: '(?<=^|[\s.-])Champion9\b'
+description: Matches "Champion9" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

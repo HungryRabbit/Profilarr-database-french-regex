@@ -1,0 +1,7 @@
+name: ENJOi
+pattern: '(?<=^|[\s.-])ENJOi\b'
+description: Matches "ENJOi" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

@@ -1,0 +1,7 @@
+name: MANGACiTY
+pattern: '(?<=^|[\s.-])MANGACiTY\b'
+description: Matches "MANGACiTY" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

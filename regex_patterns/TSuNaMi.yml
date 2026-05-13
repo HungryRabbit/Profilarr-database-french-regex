@@ -1,0 +1,7 @@
+name: TSuNaMi
+pattern: '(?<=^|[\s.-])TSuNaMi\b'
+description: Matches "TSuNaMi" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

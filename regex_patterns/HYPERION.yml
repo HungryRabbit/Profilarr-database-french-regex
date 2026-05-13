@@ -1,0 +1,7 @@
+name: HYPERION
+pattern: '(?<=^|[\s.-])HYPERION\b'
+description: Matches "HYPERION" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

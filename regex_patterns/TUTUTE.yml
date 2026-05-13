@@ -1,0 +1,8 @@
+name: TUTUTE
+pattern: '(?<=^|[\s.-])TUTUTE\b'
+description: Matches "TUTUTE" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

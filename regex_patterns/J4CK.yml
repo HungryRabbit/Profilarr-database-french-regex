@@ -1,0 +1,7 @@
+name: J4CK
+pattern: '(?<=^|[\s.-])J4CK\b'
+description: Matches "J4CK" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

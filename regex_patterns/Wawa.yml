@@ -1,0 +1,8 @@
+name: Wawa
+pattern: '(?<=^|[\s.-])Wawa-(city|mania|porno)?\b'
+description: Matches "Wawa" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

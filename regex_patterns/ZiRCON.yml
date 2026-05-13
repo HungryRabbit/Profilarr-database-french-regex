@@ -1,0 +1,7 @@
+name: ZiRCON
+pattern: '(?<=^|[\s.-])ZiRCON\b'
+description: Matches "ZiRCON" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

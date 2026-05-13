@@ -1,0 +1,7 @@
+name: BiPOLAR
+pattern: '(?<=^|[\s.-])BiPOLAR\b'
+description: Matches "BiPOLAR" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

@@ -1,0 +1,7 @@
+name: SharpHD
+pattern: '(?<=^|[\s.-])SharpHD\b'
+description: Matches "SharpHD" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

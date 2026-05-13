@@ -1,0 +1,7 @@
+name: AVON
+pattern: '(?<=^|[\s.-])AVON\b'
+description: Matches "AVON" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

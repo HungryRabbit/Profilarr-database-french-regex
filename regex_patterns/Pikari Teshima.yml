@@ -1,0 +1,8 @@
+name: Pikari Teshima
+pattern: '(?<=^|[\s.-])Pikari[ .-]?Teshima\b'
+description: Matches "Pikari Teshima" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Anime
+tests: []

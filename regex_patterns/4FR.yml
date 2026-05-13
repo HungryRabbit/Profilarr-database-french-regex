@@ -1,0 +1,7 @@
+name: 4FR
+pattern: '(?<=^|[\s.-])4FR\b'
+description: Matches "4FR" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

@@ -1,0 +1,8 @@
+name: OECUF
+pattern: '(?<=^|[\s.-])OECUF\b'
+description: Matches "OECUF" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Anime
+tests: []

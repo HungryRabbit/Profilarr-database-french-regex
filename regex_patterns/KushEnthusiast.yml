@@ -1,0 +1,8 @@
+name: KushEnthusiast
+pattern: '(?<=^|[\s.-])KushEnthusiast\b'
+description: Matches "KushEnthusiast" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Anime
+tests: []

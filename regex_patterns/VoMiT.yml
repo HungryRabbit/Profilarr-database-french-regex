@@ -1,0 +1,7 @@
+name: VoMiT
+pattern: '(?<=^|[\s.-])VoMiT\b'
+description: Matches "VoMiT" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

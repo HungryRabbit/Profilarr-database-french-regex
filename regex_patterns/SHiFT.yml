@@ -1,0 +1,8 @@
+name: SHiFT
+pattern: '(?<=^|[\s.-])SHiFT\b'
+description: Matches "SHiFT" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

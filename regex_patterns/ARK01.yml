@@ -1,0 +1,9 @@
+name: ARK01
+pattern: '(?<=^|[\s.-])ARK01\b'
+description: Matches "ARK01" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Bluray
+- WEB-DL
+tests: []

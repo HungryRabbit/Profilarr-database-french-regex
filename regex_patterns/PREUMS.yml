@@ -1,0 +1,8 @@
+name: PREUMS
+pattern: '(?<=^|[\s.-])PREUMS\b'
+description: Matches "PREUMS" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

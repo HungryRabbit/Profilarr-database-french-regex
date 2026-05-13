@@ -1,0 +1,8 @@
+name: Good Alexis
+pattern: '(?<=^|[\s.-])Good[ .-]?(Job|Rip|Sub)!?[ .-]?Alexis\b'
+description: Matches "Good Alexis" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Anime
+tests: []

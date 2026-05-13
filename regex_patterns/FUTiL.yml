@@ -1,0 +1,7 @@
+name: FUTiL
+pattern: '(?<=^|[\s.-])FUTiL\b'
+description: Matches "FUTiL" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

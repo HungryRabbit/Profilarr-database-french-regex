@@ -1,0 +1,7 @@
+name: N0Z00M
+pattern: '(?<=^|[\s.-])N0Z00M\b'
+description: Matches "N0Z00M" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

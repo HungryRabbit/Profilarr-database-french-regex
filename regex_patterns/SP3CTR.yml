@@ -1,0 +1,8 @@
+name: SP3CTR
+pattern: '(?<=^|[\s.-])SP3CTR\b'
+description: Matches "SP3CTR" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

@@ -1,0 +1,7 @@
+name: HERC
+pattern: '(?<=^|[\s.-])HERC\b'
+description: Matches "HERC" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

@@ -1,0 +1,7 @@
+name: PANZeR
+pattern: '(?<=^|[\s.-])PANZeR\b'
+description: Matches "PANZeR" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

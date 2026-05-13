@@ -1,0 +1,8 @@
+name: RONiN
+pattern: '(?<=^|[\s.-])RONiN\b'
+description: Matches "RONiN" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Anime
+tests: []

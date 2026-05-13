@@ -1,0 +1,8 @@
+name: Wakanim
+pattern: '(?<=^|[\s.-])Wakanim\b'
+description: Matches "Wakanim" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

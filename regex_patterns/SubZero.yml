@@ -1,0 +1,8 @@
+name: SubZero
+pattern: '(?<=^|[\s.-])SubZero\b'
+description: Matches "SubZero" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

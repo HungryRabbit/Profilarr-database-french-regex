@@ -1,0 +1,9 @@
+name: ONLY
+pattern: '(?<=^|[\s.-])ONLY\b'
+description: Matches "ONLY" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Bluray
+- Remux
+tests: []

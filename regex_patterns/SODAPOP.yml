@@ -1,0 +1,7 @@
+name: SODAPOP
+pattern: '(?<=^|[\s.-])SODAPOP\b'
+description: Matches "SODAPOP" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

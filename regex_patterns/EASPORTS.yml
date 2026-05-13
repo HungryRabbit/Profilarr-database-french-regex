@@ -1,0 +1,8 @@
+name: EASPORTS
+pattern: '(?<=^|[\s.-])EASPORTS\b'
+description: Matches "EASPORTS" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

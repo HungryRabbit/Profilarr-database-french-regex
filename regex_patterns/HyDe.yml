@@ -1,0 +1,7 @@
+name: HyDe
+pattern: '(?<=^|[\s.-])HyDe\b'
+description: Matches "HyDe" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

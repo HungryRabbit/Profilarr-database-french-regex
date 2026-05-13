@@ -1,0 +1,7 @@
+name: AMB3R
+pattern: '(?<=^|[\s.-])AMB3R\b'
+description: Matches "AMB3R" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

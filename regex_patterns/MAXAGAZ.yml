@@ -1,0 +1,7 @@
+name: MAXAGAZ
+pattern: '(?<=^|[\s.-])MAXAGAZ\b'
+description: Matches "MAXAGAZ" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

@@ -1,0 +1,8 @@
+name: XSPITFIRE911
+pattern: '(?<=^|[\s.-])XSPITFIRE911\b'
+description: Matches "XSPITFIRE911" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Anime
+tests: []

@@ -1,0 +1,7 @@
+name: OZEF
+pattern: '(?<=^|[\s.-])OZEF\b'
+description: Matches "OZEF" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

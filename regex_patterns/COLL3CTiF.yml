@@ -1,0 +1,8 @@
+name: COLL3CTiF
+pattern: '(?<=^|[\s.-])COLL3CTiF\b'
+description: Matches "COLL3CTiF" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- WEB-DL
+tests: []

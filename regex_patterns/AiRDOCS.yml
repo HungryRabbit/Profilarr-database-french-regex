@@ -1,0 +1,7 @@
+name: AiRDOCS
+pattern: '(?<=^|[\s.-])AiRDOCS\b'
+description: Matches "AiRDOCS" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

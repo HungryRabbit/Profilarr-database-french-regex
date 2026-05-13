@@ -1,0 +1,7 @@
+name: Goatlove
+pattern: '(?<=^|[\s.-])Goatlove\b'
+description: Matches "Goatlove" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

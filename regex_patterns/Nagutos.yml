@@ -1,0 +1,8 @@
+name: Nagutos
+pattern: '(?<=^|[\s.-])Nagutos\b'
+description: Matches "Nagutos" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Anime
+tests: []

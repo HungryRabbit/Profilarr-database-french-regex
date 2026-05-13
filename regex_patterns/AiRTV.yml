@@ -1,0 +1,7 @@
+name: AiRTV
+pattern: '(?<=^|[\s.-])AiRTV\b'
+description: Matches "AiRTV" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

@@ -1,0 +1,7 @@
+name: HiggsBoson
+pattern: '(?<=^|[\s.-])HiggsBoson\b'
+description: Matches "HiggsBoson" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

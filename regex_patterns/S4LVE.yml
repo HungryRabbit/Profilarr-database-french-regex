@@ -1,0 +1,7 @@
+name: S4LVE
+pattern: '(?<=^|[\s.-])S4LVE\b'
+description: Matches "S4LVE" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

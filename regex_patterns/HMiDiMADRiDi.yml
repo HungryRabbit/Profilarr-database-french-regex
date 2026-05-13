@@ -1,0 +1,8 @@
+name: HMiDiMADRiDi
+pattern: '(?<=^|[\s.-])HMiDiMADRiDi\b'
+description: Matches "HMiDiMADRiDi" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

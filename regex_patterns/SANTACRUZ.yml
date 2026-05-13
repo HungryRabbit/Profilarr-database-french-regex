@@ -1,0 +1,7 @@
+name: SANTACRUZ
+pattern: '(?<=^|[\s.-])SANTACRUZ\b'
+description: Matches "SANTACRUZ" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

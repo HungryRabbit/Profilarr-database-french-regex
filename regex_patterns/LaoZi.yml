@@ -1,0 +1,7 @@
+name: LaoZi
+pattern: '(?<=^|[\s.-])LaoZi\b'
+description: Matches "LaoZi" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

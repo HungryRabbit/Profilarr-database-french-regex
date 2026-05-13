@@ -1,0 +1,9 @@
+name: MAX (Release Group)
+pattern: '(?<=^|[\s.-])MAX\b'
+description: Matches "MAX" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Bluray
+- Remux
+tests: []

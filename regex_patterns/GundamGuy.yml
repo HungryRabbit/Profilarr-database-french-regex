@@ -1,0 +1,8 @@
+name: GundamGuy
+pattern: '(?<=^|[\s.-])GundamGuy\b'
+description: Matches "GundamGuy" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Anime
+tests: []

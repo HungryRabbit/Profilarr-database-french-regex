@@ -1,0 +1,7 @@
+name: MUxHD
+pattern: '(?<=^|[\s.-])MUxHD\b'
+description: Matches "MUxHD" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

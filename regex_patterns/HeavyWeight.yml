@@ -1,0 +1,10 @@
+name: HeavyWeight
+pattern: '(?<=^|[\s.-])HeavyWeight\b'
+description: Matches "HeavyWeight" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Bluray
+- WEB-DL
+- Remux
+tests: []

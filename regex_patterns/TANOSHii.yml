@@ -1,0 +1,8 @@
+name: TANOSHii
+pattern: '(?<=^|[\s.-])TANOSHii\b'
+description: Matches "TANOSHii" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Anime
+tests: []

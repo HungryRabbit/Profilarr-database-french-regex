@@ -1,0 +1,8 @@
+name: Moorea81
+pattern: '(?<=^|[\s.-])Moorea81\b'
+description: Matches "Moorea81" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

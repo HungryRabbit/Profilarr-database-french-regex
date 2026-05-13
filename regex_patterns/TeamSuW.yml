@@ -1,0 +1,8 @@
+name: TeamSuW
+pattern: '(?<=^|[\s.-])TeamSuW\b'
+description: Matches "TeamSuW" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []

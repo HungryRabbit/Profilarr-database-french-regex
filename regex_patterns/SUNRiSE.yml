@@ -1,0 +1,7 @@
+name: SUNRiSE
+pattern: '(?<=^|[\s.-])SUNRiSE\b'
+description: Matches "SUNRiSE" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

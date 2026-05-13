@@ -1,0 +1,7 @@
+name: ZEST
+pattern: '(?<=^|[\s.-])ZEST\b'
+description: Matches "ZEST" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []

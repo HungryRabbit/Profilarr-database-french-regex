@@ -1,0 +1,8 @@
+name: CR4ZYTiME
+pattern: '(?<=^|[\s.-])CR4ZYTiME\b'
+description: Matches "CR4ZYTiME" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- Banned
+tests: []
