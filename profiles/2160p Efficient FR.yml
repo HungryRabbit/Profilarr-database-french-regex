@@ -30,9 +30,9 @@ custom_formats:
   score: 60000
 - name: FR Scene Groups
   score: 99000
-- name: FR Tracker Tier 01
+- name: FR Global Tier 01
   score: 101000
-- name: FR Tracker Tier 02
+- name: FR Global Tier 02
   score: 100000
 - name: French VFQ
   score: -999999
