@@ -1,0 +1,25 @@
+name: French VOSTFR
+pattern: '(?i)(?<=^|[\s.-])(?:VOST(?:[ ._-]?FR)?|SUB[ ._-]?(?:FR|FRENCH)|FRENCH[ ._-]?SUBS?|FR[ ._-]?SUBS?)(?=$|[\s.-])'
+description: Matches original-audio releases with French subtitles.
+tags:
+- Language
+- French
+tests:
+- expected: true
+  id: 1
+  input: Movie.2024.VOSTFR.1080p.WEB-DL.DDP5.1.H264-GROUP
+- expected: true
+  id: 2
+  input: Movie.2024.VOST.FR.1080p.WEB-DL.DDP5.1.H264-GROUP
+- expected: true
+  id: 3
+  input: Movie.2024.FRENCH.SUBS.1080p.WEB-DL.H264-GROUP
+- expected: false
+  id: 4
+  input: Movie.2024.VF.1080p.WEB-DL.H264-GROUP
+- expected: true
+  id: 5
+  input: Movie.2024.VOST.1080p.WEB-DL.H264-GROUP
+- expected: true
+  id: 6
+  input: Movie.2024.SUBFR.1080p.WEB-DL.H264-GROUP

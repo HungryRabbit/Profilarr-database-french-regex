@@ -1,0 +1,43 @@
+name: French VF
+pattern: '(?i)(?<=^|[\s.-])(?:VF(?![QI])|VFF2?|VF2|TRUE[ ._-]?FR(?:ENCH)?|FRENCH(?![ ._-]?(?:SUBS?|CANADIAN))|FRANCAIS|FRANÇAIS|VOF|FRA)(?=$|[\s.-])'
+description: Matches French dubbed releases while keeping subtitles, MULTi, and Quebec French variants separate.
+tags:
+- Language
+- French
+tests:
+- expected: true
+  id: 1
+  input: Film.2024.VF.1080p.WEB-DL.DDP5.1.H264-GROUP
+- expected: true
+  id: 2
+  input: Film.2024.TRUEFRENCH.1080p.BluRay.x264-GROUP
+- expected: true
+  id: 3
+  input: Film.2024.FRENCH.2160p.WEB.H265-GROUP
+- expected: false
+  id: 4
+  input: Film.2024.VOSTFR.1080p.WEB-DL.H264-GROUP
+- expected: false
+  id: 5
+  input: Film.2024.VFQ.1080p.WEB-DL.H264-GROUP
+- expected: false
+  id: 6
+  input: Film.2024.FRENCH.SUBS.1080p.WEB-DL.H264-GROUP
+- expected: false
+  id: 7
+  input: Film.2024.FRENCH.CANADIAN.1080p.WEB-DL.H264-GROUP
+- expected: true
+  id: 8
+  input: Film.2024.FRANCAIS.1080p.WEB-DL.H264-GROUP
+- expected: true
+  id: 9
+  input: Film.2024.FRANÇAIS.1080p.WEB-DL.H264-GROUP
+- expected: true
+  id: 10
+  input: Film.2024.VOF.1080p.WEB-DL.H264-GROUP
+- expected: true
+  id: 11
+  input: Film.2024.VF2.1080p.WEB-DL.H264-GROUP
+- expected: false
+  id: 12
+  input: Film.2024.VFI.1080p.WEB-DL.H264-GROUP

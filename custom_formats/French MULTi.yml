@@ -1,0 +1,22 @@
+name: French MULTi
+description: Prioritizes French MULTi releases without also matching VFQ or VOSTFR.
+tags:
+- Language
+- French
+conditions:
+- name: French MULTi
+  negate: false
+  pattern: French MULTi
+  required: true
+  type: release_title
+- name: Not French VFQ
+  negate: true
+  pattern: French VFQ
+  required: true
+  type: release_title
+- name: Not French VOSTFR
+  negate: true
+  pattern: French VOSTFR
+  required: true
+  type: release_title
+tests: []
