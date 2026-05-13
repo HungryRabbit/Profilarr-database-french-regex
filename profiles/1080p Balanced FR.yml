@@ -29,7 +29,7 @@ custom_formats:
 - name: French VOSTFR
   score: 60000
 - name: FR Scene Groups
-  score: 100
+  score: 99000
 - name: FR Tracker Tier 01
   score: 101000
 - name: FR Tracker Tier 02
