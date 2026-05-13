@@ -1,0 +1,28 @@
+name: French Missing
+description: Rejects releases without an explicit French MULTi, VF, VOSTFR, or VFQ marker.
+tags:
+- Language
+- French
+- Banned
+conditions:
+- name: Not French MULTi
+  negate: true
+  pattern: French MULTi
+  required: true
+  type: release_title
+- name: Not French VF
+  negate: true
+  pattern: French VF
+  required: true
+  type: release_title
+- name: Not French VOSTFR
+  negate: true
+  pattern: French VOSTFR
+  required: true
+  type: release_title
+- name: Not French VFQ
+  negate: true
+  pattern: French VFQ
+  required: true
+  type: release_title
+tests: []
