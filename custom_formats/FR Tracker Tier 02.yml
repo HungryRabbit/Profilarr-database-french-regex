@@ -20,6 +20,11 @@ conditions:
   pattern: COCAIN
   required: false
   type: release_group
+- name: CHiLL
+  negate: false
+  pattern: CHiLL
+  required: false
+  type: release_group
 - name: D4RK
   negate: false
   pattern: D4RK

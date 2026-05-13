@@ -1,0 +1,7 @@
+name: CHiLL
+pattern: '(?<=^|[\s.-])CHiLL\b'
+description: Matches "CHiLL" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+tests: []
