@@ -1,0 +1,8 @@
+name: LiDHL
+pattern: '(?<=^|[\s.-])LiDHL\b'
+description: Matches "LiDHL" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+- French
+- WEB-DL
+tests: []

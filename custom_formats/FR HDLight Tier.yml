@@ -55,6 +55,11 @@ conditions:
   pattern: Winks
   required: false
   type: release_group
+- name: LiDHL
+  negate: false
+  pattern: LiDHL
+  required: false
+  type: release_group
 - name: mHDgz
   negate: false
   pattern: mHDgz
