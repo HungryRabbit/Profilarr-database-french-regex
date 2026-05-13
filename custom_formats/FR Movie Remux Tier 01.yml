@@ -1,0 +1,64 @@
+name: FR Movie Remux Tier 01
+description: Matches French movie release groups who fall under Remux Tier 01
+tags:
+- Release Group Tier
+- French
+- Movie
+- Remux
+conditions:
+- name: Remux
+  negate: false
+  pattern: Remux
+  required: true
+  type: release_title
+- name: BlackAngel
+  negate: false
+  pattern: BlackAngel
+  required: false
+  type: release_group
+- name: Choco
+  negate: false
+  pattern: Choco
+  required: false
+  type: release_group
+- name: HDForever
+  negate: false
+  pattern: HDForever
+  required: false
+  type: release_group
+- name: MAX
+  negate: false
+  pattern: MAX (Release Group)
+  required: false
+  type: release_group
+- name: ONLY
+  negate: false
+  pattern: ONLY
+  required: false
+  type: release_group
+- name: Psaro
+  negate: false
+  pattern: Psaro
+  required: false
+  type: release_group
+- name: Sicario
+  negate: false
+  pattern: Sicario
+  required: false
+  type: release_group
+- name: Tezcat74
+  negate: false
+  pattern: Tezcat74
+  required: false
+  type: release_group
+- name: TyrellCorp
+  negate: false
+  pattern: TyrellCorp
+  required: false
+  type: release_group
+- name: Zapax
+  negate: false
+  pattern: Zapax
+  required: false
+  type: release_group
+tests: []

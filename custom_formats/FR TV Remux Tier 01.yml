@@ -1,0 +1,49 @@
+name: FR TV Remux Tier 01
+description: Matches French TV release groups who fall under Remux Tier 01
+tags:
+- Release Group Tier
+- French
+- TV
+- Remux
+conditions:
+- name: Remux
+  negate: false
+  pattern: Remux
+  required: true
+  type: release_title
+- name: FtLi
+  negate: false
+  pattern: FtLi
+  required: false
+  type: release_group
+- name: Goldenyann
+  negate: false
+  pattern: Goldenyann
+  required: false
+  type: release_group
+- name: HDForever
+  negate: false
+  pattern: HDForever
+  required: false
+  type: release_group
+- name: HeavyWeight
+  negate: false
+  pattern: HeavyWeight
+  required: false
+  type: release_group
+- name: ONLY
+  negate: false
+  pattern: ONLY
+  required: false
+  type: release_group
+- name: Psaro
+  negate: false
+  pattern: Psaro
+  required: false
+  type: release_group
+- name: TyrellCorp
+  negate: false
+  pattern: TyrellCorp
+  required: false
+  type: release_group
+tests: []

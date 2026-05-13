@@ -1,0 +1,63 @@
+name: FR HDLight Tier
+description: Matches French HDLight release groups
+tags:
+- Release Group Tier
+- French
+- WEB-DL
+conditions:
+- name: PopHD
+  negate: false
+  pattern: PopHD
+  required: false
+  type: release_group
+- name: AW
+  negate: false
+  pattern: AW
+  required: false
+  type: release_group
+- name: GHT
+  negate: false
+  pattern: GHT
+  required: false
+  type: release_group
+- name: PATOMiEL
+  negate: false
+  pattern: PATOMiEL
+  required: false
+  type: release_group
+- name: QTZ
+  negate: false
+  pattern: QTZ
+  required: false
+  type: release_group
+- name: SANTACRUZ
+  negate: false
+  pattern: SANTACRUZ
+  required: false
+  type: release_group
+- name: Xantar
+  negate: false
+  pattern: Xantar
+  required: false
+  type: release_group
+- name: RiFiFi
+  negate: false
+  pattern: RiFiFi
+  required: false
+  type: release_group
+- name: PiXEL
+  negate: false
+  pattern: PiXEL
+  required: false
+  type: release_group
+- name: Winks
+  negate: false
+  pattern: Winks
+  required: false
+  type: release_group
+- name: mHDgz
+  negate: false
+  pattern: mHDgz
+  required: false
+  type: release_group
+tests: []

@@ -1,0 +1,54 @@
+name: FR TV HD Bluray Tier 01
+description: Matches French TV release groups who fall under HD Bluray Tier 01
+tags:
+- Release Group Tier
+- French
+- TV
+- Bluray
+conditions:
+- name: Not 2160p
+  negate: true
+  required: true
+  resolution: 2160p
+  type: resolution
+- name: Bluray
+  negate: false
+  required: true
+  source: bluray
+  type: source
+- name: Not Remux
+  negate: true
+  pattern: Remux
+  required: true
+  type: release_title
+- name: ARK01
+  negate: false
+  pattern: ARK01
+  required: false
+  type: release_group
+- name: BONBON
+  negate: false
+  pattern: BONBON
+  required: false
+  type: release_group
+- name: FRATERNiTY
+  negate: false
+  pattern: FRATERNiTY
+  required: false
+  type: release_group
+- name: FTMVHD
+  negate: false
+  pattern: FTMVHD
+  required: false
+  type: release_group
+- name: HeavyWeight
+  negate: false
+  pattern: HeavyWeight
+  required: false
+  type: release_group
+- name: Psaro
+  negate: false
+  pattern: Psaro
+  required: false
+  type: release_group
+tests: []

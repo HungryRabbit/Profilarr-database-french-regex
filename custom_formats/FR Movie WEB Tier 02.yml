@@ -1,0 +1,79 @@
+name: FR Movie WEB Tier 02
+description: Matches French movie release groups who fall under WEB Tier 02
+tags:
+- Release Group Tier
+- French
+- Movie
+- WEB-DL
+conditions:
+- name: Not Bluray
+  negate: true
+  required: true
+  source: bluray
+  type: source
+- name: Not Remux
+  negate: true
+  pattern: Remux
+  required: true
+  type: release_title
+- name: WEB-DL
+  negate: false
+  required: false
+  source: web_dl
+  type: source
+- name: WEBRip
+  negate: false
+  required: false
+  source: webrip
+  type: source
+- name: ALLDAYiN
+  negate: false
+  pattern: ALLDAYiN
+  required: false
+  type: release_group
+- name: ARK01
+  negate: false
+  pattern: ARK01
+  required: false
+  type: release_group
+- name: HeavyWeight
+  negate: false
+  pattern: HeavyWeight
+  required: false
+  type: release_group
+- name: NEO
+  negate: false
+  pattern: NEO
+  required: false
+  type: release_group
+- name: NoNe
+  negate: false
+  pattern: NoNE
+  required: false
+  type: release_group
+- name: ONLYMOViE
+  negate: false
+  pattern: ONLYMOViE
+  required: false
+  type: release_group
+- name: POTO
+  negate: false
+  pattern: POTO
+  required: false
+  type: release_group
+- name: Slay3R
+  negate: false
+  pattern: Slay3R
+  required: false
+  type: release_group
+- name: TkHD
+  negate: false
+  pattern: TkHD
+  required: false
+  type: release_group
+- name: WaCkS
+  negate: false
+  pattern: WaCkS
+  required: false
+  type: release_group
+tests: []

@@ -1,0 +1,79 @@
+name: FR TV WEB Tier 02
+description: Matches French TV release groups who fall under WEB Tier 02
+tags:
+- Release Group Tier
+- French
+- TV
+- WEB-DL
+conditions:
+- name: Not Bluray
+  negate: true
+  required: true
+  source: bluray
+  type: source
+- name: Not Remux
+  negate: true
+  pattern: Remux
+  required: true
+  type: release_title
+- name: WEB-DL
+  negate: false
+  required: false
+  source: web_dl
+  type: source
+- name: WEBRip
+  negate: false
+  required: false
+  source: webrip
+  type: source
+- name: COLL3CTiF
+  negate: false
+  pattern: COLL3CTiF
+  required: false
+  type: release_group
+- name: FiND
+  negate: false
+  pattern: FiND
+  required: false
+  type: release_group
+- name: FrIeNdS
+  negate: false
+  pattern: FrIeNdS
+  required: false
+  type: release_group
+- name: HeavyWeight
+  negate: false
+  pattern: HeavyWeight
+  required: false
+  type: release_group
+- name: NoNe
+  negate: false
+  pattern: NoNE
+  required: false
+  type: release_group
+- name: pERsO
+  negate: false
+  pattern: pERsO
+  required: false
+  type: release_group
+- name: POTO
+  negate: false
+  pattern: POTO
+  required: false
+  type: release_group
+- name: RG
+  negate: false
+  pattern: RG
+  required: false
+  type: release_group
+- name: RiPiT
+  negate: false
+  pattern: RiPiT
+  required: false
+  type: release_group
+- name: TAT
+  negate: false
+  pattern: TAT
+  required: false
+  type: release_group
+tests: []

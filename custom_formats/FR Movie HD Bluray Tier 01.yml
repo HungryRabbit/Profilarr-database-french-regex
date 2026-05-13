@@ -1,0 +1,59 @@
+name: FR Movie HD Bluray Tier 01
+description: Matches French movie release groups who fall under HD Bluray Tier 01
+tags:
+- Release Group Tier
+- French
+- Movie
+- Bluray
+conditions:
+- name: Not 2160p
+  negate: true
+  required: true
+  resolution: 2160p
+  type: resolution
+- name: Bluray
+  negate: false
+  required: true
+  source: bluray
+  type: source
+- name: Not Remux
+  negate: true
+  pattern: Remux
+  required: true
+  type: release_title
+- name: BDHD
+  negate: false
+  pattern: BDHD
+  required: false
+  type: release_group
+- name: FoX
+  negate: false
+  pattern: FoX
+  required: false
+  type: release_group
+- name: FRATERNiTY
+  negate: false
+  pattern: FRATERNiTY
+  required: false
+  type: release_group
+- name: FrIeNdS
+  negate: false
+  pattern: FrIeNdS
+  required: false
+  type: release_group
+- name: MAX
+  negate: false
+  pattern: MAX (Release Group)
+  required: false
+  type: release_group
+- name: Psaro
+  negate: false
+  pattern: Psaro
+  required: false
+  type: release_group
+- name: YODA
+  negate: false
+  pattern: YODA
+  required: false
+  type: release_group
+tests: []

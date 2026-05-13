@@ -1,0 +1,50 @@
+name: FR Movie UHD Bluray Tier 02
+description: Matches French movie release groups who fall under UHD Bluray Tier 02
+tags:
+- Release Group Tier
+- French
+- Movie
+- 2160p
+- Bluray
+conditions:
+- name: 2160p
+  negate: false
+  required: true
+  resolution: 2160p
+  type: resolution
+- name: Bluray
+  negate: false
+  required: true
+  source: bluray
+  type: source
+- name: Not Remux
+  negate: true
+  pattern: Remux
+  required: true
+  type: release_title
+- name: Not SDR
+  negate: true
+  pattern: SDR
+  required: true
+  type: release_title
+- name: DUSTiN
+  negate: false
+  pattern: DUSTiN
+  required: false
+  type: release_group
+- name: FCK
+  negate: false
+  pattern: FCK
+  required: false
+  type: release_group
+- name: FrIeNdS
+  negate: false
+  pattern: FrIeNdS
+  required: false
+  type: release_group
+- name: QUALiTY
+  negate: false
+  pattern: QUALiTY
+  required: false
+  type: release_group
+tests: []

@@ -1,0 +1,74 @@
+name: FR TV WEB Tier 03
+description: Matches French TV release groups who fall under WEB Tier 03
+tags:
+- Release Group Tier
+- French
+- TV
+- WEB-DL
+conditions:
+- name: Not Bluray
+  negate: true
+  required: true
+  source: bluray
+  type: source
+- name: Not Remux
+  negate: true
+  pattern: Remux
+  required: true
+  type: release_title
+- name: WEB-DL
+  negate: false
+  required: false
+  source: web_dl
+  type: source
+- name: WEBRip
+  negate: false
+  required: false
+  source: webrip
+  type: source
+- name: ARK01
+  negate: false
+  pattern: ARK01
+  required: false
+  type: release_group
+- name: BraD
+  negate: false
+  pattern: BraD
+  required: false
+  type: release_group
+- name: dRuIdE
+  negate: false
+  pattern: dRuIdE
+  required: false
+  type: release_group
+- name: FTMVHD
+  negate: false
+  pattern: FTMVHD
+  required: false
+  type: release_group
+- name: LAZARUS
+  negate: false
+  pattern: LAZARUS
+  required: false
+  type: release_group
+- name: MYSTERiON
+  negate: false
+  pattern: MYSTERiON
+  required: false
+  type: release_group
+- name: Scaph
+  negate: false
+  pattern: Scaph
+  required: false
+  type: release_group
+- name: WaCkS
+  negate: false
+  pattern: WaCkS
+  required: false
+  type: release_group
+- name: WQM
+  negate: false
+  pattern: WQM
+  required: false
+  type: release_group
+tests: []

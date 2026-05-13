@@ -1,0 +1,84 @@
+name: FR TV WEB Tier 01
+description: Matches French TV release groups who fall under WEB Tier 01
+tags:
+- Release Group Tier
+- French
+- TV
+- WEB-DL
+conditions:
+- name: Not Bluray
+  negate: true
+  required: true
+  source: bluray
+  type: source
+- name: Not Remux
+  negate: true
+  pattern: Remux
+  required: true
+  type: release_title
+- name: WEB-DL
+  negate: false
+  required: false
+  source: web_dl
+  type: source
+- name: WEBRip
+  negate: false
+  required: false
+  source: webrip
+  type: source
+- name: BONBON
+  negate: false
+  pattern: BONBON
+  required: false
+  type: release_group
+- name: FCK
+  negate: false
+  pattern: FCK
+  required: false
+  type: release_group
+- name: FW
+  negate: false
+  pattern: FW
+  required: false
+  type: release_group
+- name: FRATERNiTY
+  negate: false
+  pattern: FRATERNiTY
+  required: false
+  type: release_group
+- name: MTDK
+  negate: false
+  pattern: MTDK
+  required: false
+  type: release_group
+- name: NoLo
+  negate: false
+  pattern: NoLo
+  required: false
+  type: release_group
+- name: PATOPESTO
+  negate: false
+  pattern: PATOPESTO
+  required: false
+  type: release_group
+- name: Psaro
+  negate: false
+  pattern: Psaro
+  required: false
+  type: release_group
+- name: SUPPLY
+  negate: false
+  pattern: SUPPLY
+  required: false
+  type: release_group
+- name: TFA
+  negate: false
+  pattern: TFA
+  required: false
+  type: release_group
+- name: TiNA
+  negate: false
+  pattern: TiNA
+  required: false
+  type: release_group
+tests: []
