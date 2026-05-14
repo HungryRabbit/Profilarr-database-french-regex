@@ -1,12 +1,11 @@
 name: Anime 1080p FR
-description: 'Anime 1080p FR targets French-tagged anime releases while keeping the Dictionarry anime tier logic.
+description: >-
+  Anime 1080p FR cible les releases anime taguees en francais tout en conservant
+  la logique de tiers anime de Dictionarry.
 
-
-  - Prioritizes MULTi, then VOSTFR, then VF.
-
-  - Rejects VFQ, low-quality French groups, and releases without an explicit French marker.
-
-  - Uses the existing Dictionarry anime Bluray and WEB-DL tiers.'
+  - Priorise MULTi, puis VOSTFR, puis VF
+  - Rejette VFQ, les groupes FR de faible qualite et les releases sans marqueur francais explicite
+  - Utilise les tiers BluRay et WEB-DL anime existants de Dictionarry
 tags:
 - Anime
 - 1080p

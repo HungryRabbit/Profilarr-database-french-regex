@@ -1,7 +1,11 @@
 name: 2160p Balanced FR
-description: "2160p Balanced targets consistent & immutable 2160p **WEB-DLs w/ Lossy\
-  \ Audio**. \n\n- Average Movie Sizes ~ 15 to 30gb per Movie\n- Movie Quality Ranking\
-  \ ~ 8/10\n- Average TV Sizes ~ 5 to 15gb per Episode\n- TV Quality Ranking ~ 8/10"
+description: >-
+  2160p Balanced FR cible des **WEB-DL 2160p avec audio lossy** fiables et stables.
+
+  - Taille moyenne film ~ 15 a 30 Go par film
+  - Classement qualite film ~ 8/10
+  - Taille moyenne serie ~ 5 a 15 Go par episode
+  - Classement qualite serie ~ 8/10
 tags:
 - 2160p
 - Balanced Focused
@@ -260,9 +264,8 @@ custom_formats_sonarr:
 qualities:
 - id: -1
   name: 2160p Balanced
-  description: Balanced capable releases. Typically WEB-DL would be the overwhelming
-    majority of releases, but there are occasional streaming optimised encodes that
-    should be preferred.
+  description: Releases equilibrees. Le WEB-DL couvre generalement la grande majorite
+    des releases, mais certains encodes optimises pour le streaming peuvent etre preferables.
   qualities:
   - id: 4
     name: Bluray-2160p
@@ -270,7 +273,7 @@ qualities:
     name: WEBDL-2160p
 - id: -2
   name: 1080p Quality HDR
-  description: Indistinguishable from source
+  description: Indistinguable de la source
   qualities:
   - id: 10
     name: Bluray-1080p
@@ -280,7 +283,7 @@ qualities:
     name: WEBRip-1080p
 - id: -3
   name: 720p Quality
-  description: Fallback to 720p when 1080p cannot be found.
+  description: Repli vers 720p quand aucun 1080p n'est disponible.
   qualities:
   - id: 13
     name: Bluray-720p
@@ -290,7 +293,7 @@ qualities:
     name: WEBRip-720p
 - id: -4
   name: 480p Quality
-  description: Standard Definition Fallbacks
+  description: Replis en definition standard
   qualities:
   - id: 17
     name: Bluray-576p
@@ -303,7 +306,6 @@ qualities:
 upgrade_until:
   id: -1
   name: 2160p Balanced
-  description: Balanced capable releases. Typically WEB-DL would be the overwhelming
-    majority of releases, but there are occasional streaming optimised encodes that
-    should be preferred.
+  description: Releases equilibrees. Le WEB-DL couvre generalement la grande majorite
+    des releases, mais certains encodes optimises pour le streaming peuvent etre preferables.
 language: any

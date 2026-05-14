@@ -1,15 +1,12 @@
 name: 2160p Efficient FR
-description: '2160p Efficient targets consistent & immutable 2160p **WEB-DLs w/ Lossy
-  Audio**. Specialized Fallback to 1080p Efficient
+description: >-
+  2160p Efficient FR cible des **WEB-DL 2160p avec audio lossy** fiables et stables,
+  avec un repli specialise vers 1080p Efficient.
 
-
-  - Average Movie Sizes ~ 15 to 30gb per Movie
-
-  - Movie Quality Ranking ~ 6/10
-
-  - Average TV Sizes ~ 4 to 12gb per Episode
-
-  - TV Ranking ~ 6/10'
+  - Taille moyenne film ~ 15 a 30 Go par film
+  - Classement qualite film ~ 6/10
+  - Taille moyenne serie ~ 4 a 12 Go par episode
+  - Classement qualite serie ~ 6/10
 tags:
 - 2160p
 - Efficient Focused
@@ -257,9 +254,8 @@ qualities:
     name: WEBRip-2160p
 - id: -1
   name: 1080p Efficient
-  description: Balanced Capable releases. Typically WEB-DL would be the overwhelming
-    majority of releases, but there are occasional streaming optimised encodes that
-    should be preferred.
+  description: Releases equilibrees. Le WEB-DL couvre generalement la grande majorite
+    des releases, mais certains encodes optimises pour le streaming peuvent etre preferables.
   qualities:
   - id: 10
     name: Bluray-1080p
@@ -269,7 +265,7 @@ qualities:
     name: WEBRip-1080p
 - id: -2
   name: 720p Quality
-  description: Fallback to 720p when 1080p cannot be found.
+  description: Repli vers 720p quand aucun 1080p n'est disponible.
   qualities:
   - id: 13
     name: Bluray-720p
@@ -279,7 +275,7 @@ qualities:
     name: WEBRip-720p
 - id: -3
   name: 480p Quality
-  description: Standard Definition Fallbacks
+  description: Replis en definition standard
   qualities:
   - id: 17
     name: Bluray-576p

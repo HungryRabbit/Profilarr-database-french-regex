@@ -1,15 +1,12 @@
 name: 2160p Remux FR
-description: '2160p Remux utilizes **Video / Audio Formats** to prioritise high quality
-  lossless copies of UHD Blurays.
+description: >-
+  2160p Remux FR utilise les **formats video et audio** pour prioriser les copies
+  lossless de haute qualite issues de BluRay UHD.
 
-
-  - Average Movie Sizes ~ 40 to 60gb per Movie
-
-  - Movie Quality Ranking ~ 10/10
-
-  - Average TV Sizes ~ 15 to 30gb per Episode
-
-  - TV Quality Ranking ~ 10/10'
+  - Taille moyenne film ~ 40 a 60 Go par film
+  - Classement qualite film ~ 10/10
+  - Taille moyenne serie ~ 15 a 30 Go par episode
+  - Classement qualite serie ~ 10/10
 tags:
 - 2160p
 - Remux Focused
@@ -290,8 +287,8 @@ qualities:
     name: WEBDL-2160p
 - id: -1
   name: 1080p Remux
-  description: All capable of being indistinguishable from source. WEB-DL included
-    to not allow unknown encode to trump known WEB-DL.
+  description: Toutes ces qualites peuvent etre indistinguables de la source. WEB-DL
+    est inclus pour eviter qu'un encode inconnu depasse un WEB-DL connu.
   qualities:
   - id: 8
     name: Remux-1080p
@@ -303,7 +300,7 @@ qualities:
     name: WEBRip-1080p
 - id: -2
   name: 720p Quality
-  description: Fallback to 720p when 1080p cannot be found.
+  description: Repli vers 720p quand aucun 1080p n'est disponible.
   qualities:
   - id: 13
     name: Bluray-720p
@@ -313,7 +310,7 @@ qualities:
     name: WEBRip-720p
 - id: -3
   name: 480p Quality
-  description: Standard Definition Fallbacks
+  description: Replis en definition standard
   qualities:
   - id: 17
     name: Bluray-576p

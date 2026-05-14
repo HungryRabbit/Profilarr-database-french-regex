@@ -1,15 +1,12 @@
 name: 2160p Quality FR
-description: '2160p Quality utilizes the [**Encode Efficiency Index**](https://dictionarry.dev/wiki/eei)
-  metric at a 60% target ratio to prioritize **Transparent** x265 4K Encodes
+description: >-
+  2160p Quality FR utilise l'indice [**Encode Efficiency Index**](https://dictionarry.dev/wiki/eei)
+  avec un ratio cible de 60 % pour prioriser des encodes x265 4K **transparents**.
 
-
-  - Average Movie Sizes ~ 30 to 50gb per Movie
-
-  - Movie Quality Ranking ~ 9/10
-
-  - Average TV Sizes ~ 10 to 20gb per Episode
-
-  - TV Quality Ranking ~ 9/10'
+  - Taille moyenne film ~ 30 a 50 Go par film
+  - Classement qualite film ~ 9/10
+  - Taille moyenne serie ~ 10 a 20 Go par episode
+  - Classement qualite serie ~ 9/10
 tags:
 - 2160p
 - Quality Focused
@@ -272,7 +269,7 @@ custom_formats_sonarr:
 qualities:
 - id: -1
   name: 2160p Quality
-  description: Indistinguishable from source
+  description: Indistinguable de la source
   qualities:
   - id: 4
     name: Bluray-2160p
@@ -280,7 +277,7 @@ qualities:
     name: WEBDL-2160p
 - id: -2
   name: 1080p Quality HDR
-  description: Indistinguishable from source
+  description: Indistinguable de la source
   qualities:
   - id: 10
     name: Bluray-1080p
@@ -290,7 +287,7 @@ qualities:
     name: WEBRip-1080p
 - id: -3
   name: 720p Quality
-  description: Fallback to 720p when 1080p cannot be found.
+  description: Repli vers 720p quand aucun 1080p n'est disponible.
   qualities:
   - id: 13
     name: Bluray-720p
@@ -300,7 +297,7 @@ qualities:
     name: WEBRip-720p
 - id: -4
   name: 480p Quality
-  description: Standard Definition Fallbacks
+  description: Replis en definition standard
   qualities:
   - id: 17
     name: Bluray-576p
@@ -313,5 +310,5 @@ qualities:
 upgrade_until:
   id: -1
   name: 2160p Quality
-  description: Indistinguishable from source
+  description: Indistinguable de la source
 language: any

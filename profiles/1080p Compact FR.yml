@@ -1,7 +1,12 @@
 name: 1080p Compact FR
-description: "1080p Compact targets low to medium quality x265 Bluray and WEB Encodes.\
-  \ \n\n- Average Movie Sizes ~ 3 to 6gb per Movie\n- Movie Quality Ranking ~ 4/10\n\
-  - Average TV Sizes ~ 1 to 2gb per Episode\n- TV Quality Ranking ~ 4/10"
+description: >-
+  1080p Compact FR cible des encodes BluRay et WEB x265 de qualite faible a moyenne,
+  avec des fichiers plus legers.
+
+  - Taille moyenne film ~ 3 a 6 Go par film
+  - Classement qualite film ~ 4/10
+  - Taille moyenne serie ~ 1 a 2 Go par episode
+  - Classement qualite serie ~ 4/10
 tags:
 - 1080p
 - Compact Focused
@@ -215,9 +220,8 @@ custom_formats_sonarr:
 qualities:
 - id: -1
   name: 1080p Compact
-  description: Balanced Capable releases. Typically WEB-DL would be the overwhelming
-    majority of releases, but there are occasional streaming optimised encodes that
-    should be preferred.
+  description: Releases equilibrees. Le WEB-DL couvre generalement la grande majorite
+    des releases, mais certains encodes optimises pour le streaming peuvent etre preferables.
   qualities:
   - id: 10
     name: Bluray-1080p
@@ -227,7 +231,7 @@ qualities:
     name: WEBRip-1080p
 - id: -2
   name: 720p Quality
-  description: Fallback to 720p when 1080p cannot be found.
+  description: Repli vers 720p quand aucun 1080p n'est disponible.
   qualities:
   - id: 13
     name: Bluray-720p
@@ -241,7 +245,7 @@ qualities:
   name: HDTV-720p
 - id: -3
   name: 480p Quality
-  description: Standard Definition Fallbacks
+  description: Replis en definition standard
   qualities:
   - id: 17
     name: Bluray-576p
@@ -256,7 +260,6 @@ qualities:
 upgrade_until:
   id: -1
   name: 1080p Compact
-  description: Balanced Capable releases. Typically WEB-DL would be the overwhelming
-    majority of releases, but there are occasional streaming optimised encodes that
-    should be preferred.
+  description: Releases equilibrees. Le WEB-DL couvre generalement la grande majorite
+    des releases, mais certains encodes optimises pour le streaming peuvent etre preferables.
 language: any

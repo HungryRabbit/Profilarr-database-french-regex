@@ -1,8 +1,12 @@
 name: 1080p Quality HDR FR
-description: "1080p Quality HDR utilizes the [**Golden Popcorn Performance Index**](https://dictionarry.dev/wiki/gppi)\
-  \ to target **Transparent x265 HDR** 1080p Encodes. \n\n- Average Movie Sizes ~\
-  \ 10 to 20gb per Movie\n- Movie Quality Ranking ~ 9/10\n- Average TV Sizes ~ 4 to\
-  \ 10gb per Episode\n- TV Quality Ranking ~ 9/10"
+description: >-
+  1080p Quality HDR FR utilise le [**Golden Popcorn Performance Index**](https://dictionarry.dev/wiki/gppi)
+  pour cibler des encodes x265 HDR 1080p **transparents**.
+
+  - Taille moyenne film ~ 10 a 20 Go par film
+  - Classement qualite film ~ 9/10
+  - Taille moyenne serie ~ 4 a 10 Go par episode
+  - Classement qualite serie ~ 9/10
 tags:
 - 1080p
 - Quality Focused
@@ -223,8 +227,8 @@ custom_formats_sonarr:
 qualities:
 - id: -1
   name: 1080p Quality HDR
-  description: All capable of being indistinguishable from source. WEB-DL included
-    to not allow unknown encode to trump known WEB-DL.
+  description: Toutes ces qualites peuvent etre indistinguables de la source. WEB-DL
+    est inclus pour eviter qu'un encode inconnu depasse un WEB-DL connu.
   qualities:
   - id: 10
     name: Bluray-1080p
@@ -234,7 +238,7 @@ qualities:
     name: WEBRip-1080p
 - id: -2
   name: 720p Quality
-  description: Fallback to 720p when 1080p cannot be found.
+  description: Repli vers 720p quand aucun 1080p n'est disponible.
   qualities:
   - id: 13
     name: Bluray-720p
@@ -244,7 +248,7 @@ qualities:
     name: WEBRip-720p
 - id: -3
   name: 480p Quality
-  description: Standard Definition Fallbacks
+  description: Replis en definition standard
   qualities:
   - id: 17
     name: Bluray-576p
@@ -257,6 +261,6 @@ qualities:
 upgrade_until:
   id: -1
   name: 1080p Quality HDR
-  description: All capable of being indistinguishable from source. WEB-DL included
-    to not allow unknown encode to trump known WEB-DL.
+  description: Toutes ces qualites peuvent etre indistinguables de la source. WEB-DL
+    est inclus pour eviter qu'un encode inconnu depasse un WEB-DL connu.
 language: any

@@ -1,14 +1,12 @@
 name: 1080p Efficient FR
-description: '1080p Efficient targets high quality x265 Bluray and WEB Encodes
+description: >-
+  1080p Efficient FR cible des encodes BluRay et WEB x265 de bonne qualite, avec
+  un bon compromis entre taille et rendu.
 
-
-  - Average Movie Sizes ~ 6 to 12gb per Movie
-
-  - Movie Quality Ranking ~ 7/10
-
-  - Average TV Sizes ~ 2 to 3gb per Episode
-
-  - TV Quality Ranking ~ 6/10'
+  - Taille moyenne film ~ 6 a 12 Go par film
+  - Classement qualite film ~ 7/10
+  - Taille moyenne serie ~ 2 a 3 Go par episode
+  - Classement qualite serie ~ 6/10
 tags:
 - 1080p
 - Efficient Focused
@@ -220,9 +218,8 @@ custom_formats_sonarr:
 qualities:
 - id: -1
   name: 1080p Efficient
-  description: Balanced Capable releases. Typically WEB-DL would be the overwhelming
-    majority of releases, but there are occasional streaming optimised encodes that
-    should be preferred.
+  description: Releases equilibrees. Le WEB-DL couvre generalement la grande majorite
+    des releases, mais certains encodes optimises pour le streaming peuvent etre preferables.
   qualities:
   - id: 10
     name: Bluray-1080p
@@ -232,7 +229,7 @@ qualities:
     name: WEBRip-1080p
 - id: -2
   name: 720p Quality
-  description: Fallback to 720p when 1080p cannot be found.
+  description: Repli vers 720p quand aucun 1080p n'est disponible.
   qualities:
   - id: 13
     name: Bluray-720p
@@ -242,7 +239,7 @@ qualities:
     name: WEBRip-720p
 - id: -3
   name: 480p Quality
-  description: Standard Definition Fallbacks
+  description: Replis en definition standard
   qualities:
   - id: 17
     name: Bluray-576p
@@ -255,7 +252,6 @@ qualities:
 upgrade_until:
   id: -1
   name: 1080p Efficient
-  description: Balanced Capable releases. Typically WEB-DL would be the overwhelming
-    majority of releases, but there are occasional streaming optimised encodes that
-    should be preferred.
+  description: Releases equilibrees. Le WEB-DL couvre generalement la grande majorite
+    des releases, mais certains encodes optimises pour le streaming peuvent etre preferables.
 language: any
