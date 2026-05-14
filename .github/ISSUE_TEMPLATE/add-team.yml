@@ -1,0 +1,66 @@
+name: Add Team
+description: Proposer l'ajout d'une team FR dans les regex et Custom Formats
+title: "[Team]: "
+labels: ["type: team"]
+
+body:
+  - type: input
+    id: team-name
+    attributes:
+      label: Nom de la team
+      placeholder: "Ex: BOUBA"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Ce qu'elle propose principalement
+      options:
+        - Remux
+        - UHD Bluray
+        - HD Bluray
+        - WEB-DL / WEBRip
+        - HDLight
+        - Anime
+        - Scene
+        - Global / generaliste
+        - LQ / a bannir
+        - Inconnu
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Exemples de releases
+      description: Ajoute plusieurs noms complets si possible.
+      placeholder: |
+        Movie.2026.FRENCH.1080p.WEB.H264-TEAM
+        Show.S01E01.MULTI.2160p.WEB.H265-TEAM
+    validations:
+      required: true
+
+  - type: dropdown
+    id: suggested-tier
+    attributes:
+      label: Tier propose
+      options:
+        - FR Global Tier 01
+        - FR Global Tier 02
+        - FR Scene Groups
+        - FR HDLight Tier
+        - FR Anime Tier 01
+        - FR Anime Tier 02
+        - FR Anime Tier 03
+        - FR Anime FanSub
+        - FR LQ
+        - A discuter
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      placeholder: "Qualite habituelle, sources, reputation, liens utiles..."

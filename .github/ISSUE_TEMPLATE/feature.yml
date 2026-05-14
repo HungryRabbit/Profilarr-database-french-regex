@@ -1,44 +1,43 @@
-name: ✨ Feature Request
-description: Request new content or changes to existing content
+name: Feature Request
+description: Proposer une nouvelle fonctionnalite ou une amelioration
+title: "[Feature]: "
 labels: ["type: feature"]
 
 body:
-  - type: dropdown
-    id: what
-    attributes:
-      label: What do you want?
-      options:
-        - New profile
-        - New custom format
-        - New regex pattern
-        - Changes to existing content
-        - Other
-    validations:
-      required: true
-
   - type: textarea
-    id: description
+    id: request
     attributes:
-      label: Description
-      placeholder: Describe what you want in detail
+      label: Quoi ajouter ?
+      placeholder: "Decris la fonctionnalite ou l'amelioration souhaitee."
     validations:
       required: true
 
   - type: textarea
     id: why
     attributes:
-      label: Why is this useful?
-      placeholder: Explain your use case
+      label: Pourquoi c'est utile ?
+      placeholder: "Explique le cas d'usage et le probleme que ca resout."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Zone concernee
+      options:
+        - Regex
+        - Custom Formats
+        - Profiles
+        - Anime
+        - Media Management
+        - Documentation
+        - Autre
+    validations:
+      required: true
 
   - type: textarea
-    id: screenshots
+    id: references
     attributes:
-      label: Screenshots
-      description: If relevant, include interactive searches or movie/season history from your arrs.
-      placeholder: Drag and drop screenshots here
-
-  - type: input
-    id: related
-    attributes:
-      label: Related issues
-      placeholder: "#123, #456"
+      label: References
+      description: Liens vers TRaSH, Dictionarry, un repo FR, une release exemple ou une discussion.
+      placeholder: "https://..."
