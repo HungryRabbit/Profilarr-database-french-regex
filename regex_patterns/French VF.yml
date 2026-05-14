@@ -1,5 +1,5 @@
 name: French VF
-pattern: '(?i)(?<=^|[\s.-])(?:VF(?![QI])|VFF2?|VF2|TRUE[ ._-]?FR(?:ENCH)?|FRENCH(?![ ._-]?(?:SUBS?|CANADIAN))|FRANCAIS|FRANÇAIS|VOF|FRA)(?=$|[\s.-])'
+pattern: '(?i)(?<=^|[\s.-])(?:VF(?!Q)|VFI|VFF2?|VF2|TRUE[ ._-]?FR(?:ENCH)?|FRENCH(?![ ._-]?(?:SUBS?|CANADIAN))|FRANCAIS|FRANÇAIS|VOF|FRA)(?=$|[\s.-])'
 description: Matches French dubbed releases while keeping subtitles, MULTi, and Quebec French variants separate.
 tags:
 - Language
@@ -38,6 +38,6 @@ tests:
 - expected: true
   id: 11
   input: Film.2024.VF2.1080p.WEB-DL.H264-GROUP
-- expected: false
+- expected: true
   id: 12
   input: Film.2024.VFI.1080p.WEB-DL.H264-GROUP

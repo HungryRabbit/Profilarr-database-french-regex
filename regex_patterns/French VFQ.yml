@@ -1,5 +1,5 @@
 name: French VFQ
-pattern: '(?i)(?<=^|[\s.-])(?:VFQ2?|VFI|VQ|FRENCH[ ._-]?CANADIAN|CANADIAN[ ._-]?FRENCH|QUEBECOIS)(?=$|[\s.-])'
+pattern: '(?i)(?<=^|[\s.-])(?:VFQ2?|VQ|FRENCH[ ._-]?CANADIAN|CANADIAN[ ._-]?FRENCH|QUEBECOIS)(?=$|[\s.-])'
 description: Matches Quebec French variants that should be rejected by French profiles.
 tags:
 - Language
@@ -18,7 +18,7 @@ tests:
 - expected: false
   id: 4
   input: Film.2024.VFC.1080p.WEB-DL.H264-GROUP
-- expected: true
+- expected: false
   id: 5
   input: Film.2024.VFI.1080p.WEB-DL.H264-GROUP
 - expected: true
