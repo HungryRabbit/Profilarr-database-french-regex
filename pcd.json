@@ -1,0 +1,26 @@
+{
+  "name": "Profilarr Database French Regex",
+  "version": "2.0.0",
+  "description": "Custom formats, regex patterns, and quality profiles tuned for the French-speaking *arr ecosystem. Sources: TRaSH Guides + Dictionarry base + leof28/profilarr-dbFR + ataaki/french-multi-arr-custom-formats + mcflykid/french-profilarr-database. Adds MULTi > VF > VOSTFR scoring tier on top of the anglophone TRaSH logic, plus FR release-group regex (CHiLL, LiDHL, ZEUS, FW, etc.).",
+  "arr_types": [
+    "radarr",
+    "sonarr"
+  ],
+  "dependencies": {
+    "https://github.com/Dictionarry-Hub/schema": "1.1.0"
+  },
+  "authors": [
+    {
+      "name": "Jojont54"
+    }
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/Jojont54/Profilarr-database-french-regex",
+  "links": {
+    "homepage": "https://github.com/Jojont54/Profilarr-database-french-regex",
+    "issues": "https://github.com/Jojont54/Profilarr-database-french-regex/issues"
+  },
+  "profilarr": {
+    "minimum_version": "2.0.0"
+  }
+}
