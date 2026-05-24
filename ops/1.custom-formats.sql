@@ -1509,10 +1509,6 @@ SELECT cf.name, 'ZT', 'release_group', 'all', 0, 0
 FROM custom_formats cf
 WHERE cf.name = 'FR LQ';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
-SELECT cf.name, 'AKLHD', 'release_group', 'all', 0, 0
-FROM custom_formats cf
-WHERE cf.name = 'FR LQ';
-INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'ARKRiL', 'release_group', 'all', 0, 0
 FROM custom_formats cf
 WHERE cf.name = 'FR LQ';
@@ -2578,6 +2574,26 @@ FROM custom_formats cf
 WHERE cf.name = 'FR Scene Groups';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'ZiRCON', 'release_group', 'all', 0, 0
+FROM custom_formats cf
+WHERE cf.name = 'FR Scene Groups';
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT cf.name, 'AKLHD', 'release_group', 'all', 0, 0
+FROM custom_formats cf
+WHERE cf.name = 'FR Scene Groups';
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT cf.name, 'N0Z00M', 'release_group', 'all', 0, 0
+FROM custom_formats cf
+WHERE cf.name = 'FR Scene Groups';
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT cf.name, 'PHoQUE', 'release_group', 'all', 0, 0
+FROM custom_formats cf
+WHERE cf.name = 'FR Scene Groups';
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT cf.name, 'SharpHD', 'release_group', 'all', 0, 0
+FROM custom_formats cf
+WHERE cf.name = 'FR Scene Groups';
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT cf.name, 'USURY', 'release_group', 'all', 0, 0
 FROM custom_formats cf
 WHERE cf.name = 'FR Scene Groups';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
@@ -5481,10 +5497,6 @@ SELECT 'FR LQ', 'ZT', re.name
 FROM regular_expressions re
 WHERE re.name = 'ZT';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR LQ', 'AKLHD', re.name
-FROM regular_expressions re
-WHERE re.name = 'AKLHD';
-INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
 SELECT 'FR LQ', 'ARKRiL', re.name
 FROM regular_expressions re
 WHERE re.name = 'ARKRiL';
@@ -6496,6 +6508,26 @@ INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expr
 SELECT 'FR Scene Groups', 'ZiRCON', re.name
 FROM regular_expressions re
 WHERE re.name = 'ZiRCON';
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT 'FR Scene Groups', 'AKLHD', re.name
+FROM regular_expressions re
+WHERE re.name = 'AKLHD';
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT 'FR Scene Groups', 'N0Z00M', re.name
+FROM regular_expressions re
+WHERE re.name = 'N0Z00M';
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT 'FR Scene Groups', 'PHoQUE', re.name
+FROM regular_expressions re
+WHERE re.name = 'PHoQUE';
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT 'FR Scene Groups', 'SharpHD', re.name
+FROM regular_expressions re
+WHERE re.name = 'SharpHD';
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT 'FR Scene Groups', 'USURY', re.name
+FROM regular_expressions re
+WHERE re.name = 'USURY';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
 SELECT 'FR TV HD Bluray Tier 01', 'Not Remux', re.name
 FROM regular_expressions re

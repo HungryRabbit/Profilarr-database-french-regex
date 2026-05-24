@@ -378,6 +378,7 @@ INSERT INTO regular_expressions (name, pattern, description) VALUES ('NeoSG', '(
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('NEOSTARK', '(?<=^|[\s.-])NEOSTARK\b', 'Matches "NEOSTARK" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('NERDHD', '(?<=^|[\s.-])NERDHD\b', 'Matches "NERDHD" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('NERO', '(?<=^|[\s.-])NERO\b', 'Matches "NERO" when preceded by whitespace, a hyphen or dot');
+INSERT INTO regular_expressions (name, pattern, description) VALUES ('N0Z00M', '(?<=^|[\s.-])N0Z00M\b', 'Matches "N0Z00M" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('Netflix', '\b(NF|Netflix)\b', 'Netflix is an American subscription video on-demand over-the-top streaming service. The service primarily distributes original and acquired films and television shows from various genres, and it is available internationally in multiple languages.');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('NEWCINE', '(?<=^|[\s.-])NEWCINE\b', 'Matches "NEWCINE" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('NewZT', '(?<=^|[\s.-])NewZT\b', 'Matches "NewZT" when preceded by whitespace, a hyphen or dot');
@@ -416,6 +417,7 @@ INSERT INTO regular_expressions (name, pattern, description) VALUES ('PATOPESTO'
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('PCM', '\b(l?)PCM(\b|\d)', '');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('Peacock TV', '\bPCOK\b|\bPeacock[ ._-]WEB[ ._-]?(DL|RIP)?\b', 'Peacock is an American over-the-top subscription streaming service owned and operated by Peacock TV, LLC, a subsidiary of NBCUniversal Media Group. The service primarily features series and film content from NBCUniversal studios and other third-party content providers (such as WWE and Hallmark Channel).');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('Penrose', '(?<=^|[\s.-])Penrose\b', 'Matches "Penrose" when preceded by whitespace, a hyphen or dot');
+INSERT INTO regular_expressions (name, pattern, description) VALUES ('PHoQUE', '(?<=^|[\s.-])PHoQUE\b', 'Matches "PHoQUE" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('PEPiTE', '(?<=^|[\s.-])PEPiTE\b', 'Matches "PEPiTE" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('pERsO', '(?<=^|[\s.-])pERsO\b', 'Matches "pERsO" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('PiCKLES', '(?<=^|[\s.-])PiCKLES\b', 'Matches "PiCKLES" when preceded by whitespace, a hyphen or dot');
@@ -481,6 +483,7 @@ INSERT INTO regular_expressions (name, pattern, description) VALUES ('Seimeisen'
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('SESKAPiLE', '(?<=^|[\s.-])SESKAPiLE\b', 'Matches "SESKAPiLE" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('SHARKS', '(?<=^|[\s.-])SHARKS\b', 'Matches "SHARKS" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('SHEEEiT', '(?<=^|[\s.-])SHEEEiT\b', 'Matches "SHEEEiT" when preceded by whitespace, a hyphen or dot');
+INSERT INTO regular_expressions (name, pattern, description) VALUES ('SharpHD', '(?<=^|[\s.-])SharpHD\b', 'Matches "SharpHD" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('SHiFT', '(?<=^|[\s.-])SHiFT\b', 'Matches "SHiFT" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('SHiNiGAMi', '(?<=^|[\s.-])SHiNiGAMi(UHD)?\b', 'Matches "SHiNiGAMi" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('ShowFR', '(?<=^|[\s.-])ShowFR\b', 'Matches "ShowFR" when preceded by whitespace, a hyphen or dot');
@@ -563,6 +566,7 @@ INSERT INTO regular_expressions (name, pattern, description) VALUES ('UNSKiLLED'
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('Upmix', '(?<=^|[\s.-])Upmix\b', 'Matches "Upmix" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('Upscale', '(Up[-\.\s]?scale|Re[-\.\s]?Grade|\bAIUS\b|AI[-\.\s]?enhanced)', 'Matches upscales, regrades, AI Enhancements, etc. ');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('URY', '(?<=^|[\s.-])URY\b', 'Matches "URY" when preceded by whitespace, a hyphen or dot');
+INSERT INTO regular_expressions (name, pattern, description) VALUES ('USURY', '(?<=^|[\s.-])USURY\b', 'Matches "USURY" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('UTT', '(?<=^|[\s.-])UTT\b', 'Matches "UTT" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('VATFER', '(?<=^|[\s.-])VATFER\b', 'Matches "VATFER" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('VENUE', '(?<=^|[\s.-])VENUE\b', 'Matches "VENUE" when preceded by whitespace, a hyphen or dot');
@@ -704,10 +708,6 @@ INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
 SELECT re.name, t.name
 FROM regular_expressions re, tags t
 WHERE re.name = 'AJP' AND t.name = 'Release Group';
-INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
-SELECT re.name, t.name
-FROM regular_expressions re, tags t
-WHERE re.name = 'AKLHD' AND t.name = 'Banned';
 INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
 SELECT re.name, t.name
 FROM regular_expressions re, tags t
@@ -5613,6 +5613,39 @@ SELECT re.name, t.name
 FROM regular_expressions re, tags t
 WHERE re.name = 'ZW' AND t.name = 'Release Group';
 
+
+INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
+SELECT re.name, t.name
+FROM regular_expressions re, tags t
+WHERE re.name = 'N0Z00M' AND t.name = 'French';
+INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
+SELECT re.name, t.name
+FROM regular_expressions re, tags t
+WHERE re.name = 'N0Z00M' AND t.name = 'Release Group';
+INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
+SELECT re.name, t.name
+FROM regular_expressions re, tags t
+WHERE re.name = 'PHoQUE' AND t.name = 'French';
+INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
+SELECT re.name, t.name
+FROM regular_expressions re, tags t
+WHERE re.name = 'PHoQUE' AND t.name = 'Release Group';
+INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
+SELECT re.name, t.name
+FROM regular_expressions re, tags t
+WHERE re.name = 'SharpHD' AND t.name = 'French';
+INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
+SELECT re.name, t.name
+FROM regular_expressions re, tags t
+WHERE re.name = 'SharpHD' AND t.name = 'Release Group';
+INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
+SELECT re.name, t.name
+FROM regular_expressions re, tags t
+WHERE re.name = 'USURY' AND t.name = 'French';
+INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
+SELECT re.name, t.name
+FROM regular_expressions re, tags t
+WHERE re.name = 'USURY' AND t.name = 'Release Group';
 
 -- Dictionarry V2 technical regex retained for FR profiles
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('Movie Extras', '(?i)(?<=\b[12]\d{3}\b).*(\b|\.)\b(Extras?|Bonus|Extended[ ._-]Clip|Special Feature[s]?)\b', 'Extras, Special Features, Featurettes, etc');
