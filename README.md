@@ -18,8 +18,8 @@ L'objectif est de garder une base propre, maintenable et facile a rebase depuis 
 
 ## Ce qui change
 
-- Ajout de `regex_patterns` atomiques: un fichier YAML par team FR.
-- Ajout de `custom_formats` FR avec une tier list inspiree de plusieurs sources francophones.
+- Ajout de regex atomiques pour les teams FR.
+- Ajout de Custom Formats FR avec une tier list inspiree de plusieurs sources francophones.
 - Ajout de profils FR bases sur la logique Dictionarry, avec les memes tags que les profils originaux.
 - Ajout d'une priorisation langue: `MULTi` > `VF` > `VOSTFR` pour les profils classiques, et `MULTi` > `VOSTFR` > `VF` pour le profil anime.
 - Interdiction des releases `VFQ` dans les profils FR.
@@ -27,7 +27,9 @@ L'objectif est de garder une base propre, maintenable et facile a rebase depuis 
 
 ## Profilarr V2
 
-La publication Profilarr V2 est organisee en operations SQL separees pour garder le projet lisible et maintenable:
+La branche principale et la branche `develop` publient exclusivement la version Profilarr V2 au format PCD SQL. La source YAML compatible Profilarr V1 est conservee sur la branche `Profilarr-V1`.
+
+Les operations SQL V2 sont separees pour garder le projet lisible et maintenable:
 
 ```text
 ops/
@@ -40,7 +42,7 @@ ops/
 
 Attention: la premiere version V2 publiee utilisait un unique fichier `ops/0.jojont54-fr.sql`. Ce fichier a ete remplace par la structure ci-dessus avant stabilisation de la V2.
 
-Si vous aviez deja lie la DB V2 avant ce changement, supprimez-la de Profilarr puis ajoutez-la a nouveau afin de repartir sur les nouvelles operations propres. Les utilisateurs de la branche V1 ne sont pas concernes.
+Si vous aviez deja lie la DB V2 avant ce changement, supprimez-la de Profilarr puis ajoutez-la a nouveau afin de repartir sur les nouvelles operations propres. Les utilisateurs de la branche `Profilarr-V1` ne sont pas concernes.
 
 ## Sources FR
 
@@ -55,19 +57,7 @@ Les listes de teams, les tiers et les choix de scoring FR sont inspires et recou
 
 ### Regex patterns
 
-Chaque team FR est declaree dans son propre fichier YAML sous `regex_patterns`.
-
-Exemple de logique:
-
-```yaml
-name: BOUBA
-pattern: '(?<=^|[\s.-])BOUBA\b'
-tags:
-- Release Group
-- French
-```
-
-Cette approche evite les gros blocs regex difficiles a maintenir et permet de brancher les teams proprement dans plusieurs Custom Formats.
+Chaque team FR est representee par une regex atomique integree aux operations PCD. Cette approche evite les gros blocs regex difficiles a maintenir et permet de brancher les teams proprement dans plusieurs Custom Formats.
 
 ### Custom Formats FR
 
@@ -107,18 +97,12 @@ Anime 1080p FR
 Anime 1080p VOSTFR FR
 ```
 
-`Anime 1080p FR` conserve la priorisation `MULTi` > `VOSTFR` > `VF`.
-`Anime 1080p VOSTFR FR` est une variante stricte qui accepte uniquement les releases `VOSTFR`.
+`Anime 1080p FR` priorise `MULTi` > `VOSTFR` > `VF`.
+`Anime 1080p VOSTFR FR` priorise uniquement les releases `VOSTFR`.
 
 ## Media management
 
-Les fichiers YAML V1 dans `media_management` restent issus de Dictionarry:
-
-- `naming.yml`
-- `quality_definitions.yml`
-- `misc.yml`
-
-Pour Profilarr V2, les operations SQL integrent egalement les evolutions Dictionarry:
+Les operations SQL V2 integrent les evolutions Dictionarry:
 
 - presets renommes `Radarr` et `Sonarr` au lieu de `default`;
 - preset supplementaire `Radarr / Editionless`;

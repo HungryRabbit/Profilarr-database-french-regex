@@ -1,7 +1,0 @@
-name: SASHiMi
-pattern: '(?<=^|[\s.-])SASHiMi\b'
-description: Matches "SASHiMi" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

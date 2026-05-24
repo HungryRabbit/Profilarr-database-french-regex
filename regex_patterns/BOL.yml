@@ -1,8 +1,0 @@
-name: BOL
-pattern: '(?<=^|[\s.-])BOL\b'
-description: Matches "BOL" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

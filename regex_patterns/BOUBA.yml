@@ -1,7 +1,0 @@
-name: BOUBA
-pattern: '(?<=^|[\s.-])BOUBA\b'
-description: Matches "BOUBA" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

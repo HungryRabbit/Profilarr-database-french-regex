@@ -1,7 +1,0 @@
-name: D4KiD
-pattern: '(?<=^|[\s.-])D4KiD\b'
-description: Matches "D4KiD" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

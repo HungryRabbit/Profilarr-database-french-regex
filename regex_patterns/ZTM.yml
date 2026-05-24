@@ -1,7 +1,0 @@
-name: ZTM
-pattern: '(?<=^|[\s.-])ZTM\b'
-description: Matches "ZTM" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

@@ -1,8 +1,0 @@
-name: GOBO2S
-pattern: '(?<=^|[\s.-])GOBO2S\b'
-description: Matches "GOBO2S" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

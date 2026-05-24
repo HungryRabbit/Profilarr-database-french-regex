@@ -1,8 +1,0 @@
-name: BraD
-pattern: '(?<=^|[\s.-])BraD\b'
-description: Matches "BraD" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- WEB-DL
-tests: []

@@ -1,8 +1,0 @@
-name: TyrellCorp
-pattern: '(?<=^|[\s.-])TyrellCorp\b'
-description: Matches "TyrellCorp" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Remux
-tests: []

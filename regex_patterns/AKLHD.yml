@@ -1,8 +1,0 @@
-name: AKLHD
-pattern: '(?<=^|[\s.-])AKLHD\b'
-description: Matches "AKLHD" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

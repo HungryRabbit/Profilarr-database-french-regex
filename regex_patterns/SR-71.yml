@@ -1,8 +1,0 @@
-name: SR-71
-pattern: '(?<=^|[\s.-])SR-71\b'
-description: Matches "SR-71" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Anime
-tests: []

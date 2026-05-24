@@ -1,7 +1,0 @@
-name: BRiNK
-pattern: '(?<=^|[\s.-])BRiNK\b'
-description: Matches "BRiNK" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

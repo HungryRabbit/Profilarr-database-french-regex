@@ -1,8 +1,0 @@
-name: qctimb3rlandqc
-pattern: '(?<=^|[\s.-])qctimb3rlandqc\b'
-description: Matches "qctimb3rlandqc" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

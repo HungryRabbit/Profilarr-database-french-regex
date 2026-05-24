@@ -1,8 +1,0 @@
-name: ANONA
-pattern: '(?<=^|[\s.-])ANONA\b'
-description: Matches "ANONA" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

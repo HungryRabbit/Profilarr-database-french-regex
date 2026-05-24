@@ -1,7 +1,0 @@
-name: COCAIN
-pattern: '(?<=^|[\s.-])COCAIN\b'
-description: Matches "COCAIN" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

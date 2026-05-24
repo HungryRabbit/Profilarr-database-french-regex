@@ -1,8 +1,0 @@
-name: Firetown
-pattern: '(?<=^|[\s.-])Firetown\b'
-description: Matches "Firetown" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

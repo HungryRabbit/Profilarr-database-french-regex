@@ -1,9 +1,0 @@
-name: QUALiTY
-pattern: '(?<=^|[\s.-])QUALiTY\b'
-description: Matches "QUALiTY" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- 2160p
-- Bluray
-tests: []

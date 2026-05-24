@@ -1,7 +1,0 @@
-name: McNULTY
-pattern: '(?<=^|[\s.-])McNULTY\b'
-description: Matches "McNULTY" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

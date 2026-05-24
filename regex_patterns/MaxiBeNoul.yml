@@ -1,7 +1,0 @@
-name: MaxiBeNoul
-pattern: '(?<=^|[\s.-])MaxiBeNoul\b'
-description: Matches "MaxiBeNoul" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

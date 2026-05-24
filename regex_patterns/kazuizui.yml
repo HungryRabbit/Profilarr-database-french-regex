@@ -1,8 +1,0 @@
-name: kazuizui
-pattern: '(?<=^|[\s.-])kazui(zui)?\b'
-description: Matches "kazuizui" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Anime
-tests: []

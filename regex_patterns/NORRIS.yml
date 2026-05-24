@@ -1,8 +1,0 @@
-name: NORRIS
-pattern: '(?<=^|[\s.-])NORRIS\b'
-description: Matches "NORRIS" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

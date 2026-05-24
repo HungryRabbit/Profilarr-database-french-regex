@@ -1,8 +1,0 @@
-name: Tokushi
-pattern: '(?<=^|[\s.-])Tokushi\b'
-description: Matches "Tokushi" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

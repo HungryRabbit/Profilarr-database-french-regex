@@ -1,8 +1,0 @@
-name: dRuIdE
-pattern: '(?<=^|[\s.-])dRuIdE\b'
-description: Matches "dRuIdE" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- WEB-DL
-tests: []

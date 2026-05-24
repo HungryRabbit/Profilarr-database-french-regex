@@ -1,8 +1,0 @@
-name: BLV
-pattern: '(?<=^|[\s.-])BLV\b'
-description: Matches "BLV" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Anime
-tests: []

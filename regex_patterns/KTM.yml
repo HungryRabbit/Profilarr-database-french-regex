@@ -1,8 +1,0 @@
-name: KTM
-pattern: '(?<=^|[\s.-])KTM\b'
-description: Matches "KTM" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Remux
-tests: []

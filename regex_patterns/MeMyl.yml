@@ -1,8 +1,0 @@
-name: MeMyl
-pattern: '(?<=^|[\s.-])MeMyl\b'
-description: Matches "MeMyl" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

@@ -1,8 +1,0 @@
-name: WINCHESTER
-pattern: '(?<=^|[\s.-])WINCHESTER\b'
-description: Matches "WINCHESTER" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

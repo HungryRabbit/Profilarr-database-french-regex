@@ -1,8 +1,0 @@
-name: RiPiT
-pattern: '(?<=^|[\s.-])RiPiT\b'
-description: Matches "RiPiT" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- WEB-DL
-tests: []

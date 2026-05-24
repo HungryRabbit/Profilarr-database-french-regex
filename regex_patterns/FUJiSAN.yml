@@ -1,9 +1,0 @@
-name: FUJiSAN
-pattern: '(?<=^|[\s.-])FUJiSAN\b'
-description: Matches "FUJiSAN" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Anime
-- WEB-DL
-tests: []

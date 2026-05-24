@@ -1,8 +1,0 @@
-name: Seimeisen
-pattern: '(?<=^|[\s.-])Seimeisen\b'
-description: Matches "Seimeisen" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Anime
-tests: []

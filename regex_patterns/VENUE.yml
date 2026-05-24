@@ -1,7 +1,0 @@
-name: VENUE
-pattern: '(?<=^|[\s.-])VENUE\b'
-description: Matches "VENUE" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

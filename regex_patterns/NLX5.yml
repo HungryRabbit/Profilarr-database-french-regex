@@ -1,8 +1,0 @@
-name: NLX5
-pattern: '(?<=^|[\s.-])NLX5\b'
-description: Matches "NLX5" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

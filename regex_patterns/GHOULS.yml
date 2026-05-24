@@ -1,7 +1,0 @@
-name: GHOULS
-pattern: '(?<=^|[\s.-])GHOULS\b'
-description: Matches "GHOULS" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

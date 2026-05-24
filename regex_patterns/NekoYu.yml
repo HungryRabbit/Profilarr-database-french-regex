@@ -1,8 +1,0 @@
-name: NekoYu
-pattern: '(?<=^|[\s.-])NekoYu\\''?\b'
-description: Matches "NekoYu" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Anime
-tests: []

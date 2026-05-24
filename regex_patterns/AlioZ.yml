@@ -1,8 +1,0 @@
-name: AlioZ
-pattern: '(?<=^|[\s.-])AlioZ\b'
-description: Matches "AlioZ" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

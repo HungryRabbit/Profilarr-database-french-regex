@@ -1,7 +1,0 @@
-name: FiDELiO
-pattern: '(?<=^|[\s.-])FiDELiO\b'
-description: Matches "FiDELiO" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

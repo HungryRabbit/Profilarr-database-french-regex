@@ -1,8 +1,0 @@
-name: MONiCO
-pattern: '(?<=^|[\s.-])MONiCO\b'
-description: Matches "MONiCO" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

@@ -1,7 +1,0 @@
-name: JUSTICELEAGUE
-pattern: '(?<=^|[\s.-])JUSTICELEAGUE\b'
-description: Matches "JUSTICELEAGUE" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

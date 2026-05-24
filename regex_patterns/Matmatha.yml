@@ -1,8 +1,0 @@
-name: Matmatha
-pattern: '(?<=^|[\s.-])Matmatha\b'
-description: Matches "Matmatha" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

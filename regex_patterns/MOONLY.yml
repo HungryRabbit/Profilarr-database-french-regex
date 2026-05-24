@@ -1,8 +1,0 @@
-name: MOONLY
-pattern: '(?<=^|[\s.-])MOONLY\b'
-description: Matches "MOONLY" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- WEB-DL
-tests: []

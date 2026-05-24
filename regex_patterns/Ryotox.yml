@@ -1,7 +1,0 @@
-name: Ryotox
-pattern: '(?<=^|[\s.-])Ryotox\b'
-description: Matches "Ryotox" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

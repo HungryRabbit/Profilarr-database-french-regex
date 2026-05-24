@@ -1,8 +1,0 @@
-name: CINeHD
-pattern: '(?<=^|[\s.-])CINeHD\b'
-description: Matches "CINeHD" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

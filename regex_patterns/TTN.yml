@@ -1,8 +1,0 @@
-name: TTN
-pattern: '(?<=^|[\s.-])TTN\b'
-description: Matches "TTN" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Anime
-tests: []

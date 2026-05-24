@@ -1,8 +1,0 @@
-name: MKVXTEAM
-pattern: '(?<=^|[\s.-])MKVXTEAM\b'
-description: Matches "MKVXTEAM" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

@@ -1,7 +1,0 @@
-name: CARAPiLS
-pattern: '(?<=^|[\s.-])CARAPiLS\b'
-description: Matches "CARAPiLS" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

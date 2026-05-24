@@ -1,8 +1,0 @@
-name: Natsumi no Sekai
-pattern: '(?<=^|[\s.-])Natsumi[ .-]?no[ .-]?Sekai\b'
-description: Matches "Natsumi no Sekai" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Anime
-tests: []

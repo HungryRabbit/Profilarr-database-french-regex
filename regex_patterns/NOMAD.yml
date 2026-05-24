@@ -1,8 +1,0 @@
-name: NOMAD
-pattern: '(?<=^|[\s.-])NOMAD\b'
-description: Matches "NOMAD" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

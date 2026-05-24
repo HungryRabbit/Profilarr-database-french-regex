@@ -1,7 +1,0 @@
-name: AYMO
-pattern: '(?<=^|[\s.-])AYMO\b'
-description: Matches "AYMO" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

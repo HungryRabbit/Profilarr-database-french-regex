@@ -1,8 +1,0 @@
-name: TVPSLO
-pattern: '(?<=^|[\s.-])TVPSLO\b'
-description: Matches "TVPSLO" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

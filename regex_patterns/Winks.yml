@@ -1,7 +1,0 @@
-name: Winks
-pattern: '(?<=^|[\s.-])Winks\b'
-description: Matches "Winks" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

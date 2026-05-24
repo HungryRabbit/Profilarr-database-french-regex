@@ -1,7 +1,0 @@
-name: DiEBEX
-pattern: '(?<=^|[\s.-])DiEBEX\b'
-description: Matches "DiEBEX" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

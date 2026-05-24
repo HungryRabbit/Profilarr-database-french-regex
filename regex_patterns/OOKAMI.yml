@@ -1,7 +1,0 @@
-name: OOKAMI
-pattern: '(?<=^|[\s.-])OOKAMI\b'
-description: Matches "OOKAMI" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

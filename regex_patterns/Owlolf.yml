@@ -1,8 +1,0 @@
-name: Owlolf
-pattern: '(?<=^|[\s.-])Owlolf\b'
-description: Matches "Owlolf" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Anime
-tests: []

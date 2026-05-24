@@ -1,7 +1,0 @@
-name: LOST
-pattern: '(?<=^|[\s.-])LOST\b'
-description: Matches "LOST" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

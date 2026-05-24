@@ -1,8 +1,0 @@
-name: EXTREME
-pattern: '(?<=^|[\s.-])EXTREME\b'
-description: Matches "EXTREME" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

@@ -1,7 +1,0 @@
-name: CiELOS
-pattern: '(?<=^|[\s.-])CiELOS\b'
-description: Matches "CiELOS" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

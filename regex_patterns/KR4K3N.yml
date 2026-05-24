@@ -1,8 +1,0 @@
-name: KR4K3N
-pattern: '(?<=^|[\s.-])KR4K3N\b'
-description: Matches "KR4K3N" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

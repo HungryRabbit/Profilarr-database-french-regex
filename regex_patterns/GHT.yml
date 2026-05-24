@@ -1,7 +1,0 @@
-name: GHT
-pattern: '(?<=^|[\s.-])GHT\b'
-description: Matches "GHT" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

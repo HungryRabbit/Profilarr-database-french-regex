@@ -1,8 +1,0 @@
-name: RELiC
-pattern: '(?<=^|[\s.-])RELiC\b'
-description: Matches "RELiC" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

@@ -1,7 +1,0 @@
-name: ULSHD
-pattern: '(?<=^|[\s.-])ULSHD\b'
-description: Matches "ULSHD" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

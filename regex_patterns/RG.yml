@@ -1,8 +1,0 @@
-name: RG
-pattern: '(?<=^|[\s.-])RG\b'
-description: Matches "RG" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- WEB-DL
-tests: []

@@ -1,8 +1,0 @@
-name: EliteT
-pattern: '(?<=^|[\s.-])EliteT\b'
-description: Matches "EliteT" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

@@ -1,8 +1,0 @@
-name: Aoi Project
-pattern: '(?<=^|[\s.-])Aoi[ .-]?Project\b'
-description: Matches "Aoi Project" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Anime
-tests: []

@@ -1,7 +1,0 @@
-name: TSR
-pattern: '(?<=^|[\s.-])TSR\b'
-description: Matches "TSR" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

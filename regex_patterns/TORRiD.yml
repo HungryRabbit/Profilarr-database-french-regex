@@ -1,8 +1,0 @@
-name: TORRiD
-pattern: '(?<=^|[\s.-])TORRiD\b'
-description: Matches "TORRiD" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

@@ -1,8 +1,0 @@
-name: FZTeam
-pattern: '(?<=^|[\s.-])FZTeam\b'
-description: Matches "FZTeam" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

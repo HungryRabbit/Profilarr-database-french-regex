@@ -1,8 +1,0 @@
-name: ROMKENT
-pattern: '(?<=^|[\s.-])ROMKENT\b'
-description: Matches "ROMKENT" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Remux
-tests: []

@@ -1,7 +1,0 @@
-name: SAFETY
-pattern: '(?<=^|[\s.-])SAFETY\b'
-description: Matches "SAFETY" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

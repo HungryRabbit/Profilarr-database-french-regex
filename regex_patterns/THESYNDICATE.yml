@@ -1,7 +1,0 @@
-name: THESYNDICATE
-pattern: '(?<=^|[\s.-])THESYNDICATE\b'
-description: Matches "THESYNDICATE" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

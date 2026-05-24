@@ -1,8 +1,0 @@
-name: WQM
-pattern: '(?<=^|[\s.-])WQM\b'
-description: Matches "WQM" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- WEB-DL
-tests: []

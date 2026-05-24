@@ -1,8 +1,0 @@
-name: Sicario
-pattern: '(?<=^|[\s.-])Sicario\b'
-description: Matches "Sicario" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Remux
-tests: []

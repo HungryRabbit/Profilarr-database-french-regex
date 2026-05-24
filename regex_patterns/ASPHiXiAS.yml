@@ -1,8 +1,0 @@
-name: ASPHiXiAS
-pattern: '(?<=^|[\s.-])ASPHiXiAS\b'
-description: Matches "ASPHiXiAS" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

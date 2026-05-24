@@ -1,8 +1,0 @@
-name: KHAYA
-pattern: '(?<=^|[\s.-])KHAYA\b'
-description: Matches "KHAYA" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Anime
-tests: []

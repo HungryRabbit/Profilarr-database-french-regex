@@ -1,8 +1,0 @@
-name: Q7
-pattern: '(?<=^|[\s.-])Q7\b'
-description: Matches "Q7" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

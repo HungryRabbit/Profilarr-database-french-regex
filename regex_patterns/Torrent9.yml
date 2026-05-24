@@ -1,8 +1,0 @@
-name: Torrent9
-pattern: '(?<=^|[\s.-])Torrent9\b'
-description: Matches "Torrent9" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

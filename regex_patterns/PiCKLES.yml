@@ -1,8 +1,0 @@
-name: PiCKLES
-pattern: '(?<=^|[\s.-])PiCKLES\b'
-description: Matches "PiCKLES" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

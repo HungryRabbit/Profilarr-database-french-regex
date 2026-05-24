@@ -1,7 +1,0 @@
-name: tFR
-pattern: '(?<=^|[\s.-])tFR\b'
-description: Matches "tFR" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

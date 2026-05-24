@@ -1,9 +1,0 @@
-name: HANAMi
-pattern: '(?<=^|[\s.-])HANAMi\b'
-description: Matches "HANAMi" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Anime
-- WEB-DL
-tests: []

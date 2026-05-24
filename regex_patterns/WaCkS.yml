@@ -1,8 +1,0 @@
-name: WaCkS
-pattern: '(?<=^|[\s.-])WaCkS\b'
-description: Matches "WaCkS" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- WEB-DL
-tests: []

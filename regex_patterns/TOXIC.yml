@@ -1,8 +1,0 @@
-name: TOXIC
-pattern: '(?<=^|[\s.-])TOXIC\b'
-description: Matches "TOXIC" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

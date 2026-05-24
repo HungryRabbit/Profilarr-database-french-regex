@@ -1,7 +1,0 @@
-name: NERO
-pattern: '(?<=^|[\s.-])NERO\b'
-description: Matches "NERO" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

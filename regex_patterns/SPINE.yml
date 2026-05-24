@@ -1,7 +1,0 @@
-name: SPINE
-pattern: '(?<=^|[\s.-])SPINE\b'
-description: Matches "SPINE" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

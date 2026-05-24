@@ -1,9 +1,0 @@
-name: BDHD
-pattern: '(?<=^|[\s.-])BDHD\b'
-description: Matches "BDHD" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Bluray
-- Remux
-tests: []

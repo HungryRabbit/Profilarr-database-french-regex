@@ -1,7 +1,0 @@
-name: FRiES
-pattern: '(?<=^|[\s.-])FRiES\b'
-description: Matches "FRiES" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

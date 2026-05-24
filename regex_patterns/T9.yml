@@ -1,8 +1,0 @@
-name: T9
-pattern: '(?<=^|[\s.-])T9\b'
-description: Matches "T9" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []
