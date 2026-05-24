@@ -23,7 +23,24 @@ L'objectif est de garder une base propre, maintenable et facile a rebase depuis 
 - Ajout de profils FR bases sur la logique Dictionarry, avec les memes tags que les profils originaux.
 - Ajout d'une priorisation langue: `MULTi` > `VF` > `VOSTFR` pour les profils classiques, et `MULTi` > `VOSTFR` > `VF` pour le profil anime.
 - Interdiction des releases `VFQ` dans les profils FR.
-- Conservation des media management Dictionarry sans modification.
+- Conservation de la logique Media Management Dictionarry, avec ses mises a jour V2 recentes.
+
+## Profilarr V2
+
+La publication Profilarr V2 est organisee en operations SQL separees pour garder le projet lisible et maintenable:
+
+```text
+ops/
+  0.core-regex-patterns.sql
+  1.custom-formats.sql
+  2.quality-profiles.sql
+  3.media-management.sql
+  4.delay-profiles.sql
+```
+
+Attention: la premiere version V2 publiee utilisait un unique fichier `ops/0.jojont54-fr.sql`. Ce fichier a ete remplace par la structure ci-dessus avant stabilisation de la V2.
+
+Si vous aviez deja lie la DB V2 avant ce changement, supprimez-la de Profilarr puis ajoutez-la a nouveau afin de repartir sur les nouvelles operations propres. Les utilisateurs de la branche V1 ne sont pas concernes.
 
 ## Sources FR
 
@@ -87,15 +104,25 @@ Les scores restent dans les profils, pas dans les regex. Cela conserve la logiqu
 2160p Remux FR
 720p Quality FR
 Anime 1080p FR
+Anime 1080p VOSTFR FR
 ```
+
+`Anime 1080p FR` conserve la priorisation `MULTi` > `VOSTFR` > `VF`.
+`Anime 1080p VOSTFR FR` est une variante stricte qui accepte uniquement les releases `VOSTFR`.
 
 ## Media management
 
-Les fichiers dans `media_management` sont inchanges par rapport a Dictionarry:
+Les fichiers YAML V1 dans `media_management` restent issus de Dictionarry:
 
 - `naming.yml`
 - `quality_definitions.yml`
 - `misc.yml`
+
+Pour Profilarr V2, les operations SQL integrent egalement les evolutions Dictionarry:
+
+- presets renommes `Radarr` et `Sonarr` au lieu de `default`;
+- preset supplementaire `Radarr / Editionless`;
+- Delay Profiles `Radarr` et `Sonarr` en `prefer_torrent`, avec un delai de `360` minutes.
 
 ## Support
 
