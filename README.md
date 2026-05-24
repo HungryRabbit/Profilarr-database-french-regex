@@ -24,10 +24,16 @@ L'objectif est de garder une base propre, maintenable et facile a rebase depuis 
 - Ajout d'une priorisation langue: `MULTi` > `VF` > `VOSTFR` pour les profils classiques, et `MULTi` > `VOSTFR` > `VF` pour le profil anime.
 - Interdiction des releases `VFQ` dans les profils FR.
 - Conservation de la logique Media Management Dictionarry, avec ses mises a jour V2 recentes.
+- Publication V2 recentree sur les profils FR: les profils originaux non FR et les tiers de release groups anglophones ne sont pas embarques.
+- Conservation des Custom Formats techniques utiles de Dictionarry: sources, codecs, audio, HDR, editions et qualites.
 
 ## Profilarr V2
 
 La branche principale et la branche `develop` publient exclusivement la version Profilarr V2 au format PCD SQL. La source YAML compatible Profilarr V1 est conservee sur la branche `Profilarr-V1`.
+
+La version SQL V2 est volontairement allegee: elle contient uniquement les profils FR listes ci-dessous, leurs Custom Formats FR, et les dependances techniques Dictionarry necessaires a leur fonctionnement.
+
+Les evolutions V2 communes de Dictionarry restent integrees lorsqu'elles sont utiles a nos profils: harmonisation des formats techniques (`Extras`, `Upscale`, `Remux`, HDR, editions, noir et blanc, audio description), conservation des plateformes dans le renommage et ordre explicite des qualites. Les regroupements d'affichage propres aux profils non FR ne sont pas importes.
 
 Les operations SQL V2 sont separees pour garder le projet lisible et maintenable:
 
@@ -106,7 +112,8 @@ Les operations SQL V2 integrent les evolutions Dictionarry:
 
 - presets renommes `Radarr` et `Sonarr` au lieu de `default`;
 - preset supplementaire `Radarr / Editionless`;
-- Delay Profiles `Radarr` et `Sonarr` en `prefer_torrent`, avec un delai de `360` minutes.
+- Delay Profiles `Radarr` et `Sonarr` en `prefer_torrent`, avec un delai de `360` minutes;
+- protection `Full Disc` contre les correspondances de source `HDTV`.
 
 ## Support
 
