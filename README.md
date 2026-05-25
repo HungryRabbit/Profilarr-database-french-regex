@@ -46,9 +46,9 @@ ops/
   4.delay-profiles.sql
 ```
 
-Attention: la premiere version V2 publiee utilisait un unique fichier `ops/0.jojont54-fr.sql`. Ce fichier a ete remplace par la structure ci-dessus avant stabilisation de la V2.
+⚠️ Attention : la premiere version V2 publiee utilisait un unique fichier `ops/0.jojont54-fr.sql`. Ce fichier a ete remplace par la structure ci-dessus avant stabilisation de la V2.
 
-Si vous aviez deja lie la DB V2 avant ce changement, supprimez-la de Profilarr puis ajoutez-la a nouveau afin de repartir sur les nouvelles operations propres. Les utilisateurs de la branche `Profilarr-V1` ne sont pas concernes.
+Si vous aviez deja lie la DB V2 avant ce changement, Profilarr applique les nouvelles operations lors de la synchronisation. En cas de probleme d'import uniquement, supprimez puis ajoutez a nouveau la DB. Les utilisateurs de la branche `Profilarr-V1` ne sont pas concernes.
 
 ## Sources FR
 
