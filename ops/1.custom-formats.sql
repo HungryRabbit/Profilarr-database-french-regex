@@ -7499,3 +7499,50 @@ INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, 
 INSERT INTO condition_sources (custom_format_name, condition_name, source) VALUES ('SKST', 'WEBRip', 'webrip');
 INSERT INTO custom_format_tags (custom_format_name, tag_name) SELECT cf.name, t.name FROM custom_formats cf, tags t WHERE cf.name = 'SKST' AND t.name = 'Streaming Service';
 INSERT INTO custom_format_tags (custom_format_name, tag_name) SELECT cf.name, t.name FROM custom_formats cf, tags t WHERE cf.name = 'SKST' AND t.name = 'WEB-DL';
+
+-- Dictionarry V2 language custom formats without release-group tier logic
+INSERT INTO custom_formats (name, description) VALUES ('Nordic', 'Matches releases explicitly marked Nordic.');
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required) VALUES ('Nordic', 'Nordic', 'release_title', 'all', 0, 1);
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name) VALUES ('Nordic', 'Nordic', 'Nordic');
+INSERT INTO custom_format_tags (custom_format_name, tag_name) SELECT cf.name, t.name FROM custom_formats cf, tags t WHERE cf.name = 'Nordic' AND t.name = 'Language';
+
+INSERT INTO custom_formats (name, description) VALUES ('Dual Audio', 'Matches releases explicitly tagged as Dual Audio.');
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required) VALUES ('Dual Audio', 'Dual Audio', 'release_title', 'all', 0, 1);
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name) VALUES ('Dual Audio', 'Dual Audio', 'Dual Audio');
+INSERT INTO custom_format_tags (custom_format_name, tag_name) SELECT cf.name, t.name FROM custom_formats cf, tags t WHERE cf.name = 'Dual Audio' AND t.name = 'Language';
+
+-- Native French content is already in the desired language and does not need a dubbing marker.
+-- MULTi is excluded here to keep a native MULTi release from receiving two language bonuses.
+INSERT INTO custom_formats (name, description) VALUES ('French Original', 'Priorise les contenus dont la langue originale est le francais, sans exiger de marqueur MULTi ou VF.');
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required) VALUES ('French Original', 'Original', 'language', 'all', 0, 1);
+INSERT INTO condition_languages (custom_format_name, condition_name, language_name, except_language) VALUES ('French Original', 'Original', 'Original', 0);
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required) VALUES ('French Original', 'French', 'language', 'all', 0, 1);
+INSERT INTO condition_languages (custom_format_name, condition_name, language_name, except_language) VALUES ('French Original', 'French', 'French', 0);
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required) VALUES ('French Original', 'Not French MULTi', 'release_title', 'all', 1, 1);
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name) VALUES ('French Original', 'Not French MULTi', 'French MULTi');
+INSERT INTO custom_format_tags (custom_format_name, tag_name) SELECT cf.name, t.name FROM custom_formats cf, tags t WHERE cf.name = 'French Original' AND t.name IN ('French', 'Language');
+
+-- An original French or Quebec release must not be downgraded as VF/VFQ/VOSTFR.
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required) VALUES ('French VF', 'Not Original', 'language', 'all', 1, 1);
+INSERT INTO condition_languages (custom_format_name, condition_name, language_name, except_language) VALUES ('French VF', 'Not Original', 'Original', 0);
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required) VALUES ('French VFQ', 'Not Original', 'language', 'all', 1, 1);
+INSERT INTO condition_languages (custom_format_name, condition_name, language_name, except_language) VALUES ('French VFQ', 'Not Original', 'Original', 0);
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required) VALUES ('French VOSTFR', 'Not Original', 'language', 'all', 1, 1);
+INSERT INTO condition_languages (custom_format_name, condition_name, language_name, except_language) VALUES ('French VOSTFR', 'Not Original', 'Original', 0);
+
+-- Dictionarry V2 source formats required by the revised technical score ladder
+INSERT INTO custom_formats (name, description) VALUES ('576p WEB-DL', 'Matches 576p WEB-DLs.');
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required) VALUES ('576p WEB-DL', '576p', 'resolution', 'all', 0, 1);
+INSERT INTO condition_resolutions (custom_format_name, condition_name, resolution) VALUES ('576p WEB-DL', '576p', '576p');
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required) VALUES ('576p WEB-DL', 'WEB-DL', 'source', 'all', 0, 1);
+INSERT INTO condition_sources (custom_format_name, condition_name, source) VALUES ('576p WEB-DL', 'WEB-DL', 'web_dl');
+INSERT INTO custom_format_tags (custom_format_name, tag_name) SELECT cf.name, t.name FROM custom_formats cf, tags t WHERE cf.name = '576p WEB-DL' AND t.name = 'Source';
+
+INSERT INTO custom_formats (name, description) VALUES ('1080p Bluray (Efficient)', 'Matches 1080p x264 Blurays as an Efficient movie fallback.');
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required) VALUES ('1080p Bluray (Efficient)', '1080p', 'resolution', 'all', 0, 1);
+INSERT INTO condition_resolutions (custom_format_name, condition_name, resolution) VALUES ('1080p Bluray (Efficient)', '1080p', '1080p');
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required) VALUES ('1080p Bluray (Efficient)', 'Bluray', 'source', 'all', 0, 1);
+INSERT INTO condition_sources (custom_format_name, condition_name, source) VALUES ('1080p Bluray (Efficient)', 'Bluray', 'bluray');
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required) VALUES ('1080p Bluray (Efficient)', 'x264', 'release_title', 'all', 0, 1);
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name) VALUES ('1080p Bluray (Efficient)', 'x264', 'AVC');
+INSERT INTO custom_format_tags (custom_format_name, tag_name) SELECT cf.name, t.name FROM custom_formats cf, tags t WHERE cf.name = '1080p Bluray (Efficient)' AND t.name = 'Source';

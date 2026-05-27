@@ -6125,3 +6125,86 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 SELECT qp.name, cf.name, 'all', 0
 FROM quality_profiles qp, custom_formats cf
 WHERE qp.name IN ('1080p Balanced FR', '1080p Compact FR', '1080p Efficient FR', '1080p Quality FR', '1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR', '720p Quality FR') AND cf.name = 'SKST';
+
+-- Dictionarry V2 technical score ladder, retained without anglophone group tiers.
+UPDATE quality_profile_custom_formats SET score = 200000 WHERE quality_profile_name IN ('1080p Balanced FR', '1080p Compact FR', '1080p Efficient FR', '1080p Quality FR', '1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR', '720p Quality FR') AND custom_format_name = 'DVD';
+UPDATE quality_profile_custom_formats SET score = 220000 WHERE quality_profile_name IN ('1080p Balanced FR', '1080p Compact FR', '1080p Efficient FR', '1080p Quality FR', '1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR', '720p Quality FR') AND custom_format_name = 'DVD Remux';
+UPDATE quality_profile_custom_formats SET score = 280000 WHERE quality_profile_name IN ('1080p Balanced FR', '1080p Compact FR', '1080p Efficient FR', '1080p Quality FR', '1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR', '720p Quality FR') AND custom_format_name = '480p WEB-DL';
+UPDATE quality_profile_custom_formats SET score = 320000 WHERE quality_profile_name IN ('1080p Balanced FR', '1080p Compact FR', '1080p Efficient FR', '1080p Quality FR', '1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR', '720p Quality FR') AND custom_format_name = '480p Bluray';
+UPDATE quality_profile_custom_formats SET score = 420000 WHERE quality_profile_name IN ('1080p Balanced FR', '1080p Compact FR', '1080p Efficient FR', '1080p Quality FR', '1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR', '720p Quality FR') AND custom_format_name = '576p Bluray';
+UPDATE quality_profile_custom_formats SET score = 540000 WHERE quality_profile_name IN ('1080p Balanced FR', '1080p Compact FR', '1080p Efficient FR', '1080p Quality FR', '1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR', '720p Quality FR') AND custom_format_name IN ('720p Bluray', '720p WEBRip');
+UPDATE quality_profile_custom_formats SET score = 660000 WHERE quality_profile_name IN ('1080p Balanced FR', '1080p Compact FR', '1080p Efficient FR', '1080p Quality FR', '1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR', '720p Quality FR') AND custom_format_name = '720p WEB-DL';
+UPDATE quality_profile_custom_formats SET score = 700000 WHERE quality_profile_name IN ('1080p Quality FR', '1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Quality FR', '2160p Remux FR') AND custom_format_name IN ('1080p Bluray', '1080p WEBRip');
+UPDATE quality_profile_custom_formats SET score = 860000 WHERE quality_profile_name IN ('1080p Balanced FR', '1080p Quality FR', '1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Quality FR', '2160p Remux FR') AND custom_format_name = '1080p WEB-DL';
+UPDATE quality_profile_custom_formats SET score = 860000 WHERE quality_profile_name IN ('1080p Compact FR', '1080p Efficient FR', '2160p Efficient FR') AND custom_format_name = '1080p WEB-DL (h264)';
+UPDATE quality_profile_custom_formats SET score = 840000 WHERE quality_profile_name IN ('1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Quality FR', '2160p Remux FR') AND custom_format_name = 'UHD Bluray';
+UPDATE quality_profile_custom_formats SET score = 920000 WHERE quality_profile_name IN ('2160p Balanced FR', '2160p Quality FR', '2160p Remux FR') AND custom_format_name = '2160p WEB-DL';
+UPDATE quality_profile_custom_formats SET score = 920000 WHERE quality_profile_name IN ('1080p Remux FR', '2160p Remux FR') AND custom_format_name = '1080p Remux';
+UPDATE quality_profile_custom_formats SET score = 980000 WHERE quality_profile_name = '2160p Remux FR' AND custom_format_name = '2160p Remux';
+UPDATE quality_profile_custom_formats SET arr_type = 'radarr' WHERE quality_profile_name IN ('1080p Balanced FR', '1080p Compact FR', '1080p Efficient FR', '1080p Quality FR', '1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR', '720p Quality FR') AND custom_format_name IN ('720p WEBRip', '1080p WEBRip') AND arr_type = 'all';
+
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+SELECT qp.name, cf.name, 'all', 300000 FROM quality_profiles qp, custom_formats cf
+WHERE qp.name IN ('1080p Balanced FR', '1080p Compact FR', '1080p Efficient FR', '1080p Quality FR', '1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR', '720p Quality FR')
+  AND cf.name = '576p WEB-DL';
+
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+SELECT qp.name, cf.name, 'radarr', 700000 FROM quality_profiles qp, custom_formats cf
+WHERE qp.name IN ('1080p Efficient FR', '2160p Efficient FR') AND cf.name = '1080p Bluray (Efficient)';
+
+-- Streaming-service adjustments from Dictionarry V2 that do not depend on release groups.
+UPDATE quality_profile_custom_formats SET score = 2000
+WHERE quality_profile_name IN ('1080p Balanced FR', '1080p Compact FR', '1080p Efficient FR', '1080p Quality FR', '1080p Quality HDR FR', '1080p Remux FR', '720p Quality FR')
+  AND custom_format_name = 'DSNP' AND score = 3000;
+UPDATE quality_profile_custom_formats SET score = 2000
+WHERE quality_profile_name IN ('2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR')
+  AND custom_format_name = 'DSNP' AND arr_type = 'radarr';
+DELETE FROM quality_profile_custom_formats
+WHERE quality_profile_name IN ('2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR')
+  AND custom_format_name = 'Disney+ Enhancement' AND arr_type = 'radarr';
+UPDATE quality_profile_custom_formats SET score = 5000
+WHERE quality_profile_name IN ('2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR')
+  AND custom_format_name = 'MA' AND arr_type = 'radarr';
+DELETE FROM quality_profile_custom_formats
+WHERE quality_profile_name IN ('2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR')
+  AND custom_format_name = 'Amazon Enhancement' AND arr_type = 'all';
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+SELECT qp.name, cf.name, 'radarr', 2000 FROM quality_profiles qp, custom_formats cf
+WHERE qp.name IN ('2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR') AND cf.name = 'Amazon Enhancement';
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+SELECT qp.name, cf.name, 'sonarr', 1000 FROM quality_profiles qp, custom_formats cf
+WHERE qp.name IN ('2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR') AND cf.name = 'Amazon Enhancement';
+DELETE FROM quality_profile_custom_formats
+WHERE quality_profile_name IN ('2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR')
+  AND custom_format_name = 'BCORE' AND arr_type = 'all';
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+SELECT qp.name, cf.name, 'radarr',
+       CASE WHEN qp.name IN ('2160p Balanced FR', '2160p Efficient FR') THEN -999999 ELSE 6000 END
+FROM quality_profiles qp, custom_formats cf
+WHERE qp.name IN ('2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR') AND cf.name = 'BCORE';
+
+-- French language preference is expressed as fallbacks inside Dictionarry's 1,000,000 scale.
+-- A recognised high-quality VF/MULTi may beat a VOSTFR Remux, while a large quality gap still matters.
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+SELECT qp.name, cf.name, 'all', 0 FROM quality_profiles qp, custom_formats cf
+WHERE qp.name IN ('1080p Balanced FR', '1080p Compact FR', '1080p Efficient FR', '1080p Quality FR', '1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR', '720p Quality FR', 'Anime 1080p FR') AND cf.name = 'French Original';
+UPDATE quality_profile_custom_formats SET score = 0
+WHERE quality_profile_name IN ('1080p Balanced FR', '1080p Compact FR', '1080p Efficient FR', '1080p Quality FR', '1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR', '720p Quality FR', 'Anime 1080p FR') AND custom_format_name = 'French MULTi';
+UPDATE quality_profile_custom_formats SET score = -50000
+WHERE quality_profile_name IN ('1080p Balanced FR', '1080p Compact FR', '1080p Efficient FR', '1080p Quality FR', '1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR', '720p Quality FR') AND custom_format_name = 'French VF';
+UPDATE quality_profile_custom_formats SET score = -200000
+WHERE quality_profile_name IN ('1080p Balanced FR', '1080p Compact FR', '1080p Efficient FR', '1080p Quality FR', '1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR', '720p Quality FR') AND custom_format_name = 'French VOSTFR';
+UPDATE quality_profile_custom_formats SET score = -20000 WHERE quality_profile_name = 'Anime 1080p FR' AND custom_format_name = 'French VOSTFR';
+UPDATE quality_profile_custom_formats SET score = -60000 WHERE quality_profile_name = 'Anime 1080p FR' AND custom_format_name = 'French VF';
+UPDATE quality_profile_custom_formats SET score = 0 WHERE quality_profile_name = 'Anime 1080p VOSTFR FR' AND custom_format_name = 'French VOSTFR';
+
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+SELECT qp.name, cf.name, 'all', -999999 FROM quality_profiles qp, custom_formats cf
+WHERE qp.name = 'Anime 1080p VOSTFR FR' AND cf.name = 'French Original';
+
+UPDATE quality_profiles SET upgrade_until_score = 1000000
+WHERE name IN ('1080p Balanced FR', '1080p Compact FR', '1080p Efficient FR', '1080p Quality FR', '1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR', '720p Quality FR');
+UPDATE quality_profiles SET upgrade_until_score = 101000
+WHERE name IN ('Anime 1080p FR', 'Anime 1080p VOSTFR FR');
+UPDATE quality_profiles SET minimum_custom_format_score = 0
+WHERE name = 'Anime 1080p VOSTFR FR';

@@ -21,8 +21,8 @@ L'objectif est de garder une base propre, maintenable et facile a rebase depuis 
 - Ajout de regex atomiques pour les teams FR.
 - Ajout de Custom Formats FR avec une tier list inspiree de plusieurs sources francophones.
 - Ajout de profils FR bases sur la logique Dictionarry, avec les memes tags que les profils originaux.
-- Ajout d'une priorisation langue: `MULTi` > `VF` > `VOSTFR` pour les profils classiques, et `MULTi` > `VOSTFR` > `VF` pour le profil anime.
-- Interdiction des releases `VFQ` dans les profils FR.
+- Ajout d'une priorisation langue: `MULTi` / `French Original` > `VF` > `VOSTFR` pour les profils classiques, et `MULTi` / `French Original` > `VOSTFR` > `VF` pour le profil anime.
+- Interdiction des doublages `VFQ` dans les profils FR; un contenu original francophone, notamment quebecois, est classe `French Original` et n'est pas penalise.
 - Conservation de la logique Media Management Dictionarry, avec ses mises a jour V2 recentes.
 - Publication V2 recentree sur les profils FR: les profils originaux non FR et les tiers de release groups anglophones ne sont pas embarques.
 - Conservation des Custom Formats techniques utiles de Dictionarry: sources, codecs, audio, HDR, editions et qualites.
@@ -78,6 +78,7 @@ Les Custom Formats FR sont separes par usage:
 - `FR Movie ...`
 - `FR TV ...`
 - `French MULTi`
+- `French Original`
 - `French VF`
 - `French VOSTFR`
 - `French VFQ`
@@ -103,7 +104,7 @@ Anime 1080p FR
 Anime 1080p VOSTFR FR
 ```
 
-`Anime 1080p FR` priorise `MULTi` > `VOSTFR` > `VF`.
+`Anime 1080p FR` priorise `MULTi` / `French Original` > `VOSTFR` > `VF`.
 `Anime 1080p VOSTFR FR` priorise uniquement les releases `VOSTFR`.
 
 ## Media management

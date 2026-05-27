@@ -5673,3 +5673,8 @@ INSERT INTO regular_expression_tags (regular_expression_name, tag_name) SELECT r
 INSERT INTO regular_expression_tags (regular_expression_name, tag_name) SELECT re.name, t.name FROM regular_expressions re, tags t WHERE re.name = 'German DL' AND t.name = 'Language';
 INSERT INTO regular_expression_tags (regular_expression_name, tag_name) SELECT re.name, t.name FROM regular_expressions re, tags t WHERE re.name = 'HDTV' AND t.name = 'Source';
 INSERT INTO regular_expression_tags (regular_expression_name, tag_name) SELECT re.name, t.name FROM regular_expressions re, tags t WHERE re.name = 'UHD Bluray' AND t.name = 'UHD Bluray';
+
+-- Dictionarry V2 language markers retained independently of release groups
+INSERT INTO regular_expressions (name, pattern, description) VALUES ('Nordic', '\b(Nordic)\b', 'Matches releases explicitly marked Nordic.');
+INSERT INTO regular_expressions (name, pattern, description) VALUES ('Dual Audio', '\bDual[ ._-]?(Audio)?\b|\b(JA|ZH|KO)(?= ?\+ ?.*?\b(EN))|\b(EN)(?= ?\+ ?.*?\b(JA|ZH|KO))\b', 'Matches explicitly tagged dual-audio releases and common Asian language plus English pairs.');
+INSERT INTO regular_expression_tags (regular_expression_name, tag_name) SELECT re.name, t.name FROM regular_expressions re, tags t WHERE re.name IN ('Nordic', 'Dual Audio') AND t.name = 'Language';
