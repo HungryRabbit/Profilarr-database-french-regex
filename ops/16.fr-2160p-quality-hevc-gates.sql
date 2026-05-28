@@ -1,5 +1,8 @@
 -- @operation: export
+-- @entity: batch
 -- @name: fr 2160p quality hevc gates
+-- @exportedAt: 2026-05-28T00:00:00.000Z
+-- @opIds: 9016
 
 -- 2160p French quality tiers carry high Dictionarry V2-style scores.
 -- 2160p h264 exists but is rare, while the intended 2160p tier behavior is

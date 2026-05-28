@@ -1,5 +1,8 @@
 -- @operation: export
+-- @entity: batch
 -- @name: require web title for fr web tiers
+-- @exportedAt: 2026-05-28T00:00:00.000Z
+-- @opIds: 9018
 
 -- FR WEB tiers must not match on source alone.
 --

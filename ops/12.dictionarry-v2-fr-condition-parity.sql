@@ -1,5 +1,8 @@
 -- @operation: export
+-- @entity: batch
 -- @name: dictionarry v2 fr condition parity
+-- @exportedAt: 2026-05-28T00:00:00.000Z
+-- @opIds: 9012
 
 -- Align non-team conditions of French release-group tiers with Dictionarry V2.
 -- Team lists stay French; source/resolution/codec gates follow the upstream shape.

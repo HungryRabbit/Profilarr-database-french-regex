@@ -1,5 +1,8 @@
 -- @operation: export
+-- @entity: batch
 -- @name: dictionarry v2 technical score parity
+-- @exportedAt: 2026-05-28T00:00:00.000Z
+-- @opIds: 9013
 
 -- Align technical profile scores with Dictionarry V2 for FR profiles.
 -- French language CFs and French release-group tiers are intentionally excluded.

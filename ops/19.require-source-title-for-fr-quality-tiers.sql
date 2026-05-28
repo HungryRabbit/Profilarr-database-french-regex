@@ -1,5 +1,8 @@
 -- @operation: export
+-- @entity: batch
 -- @name: require source title for fr quality tiers
+-- @exportedAt: 2026-05-28T00:00:00.000Z
+-- @opIds: 9019
 
 -- FR 720p/1080p Quality tiers must not match on source alone.
 --

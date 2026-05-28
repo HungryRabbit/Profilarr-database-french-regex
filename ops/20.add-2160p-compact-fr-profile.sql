@@ -1,5 +1,8 @@
 -- @operation: export
+-- @entity: batch
 -- @name: add 2160p compact fr profile
+-- @exportedAt: 2026-05-28T00:00:00.000Z
+-- @opIds: 9020
 
 -- ============================================================================
 -- 2160p Compact FR

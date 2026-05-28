@@ -1,5 +1,8 @@
 -- @operation: export
+-- @entity: batch
 -- @name: dictionarry v2 score alignment
+-- @exportedAt: 2026-05-28T00:00:00.000Z
+-- @opIds: 9006
 
 -- ============================================================================
 -- Dictionarry V2 score alignment for FR profiles

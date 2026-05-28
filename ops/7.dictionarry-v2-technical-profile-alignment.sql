@@ -1,5 +1,8 @@
 -- @operation: export
+-- @entity: batch
 -- @name: dictionarry v2 technical profile alignment
+-- @exportedAt: 2026-05-28T00:00:00.000Z
+-- @opIds: 9007
 
 -- ============================================================================
 -- Dictionarry V2 technical profile alignment for FR profiles

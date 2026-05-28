@@ -1,5 +1,8 @@
 -- @operation: export
+-- @entity: batch
 -- @name: fr 2160p 1080p fallback cap
+-- @exportedAt: 2026-05-28T00:00:00.000Z
+-- @opIds: 9011
 
 -- ============================================================================
 -- FR 1080p quality tier cap

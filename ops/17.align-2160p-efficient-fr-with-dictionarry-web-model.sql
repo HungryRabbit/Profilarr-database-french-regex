@@ -1,5 +1,8 @@
 -- @operation: export
+-- @entity: batch
 -- @name: align 2160p efficient fr with dictionarry web model
+-- @exportedAt: 2026-05-28T00:00:00.000Z
+-- @opIds: 9017
 
 -- Align 2160p Efficient FR with Dictionarry V2's WEB model.
 --

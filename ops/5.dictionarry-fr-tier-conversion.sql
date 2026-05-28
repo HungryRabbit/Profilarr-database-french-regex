@@ -1,5 +1,8 @@
 -- @operation: export
+-- @entity: batch
 -- @name: dictionarry fr tier conversion
+-- @exportedAt: 2026-05-28T00:00:00.000Z
+-- @opIds: 9005
 
 -- ============================================================================
 -- Dictionarry V2 French release-group tier conversion

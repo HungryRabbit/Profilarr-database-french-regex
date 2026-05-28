@@ -1,5 +1,8 @@
 -- @operation: export
+-- @entity: batch
 -- @name: fr tier source gate hardening
+-- @exportedAt: 2026-05-28T00:00:00.000Z
+-- @opIds: 9008
 
 -- ============================================================================
 -- FR tier source-gate hardening

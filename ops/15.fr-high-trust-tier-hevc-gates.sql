@@ -1,5 +1,8 @@
 -- @operation: export
+-- @entity: batch
 -- @name: fr high trust tier hevc gates
+-- @exportedAt: 2026-05-28T00:00:00.000Z
+-- @opIds: 9015
 
 -- French replacements for hallowed/BHDStudio/HONE must be HEVC-gated.
 -- Upstream can omit this because those groups are effectively HEVC-only in the

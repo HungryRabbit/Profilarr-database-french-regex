@@ -1,5 +1,8 @@
 -- @operation: export
+-- @entity: batch
 -- @name: dictionarry v2 common cf condition parity
+-- @exportedAt: 2026-05-28T00:00:00.000Z
+-- @opIds: 9014
 
 -- Align remaining common non-French custom format conditions with Dictionarry V2.
 

@@ -1,5 +1,8 @@
 -- @operation: export
+-- @entity: batch
 -- @name: fr 2160p efficient scene cap
+-- @exportedAt: 2026-05-28T00:00:00.000Z
+-- @opIds: 9010
 
 -- ============================================================================
 -- FR high-ceiling scene cap

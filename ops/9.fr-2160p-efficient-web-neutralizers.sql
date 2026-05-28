@@ -1,5 +1,8 @@
 -- @operation: export
+-- @entity: batch
 -- @name: fr 2160p efficient web neutralizers
+-- @exportedAt: 2026-05-28T00:00:00.000Z
+-- @opIds: 9009
 
 -- ============================================================================
 -- FR 2160p Efficient WEB neutralizers
