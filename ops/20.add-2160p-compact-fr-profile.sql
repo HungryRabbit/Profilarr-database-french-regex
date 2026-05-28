@@ -301,7 +301,6 @@ INSERT INTO quality_groups (quality_profile_name, name)
 VALUES
   ('2160p Compact FR', '2160p Compact'),
   ('2160p Compact FR', '1080p Balanced'),
-  ('2160p Compact FR', '1080p Efficient'),
   ('2160p Compact FR', '720p Quality'),
   ('2160p Compact FR', '480p Quality');
 
@@ -310,9 +309,7 @@ WITH members(group_name, quality_name, position) AS (
   ('2160p Compact', 'Bluray-2160p', 0),
   ('2160p Compact', 'WEBRip-2160p', 1),
   ('1080p Balanced', 'WEBDL-1080p', 0),
-  ('1080p Efficient', 'Bluray-1080p', 0),
-  ('1080p Efficient', 'WEBDL-1080p', 1),
-  ('1080p Efficient', 'WEBRip-1080p', 2),
+  ('1080p Balanced', 'WEBRip-1080p', 1),
   ('720p Quality', 'Bluray-720p', 0),
   ('720p Quality', 'WEBDL-720p', 1),
   ('720p Quality', 'WEBRip-720p', 2),
@@ -329,7 +326,7 @@ WITH profile_qualities(quality_group_name, quality_name, position, enabled, upgr
   VALUES
   ('2160p Compact', NULL, 0, 1, 1),
   ('1080p Balanced', NULL, 1, 1, 0),
-  ('1080p Efficient', NULL, 2, 1, 0),
+  (NULL, 'Bluray-1080p', 2, 1, 0),
   ('720p Quality', NULL, 3, 1, 0),
   (NULL, 'HDTV-1080p', 4, 1, 0),
   (NULL, 'HDTV-720p', 5, 1, 0),
