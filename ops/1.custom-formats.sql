@@ -882,6 +882,10 @@ SELECT cf.name, 'TANOSHii', 'release_title', 'all', 0, 0
 FROM custom_formats cf
 WHERE cf.name = 'FR Anime Tier 01';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT cf.name, 'TenmaLand', 'release_title', 'all', 0, 0
+FROM custom_formats cf
+WHERE cf.name = 'FR Anime Tier 01';
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'Tsundere-Raws', 'release_title', 'all', 0, 0
 FROM custom_formats cf
 WHERE cf.name = 'FR Anime Tier 01';
@@ -4897,6 +4901,10 @@ INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expr
 SELECT 'FR Anime Tier 01', 'TANOSHii', re.name
 FROM regular_expressions re
 WHERE re.name = 'TANOSHii';
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT 'FR Anime Tier 01', 'TenmaLand', re.name
+FROM regular_expressions re
+WHERE re.name = 'TenmaLand';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
 SELECT 'FR Anime Tier 01', 'Tsundere-Raws', re.name
 FROM regular_expressions re

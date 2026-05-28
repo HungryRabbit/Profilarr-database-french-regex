@@ -522,6 +522,7 @@ INSERT INTO regular_expressions (name, pattern, description) VALUES ('TANOSHii',
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('TAT', '(?<=^|[\s.-])TAT\b', 'Matches "TAT" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('TeamSuW', '(?<=^|[\s.-])TeamSuW\b', 'Matches "TeamSuW" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('Tezcat74', '(?<=^|[\s.-])Tezcat74\b', 'Matches "Tezcat74" when preceded by whitespace, a hyphen or dot');
+INSERT INTO regular_expressions (name, pattern, description) VALUES ('TenmaLand', '(?<=^|[\s.-])TenmaLand\b', 'Matches "TenmaLand" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('TFA', '(?<=^|[\s.-])TFA\b', 'Matches "TFA" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('tFR', '(?<=^|[\s.-])tFR\b', 'Matches "tFR" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('Theatrical Edition', '(?<=\b[12]\d{3}\b).*\b(Theatrical)(\b|\d)', 'Matches any type of theatrical edition.
@@ -4841,6 +4842,22 @@ INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
 SELECT re.name, t.name
 FROM regular_expressions re, tags t
 WHERE re.name = 'Tezcat74' AND t.name = 'Remux';
+INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
+SELECT re.name, t.name
+FROM regular_expressions re, tags t
+WHERE re.name = 'TenmaLand' AND t.name = 'Anime';
+INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
+SELECT re.name, t.name
+FROM regular_expressions re, tags t
+WHERE re.name = 'TenmaLand' AND t.name = 'French';
+INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
+SELECT re.name, t.name
+FROM regular_expressions re, tags t
+WHERE re.name = 'TenmaLand' AND t.name = 'Release Group';
+INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
+SELECT re.name, t.name
+FROM regular_expressions re, tags t
+WHERE re.name = 'TenmaLand' AND t.name = 'WEB-DL';
 INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
 SELECT re.name, t.name
 FROM regular_expressions re, tags t
