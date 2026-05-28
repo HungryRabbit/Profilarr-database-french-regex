@@ -44,6 +44,22 @@ ops/
   2.quality-profiles.sql
   3.media-management.sql
   4.delay-profiles.sql
+  5.dictionarry-fr-tier-conversion.sql
+  6.dictionarry-v2-score-alignment.sql
+  7.dictionarry-v2-technical-profile-alignment.sql
+  8.fr-tier-source-gate-hardening.sql
+  9.fr-2160p-efficient-web-neutralizers.sql
+  10.fr-2160p-efficient-scene-cap.sql
+  11.fr-2160p-1080p-fallback-cap.sql
+  12.dictionarry-v2-fr-condition-parity.sql
+  13.dictionarry-v2-technical-score-parity.sql
+  14.dictionarry-v2-common-cf-condition-parity.sql
+  15.fr-high-trust-tier-hevc-gates.sql
+  16.fr-2160p-quality-hevc-gates.sql
+  17.align-2160p-efficient-fr-with-dictionarry-web-model.sql
+  18.require-web-title-for-fr-web-tiers.sql
+  19.require-source-title-for-fr-quality-tiers.sql
+  20.add-2160p-compact-fr-profile.sql
 ```
 
 ⚠️ Attention : la premiere version V2 publiee utilisait un unique fichier `ops/0.jojont54-fr.sql`. Ce fichier a ete remplace par la structure ci-dessus avant stabilisation de la V2.
@@ -69,20 +85,40 @@ Chaque team FR est representee par une regex atomique integree aux operations PC
 
 Les Custom Formats FR sont separes par usage:
 
-- `FR Global Tier 01/02`
+- `FR 720p Quality Tier ...`
+- `FR 1080p Balanced Tier ...`
+- `FR 1080p Compact Movie/TV Bluray/WEB Tier ...`
+- `FR 2160p Compact Movie/TV Bluray/WEB Tier ...`
+- `FR 1080p Bluray HEVC Tier ...`
+- `FR 1080p WEB-DL HEVC Tier ...`
+- `FR 1080p Quality Tier ...`
+- `FR 2160p Balanced Tier ...`
+- `FR 2160p Efficient Movie/TV Bluray/WEB Tier ...`
+- `FR 2160p Quality Tier ...`
+- `FR Remux Tier ...`
 - `FR Scene Groups`
-- `FR HDLight Tier`
 - `FR LQ`
 - `FR Anime Tier 01/02/03`
 - `FR Anime FanSub`
-- `FR Movie ...`
-- `FR TV ...`
 - `French MULTi`
 - `French Original`
+- `French Original Marker`
 - `French VF`
 - `French VOSTFR`
 - `French VFQ`
 - `French Missing`
+
+Les anciens Custom Formats FR issus des sources TRaSH/DBFR (`FR Movie ...`, `FR TV ...`, `FR Global Tier ...`, `FR HDLight Tier`) restent disponibles comme historique de migration, mais les profils FR principaux utilisent les nouveaux noms alignes sur Dictionarry avec `FR` en prefixe.
+
+Les conditions non-team des Custom Formats communs et des tiers FR derives de Dictionarry sont alignees sur Dictionarry V2. Cela conserve les subtilites importantes, par exemple `WEB-DL` et `WEBRip` ne declenchent pas les memes tiers.
+
+Les scores techniques des profils FR sont realignes sur Dictionarry V2. Les scores de langue, les tiers de teams FR et les plafonnements necessaires a la logique francaise restent geres separement.
+
+Le profil `2160p Efficient FR` utilise des neutralizers WEB FR pour annuler le score source `2160p WEB-DL (Efficient)` quand un tier WEB composite FR est deja applique.
+
+Dans les profils a score technique tres eleve (`1080p Remux FR`, `2160p Balanced FR`, `2160p Efficient FR`, `2160p Quality FR`, `2160p Remux FR`), `FR Scene Groups` est volontairement plafonne car le score source est deja proche du maximum.
+
+Les tiers `FR 1080p Quality` sont aussi plafonnes dans les profils Quality/Remux pour rester sous le score maximum avec une source `1080p WEB-DL`.
 
 Les scores restent dans les profils, pas dans les regex. Cela conserve la logique Dictionarry: les regex detectent, les Custom Formats regroupent, les profils priorisent.
 
@@ -96,6 +132,7 @@ Les scores restent dans les profils, pas dans les regex. Cela conserve la logiqu
 1080p Quality HDR FR
 1080p Remux FR
 2160p Balanced FR
+2160p Compact FR
 2160p Efficient FR
 2160p Quality FR
 2160p Remux FR

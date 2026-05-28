@@ -80,8 +80,9 @@ INSERT INTO custom_formats (name, description) VALUES ('FR TV Remux Tier 01', 'M
 INSERT INTO custom_formats (name, description) VALUES ('FR TV WEB Tier 01', 'Matches French TV release groups who fall under WEB Tier 01');
 INSERT INTO custom_formats (name, description) VALUES ('FR TV WEB Tier 02', 'Matches French TV release groups who fall under WEB Tier 02');
 INSERT INTO custom_formats (name, description) VALUES ('FR TV WEB Tier 03', 'Matches French TV release groups who fall under WEB Tier 03');
-INSERT INTO custom_formats (name, description) VALUES ('French Missing', 'Rejects releases without an explicit French MULTi, VF, VOSTFR, or VFQ marker.');
+INSERT INTO custom_formats (name, description) VALUES ('French Missing', 'Rejects releases without an explicit French MULTi, French Original, VF, VOSTFR, or VFQ marker.');
 INSERT INTO custom_formats (name, description) VALUES ('French MULTi', 'Prioritizes French MULTi releases without also matching VFQ or VOSTFR.');
+INSERT INTO custom_formats (name, description) VALUES ('French Original Marker', 'Priorise les releases marquees VOF ou VOQ comme version originale francophone.');
 INSERT INTO custom_formats (name, description) VALUES ('French VF', 'Prioritizes French dubbed releases when they are not MULTi, VOSTFR, or VFQ.');
 INSERT INTO custom_formats (name, description) VALUES ('French VFQ', 'Rejects Quebec French releases from French profiles.');
 INSERT INTO custom_formats (name, description) VALUES ('French VOSTFR', 'Allows lower-priority original-audio releases with French subtitles when they are not MULTi or VF.');
@@ -2849,6 +2850,10 @@ SELECT cf.name, 'Not French VFQ', 'release_title', 'all', 1, 1
 FROM custom_formats cf
 WHERE cf.name = 'French Missing';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT cf.name, 'Not French Original Marker', 'release_title', 'all', 1, 1
+FROM custom_formats cf
+WHERE cf.name = 'French Missing';
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'French MULTi', 'release_title', 'all', 0, 1
 FROM custom_formats cf
 WHERE cf.name = 'French MULTi';
@@ -2877,7 +2882,15 @@ SELECT cf.name, 'Not French VFQ', 'release_title', 'all', 1, 1
 FROM custom_formats cf
 WHERE cf.name = 'French VF';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT cf.name, 'Not French Original Marker', 'release_title', 'all', 1, 1
+FROM custom_formats cf
+WHERE cf.name = 'French VF';
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'French VFQ', 'release_title', 'all', 0, 1
+FROM custom_formats cf
+WHERE cf.name = 'French VFQ';
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT cf.name, 'Not French Original Marker', 'release_title', 'all', 1, 1
 FROM custom_formats cf
 WHERE cf.name = 'French VFQ';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
@@ -2896,6 +2909,14 @@ INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, 
 SELECT cf.name, 'Not French VFQ', 'release_title', 'all', 1, 1
 FROM custom_formats cf
 WHERE cf.name = 'French VOSTFR';
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT cf.name, 'Not French Original Marker', 'release_title', 'all', 1, 1
+FROM custom_formats cf
+WHERE cf.name = 'French VOSTFR';
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT cf.name, 'French Original Marker', 'release_title', 'all', 0, 1
+FROM custom_formats cf
+WHERE cf.name = 'French Original Marker';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'Full Disc', 'release_title', 'all', 0, 1
 FROM custom_formats cf
@@ -4044,6 +4065,14 @@ INSERT INTO custom_format_tags (custom_format_name, tag_name)
 SELECT cf.name, t.name
 FROM custom_formats cf, tags t
 WHERE cf.name = 'French MULTi' AND t.name = 'Language';
+INSERT INTO custom_format_tags (custom_format_name, tag_name)
+SELECT cf.name, t.name
+FROM custom_formats cf, tags t
+WHERE cf.name = 'French Original Marker' AND t.name = 'French';
+INSERT INTO custom_format_tags (custom_format_name, tag_name)
+SELECT cf.name, t.name
+FROM custom_formats cf, tags t
+WHERE cf.name = 'French Original Marker' AND t.name = 'Language';
 INSERT INTO custom_format_tags (custom_format_name, tag_name)
 SELECT cf.name, t.name
 FROM custom_formats cf, tags t
@@ -6737,6 +6766,10 @@ SELECT 'French Missing', 'Not French VFQ', re.name
 FROM regular_expressions re
 WHERE re.name = 'French VFQ';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT 'French Missing', 'Not French Original Marker', re.name
+FROM regular_expressions re
+WHERE re.name = 'French Original Marker';
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
 SELECT 'French MULTi', 'French MULTi', re.name
 FROM regular_expressions re
 WHERE re.name = 'French MULTi';
@@ -6765,9 +6798,17 @@ SELECT 'French VF', 'Not French VFQ', re.name
 FROM regular_expressions re
 WHERE re.name = 'French VFQ';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT 'French VF', 'Not French Original Marker', re.name
+FROM regular_expressions re
+WHERE re.name = 'French Original Marker';
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
 SELECT 'French VFQ', 'French VFQ', re.name
 FROM regular_expressions re
 WHERE re.name = 'French VFQ';
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT 'French VFQ', 'Not French Original Marker', re.name
+FROM regular_expressions re
+WHERE re.name = 'French Original Marker';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
 SELECT 'French VOSTFR', 'French VOSTFR', re.name
 FROM regular_expressions re
@@ -6784,6 +6825,14 @@ INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expr
 SELECT 'French VOSTFR', 'Not French VFQ', re.name
 FROM regular_expressions re
 WHERE re.name = 'French VFQ';
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT 'French VOSTFR', 'Not French Original Marker', re.name
+FROM regular_expressions re
+WHERE re.name = 'French Original Marker';
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT 'French Original Marker', 'French Original Marker', re.name
+FROM regular_expressions re
+WHERE re.name = 'French Original Marker';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
 SELECT 'Full Disc', 'Full Disc', re.name
 FROM regular_expressions re

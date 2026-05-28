@@ -1,0 +1,495 @@
+{
+  "status": "implemented-in-ops-5-to-20",
+  "notes": [
+    "Reference table for the Dictionarry V2-style FR conversion.",
+    "Custom format names are Dictionarry-shaped with FR at the beginning.",
+    "FORWARD is treated as FW, but both regex patterns are linked where useful.",
+    "Quality tiers keep only the best tier per team to avoid double tier scores.",
+    "LQ remains handled by the banned/LQ custom formats.",
+    "FR tier custom formats scored above 600000 require the HEVC regex, which matches h265, x265 and HEVC.",
+    "Shared technical profile scores are realigned with Dictionarry V2 in ops/7 without importing US release-group tiers.",
+    "High-score FR tiers have required source gates in ops/8 so WEB and Bluray tiers cannot stack on the same release.",
+    "2160p Efficient WEB composite tiers are removed in ops/17 to align with Dictionarry V2: 2160p WEB releases score through 2160p WEB-DL (Efficient), while trusted FR groups keep premium tiers on Bluray HEVC.",
+    "FR WEB tiers with optional WEB-DL/WEBRip source conditions are hardened in ops/18: WEB source must be present, and release-group tier matching is no longer satisfied by source alone.",
+    "FR 720p/1080p Quality tiers are hardened in ops/19: Bluray/WEBRip source must be present, and source alone no longer satisfies the tier.",
+    "FR Scene Groups is capped in high-ceiling Remux/2160p profiles by ops/10 because the source score already sits near the ceiling.",
+    "FR 1080p Quality tiers are capped in Quality/Remux profiles by ops/11 to remain below the ceiling with 1080p WEB-DL source scoring.",
+    "FR 2160p Quality tiers require HEVC in ops/16 so rare 2160p h264 releases keep normal source scoring instead of taking a high 2160p team-tier score.",
+    "2160p Compact FR is added in ops/20 as a 4KLight profile using the same compact teams as 1080p Compact FR, with fallback to 1080p Balanced then 1080p Efficient.",
+    "4KLight is intentionally not a regex pattern: the profile trusts compact teams only when the release is 2160p Bluray or WEBRip x265.",
+    "Release-group checks are group-scoped in Profilarr; title words such as Lion in a movie title must not be interpreted as LQ group matches.",
+    "FR 2160p Balanced uses Tier 1 naming, not Tier 3, because the profile has one FR balanced tier and it replaces the Dictionarry hallowed/BHDStudio-style pass."
+  ],
+  "aliases": {
+    "FORWARD": "FW"
+  },
+  "custom_formats": {
+    "balanced": {
+      "FR 1080p Balanced Tier 1": [
+        "FW",
+        "FORWARD",
+        "SUPPLY"
+      ],
+      "FR 1080p Balanced Tier 2": [
+        "TFA"
+      ],
+      "FR 2160p Balanced Tier 1": [
+        "FW",
+        "FORWARD",
+        "SUPPLY",
+        "TFA"
+      ]
+    },
+    "compact": {
+      "FR 1080p Compact Movie Bluray Tier 1": [
+        "LiDHL",
+        "mHDgz",
+        "QTZ",
+        "RiFiFi"
+      ],
+      "FR 1080p Compact Movie Bluray Tier 2": [
+        "AW",
+        "GHT",
+        "PATOMiEL",
+        "PiXEL",
+        "PopHD",
+        "SANTACRUZ",
+        "Winks",
+        "Xantar"
+      ],
+      "FR 1080p Compact Movie WEB Tier 1": [
+        "LiDHL",
+        "mHDgz",
+        "QTZ",
+        "RiFiFi"
+      ],
+      "FR 1080p Compact Movie WEB Tier 2": [
+        "AW",
+        "GHT",
+        "PATOMiEL",
+        "PiXEL",
+        "PopHD",
+        "SANTACRUZ",
+        "Winks",
+        "Xantar"
+      ],
+      "FR 1080p Compact TV Bluray Tier 1": [
+        "LiDHL",
+        "mHDgz",
+        "QTZ",
+        "RiFiFi"
+      ],
+      "FR 1080p Compact TV Bluray Tier 2": [
+        "AW",
+        "GHT",
+        "PATOMiEL",
+        "PiXEL",
+        "PopHD",
+        "SANTACRUZ",
+        "Winks",
+        "Xantar"
+      ],
+      "FR 1080p Compact TV WEB Tier 1": [
+        "LiDHL",
+        "mHDgz",
+        "QTZ",
+        "RiFiFi"
+      ],
+      "FR 1080p Compact TV WEB Tier 2": [
+        "AW",
+        "GHT",
+        "PATOMiEL",
+        "PiXEL",
+        "PopHD",
+        "SANTACRUZ",
+        "Winks",
+        "Xantar"
+      ],
+      "FR 2160p Compact Movie Bluray Tier 1": [
+        "AMEN",
+        "LiDHL",
+        "mHDgz",
+        "QTZ",
+        "RiFiFi"
+      ],
+      "FR 2160p Compact Movie Bluray Tier 2": [
+        "AW",
+        "BONBON",
+        "GHT",
+        "PATOMiEL",
+        "PiXEL",
+        "PopHD",
+        "SANTACRUZ",
+        "TyHD",
+        "Winks",
+        "Xantar"
+      ],
+      "FR 2160p Compact Movie WEB Tier 1": [
+        "AMEN",
+        "LiDHL",
+        "mHDgz",
+        "QTZ",
+        "RiFiFi"
+      ],
+      "FR 2160p Compact Movie WEB Tier 2": [
+        "AW",
+        "BONBON",
+        "GHT",
+        "PATOMiEL",
+        "PiXEL",
+        "PopHD",
+        "SANTACRUZ",
+        "TyHD",
+        "Winks",
+        "Xantar"
+      ],
+      "FR 2160p Compact TV Bluray Tier 1": [
+        "AMEN",
+        "LiDHL",
+        "mHDgz",
+        "QTZ",
+        "RiFiFi"
+      ],
+      "FR 2160p Compact TV Bluray Tier 2": [
+        "AW",
+        "BONBON",
+        "GHT",
+        "PATOMiEL",
+        "PiXEL",
+        "PopHD",
+        "SANTACRUZ",
+        "TyHD",
+        "Winks",
+        "Xantar"
+      ],
+      "FR 2160p Compact TV WEB Tier 1": [
+        "AMEN",
+        "LiDHL",
+        "mHDgz",
+        "QTZ",
+        "RiFiFi"
+      ],
+      "FR 2160p Compact TV WEB Tier 2": [
+        "AW",
+        "BONBON",
+        "GHT",
+        "PATOMiEL",
+        "PiXEL",
+        "PopHD",
+        "SANTACRUZ",
+        "TyHD",
+        "Winks",
+        "Xantar"
+      ]
+    },
+    "efficient": {
+      "FR 1080p Bluray HEVC Tier 1": [
+        "TyHD",
+        "THESYNDICATE",
+        "CHiLL",
+        "SUPPLY",
+        "FW",
+        "FORWARD",
+        "TFA"
+      ],
+      "FR 1080p WEB-DL HEVC Tier 1": [
+        "TyHD",
+        "THESYNDICATE",
+        "CHiLL",
+        "SUPPLY",
+        "FW",
+        "FORWARD",
+        "TFA"
+      ],
+      "FR 2160p Efficient Movie Bluray Tier 1": [
+        "TyHD",
+        "THESYNDICATE",
+        "CHiLL",
+        "SUPPLY",
+        "FW",
+        "FORWARD",
+        "TFA"
+      ],
+      "FR 2160p Efficient TV Bluray Tier 1": [
+        "TyHD",
+        "THESYNDICATE",
+        "CHiLL",
+        "SUPPLY",
+        "FW",
+        "FORWARD",
+        "TFA"
+      ]
+    },
+    "quality": {
+      "FR 720p Quality Tier 1": "same teams as FR 1080p Quality Tier 1",
+      "FR 720p Quality Tier 2": "same teams as FR 1080p Quality Tier 2",
+      "FR 720p Quality Tier 3": "same teams as FR 1080p Quality Tier 3",
+      "FR 1080p Quality Tier 1": [
+        "ARK01",
+        "BDHD",
+        "BlackAngel",
+        "BONBON",
+        "Choco",
+        "FCK",
+        "FLOP",
+        "FoX",
+        "FRATERNiTY",
+        "FrIeNdS",
+        "FTMVHD",
+        "FW",
+        "FORWARD",
+        "Goldenyann",
+        "HDForever",
+        "HeavyWeight",
+        "MAX",
+        "MOONLY",
+        "MTDK",
+        "NoLo",
+        "ONLY",
+        "PATOPESTO",
+        "Psaro",
+        "RG",
+        "Sicario",
+        "SUPPLY",
+        "Tezcat74",
+        "TFA",
+        "TiNA",
+        "TyrellCorp",
+        "YODA",
+        "Zapax"
+      ],
+      "FR 1080p Quality Tier 2": [
+        "ALLDAYiN",
+        "NEO",
+        "NoNe",
+        "ONLYMOViE",
+        "POTO",
+        "Slay3R",
+        "TkHD",
+        "WaCkS",
+        "COLL3CTiF",
+        "FiND",
+        "RiPiT",
+        "TAT",
+        "pERsO",
+        "MARBLECAKE",
+        "MYSTERiON",
+        "UTT",
+        "FtLi",
+        "KTM",
+        "MUSTANG",
+        "Obi",
+        "PEPiTE",
+        "QUEBEC63",
+        "ROMKENT",
+        "DUSTiN",
+        "QUALiTY",
+        "AMEN",
+        "B@tman",
+        "BOUBA",
+        "BOUC",
+        "GKS",
+        "KAAZA",
+        "M@x",
+        "OZEF"
+      ],
+      "FR 1080p Quality Tier 3": [
+        "BraD",
+        "LAZARUS",
+        "Scaph",
+        "WQM",
+        "dRuIdE",
+        "AJP",
+        "ATE",
+        "COCAIN",
+        "D4RK",
+        "DREAM",
+        "ENIGMA",
+        "GORE",
+        "HYPERION",
+        "J4CK",
+        "LKT",
+        "Maxadonf",
+        "MULTiPLY",
+        "N3ZUKO",
+        "NEOSTARK",
+        "PRESTiGE",
+        "R3MIX",
+        "SUPERFLU",
+        "Themouche",
+        "TLC",
+        "TMB",
+        "TSR",
+        "ZTM"
+      ],
+      "FR 2160p Quality Tier 1": "same teams as FR 1080p Quality Tier 1",
+      "FR 2160p Quality Tier 2": "same teams as FR 1080p Quality Tier 2",
+      "FR 2160p Quality Tier 3": "same teams as FR 1080p Quality Tier 3",
+      "FR Remux Tier 1": [
+        "BlackAngel",
+        "Choco",
+        "HDForever",
+        "MAX",
+        "ONLY",
+        "Psaro",
+        "Sicario",
+        "Tezcat74",
+        "TyrellCorp",
+        "Zapax"
+      ],
+      "FR Remux Tier 2": [
+        "BDHD",
+        "FtLi",
+        "Goldenyann",
+        "HeavyWeight",
+        "KTM",
+        "MARBLECAKE",
+        "MUSTANG",
+        "Obi",
+        "PEPiTE",
+        "QUEBEC63",
+        "ROMKENT"
+      ]
+    }
+  },
+  "profile_scores": {
+    "720p Quality FR": {
+      "FR 720p Quality Tier 1": 145000,
+      "FR 720p Quality Tier 2": 144000,
+      "FR 720p Quality Tier 3": 143000
+    },
+    "1080p Balanced FR": {
+      "FR 1080p Balanced Tier 1": 861000,
+      "FR 1080p Balanced Tier 2": 860000
+    },
+    "1080p Compact FR": {
+      "FR 1080p Compact Movie Bluray Tier 1": 943000,
+      "FR 1080p Compact Movie Bluray Tier 2": 942000,
+      "FR 1080p Compact Movie WEB Tier 1": 883000,
+      "FR 1080p Compact Movie WEB Tier 2": 882000,
+      "FR 1080p Compact TV Bluray Tier 1": 905000,
+      "FR 1080p Compact TV Bluray Tier 2": 904000,
+      "FR 1080p Compact TV WEB Tier 1": 924000,
+      "FR 1080p Compact TV WEB Tier 2": 923000
+    },
+    "2160p Compact FR": {
+      "FR 2160p Compact Movie Bluray Tier 1": 970000,
+      "FR 2160p Compact Movie Bluray Tier 2": 969000,
+      "FR 2160p Compact Movie WEB Tier 1": 970000,
+      "FR 2160p Compact Movie WEB Tier 2": 969000,
+      "FR 2160p Compact TV Bluray Tier 1": 970000,
+      "FR 2160p Compact TV Bluray Tier 2": 969000,
+      "FR 2160p Compact TV WEB Tier 1": 970000,
+      "FR 2160p Compact TV WEB Tier 2": 969000,
+      "2160p WEB-DL": -999999,
+      "1080p WEB-DL (Efficient)": 860000,
+      "FR 1080p WEB-DL HEVC Tier 1": 830000,
+      "FR 1080p Bluray HEVC Tier 1": 830000,
+      "1080p Bluray (Efficient)": 700000
+    },
+    "1080p Efficient FR": {
+      "FR 1080p Bluray HEVC Tier 1": 960000,
+      "FR 1080p WEB-DL HEVC Tier 1": 940000,
+      "1080p WEB-DL (Efficient)": {
+        "radarr": 880000,
+        "sonarr": 860000
+      }
+    },
+    "1080p Quality FR": {
+      "FR 1080p Quality Tier 1": 185000,
+      "FR 1080p Quality Tier 2": 184000,
+      "FR 1080p Quality Tier 3": 183000
+    },
+    "1080p Quality HDR FR": {
+      "FR 1080p Quality Tier 1": 185000,
+      "FR 1080p Quality Tier 2": 184000,
+      "FR 1080p Quality Tier 3": 183000
+    },
+    "1080p Remux FR": {
+      "FR 1080p Quality Tier 1": 185000,
+      "FR 1080p Quality Tier 2": 184000,
+      "FR 1080p Quality Tier 3": 183000,
+      "FR Remux Tier 1": 100,
+      "FR Remux Tier 2": 80
+    },
+    "2160p Balanced FR": {
+      "FR 2160p Balanced Tier 1": 920000
+    },
+    "2160p Efficient FR": {
+      "FR 2160p Efficient Movie Bluray Tier 1": 982000,
+      "FR 2160p Efficient TV Bluray Tier 1": 980000,
+      "1080p WEB-DL (Efficient)": {
+        "radarr": 880000,
+        "sonarr": 860000
+      },
+      "2160p WEB-DL (Efficient)": {
+        "radarr": 980000,
+        "sonarr": 960000
+      }
+    },
+    "2160p Quality FR": {
+      "FR 2160p Quality Tier 1": 945000,
+      "FR 2160p Quality Tier 2": 944000,
+      "FR 2160p Quality Tier 3": 943000,
+      "FR 1080p Quality Tier 1": 185000,
+      "FR 1080p Quality Tier 2": 184000,
+      "FR 1080p Quality Tier 3": 183000
+    },
+    "2160p Remux FR": {
+      "FR 2160p Quality Tier 1": 965000,
+      "FR 2160p Quality Tier 2": 964000,
+      "FR 2160p Quality Tier 3": 963000,
+      "FR 1080p Quality Tier 1": 185000,
+      "FR 1080p Quality Tier 2": 184000,
+      "FR 1080p Quality Tier 3": 183000,
+      "FR Remux Tier 1": 100,
+      "FR Remux Tier 2": 80
+    }
+  },
+  "decision_notes": {
+    "language_policy": {
+      "classic_profiles": "MULTi, French Original and French Original Marker are neutral at 0, VF is slightly penalized, VOSTFR is strongly penalized, VFQ and missing French are rejected.",
+      "anime_profiles": "Anime keeps the same French Original/MULTi base, including VOF/VOQ markers, but VOSTFR is preferred over VF because the expected anime use case is different from classic movies and series.",
+      "french_original": "French Original neutralizes the need for MULTi on native French or Quebec content, so a French-original release is not punished for not carrying a separate MULTi/VF tag.",
+      "french_original_marker": "VOF and VOQ are treated as French Original markers. They prevent French Missing and VF/VFQ/VOSTFR penalties because they describe the original francophone version rather than an unwanted dub."
+    },
+    "tier_policy": {
+      "quality_and_remux": "Quality and Remux tiers follow the TRaSH FR tier source as directly as possible, with FR Global teams folded down where they are useful.",
+      "balanced": "Balanced is intentionally narrow: FW/FORWARD and SUPPLY are the main trusted 2160p/1080p stable groups, with TFA as the lower balanced fallback where applicable.",
+      "compact": "Compact is reserved for HDLight and 4KLight-style encode groups. The same teams are used in 1080p Compact and 2160p Compact because these groups specialize in light encodes.",
+      "efficient": "Efficient is limited to validated HEVC groups: TyHD, THESYNDICATE, CHiLL, SUPPLY, FW/FORWARD and TFA.",
+      "scene": "FR Scene Groups is trusted but capped in high-ceiling profiles so it cannot push a release over the 1,000,000 upgrade ceiling."
+    },
+    "2160p_compact_fr": {
+      "goal": "Target 4KLight releases first, then accept 1080p Balanced, then 1080p Efficient.",
+      "primary_match": "2160p Compact tiers require 2160p + Bluray or WEBRip + x265 + a compact release group. WEB tiers require WEBRip only; 2160p WEB-DL is banned in this profile.",
+      "tier_1_groups": [
+        "AMEN",
+        "LiDHL",
+        "mHDgz",
+        "QTZ",
+        "RiFiFi"
+      ],
+      "tier_2_groups": [
+        "AW",
+        "BONBON",
+        "GHT",
+        "PATOMiEL",
+        "PiXEL",
+        "PopHD",
+        "SANTACRUZ",
+        "TyHD",
+        "Winks",
+        "Xantar"
+      ],
+      "score_order": "Tier 1 4KLight Bluray/WEBRip is 970000, Tier 2 4KLight Bluray/WEBRip is 969000, 1080p Balanced h264 WEB-DL fallback is 860000, validated 1080p HEVC fallback is 830000, and 1080p x264 Bluray fallback is 700000.",
+      "ceiling_check": "The expected top score for a MULTi DV/HDR10 EAC3 7.1 QTZ 4KLight release is about 974600, leaving headroom below the 1,000,000 ceiling."
+    },
+    "technical_alignment": {
+      "source_gates": "High-score FR tiers use required source gates so a WEB release cannot also satisfy a Bluray tier, and source alone cannot satisfy a release-group tier.",
+      "hevc_gates": "FR tiers scored above 600000 require HEVC/x265 where needed, mirroring Dictionarry V2's high-trust tier behavior without importing US teams.",
+      "2160p_efficient": "2160p Efficient follows Dictionarry V2's WEB model: generic 2160p WEB-DL scores through the technical CF, while premium FR team tiers stay on Bluray HEVC.",
+      "release_group_scope": "Release-group regexes are meant to match the release group field, not the movie title. This matters for short group names such as LION."
+    }
+  }
+}

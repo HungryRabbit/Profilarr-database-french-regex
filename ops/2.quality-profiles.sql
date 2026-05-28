@@ -6188,6 +6188,9 @@ WHERE qp.name IN ('2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR',
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 0 FROM quality_profiles qp, custom_formats cf
 WHERE qp.name IN ('1080p Balanced FR', '1080p Compact FR', '1080p Efficient FR', '1080p Quality FR', '1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR', '720p Quality FR', 'Anime 1080p FR') AND cf.name = 'French Original';
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+SELECT qp.name, cf.name, 'all', 0 FROM quality_profiles qp, custom_formats cf
+WHERE qp.name IN ('1080p Balanced FR', '1080p Compact FR', '1080p Efficient FR', '1080p Quality FR', '1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR', '720p Quality FR', 'Anime 1080p FR') AND cf.name = 'French Original Marker';
 UPDATE quality_profile_custom_formats SET score = 0
 WHERE quality_profile_name IN ('1080p Balanced FR', '1080p Compact FR', '1080p Efficient FR', '1080p Quality FR', '1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR', '720p Quality FR', 'Anime 1080p FR') AND custom_format_name = 'French MULTi';
 UPDATE quality_profile_custom_formats SET score = -50000
@@ -6201,6 +6204,9 @@ UPDATE quality_profile_custom_formats SET score = 0 WHERE quality_profile_name =
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', -999999 FROM quality_profiles qp, custom_formats cf
 WHERE qp.name = 'Anime 1080p VOSTFR FR' AND cf.name = 'French Original';
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+SELECT qp.name, cf.name, 'all', -999999 FROM quality_profiles qp, custom_formats cf
+WHERE qp.name = 'Anime 1080p VOSTFR FR' AND cf.name = 'French Original Marker';
 
 UPDATE quality_profiles SET upgrade_until_score = 1000000
 WHERE name IN ('1080p Balanced FR', '1080p Compact FR', '1080p Efficient FR', '1080p Quality FR', '1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR', '720p Quality FR');
