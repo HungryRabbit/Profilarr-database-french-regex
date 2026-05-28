@@ -313,7 +313,7 @@ SELECT custom_format_name, condition_name, 'release_group', 'all', 0, 0 FROM qua
 WITH quality_team(custom_format_name, condition_name, regex_name) AS (
   VALUES
   ('FR Remux Tier 1', 'BlackAngel', 'BlackAngel'), ('FR Remux Tier 1', 'Choco', 'Choco'), ('FR Remux Tier 1', 'FtLi', 'FtLi'), ('FR Remux Tier 1', 'Goldenyann', 'Goldenyann'), ('FR Remux Tier 1', 'HDForever', 'HDForever'), ('FR Remux Tier 1', 'HeavyWeight', 'HeavyWeight'), ('FR Remux Tier 1', 'MAX', 'MAX (Release Group)'), ('FR Remux Tier 1', 'ONLY', 'ONLY'), ('FR Remux Tier 1', 'Psaro', 'Psaro'), ('FR Remux Tier 1', 'Sicario', 'Sicario'), ('FR Remux Tier 1', 'Tezcat74', 'Tezcat74'), ('FR Remux Tier 1', 'TyrellCorp', 'TyrellCorp'), ('FR Remux Tier 1', 'Zapax', 'Zapax'),
-  ('FR Remux Tier 2', 'BDHD', 'BDHD'), ('FR Remux Tier 2', 'FtLi', 'FtLi'), ('FR Remux Tier 2', 'Goldenyann', 'Goldenyann'), ('FR Remux Tier 2', 'HeavyWeight', 'HeavyWeight'), ('FR Remux Tier 2', 'KTM', 'KTM'), ('FR Remux Tier 2', 'MARBLECAKE', 'MARBLECAKE'), ('FR Remux Tier 2', 'MUSTANG', 'MUSTANG'), ('FR Remux Tier 2', 'Obi', 'Obi'), ('FR Remux Tier 2', 'PEPiTE', 'PEPiTE'), ('FR Remux Tier 2', 'QUEBEC63', 'QUEBEC63'), ('FR Remux Tier 2', 'ROMKENT', 'ROMKENT')
+  ('FR Remux Tier 2', 'BDHD', 'BDHD'), ('FR Remux Tier 2', 'FtLi', 'FtLi'), ('FR Remux Tier 2', 'Goldenyann', 'Goldenyann'), ('FR Remux Tier 2', 'HeavyWeight', 'HeavyWeight'), ('FR Remux Tier 2', 'KTM', 'KTM'), ('FR Remux Tier 2', 'MARBLECAKE', 'MARBLECAKE'), ('FR Remux Tier 2', 'MUSTANG', 'MUSTANG'), ('FR Remux Tier 2', 'Obi', 'Obi'), ('FR Remux Tier 2', 'PEPiTE', 'PEPiTE'), ('FR Remux Tier 2', 'QUEBEC63', 'QC63'), ('FR Remux Tier 2', 'ROMKENT', 'ROMKENT')
 )
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT custom_format_name, condition_name, 'release_group', 'all', 0, 0 FROM quality_team;
@@ -321,7 +321,7 @@ SELECT custom_format_name, condition_name, 'release_group', 'all', 0, 0 FROM qua
 WITH quality_team(custom_format_name, condition_name, regex_name) AS (
   VALUES
   ('FR Remux Tier 1', 'BlackAngel', 'BlackAngel'), ('FR Remux Tier 1', 'Choco', 'Choco'), ('FR Remux Tier 1', 'FtLi', 'FtLi'), ('FR Remux Tier 1', 'Goldenyann', 'Goldenyann'), ('FR Remux Tier 1', 'HDForever', 'HDForever'), ('FR Remux Tier 1', 'HeavyWeight', 'HeavyWeight'), ('FR Remux Tier 1', 'MAX', 'MAX (Release Group)'), ('FR Remux Tier 1', 'ONLY', 'ONLY'), ('FR Remux Tier 1', 'Psaro', 'Psaro'), ('FR Remux Tier 1', 'Sicario', 'Sicario'), ('FR Remux Tier 1', 'Tezcat74', 'Tezcat74'), ('FR Remux Tier 1', 'TyrellCorp', 'TyrellCorp'), ('FR Remux Tier 1', 'Zapax', 'Zapax'),
-  ('FR Remux Tier 2', 'BDHD', 'BDHD'), ('FR Remux Tier 2', 'FtLi', 'FtLi'), ('FR Remux Tier 2', 'Goldenyann', 'Goldenyann'), ('FR Remux Tier 2', 'HeavyWeight', 'HeavyWeight'), ('FR Remux Tier 2', 'KTM', 'KTM'), ('FR Remux Tier 2', 'MARBLECAKE', 'MARBLECAKE'), ('FR Remux Tier 2', 'MUSTANG', 'MUSTANG'), ('FR Remux Tier 2', 'Obi', 'Obi'), ('FR Remux Tier 2', 'PEPiTE', 'PEPiTE'), ('FR Remux Tier 2', 'QUEBEC63', 'QUEBEC63'), ('FR Remux Tier 2', 'ROMKENT', 'ROMKENT')
+  ('FR Remux Tier 2', 'BDHD', 'BDHD'), ('FR Remux Tier 2', 'FtLi', 'FtLi'), ('FR Remux Tier 2', 'Goldenyann', 'Goldenyann'), ('FR Remux Tier 2', 'HeavyWeight', 'HeavyWeight'), ('FR Remux Tier 2', 'KTM', 'KTM'), ('FR Remux Tier 2', 'MARBLECAKE', 'MARBLECAKE'), ('FR Remux Tier 2', 'MUSTANG', 'MUSTANG'), ('FR Remux Tier 2', 'Obi', 'Obi'), ('FR Remux Tier 2', 'PEPiTE', 'PEPiTE'), ('FR Remux Tier 2', 'QUEBEC63', 'QC63'), ('FR Remux Tier 2', 'ROMKENT', 'ROMKENT')
 )
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
 SELECT custom_format_name, condition_name, regex_name FROM quality_team;
@@ -412,13 +412,13 @@ WITH tier2_cf(custom_format_name) AS (
 tier2_team(condition_name, regex_name) AS (
   VALUES
   ('ALLDAYiN', 'ALLDAYiN'), ('NEO', 'NEO'),
-  ('NoNe', 'NoNe'), ('ONLYMOViE', 'ONLYMOViE'), ('POTO', 'POTO'), ('Slay3R', 'Slay3R'),
+  ('NoNe', 'NoNE'), ('ONLYMOViE', 'ONLYMOViE'), ('POTO', 'POTO'), ('Slay3R', 'Slay3R'),
   ('TkHD', 'TkHD'), ('WaCkS', 'WaCkS'), ('COLL3CTiF', 'COLL3CTiF'), ('FiND', 'FiND'),
   ('RiPiT', 'RiPiT'), ('TAT', 'TAT'), ('pERsO', 'pERsO'),
   ('MARBLECAKE', 'MARBLECAKE'), ('MYSTERiON', 'MYSTERiON'),
   ('UTT', 'UTT'), ('FtLi', 'FtLi'),
   ('KTM', 'KTM'), ('MUSTANG', 'MUSTANG'), ('Obi', 'Obi'), ('PEPiTE', 'PEPiTE'),
-  ('QUEBEC63', 'QUEBEC63'), ('ROMKENT', 'ROMKENT'), ('DUSTiN', 'DUSTiN'),
+  ('QUEBEC63', 'QC63'), ('ROMKENT', 'ROMKENT'), ('DUSTiN', 'DUSTiN'),
   ('QUALiTY', 'QUALiTY'),
   -- FR Global Tier 01 lowered by one tier, excluding groups promoted to Balanced/Efficient.
   ('AMEN', 'AMEN'), ('B@tman', 'B@tman'), ('BOUBA', 'BOUBA'), ('BOUC', 'BOUC'),
@@ -434,13 +434,13 @@ WITH tier2_cf(custom_format_name) AS (
 tier2_team(condition_name, regex_name) AS (
   VALUES
   ('ALLDAYiN', 'ALLDAYiN'), ('NEO', 'NEO'),
-  ('NoNe', 'NoNe'), ('ONLYMOViE', 'ONLYMOViE'), ('POTO', 'POTO'), ('Slay3R', 'Slay3R'),
+  ('NoNe', 'NoNE'), ('ONLYMOViE', 'ONLYMOViE'), ('POTO', 'POTO'), ('Slay3R', 'Slay3R'),
   ('TkHD', 'TkHD'), ('WaCkS', 'WaCkS'), ('COLL3CTiF', 'COLL3CTiF'), ('FiND', 'FiND'),
   ('RiPiT', 'RiPiT'), ('TAT', 'TAT'), ('pERsO', 'pERsO'),
   ('MARBLECAKE', 'MARBLECAKE'), ('MYSTERiON', 'MYSTERiON'),
   ('UTT', 'UTT'), ('FtLi', 'FtLi'),
   ('KTM', 'KTM'), ('MUSTANG', 'MUSTANG'), ('Obi', 'Obi'), ('PEPiTE', 'PEPiTE'),
-  ('QUEBEC63', 'QUEBEC63'), ('ROMKENT', 'ROMKENT'), ('DUSTiN', 'DUSTiN'),
+  ('QUEBEC63', 'QC63'), ('ROMKENT', 'ROMKENT'), ('DUSTiN', 'DUSTiN'),
   ('QUALiTY', 'QUALiTY'),
   ('AMEN', 'AMEN'), ('B@tman', 'B@tman'), ('BOUBA', 'BOUBA'), ('BOUC', 'BOUC'),
   ('GKS', 'GKS'), ('KAAZA', 'KAAZA'), ('M@x', 'M@x'), ('OZEF', 'OZEF')
