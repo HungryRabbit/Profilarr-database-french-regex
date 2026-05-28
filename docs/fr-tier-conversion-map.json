@@ -1,5 +1,5 @@
 {
-  "status": "implemented-in-ops-5-to-20",
+  "status": "implemented-in-ops-5-to-21",
   "notes": [
     "Reference table for the Dictionarry V2-style FR conversion.",
     "Custom format names are Dictionarry-shaped with FR at the beginning.",
@@ -16,7 +16,8 @@
     "FR 1080p Quality tiers are capped in Quality/Remux profiles by ops/11 to remain below the ceiling with 1080p WEB-DL source scoring.",
     "FR 2160p Quality tiers require HEVC in ops/16 so rare 2160p h264 releases keep normal source scoring instead of taking a high 2160p team-tier score.",
     "2160p Compact FR is added in ops/20 as a 4KLight profile using the same compact teams as 1080p Compact FR, with fallback to 1080p Balanced then 1080p Efficient.",
-    "4KLight is intentionally not a regex pattern: the profile trusts compact teams only when the release is 2160p Bluray or WEBRip x265.",
+    "HDLight and 4KLight title markers are added in ops/21 and banned in Quality profiles so Quality does not accept light encodes.",
+    "UHD Bluray is adapted for French usage in ops/21: it now requires 2160p instead of 1080p, and no longer requires an explicit HDR marker.",
     "Release-group checks are group-scoped in Profilarr; title words such as Lion in a movie title must not be interpreted as LQ group matches.",
     "FR 2160p Balanced uses Tier 1 naming, not Tier 3, because the profile has one FR balanced tier and it replaces the Dictionarry hallowed/BHDStudio-style pass."
   ],
