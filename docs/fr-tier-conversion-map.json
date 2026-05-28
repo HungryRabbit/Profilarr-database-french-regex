@@ -18,6 +18,8 @@
     "2160p Compact FR is added in ops/20 as a 4KLight profile using the same compact teams as 1080p Compact FR, with fallback to 1080p Balanced then 1080p Efficient.",
     "HDLight and 4KLight title markers are added in ops/21 and banned in Quality profiles so Quality does not accept light encodes.",
     "HDLight and 4KLight receive a light -50000 penalty in Balanced and Efficient profiles: allowed, but not prioritized.",
+    "Generic non-tier Compact Light source CFs are added in ops/21: 4KLight Bluray/WEBRip for 2160p Compact FR and HDLight Bluray/WEBRip for 1080p Compact FR. Compact tier teams are excluded so these generic CFs do not double-score tiered groups.",
+    "FR Scene Groups is explicitly kept at 8000 in 1080p Compact FR and 2160p Compact FR so Compact tiers remain above Scene-only trust.",
     "UHD Bluray is adapted for French usage in ops/21: it now requires 2160p instead of 1080p, and no longer requires an explicit HDR marker.",
     "UHD Bluray (Efficient) is adapted in ops/21 for 2160p Efficient FR at 720000 points and excludes the validated FR Efficient teams to avoid double scoring with their premium Bluray tiers.",
     "2160p WEB-DL (Efficient/Balanced) replaces Dictionarry's US high-trust exclusions with FR Efficient team exclusions: TyHD, THESYNDICATE, CHiLL, SUPPLY, FW/FORWARD and TFA.",
@@ -375,7 +377,9 @@
       "FR 1080p Compact TV Bluray Tier 1": 905000,
       "FR 1080p Compact TV Bluray Tier 2": 904000,
       "FR 1080p Compact TV WEB Tier 1": 924000,
-      "FR 1080p Compact TV WEB Tier 2": 923000
+      "FR 1080p Compact TV WEB Tier 2": 923000,
+      "HDLight Bluray (Compact)": 900000,
+      "HDLight WEBRip (Compact)": 870000
     },
     "2160p Compact FR": {
       "FR 2160p Compact Movie Bluray Tier 1": 970000,
@@ -386,6 +390,8 @@
       "FR 2160p Compact TV Bluray Tier 2": 969000,
       "FR 2160p Compact TV WEB Tier 1": 970000,
       "FR 2160p Compact TV WEB Tier 2": 969000,
+      "4KLight Bluray (Compact)": 940000,
+      "4KLight WEBRip (Compact)": 900000,
       "2160p WEB-DL": -999999,
       "1080p WEB-DL (Efficient)": 860000,
       "FR 1080p WEB-DL HEVC Tier 1": 830000,
