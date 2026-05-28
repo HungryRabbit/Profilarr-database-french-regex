@@ -1,3 +1,6 @@
+-- @operation: export
+-- @name: fr 2160p 1080p fallback cap
+
 -- ============================================================================
 -- FR 1080p quality tier cap
 -- 1080p quality tiers must remain below the 1,000,000 ceiling when combined

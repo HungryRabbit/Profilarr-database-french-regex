@@ -1,3 +1,6 @@
+-- @operation: export
+-- @name: fr high trust tier hevc gates
+
 -- French replacements for hallowed/BHDStudio/HONE must be HEVC-gated.
 -- Upstream can omit this because those groups are effectively HEVC-only in the
 -- targeted tiers. Our French replacement teams are broader, so h264 releases

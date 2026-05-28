@@ -1,3 +1,6 @@
+-- @operation: export
+-- @name: require source title for fr quality tiers
+
 -- FR 720p/1080p Quality tiers must not match on source alone.
 --
 -- These tiers allow Bluray or WEBRip, but source conditions cannot stay as

@@ -1,3 +1,6 @@
+-- @operation: export
+-- @name: dictionarry v2 score alignment
+
 -- ============================================================================
 -- Dictionarry V2 score alignment for FR profiles
 -- Keeps the FR language layer, but aligns the technical and tier scores with

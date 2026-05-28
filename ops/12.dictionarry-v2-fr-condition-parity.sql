@@ -1,3 +1,6 @@
+-- @operation: export
+-- @name: dictionarry v2 fr condition parity
+
 -- Align non-team conditions of French release-group tiers with Dictionarry V2.
 -- Team lists stay French; source/resolution/codec gates follow the upstream shape.
 

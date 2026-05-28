@@ -1,3 +1,6 @@
+-- @operation: export
+-- @name: fr 2160p efficient web neutralizers
+
 -- ============================================================================
 -- FR 2160p Efficient WEB neutralizers
 -- The FR 2160p Efficient WEB tiers already include source/resolution/team/HEVC.

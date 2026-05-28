@@ -1,3 +1,6 @@
+-- @operation: export
+-- @name: fr 2160p efficient scene cap
+
 -- ============================================================================
 -- FR high-ceiling scene cap
 -- Some technical source scores already sit very close to the 1,000,000 ceiling.

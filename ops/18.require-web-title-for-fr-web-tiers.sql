@@ -1,3 +1,6 @@
+-- @operation: export
+-- @name: require web title for fr web tiers
+
 -- FR WEB tiers must not match on source alone.
 --
 -- These tiers originally had WEB-DL/WEBRip as optional source conditions beside

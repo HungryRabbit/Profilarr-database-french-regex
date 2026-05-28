@@ -1,3 +1,6 @@
+-- @operation: export
+-- @name: add 2160p compact fr profile
+
 -- ============================================================================
 -- 2160p Compact FR
 -- 4KLight-focused profile built from the same compact teams as 1080p Compact FR.

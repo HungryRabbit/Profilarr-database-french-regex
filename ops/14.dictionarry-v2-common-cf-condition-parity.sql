@@ -1,3 +1,6 @@
+-- @operation: export
+-- @name: dictionarry v2 common cf condition parity
+
 -- Align remaining common non-French custom format conditions with Dictionarry V2.
 
 INSERT INTO regular_expressions (name, pattern, description)

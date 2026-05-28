@@ -1,3 +1,6 @@
+-- @operation: export
+-- @name: fr tier source gate hardening
+
 -- ============================================================================
 -- FR tier source-gate hardening
 -- High-score FR tiers are composite quality passes. Source gates must be

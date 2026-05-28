@@ -1,3 +1,6 @@
+-- @operation: export
+-- @name: dictionarry v2 technical profile alignment
+
 -- ============================================================================
 -- Dictionarry V2 technical profile alignment for FR profiles
 -- Aligns shared non-FR, non-language custom format scores with Dictionarry V2.

@@ -1,3 +1,6 @@
+-- @operation: export
+-- @name: dictionarry fr tier conversion
+
 -- ============================================================================
 -- Dictionarry V2 French release-group tier conversion
 -- Keeps the historical TRaSH-shaped FR custom formats available, but moves

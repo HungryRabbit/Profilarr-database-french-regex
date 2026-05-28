@@ -1,3 +1,6 @@
+-- @operation: export
+-- @name: align 2160p efficient fr with dictionarry web model
+
 -- Align 2160p Efficient FR with Dictionarry V2's WEB model.
 --
 -- Dictionarry keeps 2160p WEB-DL (Efficient) as the main WEB score and uses

@@ -1,3 +1,6 @@
+-- @operation: export
+-- @name: dictionarry v2 technical score parity
+
 -- Align technical profile scores with Dictionarry V2 for FR profiles.
 -- French language CFs and French release-group tiers are intentionally excluded.
 
