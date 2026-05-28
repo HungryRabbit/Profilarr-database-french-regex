@@ -12,38 +12,38 @@
 
 # Dictionarry Database FR
 
-Cette base est une adaptation francaise de la [base officielle Dictionarry](https://github.com/Dictionarry-Hub/database) pour Profilarr, Radarr et Sonarr.
+Cette base est une adaptation française de la [base officielle Dictionarry](https://github.com/Dictionarry-Hub/database) pour Profilarr, Radarr et Sonarr.
 
-L'objectif est de garder une base propre, maintenable et facile a rebase depuis Dictionarry, tout en ajoutant une couche FR dediee aux releases francophones.
+L'objectif est de garder une base propre, maintenable et facile à rebase depuis Dictionarry, tout en ajoutant une couche FR dédiée aux releases francophones.
 
 ## Transition Profilarr V1 / V2
 
 ### Planning
 
-⚠️ Le 1er juin 2026, la branche `develop` sera fusionnee dans `stable`. A compter de cette date, `stable` publiera exclusivement la base compatible Profilarr V2 au format PCD SQL.
+⚠️ Le 1er juin 2026, la branche `develop` sera fusionnée dans `stable`. À compter de cette date, `stable` publiera exclusivement la base compatible Profilarr V2 au format PCD SQL.
 
-- Jusqu'au 31 mai 2026 inclus, `stable` contient la V1 YAML et sa migration Rosettarr V2 figees depuis le 18 mai 2026.
-- La branche `Profilarr-V1` conserve la version YAML pour les utilisateurs qui souhaitent rester sur Profilarr V1 apres la bascule.
+- Jusqu'au 31 mai 2026 inclus, `stable` contient la V1 YAML et sa migration Rosettarr V2 figées depuis le 18 mai 2026.
+- La branche `Profilarr-V1` conserve la version YAML pour les utilisateurs qui souhaitent rester sur Profilarr V1 après la bascule.
 - La branche `develop` contient actuellement la version Profilarr V2 en cours de validation avant sa publication sur `stable`.
 
 ### Situation actuelle
 
-- `stable` publie la version Profilarr V1 au format YAML ainsi que sa migration Rosettarr vers Profilarr V2. Ces deux versions sont figees depuis le 18 mai 2026 et ne recevront plus de modification avant la bascule du 1er juin 2026.
-- `Profilarr-V1` conserve une copie de la version YAML pour preparer la conservation de la V1 apres la bascule.
+- `stable` publie la version Profilarr V1 au format YAML ainsi que sa migration Rosettarr vers Profilarr V2. Ces deux versions sont figées depuis le 18 mai 2026 et ne recevront plus de modification avant la bascule du 1er juin 2026.
+- `Profilarr-V1` conserve une copie de la version YAML pour préparer la conservation de la V1 après la bascule.
 - `develop` publie la version compatible Profilarr V2 au format PCD SQL pour validation avant sa mise en production.
 
 ## Ce qui change
 
 - Ajout de `regex_patterns` atomiques: un fichier YAML par team FR.
-- Ajout de `custom_formats` FR avec une tier list inspiree de plusieurs sources francophones.
-- Ajout de profils FR bases sur la logique Dictionarry, avec les memes tags que les profils originaux.
+- Ajout de `custom_formats` FR avec une tier list inspirée de plusieurs sources francophones.
+- Ajout de profils FR basés sur la logique Dictionarry, avec les mêmes tags que les profils originaux.
 - Ajout d'une priorisation langue: `MULTi` > `VF` > `VOSTFR` pour les profils classiques, et `MULTi` > `VOSTFR` > `VF` pour le profil anime.
 - Interdiction des releases `VFQ` dans les profils FR.
 - Conservation des media management Dictionarry sans modification.
 
 ## Sources FR
 
-Les listes de teams, les tiers et les choix de scoring FR sont inspires et recoupes avec:
+Les listes de teams, les tiers et les choix de scoring FR sont inspirés et recoupés avec:
 
 - [TRaSH Guides - French HQ Source Groups](https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats/#french-hq-source-groups)
 - [leof28/profilarr-dbFR](https://github.com/leof28/profilarr-dbFR)
@@ -54,7 +54,7 @@ Les listes de teams, les tiers et les choix de scoring FR sont inspires et recou
 
 ### Regex patterns
 
-Chaque team FR est declaree dans son propre fichier YAML sous `regex_patterns`.
+Chaque team FR est déclarée dans son propre fichier YAML sous `regex_patterns`.
 
 Exemple de logique:
 
@@ -66,11 +66,11 @@ tags:
 - French
 ```
 
-Cette approche evite les gros blocs regex difficiles a maintenir et permet de brancher les teams proprement dans plusieurs Custom Formats.
+Cette approche évite les gros blocs regex difficiles à maintenir et permet de brancher les teams proprement dans plusieurs Custom Formats.
 
 ### Custom Formats FR
 
-Les Custom Formats FR sont separes par usage:
+Les Custom Formats FR sont séparés par usage:
 
 - `FR Global Tier 01/02`
 - `FR Scene Groups`
@@ -86,9 +86,9 @@ Les Custom Formats FR sont separes par usage:
 - `French VFQ`
 - `French Missing`
 
-Les scores restent dans les profils, pas dans les regex. Cela conserve la logique Dictionarry: les regex detectent, les Custom Formats regroupent, les profils priorisent.
+Les scores restent dans les profils, pas dans les regex. Cela conserve la logique Dictionarry: les regex détectent, les Custom Formats regroupent, les profils priorisent.
 
-## Profils FR ajoutes
+## Profils FR ajoutés
 
 ```text
 1080p Balanced FR
@@ -107,7 +107,7 @@ Anime 1080p FR
 
 ## Media management
 
-Les fichiers dans `media_management` sont inchanges par rapport a Dictionarry:
+Les fichiers dans `media_management` sont inchangés par rapport à Dictionarry:
 
 - `naming.yml`
 - `quality_definitions.yml`
@@ -115,7 +115,7 @@ Les fichiers dans `media_management` sont inchanges par rapport a Dictionarry:
 
 ## Support
 
-Pour un probleme lie a cette adaptation FR, ouvre une issue avec le template adapte:
+Pour un problème lié à cette adaptation FR, ouvre une issue avec le template adapté:
 
 - Bug
 - Add Team
@@ -123,7 +123,7 @@ Pour un probleme lie a cette adaptation FR, ouvre une issue avec le template ada
 - Feature Request
 - Support
 
-Pour la documentation generale Dictionarry et Profilarr:
+Pour la documentation générale Dictionarry et Profilarr:
 
 - [Documentation Dictionarry](https://dictionarry.dev)
 - [Repository Dictionarry](https://github.com/Dictionarry-Hub/database)

@@ -24,8 +24,8 @@ body:
         - HDLight
         - Anime
         - Scene
-        - Global / generaliste
-        - LQ / a bannir
+        - Global / généraliste
+        - LQ / à bannir
         - Inconnu
     validations:
       required: true
@@ -44,18 +44,17 @@ body:
   - type: dropdown
     id: suggested-tier
     attributes:
-      label: Tier propose
+      label: Tier proposé
       options:
-        - FR Global Tier 01
-        - FR Global Tier 02
-        - FR Scene Groups
-        - FR HDLight Tier
-        - FR Anime Tier 01
-        - FR Anime Tier 02
-        - FR Anime Tier 03
-        - FR Anime FanSub
-        - FR LQ
-        - A discuter
+        - Film/Série Tier 1
+        - Film/Série Tier 2
+        - Film/Série Tier 3
+        - Anime Tier 1
+        - Anime Tier 2
+        - Anime Tier 3
+        - Anime FanSub
+        - À bannir
+        - Autre (précisez dans notes : nouveau Tier, plusieurs Tiers...)
     validations:
       required: true
 
@@ -63,4 +62,12 @@ body:
     id: notes
     attributes:
       label: Notes
-      placeholder: "Qualite habituelle, sources, reputation, liens utiles..."
+      value: |
+        Qualité habituelle, sources, réputation, liens utiles...
+
+        Encode spécifique :
+        - Release 4K toujours en h265 :
+        - Uniquement HDLight / 4KLight :
+        - Autre élément utile pour trier la team :
+
+        Si la team doit aller dans un tier à gros score avec neutraliseur, ajoutez les détails utiles ici.
