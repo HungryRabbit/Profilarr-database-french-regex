@@ -4,6 +4,7 @@
 -- @exportedAt: 2026-05-28T00:00:00.000Z
 -- @opIds: 9020
 
+-- --- BEGIN op 9020 ( batch add 2160p compact fr profile )
 -- ============================================================================
 -- 2160p Compact FR
 -- 4KLight-focused profile built from the same compact teams as 1080p Compact FR.
@@ -391,3 +392,4 @@ VALUES
   ('2160p Compact FR', 'French VFQ', 'all', -999999),
   ('2160p Compact FR', 'French Missing', 'all', -999999),
   ('2160p Compact FR', 'FR LQ', 'all', -999999);
+-- --- END op 9020

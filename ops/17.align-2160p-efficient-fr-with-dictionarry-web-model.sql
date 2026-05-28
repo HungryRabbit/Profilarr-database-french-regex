@@ -4,6 +4,7 @@
 -- @exportedAt: 2026-05-28T00:00:00.000Z
 -- @opIds: 9017
 
+-- --- BEGIN op 9017 ( batch align 2160p efficient fr with dictionarry web model )
 -- Align 2160p Efficient FR with Dictionarry V2's WEB model.
 --
 -- Dictionarry keeps 2160p WEB-DL (Efficient) as the main WEB score and uses
@@ -124,3 +125,4 @@ WHERE name IN (
   'FR 2160p Efficient Movie WEB Source Neutralizer',
   'FR 2160p Efficient TV WEB Source Neutralizer'
 );
+-- --- END op 9017

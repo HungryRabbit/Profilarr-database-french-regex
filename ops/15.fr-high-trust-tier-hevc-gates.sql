@@ -4,6 +4,7 @@
 -- @exportedAt: 2026-05-28T00:00:00.000Z
 -- @opIds: 9015
 
+-- --- BEGIN op 9015 ( batch fr high trust tier hevc gates )
 -- French replacements for hallowed/BHDStudio/HONE must be HEVC-gated.
 -- Upstream can omit this because those groups are effectively HEVC-only in the
 -- targeted tiers. Our French replacement teams are broader, so h264 releases
@@ -43,3 +44,4 @@ WHERE cf.name IN (
     WHERE cp.custom_format_name = cf.name
       AND cp.condition_name = 'x265'
   );
+-- --- END op 9015

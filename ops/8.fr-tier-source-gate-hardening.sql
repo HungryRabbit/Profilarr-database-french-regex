@@ -4,6 +4,7 @@
 -- @exportedAt: 2026-05-28T00:00:00.000Z
 -- @opIds: 9008
 
+-- --- BEGIN op 9008 ( batch fr tier source gate hardening )
 -- ============================================================================
 -- FR tier source-gate hardening
 -- High-score FR tiers are composite quality passes. Source gates must be
@@ -92,3 +93,4 @@ WITH web_cf(custom_format_name) AS (
 INSERT INTO condition_sources (custom_format_name, condition_name, source)
 SELECT custom_format_name, 'WEB', 'web_dl'
 FROM web_cf;
+-- --- END op 9008

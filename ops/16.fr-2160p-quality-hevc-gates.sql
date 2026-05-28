@@ -4,6 +4,7 @@
 -- @exportedAt: 2026-05-28T00:00:00.000Z
 -- @opIds: 9016
 
+-- --- BEGIN op 9016 ( batch fr 2160p quality hevc gates )
 -- 2160p French quality tiers carry high Dictionarry V2-style scores.
 -- 2160p h264 exists but is rare, while the intended 2160p tier behavior is
 -- effectively HEVC. Gate these tiers so rare h264 releases keep normal source
@@ -35,3 +36,4 @@ WHERE cf.name IN (
     WHERE cp.custom_format_name = cf.name
       AND cp.condition_name = 'x265'
   );
+-- --- END op 9016

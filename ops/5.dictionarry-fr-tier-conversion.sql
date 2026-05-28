@@ -4,6 +4,7 @@
 -- @exportedAt: 2026-05-28T00:00:00.000Z
 -- @opIds: 9005
 
+-- --- BEGIN op 9005 ( batch dictionarry fr tier conversion )
 -- ============================================================================
 -- Dictionarry V2 French release-group tier conversion
 -- Keeps the historical TRaSH-shaped FR custom formats available, but moves
@@ -486,3 +487,4 @@ tier3_team(condition_name, regex_name) AS (
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
 SELECT tier3_cf.custom_format_name, tier3_team.condition_name, tier3_team.regex_name
 FROM tier3_cf CROSS JOIN tier3_team;
+-- --- END op 9005

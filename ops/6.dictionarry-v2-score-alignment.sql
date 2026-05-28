@@ -4,6 +4,7 @@
 -- @exportedAt: 2026-05-28T00:00:00.000Z
 -- @opIds: 9006
 
+-- --- BEGIN op 9006 ( batch dictionarry v2 score alignment )
 -- ============================================================================
 -- Dictionarry V2 score alignment for FR profiles
 -- Keeps the FR language layer, but aligns the technical and tier scores with
@@ -171,3 +172,4 @@ WHERE NOT EXISTS (
     AND cp.condition_name = 'HEVC'
     AND cp.regular_expression_name = 'HEVC'
 );
+-- --- END op 9006

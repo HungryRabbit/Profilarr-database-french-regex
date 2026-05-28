@@ -4,6 +4,7 @@
 -- @exportedAt: 2026-05-28T00:00:00.000Z
 -- @opIds: 9013
 
+-- --- BEGIN op 9013 ( batch dictionarry v2 technical score parity )
 -- Align technical profile scores with Dictionarry V2 for FR profiles.
 -- French language CFs and French release-group tiers are intentionally excluded.
 
@@ -1211,3 +1212,4 @@ VALUES
   ('720p Quality FR', 'iP', 'all', 0),
   ('720p Quality FR', 'iT', 'all', 1000),
   ('720p Quality FR', 'x265', 'all', -999999);
+-- --- END op 9013

@@ -4,6 +4,7 @@
 -- @exportedAt: 2026-05-28T00:00:00.000Z
 -- @opIds: 9009
 
+-- --- BEGIN op 9009 ( batch fr 2160p efficient web neutralizers )
 -- ============================================================================
 -- FR 2160p Efficient WEB neutralizers
 -- The FR 2160p Efficient WEB tiers already include source/resolution/team/HEVC.
@@ -69,3 +70,4 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 VALUES
   ('2160p Efficient FR', 'FR 2160p Efficient Movie WEB Source Neutralizer', 'radarr', -980000),
   ('2160p Efficient FR', 'FR 2160p Efficient TV WEB Source Neutralizer', 'sonarr', -960000);
+-- --- END op 9009

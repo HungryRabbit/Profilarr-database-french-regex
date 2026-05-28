@@ -4,6 +4,7 @@
 -- @exportedAt: 2026-05-28T00:00:00.000Z
 -- @opIds: 9019
 
+-- --- BEGIN op 9019 ( batch require source title for fr quality tiers )
 -- FR 720p/1080p Quality tiers must not match on source alone.
 --
 -- These tiers allow Bluray or WEBRip, but source conditions cannot stay as
@@ -69,3 +70,4 @@ WHERE custom_format_name IN (
   'FR 1080p Quality Tier 3'
 )
   AND name IN ('Bluray', 'WEBRip');
+-- --- END op 9019

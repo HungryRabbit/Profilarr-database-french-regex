@@ -4,6 +4,7 @@
 -- @exportedAt: 2026-05-28T00:00:00.000Z
 -- @opIds: 9010
 
+-- --- BEGIN op 9010 ( batch fr 2160p efficient scene cap )
 -- ============================================================================
 -- FR high-ceiling scene cap
 -- Some technical source scores already sit very close to the 1,000,000 ceiling.
@@ -21,3 +22,4 @@ WHERE quality_profile_name IN (
     '2160p Remux FR'
   )
   AND custom_format_name = 'FR Scene Groups';
+-- --- END op 9010

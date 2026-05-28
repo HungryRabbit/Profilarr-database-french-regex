@@ -4,6 +4,7 @@
 -- @exportedAt: 2026-05-28T00:00:00.000Z
 -- @opIds: 9012
 
+-- --- BEGIN op 9012 ( batch dictionarry v2 fr condition parity )
 -- Align non-team conditions of French release-group tiers with Dictionarry V2.
 -- Team lists stay French; source/resolution/codec gates follow the upstream shape.
 
@@ -264,3 +265,4 @@ UPDATE condition_patterns
 SET regular_expression_name = 'HEVC'
 WHERE custom_format_name = 'FR 1080p WEB-DL HEVC Tier 1'
   AND condition_name = 'h265';
+-- --- END op 9012

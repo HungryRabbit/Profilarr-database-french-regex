@@ -4,6 +4,7 @@
 -- @exportedAt: 2026-05-28T00:00:00.000Z
 -- @opIds: 9018
 
+-- --- BEGIN op 9018 ( batch require web title for fr web tiers )
 -- FR WEB tiers must not match on source alone.
 --
 -- These tiers originally had WEB-DL/WEBRip as optional source conditions beside
@@ -81,3 +82,4 @@ WHERE custom_format_name IN (
   'FR TV WEB Tier 03'
 )
   AND name IN ('WEB-DL', 'WEBRip');
+-- --- END op 9018

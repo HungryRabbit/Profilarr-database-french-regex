@@ -4,6 +4,7 @@
 -- @exportedAt: 2026-05-28T00:00:00.000Z
 -- @opIds: 9014
 
+-- --- BEGIN op 9014 ( batch dictionarry v2 common cf condition parity )
 -- Align remaining common non-French custom format conditions with Dictionarry V2.
 
 INSERT INTO regular_expressions (name, pattern, description)
@@ -144,3 +145,4 @@ WHERE NOT EXISTS (
   WHERE cp.custom_format_name = '2160p WEB-DL (Efficient)'
     AND cp.condition_name = v.condition_name
 );
+-- --- END op 9014

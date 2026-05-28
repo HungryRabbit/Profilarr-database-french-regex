@@ -4,6 +4,7 @@
 -- @exportedAt: 2026-05-28T00:00:00.000Z
 -- @opIds: 9007
 
+-- --- BEGIN op 9007 ( batch dictionarry v2 technical profile alignment )
 -- ============================================================================
 -- Dictionarry V2 technical profile alignment for FR profiles
 -- Aligns shared non-FR, non-language custom format scores with Dictionarry V2.
@@ -197,3 +198,4 @@ VALUES
   ('2160p Remux FR', 'iT', 'radarr', 3000),
   ('2160p Remux FR', 'iT', 'sonarr', 1000),
   ('2160p Remux FR', 'iTunes Enhancement', 'radarr', -2000);
+-- --- END op 9007

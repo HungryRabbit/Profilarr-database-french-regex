@@ -4,6 +4,7 @@
 -- @exportedAt: 2026-05-28T00:00:00.000Z
 -- @opIds: 9011
 
+-- --- BEGIN op 9011 ( batch fr 2160p 1080p fallback cap )
 -- ============================================================================
 -- FR 1080p quality tier cap
 -- 1080p quality tiers must remain below the 1,000,000 ceiling when combined
@@ -35,3 +36,4 @@ WHERE quality_profile_name IN ('1080p Quality FR', '1080p Quality HDR FR', '1080
     'FR 1080p Quality Tier 2',
     'FR 1080p Quality Tier 3'
   );
+-- --- END op 9011
