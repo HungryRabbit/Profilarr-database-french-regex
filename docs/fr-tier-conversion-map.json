@@ -9,7 +9,7 @@
     "FR tier custom formats scored above 600000 require the HEVC regex, which matches h265, x265 and HEVC.",
     "Shared technical profile scores are realigned with Dictionarry V2 in ops/7 without importing US release-group tiers.",
     "High-score FR tiers have required source gates in ops/8 so WEB and Bluray tiers cannot stack on the same release.",
-    "2160p Efficient WEB composite tiers are removed in ops/17 to align with Dictionarry V2: 2160p WEB releases score through 2160p WEB-DL (Efficient), while trusted FR groups keep premium tiers on Bluray HEVC.",
+    "2160p Efficient WEB composite tiers are removed in ops/17 to align with Dictionarry V2: 2160p WEB releases score through 2160p WEB-DL (Efficient/Balanced), while trusted FR groups keep premium tiers on Bluray HEVC.",
     "FR WEB tiers with optional WEB-DL/WEBRip source conditions are hardened in ops/18: WEB source must be present, and release-group tier matching is no longer satisfied by source alone.",
     "FR 720p/1080p Quality tiers are hardened in ops/19: Bluray/WEBRip source must be present, and source alone no longer satisfies the tier.",
     "FR Scene Groups is capped in high-ceiling Remux/2160p profiles by ops/10 because the source score already sits near the ceiling.",
@@ -17,7 +17,11 @@
     "FR 2160p Quality tiers require HEVC in ops/16 so rare 2160p h264 releases keep normal source scoring instead of taking a high 2160p team-tier score.",
     "2160p Compact FR is added in ops/20 as a 4KLight profile using the same compact teams as 1080p Compact FR, with fallback to 1080p Balanced then 1080p Efficient.",
     "HDLight and 4KLight title markers are added in ops/21 and banned in Quality profiles so Quality does not accept light encodes.",
+    "HDLight and 4KLight receive a light -50000 penalty in Balanced and Efficient profiles: allowed, but not prioritized.",
     "UHD Bluray is adapted for French usage in ops/21: it now requires 2160p instead of 1080p, and no longer requires an explicit HDR marker.",
+    "UHD Bluray (Efficient) is adapted in ops/21 for 2160p Efficient FR at 720000 points and excludes the validated FR Efficient teams to avoid double scoring with their premium Bluray tiers.",
+    "2160p WEB-DL (Efficient/Balanced) replaces Dictionarry's US high-trust exclusions with FR Efficient team exclusions: TyHD, THESYNDICATE, CHiLL, SUPPLY, FW/FORWARD and TFA.",
+    "2160p Balanced FR uses 2160p WEB-DL (Efficient/Balanced) at 720000 instead of UHD Bluray at 840000.",
     "Release-group checks are group-scoped in Profilarr; title words such as Lion in a movie title must not be interpreted as LQ group matches.",
     "FR 2160p Balanced uses Tier 1 naming, not Tier 3, because the profile has one FR balanced tier and it replaces the Dictionarry hallowed/BHDStudio-style pass."
   ],
@@ -414,7 +418,8 @@
       "FR Remux Tier 2": 80
     },
     "2160p Balanced FR": {
-      "FR 2160p Balanced Tier 1": 920000
+      "FR 2160p Balanced Tier 1": 920000,
+      "2160p WEB-DL (Efficient/Balanced)": 720000
     },
     "2160p Efficient FR": {
       "FR 2160p Efficient Movie Bluray Tier 1": 982000,
@@ -423,7 +428,8 @@
         "radarr": 880000,
         "sonarr": 860000
       },
-      "2160p WEB-DL (Efficient)": {
+      "UHD Bluray (Efficient)": 720000,
+      "2160p WEB-DL (Efficient/Balanced)": {
         "radarr": 980000,
         "sonarr": 960000
       }

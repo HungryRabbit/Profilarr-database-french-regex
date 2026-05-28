@@ -90,4 +90,157 @@ VALUES
   ('1080p Quality HDR FR', '4KLight', 'all', -999999),
   ('2160p Quality FR', 'HDLight', 'all', -999999),
   ('2160p Quality FR', '4KLight', 'all', -999999);
+
+-- 2160p Efficient source scores must not stack with the validated FR Efficient
+-- team tiers. Replace Dictionarry's US high-trust exclusions with our FR
+-- Efficient teams: TyHD, THESYNDICATE, CHiLL, SUPPLY, FW/FORWARD and TFA.
+DELETE FROM condition_patterns
+WHERE custom_format_name = '2160p WEB-DL (Efficient)'
+  AND condition_name IN (
+    'Not QxR',
+    'Not QxR Title',
+    'Not TAoE',
+    'Not TAoE Title',
+    'Not Vyndros'
+  );
+
+DELETE FROM custom_format_conditions
+WHERE custom_format_name = '2160p WEB-DL (Efficient)'
+  AND name IN (
+    'Not QxR',
+    'Not QxR Title',
+    'Not TAoE',
+    'Not TAoE Title',
+    'Not Vyndros'
+  );
+
+WITH efficient_team(condition_name, regular_expression_name) AS (
+  VALUES
+  ('Not TyHD', 'TyHD'),
+  ('Not THESYNDICATE', 'THESYNDICATE'),
+  ('Not CHiLL', 'CHiLL'),
+  ('Not SUPPLY', 'SUPPLY'),
+  ('Not FW', 'FW'),
+  ('Not FORWARD', 'FORWARD'),
+  ('Not TFA', 'TFA')
+)
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT '2160p WEB-DL (Efficient)', condition_name, 'release_group', 'all', 1, 1
+FROM efficient_team;
+
+WITH efficient_team(condition_name, regular_expression_name) AS (
+  VALUES
+  ('Not TyHD', 'TyHD'),
+  ('Not THESYNDICATE', 'THESYNDICATE'),
+  ('Not CHiLL', 'CHiLL'),
+  ('Not SUPPLY', 'SUPPLY'),
+  ('Not FW', 'FW'),
+  ('Not FORWARD', 'FORWARD'),
+  ('Not TFA', 'TFA')
+)
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT '2160p WEB-DL (Efficient)', condition_name, regular_expression_name
+FROM efficient_team;
+
+-- UHD Bluray (Efficient) mirrors the FR UHD Bluray technical shape, then
+-- excludes the same validated FR Efficient teams so their Bluray tiers remain
+-- the only premium match.
+DELETE FROM condition_patterns
+WHERE custom_format_name = 'UHD Bluray (Efficient)';
+
+DELETE FROM condition_resolutions
+WHERE custom_format_name = 'UHD Bluray (Efficient)';
+
+DELETE FROM condition_sources
+WHERE custom_format_name = 'UHD Bluray (Efficient)';
+
+DELETE FROM custom_format_conditions
+WHERE custom_format_name = 'UHD Bluray (Efficient)';
+
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+VALUES
+  ('UHD Bluray (Efficient)', '2160p', 'resolution', 'all', 0, 1),
+  ('UHD Bluray (Efficient)', 'UHD Bluray', 'release_title', 'all', 0, 1),
+  ('UHD Bluray (Efficient)', 'x265', 'release_title', 'all', 0, 1);
+
+INSERT INTO condition_resolutions (custom_format_name, condition_name, resolution)
+VALUES ('UHD Bluray (Efficient)', '2160p', '2160p');
+
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+VALUES
+  ('UHD Bluray (Efficient)', 'UHD Bluray', 'UHD Bluray'),
+  ('UHD Bluray (Efficient)', 'x265', 'x265');
+
+WITH efficient_team(condition_name, regular_expression_name) AS (
+  VALUES
+  ('Not TyHD', 'TyHD'),
+  ('Not THESYNDICATE', 'THESYNDICATE'),
+  ('Not CHiLL', 'CHiLL'),
+  ('Not SUPPLY', 'SUPPLY'),
+  ('Not FW', 'FW'),
+  ('Not FORWARD', 'FORWARD'),
+  ('Not TFA', 'TFA')
+)
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT 'UHD Bluray (Efficient)', condition_name, 'release_group', 'all', 1, 1
+FROM efficient_team;
+
+WITH efficient_team(condition_name, regular_expression_name) AS (
+  VALUES
+  ('Not TyHD', 'TyHD'),
+  ('Not THESYNDICATE', 'THESYNDICATE'),
+  ('Not CHiLL', 'CHiLL'),
+  ('Not SUPPLY', 'SUPPLY'),
+  ('Not FW', 'FW'),
+  ('Not FORWARD', 'FORWARD'),
+  ('Not TFA', 'TFA')
+)
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT 'UHD Bluray (Efficient)', condition_name, regular_expression_name
+FROM efficient_team;
+
+DELETE FROM quality_profile_custom_formats
+WHERE quality_profile_name = '2160p Efficient FR'
+  AND custom_format_name = 'UHD Bluray (Efficient)';
+
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+VALUES ('2160p Efficient FR', 'UHD Bluray (Efficient)', 'all', 720000);
+
+-- This source CF is shared by Efficient and Balanced FR profiles.
+UPDATE custom_formats
+SET
+  name = '2160p WEB-DL (Efficient/Balanced)',
+  description = 'Matches 2160p WEB-DLs for Efficient and Balanced profiles.'
+WHERE name = '2160p WEB-DL (Efficient)';
+
+DELETE FROM quality_profile_custom_formats
+WHERE quality_profile_name = '2160p Balanced FR'
+  AND custom_format_name = 'UHD Bluray';
+
+DELETE FROM quality_profile_custom_formats
+WHERE quality_profile_name = '2160p Balanced FR'
+  AND custom_format_name = '2160p WEB-DL (Efficient/Balanced)';
+
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+VALUES ('2160p Balanced FR', '2160p WEB-DL (Efficient/Balanced)', 'all', 720000);
+
+DELETE FROM quality_profile_custom_formats
+WHERE quality_profile_name IN (
+    '1080p Balanced FR',
+    '1080p Efficient FR',
+    '2160p Balanced FR',
+    '2160p Efficient FR'
+  )
+  AND custom_format_name IN ('HDLight', '4KLight');
+
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+VALUES
+  ('1080p Balanced FR', 'HDLight', 'all', -50000),
+  ('1080p Balanced FR', '4KLight', 'all', -50000),
+  ('1080p Efficient FR', 'HDLight', 'all', -50000),
+  ('1080p Efficient FR', '4KLight', 'all', -50000),
+  ('2160p Balanced FR', 'HDLight', 'all', -50000),
+  ('2160p Balanced FR', '4KLight', 'all', -50000),
+  ('2160p Efficient FR', 'HDLight', 'all', -50000),
+  ('2160p Efficient FR', '4KLight', 'all', -50000);
 -- --- END op 9021
