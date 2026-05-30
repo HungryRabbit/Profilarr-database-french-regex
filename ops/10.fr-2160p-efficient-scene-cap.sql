@@ -13,7 +13,7 @@
 -- ============================================================================
 
 UPDATE quality_profile_custom_formats
-SET score = 8000
+SET score = 4000
 WHERE quality_profile_name IN (
     '1080p Remux FR',
     '2160p Balanced FR',

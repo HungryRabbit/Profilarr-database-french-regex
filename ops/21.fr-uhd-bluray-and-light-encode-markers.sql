@@ -565,7 +565,15 @@ VALUES
   ('1080p Compact FR', 'HDLight WEBRip (Compact)', 'all', 870000);
 
 UPDATE quality_profile_custom_formats
-SET score = 8000
-WHERE quality_profile_name IN ('1080p Compact FR', '2160p Compact FR')
+SET score = 4000
+WHERE quality_profile_name IN (
+    '1080p Compact FR',
+    '1080p Remux FR',
+    '2160p Balanced FR',
+    '2160p Compact FR',
+    '2160p Efficient FR',
+    '2160p Quality FR',
+    '2160p Remux FR'
+  )
   AND custom_format_name = 'FR Scene Groups';
 -- --- END op 9021
