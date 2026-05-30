@@ -19,6 +19,8 @@
     "HDLight and 4KLight title markers are added in ops/21 and banned in Quality profiles so Quality does not accept light encodes.",
     "HDLight and 4KLight receive a light -50000 penalty in Balanced and Efficient profiles: allowed, but not prioritized.",
     "Generic non-tier Compact Light source CFs are added in ops/21: 4KLight Bluray/WEBRip for 2160p Compact FR and HDLight Bluray/WEBRip for 1080p Compact FR. Compact tier teams are excluded so these generic CFs do not double-score tiered groups.",
+    "2160p WEBRip is added in ops/22 by copying 4KLight WEBRip (Compact) before removing the 4KLight marker; then 4KLight WEBRip (Compact) is widened from strict WEBRip source to broad WEB title matching.",
+    "IMAX follows HDR10+ scoring: 2000 where HDR10+ is rewarded, 0 where HDR10+ is banned, so IMAX is never itself a ban condition.",
     "FR Scene Tier is kept profile-specific: 127000 in 1080p Quality profiles, 15000 in 1080p Compact FR, 4000 in 2160p Compact FR and other high-ceiling 2160p/Remux profiles, while 99000 remains on Anime style profiles.",
     "UHD Bluray is adapted for French usage in ops/21: it now requires 2160p instead of 1080p, and no longer requires an explicit HDR marker.",
     "2160p Efficient FR now uses FR 2160p Efficient WEB h265 and FR 2160p Efficient Bluray h265 as source passes without release-group conditions; teams are scored separately through the reusable FR WEB/Bluray tiers.",
@@ -504,7 +506,8 @@
     "720p Quality FR": {
       "FR 720p Quality Tier 1": 145000,
       "FR 720p Quality Tier 2": 144000,
-      "FR 720p Quality Tier 3": 143000
+      "FR 720p Quality Tier 3": 143000,
+      "IMAX": 0
     },
     "1080p Balanced FR": {
       "FR WEB Top Tier": 5000,
@@ -514,7 +517,8 @@
       "1080p WEB-DL": {
         "radarr": 710000,
         "sonarr": 710000
-      }
+      },
+      "IMAX": 0
     },
     "1080p Compact FR": {
       "FR 1080p Compact Bluray Tier 1": 943000,
@@ -529,7 +533,8 @@
       "FR WEB Tier 1": 15300,
       "FR WEB Tier 2": 15200,
       "FR WEB Tier 3": 15100,
-      "FR Scene Tier": 15000
+      "FR Scene Tier": 15000,
+      "IMAX": 0
     },
     "2160p Compact FR": {
       "FR 2160p Compact Bluray Tier 1": 970000,
@@ -538,6 +543,7 @@
       "FR 2160p Compact WEB Tier 2": 969000,
       "4KLight Bluray (Compact)": 940000,
       "4KLight WEBRip (Compact)": 900000,
+      "2160p WEBRip": 880000,
       "2160p WEB-DL": -999999,
       "1080p WEB-DL (Efficient)": 840000,
       "1080p Bluray (Efficient)": 840000,
@@ -566,7 +572,8 @@
       "FR WEB Tier 2": 4200,
       "FR WEB Tier 3": 4100,
       "FR Bluray Tier 1": 4300,
-      "FR Bluray Tier 2": 4200
+      "FR Bluray Tier 2": 4200,
+      "IMAX": 0
     },
     "1080p Quality FR": {
       "FR 1080p Quality Tier 1": 130000,
@@ -584,7 +591,8 @@
         "radarr": 710000,
         "sonarr": 710000
       },
-      "FR Scene Tier": 127000
+      "FR Scene Tier": 127000,
+      "IMAX": 2000
     },
     "1080p Quality HDR FR": {
       "FR 1080p Quality Tier 1": 130000,
@@ -602,7 +610,8 @@
         "radarr": 710000,
         "sonarr": 710000
       },
-      "FR Scene Tier": 127000
+      "FR Scene Tier": 127000,
+      "IMAX": 2000
     },
     "1080p Remux FR": {
       "FR 1080p Quality Tier 1": 130000,
@@ -621,7 +630,8 @@
       "1080p Bluray": {
         "radarr": 720000,
         "sonarr": 720000
-      }
+      },
+      "IMAX": 2000
     },
     "2160p Balanced FR": {
       "FR 2160p Balanced WEB": 920000,
@@ -652,7 +662,8 @@
       "1080p WEB-DL": {
         "radarr": 710000,
         "sonarr": 710000
-      }
+      },
+      "IMAX": 2000
     },
     "2160p Efficient FR": {
       "FR 2160p Efficient WEB h265": 983000,
@@ -678,7 +689,8 @@
       "FR WEB Tier 2": 4200,
       "FR WEB Tier 3": 4100,
       "FR Bluray Tier 1": 4300,
-      "FR Bluray Tier 2": 4200
+      "FR Bluray Tier 2": 4200,
+      "IMAX": 2000
     },
     "2160p Quality FR": {
       "FR 2160p Quality Tier 1": 945000,
@@ -706,7 +718,8 @@
       "1080p WEB-DL": {
         "radarr": 710000,
         "sonarr": 710000
-      }
+      },
+      "IMAX": 2000
     },
     "2160p Remux FR": {
       "FR 2160p Quality Tier 1": 965000,
@@ -736,7 +749,8 @@
       "1080p Bluray": {
         "radarr": 720000,
         "sonarr": 720000
-      }
+      },
+      "IMAX": 2000
     }
   },
   "decision_notes": {
@@ -775,7 +789,7 @@
         "Winks",
         "Xantar"
       ],
-      "score_order": "Tier 1 4KLight Bluray/WEBRip is 970000, Tier 2 4KLight Bluray/WEBRip is 969000, generic 4KLight Bluray is 940000, generic 4KLight WEBRip is 900000, validated 1080p Efficient fallback is 890000 after source + tier bonus, 1080p Compact tiers are 830000/829000, and generic 1080p WEBRip Compact fallback is 820000.",
+      "score_order": "Tier 1 4KLight Bluray/WEBRip is 970000, Tier 2 4KLight Bluray/WEBRip is 969000, generic 4KLight Bluray is 940000, generic 4KLight WEBRip is 900000, validated 1080p Efficient fallback is 890000 after source + tier bonus, generic 2160p WEBRip is 880000, 1080p Compact tiers are 830000/829000, and generic 1080p WEBRip Compact fallback is 820000.",
       "ceiling_check": "The expected top score for a MULTi DV/HDR10 EAC3 7.1 QTZ 4KLight release stays below the 1,000,000 ceiling, and 1080p Efficient source + tier cannot exceed the 4KLight Compact tiers."
     },
     "technical_alignment": {

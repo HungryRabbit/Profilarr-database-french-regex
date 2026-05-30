@@ -1435,4 +1435,121 @@ VALUES
   ('1080p Quality FR', 'FR Scene Tier', 'all', 127000),
   ('1080p Quality HDR FR', 'FR Scene Tier', 'all', 127000);
 
+-- Build the generic 2160p WEBRip fallback from the current 4KLight WEBRip
+-- Compact CF before widening that CF from strict WEBRip source to broad WEB title.
+INSERT INTO custom_formats (name, description)
+VALUES ('2160p WEBRip', 'Matches non-tier 2160p WEBRip releases for 2160p Compact FR fallback.')
+ON CONFLICT(name) DO UPDATE SET description = excluded.description;
+
+INSERT OR IGNORE INTO custom_format_tags (custom_format_name, tag_name)
+SELECT '2160p WEBRip', tag_name
+FROM custom_format_tags
+WHERE custom_format_name = '4KLight WEBRip (Compact)';
+
+DELETE FROM condition_patterns
+WHERE custom_format_name = '2160p WEBRip';
+
+DELETE FROM condition_sources
+WHERE custom_format_name = '2160p WEBRip';
+
+DELETE FROM condition_resolutions
+WHERE custom_format_name = '2160p WEBRip';
+
+DELETE FROM custom_format_conditions
+WHERE custom_format_name = '2160p WEBRip';
+
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT '2160p WEBRip', name, type, arr_type, negate, required
+FROM custom_format_conditions
+WHERE custom_format_name = '4KLight WEBRip (Compact)'
+  AND name <> '4KLight';
+
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT '2160p WEBRip', condition_name, regular_expression_name
+FROM condition_patterns
+WHERE custom_format_name = '4KLight WEBRip (Compact)'
+  AND condition_name <> '4KLight';
+
+INSERT INTO condition_resolutions (custom_format_name, condition_name, resolution)
+SELECT '2160p WEBRip', condition_name, resolution
+FROM condition_resolutions
+WHERE custom_format_name = '4KLight WEBRip (Compact)';
+
+INSERT INTO condition_sources (custom_format_name, condition_name, source)
+SELECT '2160p WEBRip', condition_name, source
+FROM condition_sources
+WHERE custom_format_name = '4KLight WEBRip (Compact)';
+
+DELETE FROM condition_sources
+WHERE custom_format_name = '4KLight WEBRip (Compact)'
+  AND condition_name = 'WEBRip';
+
+DELETE FROM custom_format_conditions
+WHERE custom_format_name = '4KLight WEBRip (Compact)'
+  AND name = 'WEBRip';
+
+INSERT OR IGNORE INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+VALUES ('4KLight WEBRip (Compact)', 'WEB Source', 'release_title', 'all', 0, 1);
+
+INSERT OR IGNORE INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+VALUES ('4KLight WEBRip (Compact)', 'WEB Source', 'WEB Source');
+
+DELETE FROM quality_profile_custom_formats
+WHERE quality_profile_name = '2160p Compact FR'
+  AND custom_format_name = '2160p WEBRip';
+
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+VALUES ('2160p Compact FR', '2160p WEBRip', 'all', 880000);
+
+INSERT INTO custom_formats (name, description)
+VALUES ('IMAX', 'Matches IMAX releases as a premium framing / aspect-ratio enhancement.')
+ON CONFLICT(name) DO UPDATE SET description = excluded.description;
+
+INSERT OR IGNORE INTO custom_format_tags (custom_format_name, tag_name)
+VALUES
+  ('IMAX', 'Aspect Ratio'),
+  ('IMAX', 'Enhancement');
+
+DELETE FROM condition_patterns
+WHERE custom_format_name = 'IMAX';
+
+DELETE FROM custom_format_conditions
+WHERE custom_format_name = 'IMAX';
+
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+VALUES ('IMAX', 'IMAX', 'release_title', 'all', 0, 1);
+
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+VALUES ('IMAX', 'IMAX', 'IMAX');
+
+DELETE FROM quality_profile_custom_formats
+WHERE custom_format_name = 'IMAX'
+  AND quality_profile_name IN (
+    '1080p Balanced FR',
+    '1080p Compact FR',
+    '1080p Efficient FR',
+    '1080p Quality FR',
+    '1080p Quality HDR FR',
+    '1080p Remux FR',
+    '2160p Balanced FR',
+    '2160p Efficient FR',
+    '2160p Quality FR',
+    '2160p Remux FR',
+    '720p Quality FR'
+  );
+
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+VALUES
+  ('1080p Balanced FR', 'IMAX', 'all', 0),
+  ('1080p Compact FR', 'IMAX', 'all', 0),
+  ('1080p Efficient FR', 'IMAX', 'all', 2000),
+  ('1080p Quality FR', 'IMAX', 'all', 0),
+  ('1080p Quality HDR FR', 'IMAX', 'all', 2000),
+  ('1080p Remux FR', 'IMAX', 'all', 2000),
+  ('2160p Balanced FR', 'IMAX', 'all', 2000),
+  ('2160p Efficient FR', 'IMAX', 'all', 2000),
+  ('2160p Quality FR', 'IMAX', 'all', 2000),
+  ('2160p Remux FR', 'IMAX', 'all', 2000),
+  ('720p Quality FR', 'IMAX', 'all', 0);
+
 -- --- END op 9022
