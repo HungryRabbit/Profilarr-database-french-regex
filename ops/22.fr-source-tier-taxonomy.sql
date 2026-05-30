@@ -776,7 +776,7 @@ WHERE quality_profile_name = '1080p Compact FR'
 
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 VALUES
-  ('1080p Compact FR', 'FR WEB Top Tier', 'all', 160100),
+  ('1080p Compact FR', 'FR WEB Top Tier', 'all', 16000),
   ('1080p Compact FR', 'FR WEB Tier 1', 'all', 15300),
   ('1080p Compact FR', 'FR WEB Tier 2', 'all', 15200),
   ('1080p Compact FR', 'FR WEB Tier 3', 'all', 15100);
@@ -918,5 +918,134 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 VALUES
   ('2160p Compact FR', 'FR 1080p Bluray HEVC', 'all', 50000),
   ('2160p Compact FR', 'FR 1080p WEB-DL HEVC', 'all', 50000);
+
+-- 1080p Quality tiers follow the reusable FR source taxonomy:
+-- Tier 1 = WEB Top + WEB Tier 1 + Bluray Tier 1
+-- Tier 2 = WEB Tier 2 + Bluray Tier 2
+-- Tier 3 = WEB Tier 3. There is no dedicated Bluray Tier 3 currently.
+WITH target(custom_format_name) AS (
+  VALUES
+  ('FR 1080p Quality Tier 1'),
+  ('FR 1080p Quality Tier 2'),
+  ('FR 1080p Quality Tier 3')
+),
+release_group_condition(custom_format_name, condition_name) AS (
+  SELECT cfc.custom_format_name, cfc.name
+  FROM custom_format_conditions cfc
+  JOIN target ON target.custom_format_name = cfc.custom_format_name
+  WHERE cfc.type = 'release_group'
+)
+DELETE FROM condition_patterns
+WHERE (custom_format_name, condition_name) IN (
+  SELECT custom_format_name, condition_name FROM release_group_condition
+);
+
+DELETE FROM custom_format_conditions
+WHERE custom_format_name IN (
+    'FR 1080p Quality Tier 1',
+    'FR 1080p Quality Tier 2',
+    'FR 1080p Quality Tier 3'
+  )
+  AND type = 'release_group';
+
+DELETE FROM condition_patterns
+WHERE custom_format_name IN (
+    'FR 1080p Quality Tier 1',
+    'FR 1080p Quality Tier 2',
+    'FR 1080p Quality Tier 3'
+  )
+  AND condition_name = 'Not Rip';
+
+DELETE FROM custom_format_conditions
+WHERE custom_format_name IN (
+    'FR 1080p Quality Tier 1',
+    'FR 1080p Quality Tier 2',
+    'FR 1080p Quality Tier 3'
+  )
+  AND name = 'Not Rip'
+  AND type = 'release_title';
+
+WITH tier_map(target_cf, source_cf) AS (
+  VALUES
+  ('FR 1080p Quality Tier 1', 'FR WEB Top Tier'),
+  ('FR 1080p Quality Tier 1', 'FR WEB Tier 1'),
+  ('FR 1080p Quality Tier 1', 'FR Bluray Tier 1'),
+  ('FR 1080p Quality Tier 2', 'FR WEB Tier 2'),
+  ('FR 1080p Quality Tier 2', 'FR Bluray Tier 2'),
+  ('FR 1080p Quality Tier 3', 'FR WEB Tier 3')
+),
+source_condition AS (
+  SELECT DISTINCT
+    tier_map.target_cf AS custom_format_name,
+    cfc.name AS condition_name,
+    cfc.type,
+    cfc.arr_type,
+    cfc.negate,
+    cfc.required
+  FROM tier_map
+  JOIN custom_format_conditions cfc
+    ON cfc.custom_format_name = tier_map.source_cf
+   AND cfc.type = 'release_group'
+)
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT custom_format_name, condition_name, type, arr_type, negate, required
+FROM source_condition;
+
+WITH tier_map(target_cf, source_cf) AS (
+  VALUES
+  ('FR 1080p Quality Tier 1', 'FR WEB Top Tier'),
+  ('FR 1080p Quality Tier 1', 'FR WEB Tier 1'),
+  ('FR 1080p Quality Tier 1', 'FR Bluray Tier 1'),
+  ('FR 1080p Quality Tier 2', 'FR WEB Tier 2'),
+  ('FR 1080p Quality Tier 2', 'FR Bluray Tier 2'),
+  ('FR 1080p Quality Tier 3', 'FR WEB Tier 3')
+),
+source_pattern AS (
+  SELECT DISTINCT
+    tier_map.target_cf AS custom_format_name,
+    cp.condition_name,
+    cp.regular_expression_name
+  FROM tier_map
+  JOIN condition_patterns cp
+    ON cp.custom_format_name = tier_map.source_cf
+)
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT custom_format_name, condition_name, regular_expression_name
+FROM source_pattern;
+
+DELETE FROM quality_profile_custom_formats
+WHERE quality_profile_name = '1080p Remux FR'
+  AND custom_format_name IN ('FR Remux Tier 1', 'FR Remux Tier 2');
+
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+VALUES
+  ('1080p Remux FR', 'FR Remux Tier 1', 'all', 4200),
+  ('1080p Remux FR', 'FR Remux Tier 2', 'all', 4100);
+
+DELETE FROM quality_profile_custom_formats
+WHERE quality_profile_name IN (
+    '1080p Quality FR',
+    '1080p Quality HDR FR',
+    '1080p Remux FR',
+    '2160p Balanced FR',
+    '2160p Quality FR',
+    '2160p Remux FR'
+  )
+  AND custom_format_name IN ('1080p WEBRip', '1080p Bluray');
+
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+VALUES
+  ('1080p Quality FR', '1080p WEBRip', 'all', 700000),
+  ('1080p Quality FR', '1080p Bluray', 'all', 720000),
+  ('1080p Quality HDR FR', '1080p WEBRip', 'all', 700000),
+  ('1080p Quality HDR FR', '1080p Bluray', 'all', 720000),
+  ('1080p Remux FR', '1080p WEBRip', 'all', 700000),
+  ('1080p Remux FR', '1080p Bluray', 'all', 720000),
+  ('2160p Balanced FR', '1080p WEBRip', 'all', 700000),
+  ('2160p Balanced FR', '1080p Bluray', 'all', 720000),
+  ('2160p Quality FR', '1080p WEBRip', 'all', 700000),
+  ('2160p Quality FR', '1080p Bluray', 'all', 720000),
+  ('2160p Remux FR', '1080p WEBRip', 'all', 700000),
+  ('2160p Remux FR', '1080p Bluray', 'all', 720000);
 
 -- --- END op 9022
