@@ -719,12 +719,9 @@ UPDATE custom_formats
 SET description = 'Deprecated by FR source tier taxonomy. Kept only to satisfy Profilarr foreign-key metadata; not used by final FR profiles.'
 WHERE name IN (SELECT name FROM old_cf);
 
--- HYPERION releases games, not video. Keep existing condition rows intact to
--- avoid FK-backed metadata deletes, but remove its tags and make the regex
--- impossible to match.
-DELETE FROM regular_expression_tags
-WHERE regular_expression_name = 'HYPERION';
-
+-- HYPERION releases games, not video. Keep existing tag and condition rows
+-- intact because Profilarr PCD metadata can be FK-backed across tables; make
+-- the regex impossible to match instead.
 UPDATE regular_expressions
 SET pattern = '(?!)',
     description = 'Disabled: HYPERION releases games, not video.'
@@ -1006,8 +1003,12 @@ source_pattern AS (
     cp.condition_name,
     cp.regular_expression_name
   FROM tier_map
+  JOIN custom_format_conditions cfc
+    ON cfc.custom_format_name = tier_map.source_cf
+   AND cfc.type = 'release_group'
   JOIN condition_patterns cp
     ON cp.custom_format_name = tier_map.source_cf
+   AND cp.condition_name = cfc.name
 )
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
 SELECT custom_format_name, condition_name, regular_expression_name
