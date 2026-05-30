@@ -590,140 +590,138 @@ WITH old_cf(name) AS (
   ('FR TV WEB Tier 02'),
   ('FR TV WEB Tier 03')
 )
-DELETE FROM condition_patterns
-WHERE custom_format_name IN (SELECT name FROM old_cf);
-
-WITH old_cf(name) AS (
-  VALUES
-  ('FR 1080p Balanced Tier 1'),
-  ('FR 1080p Balanced Tier 2'),
-  ('FR Global Tier 01'),
-  ('FR Global Tier 02'),
-  ('FR HDLight Tier'),
-  ('FR Movie HD Bluray Tier 01'),
-  ('FR Movie HD Bluray Tier 02'),
-  ('FR Movie Remux Tier 01'),
-  ('FR Movie Remux Tier 02'),
-  ('FR Movie UHD Bluray Tier 01'),
-  ('FR Movie UHD Bluray Tier 02'),
-  ('FR Movie WEB Tier 01'),
-  ('FR Movie WEB Tier 02'),
-  ('FR TV HD Bluray Tier 01'),
-  ('FR TV Remux Tier 01'),
-  ('FR TV WEB Tier 01'),
-  ('FR TV WEB Tier 02'),
-  ('FR TV WEB Tier 03')
-)
-DELETE FROM condition_sources
-WHERE custom_format_name IN (SELECT name FROM old_cf);
-
-WITH old_cf(name) AS (
-  VALUES
-  ('FR 1080p Balanced Tier 1'),
-  ('FR 1080p Balanced Tier 2'),
-  ('FR Global Tier 01'),
-  ('FR Global Tier 02'),
-  ('FR HDLight Tier'),
-  ('FR Movie HD Bluray Tier 01'),
-  ('FR Movie HD Bluray Tier 02'),
-  ('FR Movie Remux Tier 01'),
-  ('FR Movie Remux Tier 02'),
-  ('FR Movie UHD Bluray Tier 01'),
-  ('FR Movie UHD Bluray Tier 02'),
-  ('FR Movie WEB Tier 01'),
-  ('FR Movie WEB Tier 02'),
-  ('FR TV HD Bluray Tier 01'),
-  ('FR TV Remux Tier 01'),
-  ('FR TV WEB Tier 01'),
-  ('FR TV WEB Tier 02'),
-  ('FR TV WEB Tier 03')
-)
-DELETE FROM condition_resolutions
-WHERE custom_format_name IN (SELECT name FROM old_cf);
-
-WITH old_cf(name) AS (
-  VALUES
-  ('FR 1080p Balanced Tier 1'),
-  ('FR 1080p Balanced Tier 2'),
-  ('FR Global Tier 01'),
-  ('FR Global Tier 02'),
-  ('FR HDLight Tier'),
-  ('FR Movie HD Bluray Tier 01'),
-  ('FR Movie HD Bluray Tier 02'),
-  ('FR Movie Remux Tier 01'),
-  ('FR Movie Remux Tier 02'),
-  ('FR Movie UHD Bluray Tier 01'),
-  ('FR Movie UHD Bluray Tier 02'),
-  ('FR Movie WEB Tier 01'),
-  ('FR Movie WEB Tier 02'),
-  ('FR TV HD Bluray Tier 01'),
-  ('FR TV Remux Tier 01'),
-  ('FR TV WEB Tier 01'),
-  ('FR TV WEB Tier 02'),
-  ('FR TV WEB Tier 03')
-)
-DELETE FROM custom_format_conditions
-WHERE custom_format_name IN (SELECT name FROM old_cf);
-
-WITH old_cf(name) AS (
-  VALUES
-  ('FR 1080p Balanced Tier 1'),
-  ('FR 1080p Balanced Tier 2'),
-  ('FR Global Tier 01'),
-  ('FR Global Tier 02'),
-  ('FR HDLight Tier'),
-  ('FR Movie HD Bluray Tier 01'),
-  ('FR Movie HD Bluray Tier 02'),
-  ('FR Movie Remux Tier 01'),
-  ('FR Movie Remux Tier 02'),
-  ('FR Movie UHD Bluray Tier 01'),
-  ('FR Movie UHD Bluray Tier 02'),
-  ('FR Movie WEB Tier 01'),
-  ('FR Movie WEB Tier 02'),
-  ('FR TV HD Bluray Tier 01'),
-  ('FR TV Remux Tier 01'),
-  ('FR TV WEB Tier 01'),
-  ('FR TV WEB Tier 02'),
-  ('FR TV WEB Tier 03')
-)
-DELETE FROM custom_format_tags
-WHERE custom_format_name IN (SELECT name FROM old_cf);
-
-WITH old_cf(name) AS (
-  VALUES
-  ('FR 1080p Balanced Tier 1'),
-  ('FR 1080p Balanced Tier 2'),
-  ('FR Global Tier 01'),
-  ('FR Global Tier 02'),
-  ('FR HDLight Tier'),
-  ('FR Movie HD Bluray Tier 01'),
-  ('FR Movie HD Bluray Tier 02'),
-  ('FR Movie Remux Tier 01'),
-  ('FR Movie Remux Tier 02'),
-  ('FR Movie UHD Bluray Tier 01'),
-  ('FR Movie UHD Bluray Tier 02'),
-  ('FR Movie WEB Tier 01'),
-  ('FR Movie WEB Tier 02'),
-  ('FR TV HD Bluray Tier 01'),
-  ('FR TV Remux Tier 01'),
-  ('FR TV WEB Tier 01'),
-  ('FR TV WEB Tier 02'),
-  ('FR TV WEB Tier 03')
-)
-DELETE FROM custom_formats
+UPDATE custom_formats
+SET description = 'Deprecated by FR source tier taxonomy. Kept only to satisfy Profilarr foreign-key metadata; not used by final FR profiles.'
 WHERE name IN (SELECT name FROM old_cf);
 
--- HYPERION releases games, not video. Remove it from every functional tier and
--- tag, then neutralize the regex instead of deleting the parent row. Profilarr
--- keeps FK-backed regex metadata tables, so deleting the regex row can break
--- PCD compilation even after conditions are removed.
-DELETE FROM condition_patterns
-WHERE regular_expression_name = 'HYPERION'
-   OR condition_name = 'HYPERION';
+WITH old_cf(name) AS (
+  VALUES
+  ('FR 1080p Balanced Tier 1'),
+  ('FR 1080p Balanced Tier 2'),
+  ('FR Global Tier 01'),
+  ('FR Global Tier 02'),
+  ('FR HDLight Tier'),
+  ('FR Movie HD Bluray Tier 01'),
+  ('FR Movie HD Bluray Tier 02'),
+  ('FR Movie Remux Tier 01'),
+  ('FR Movie Remux Tier 02'),
+  ('FR Movie UHD Bluray Tier 01'),
+  ('FR Movie UHD Bluray Tier 02'),
+  ('FR Movie WEB Tier 01'),
+  ('FR Movie WEB Tier 02'),
+  ('FR TV HD Bluray Tier 01'),
+  ('FR TV Remux Tier 01'),
+  ('FR TV WEB Tier 01'),
+  ('FR TV WEB Tier 02'),
+  ('FR TV WEB Tier 03')
+)
+UPDATE custom_formats
+SET description = 'Deprecated by FR source tier taxonomy. Kept only to satisfy Profilarr foreign-key metadata; not used by final FR profiles.'
+WHERE name IN (SELECT name FROM old_cf);
 
-DELETE FROM custom_format_conditions
-WHERE name = 'HYPERION';
+WITH old_cf(name) AS (
+  VALUES
+  ('FR 1080p Balanced Tier 1'),
+  ('FR 1080p Balanced Tier 2'),
+  ('FR Global Tier 01'),
+  ('FR Global Tier 02'),
+  ('FR HDLight Tier'),
+  ('FR Movie HD Bluray Tier 01'),
+  ('FR Movie HD Bluray Tier 02'),
+  ('FR Movie Remux Tier 01'),
+  ('FR Movie Remux Tier 02'),
+  ('FR Movie UHD Bluray Tier 01'),
+  ('FR Movie UHD Bluray Tier 02'),
+  ('FR Movie WEB Tier 01'),
+  ('FR Movie WEB Tier 02'),
+  ('FR TV HD Bluray Tier 01'),
+  ('FR TV Remux Tier 01'),
+  ('FR TV WEB Tier 01'),
+  ('FR TV WEB Tier 02'),
+  ('FR TV WEB Tier 03')
+)
+UPDATE custom_formats
+SET description = 'Deprecated by FR source tier taxonomy. Kept only to satisfy Profilarr foreign-key metadata; not used by final FR profiles.'
+WHERE name IN (SELECT name FROM old_cf);
 
+WITH old_cf(name) AS (
+  VALUES
+  ('FR 1080p Balanced Tier 1'),
+  ('FR 1080p Balanced Tier 2'),
+  ('FR Global Tier 01'),
+  ('FR Global Tier 02'),
+  ('FR HDLight Tier'),
+  ('FR Movie HD Bluray Tier 01'),
+  ('FR Movie HD Bluray Tier 02'),
+  ('FR Movie Remux Tier 01'),
+  ('FR Movie Remux Tier 02'),
+  ('FR Movie UHD Bluray Tier 01'),
+  ('FR Movie UHD Bluray Tier 02'),
+  ('FR Movie WEB Tier 01'),
+  ('FR Movie WEB Tier 02'),
+  ('FR TV HD Bluray Tier 01'),
+  ('FR TV Remux Tier 01'),
+  ('FR TV WEB Tier 01'),
+  ('FR TV WEB Tier 02'),
+  ('FR TV WEB Tier 03')
+)
+UPDATE custom_formats
+SET description = 'Deprecated by FR source tier taxonomy. Kept only to satisfy Profilarr foreign-key metadata; not used by final FR profiles.'
+WHERE name IN (SELECT name FROM old_cf);
+
+WITH old_cf(name) AS (
+  VALUES
+  ('FR 1080p Balanced Tier 1'),
+  ('FR 1080p Balanced Tier 2'),
+  ('FR Global Tier 01'),
+  ('FR Global Tier 02'),
+  ('FR HDLight Tier'),
+  ('FR Movie HD Bluray Tier 01'),
+  ('FR Movie HD Bluray Tier 02'),
+  ('FR Movie Remux Tier 01'),
+  ('FR Movie Remux Tier 02'),
+  ('FR Movie UHD Bluray Tier 01'),
+  ('FR Movie UHD Bluray Tier 02'),
+  ('FR Movie WEB Tier 01'),
+  ('FR Movie WEB Tier 02'),
+  ('FR TV HD Bluray Tier 01'),
+  ('FR TV Remux Tier 01'),
+  ('FR TV WEB Tier 01'),
+  ('FR TV WEB Tier 02'),
+  ('FR TV WEB Tier 03')
+)
+UPDATE custom_formats
+SET description = 'Deprecated by FR source tier taxonomy. Kept only to satisfy Profilarr foreign-key metadata; not used by final FR profiles.'
+WHERE name IN (SELECT name FROM old_cf);
+
+WITH old_cf(name) AS (
+  VALUES
+  ('FR 1080p Balanced Tier 1'),
+  ('FR 1080p Balanced Tier 2'),
+  ('FR Global Tier 01'),
+  ('FR Global Tier 02'),
+  ('FR HDLight Tier'),
+  ('FR Movie HD Bluray Tier 01'),
+  ('FR Movie HD Bluray Tier 02'),
+  ('FR Movie Remux Tier 01'),
+  ('FR Movie Remux Tier 02'),
+  ('FR Movie UHD Bluray Tier 01'),
+  ('FR Movie UHD Bluray Tier 02'),
+  ('FR Movie WEB Tier 01'),
+  ('FR Movie WEB Tier 02'),
+  ('FR TV HD Bluray Tier 01'),
+  ('FR TV Remux Tier 01'),
+  ('FR TV WEB Tier 01'),
+  ('FR TV WEB Tier 02'),
+  ('FR TV WEB Tier 03')
+)
+UPDATE custom_formats
+SET description = 'Deprecated by FR source tier taxonomy. Kept only to satisfy Profilarr foreign-key metadata; not used by final FR profiles.'
+WHERE name IN (SELECT name FROM old_cf);
+
+-- HYPERION releases games, not video. Keep existing condition rows intact to
+-- avoid FK-backed metadata deletes, but remove its tags and make the regex
+-- impossible to match.
 DELETE FROM regular_expression_tags
 WHERE regular_expression_name = 'HYPERION';
 
