@@ -1424,6 +1424,22 @@ VALUES
   ('2160p Quality FR', 'FR UHD Bluray Tier 2', 'all', 4100);
 
 DELETE FROM quality_profile_custom_formats
+WHERE quality_profile_name = '2160p Quality FR'
+  AND custom_format_name IN (
+    'FR 2160p WEB Top Tier',
+    'FR 2160p WEB Tier 1',
+    'FR 2160p WEB Tier 2',
+    'FR 2160p WEB Tier 3'
+  );
+
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+VALUES
+  ('2160p Quality FR', 'FR 2160p WEB Top Tier', 'all', 5000),
+  ('2160p Quality FR', 'FR 2160p WEB Tier 1', 'all', 4300),
+  ('2160p Quality FR', 'FR 2160p WEB Tier 2', 'all', 4200),
+  ('2160p Quality FR', 'FR 2160p WEB Tier 3', 'all', 4100);
+
+DELETE FROM quality_profile_custom_formats
 WHERE quality_profile_name = '2160p Remux FR'
   AND custom_format_name IN ('FR UHD Bluray Tier 1', 'FR UHD Bluray Tier 2');
 
