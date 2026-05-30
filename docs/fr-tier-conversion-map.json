@@ -48,12 +48,8 @@
       "FR WEB Tier 1": "Reusable WEB team tier scored separately in Balanced, Compact and Efficient profiles.",
       "FR WEB Tier 2": "Reusable WEB team tier scored separately in Balanced, Compact and Efficient profiles.",
       "FR WEB Tier 3": "Reusable WEB team tier scored separately in Balanced, Compact and Efficient profiles.",
-      "FR 2160p Balanced Tier 1": [
-        "FW",
-        "FORWARD",
-        "SUPPLY",
-        "TFA"
-      ]
+      "FR 2160p Balanced WEB": "2160p WEB-DL Balanced source pass without release-group condition.",
+      "FR 2160p Balanced Bluray": "2160p Bluray Balanced source pass without release-group condition."
     },
     "compact": {
       "FR 1080p Compact Bluray Tier 1": [
@@ -415,6 +411,93 @@
         "ALPIATE",
         "M@x",
         "ZTM"
+      ],
+      "FR 2160p WEB Top Tier": [
+        "FW",
+        "FORWARD",
+        "CHiLL",
+        "TyHD",
+        "TFA",
+        "THESYNDICATE"
+      ],
+      "FR 2160p WEB Tier 1": [
+        "BONBON",
+        "FCK",
+        "FoX",
+        "FRATERNiTY",
+        "FrIeNdS",
+        "MOONLY",
+        "MTDK",
+        "NoLo",
+        "OZEF",
+        "PATOPESTO",
+        "Psaro",
+        "RG",
+        "SUPPLY",
+        "TiNA"
+      ],
+      "FR 2160p WEB Tier 2": [
+        "ALLDAYiN",
+        "ARK01",
+        "BOUBA",
+        "COLL3CTiF",
+        "FiND",
+        "HeavyWeight",
+        "N3ZUKO",
+        "NEO",
+        "NEOSTARK",
+        "NoNE",
+        "ONLYMOViE",
+        "pERsO",
+        "POTO",
+        "R3MIX",
+        "RiPiT",
+        "Slay3R",
+        "SUPERFLU",
+        "TAT",
+        "TkHD",
+        "TLC",
+        "TMB",
+        "WaCkS"
+      ],
+      "FR 2160p WEB Tier 3": [
+        "BraD",
+        "BOUC",
+        "dRuIdE",
+        "ENIGMA",
+        "FTMVHD",
+        "LAZARUS",
+        "MYSTERiON",
+        "Scaph",
+        "WQM"
+      ],
+      "FR 2160p Bluray Tier 1": [
+        "ARK01",
+        "BDHD",
+        "BONBON",
+        "FoX",
+        "FRATERNiTY",
+        "FrIeNdS",
+        "FTMVHD",
+        "HeavyWeight",
+        "MAX",
+        "Psaro",
+        "YODA"
+      ],
+      "FR 2160p Bluray Tier 2": [
+        "COCAIN",
+        "DREAM",
+        "HDForever",
+        "LKT",
+        "MARBLECAKE",
+        "MYSTERiON",
+        "NoNE",
+        "ONLY",
+        "ONLYMOViE",
+        "Themouche",
+        "TkHD",
+        "TSR",
+        "UTT"
       ]
     }
   },
@@ -535,10 +618,23 @@
       }
     },
     "2160p Balanced FR": {
-      "FR 2160p Balanced Tier 1": 920000,
-      "2160p WEB-DL (Efficient/Balanced)": 720000,
-      "FR UHD Bluray Tier 1": 442000,
-      "FR UHD Bluray Tier 2": 441000,
+      "FR 2160p Balanced WEB": 920000,
+      "FR 2160p Balanced Bluray": 921000,
+      "2160p WEB-DL (Balanced)": 920000,
+      "FR UHD Bluray Tier 1": {
+        "radarr": 4200,
+        "sonarr": 4200
+      },
+      "FR UHD Bluray Tier 2": {
+        "radarr": 4100,
+        "sonarr": 4100
+      },
+      "FR 2160p WEB Top Tier": 5000,
+      "FR 2160p WEB Tier 1": 4300,
+      "FR 2160p WEB Tier 2": 4200,
+      "FR 2160p WEB Tier 3": 4100,
+      "FR 2160p Bluray Tier 1": 4300,
+      "FR 2160p Bluray Tier 2": 4200,
       "1080p WEBRip": {
         "radarr": 700000,
         "sonarr": 700000

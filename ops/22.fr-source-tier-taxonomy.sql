@@ -1071,4 +1071,259 @@ VALUES
   ('2160p Quality FR', '1080p WEB-DL', 'all', 710000),
   ('2160p Remux FR', '1080p WEB-DL', 'all', 710000);
 
+-- 2160p Balanced follows the same split as 1080p: source/base CFs no longer
+-- carry release-group conditions, and team preference is scored separately by
+-- reusable 2160p tiers.
+WITH new_cf(name, description) AS (
+  VALUES
+  ('FR 2160p Balanced WEB', '2160p WEB-DL Balanced source pass without release-group condition.'),
+  ('FR 2160p Balanced Bluray', '2160p Bluray Balanced source pass without release-group condition.'),
+  ('FR 2160p WEB Top Tier', '2160p WEB copy of FR WEB Top Tier with 2160p and Not Remux gates.'),
+  ('FR 2160p WEB Tier 1', '2160p WEB copy of FR WEB Tier 1 with 2160p and Not Remux gates.'),
+  ('FR 2160p WEB Tier 2', '2160p WEB copy of FR WEB Tier 2 with 2160p and Not Remux gates.'),
+  ('FR 2160p WEB Tier 3', '2160p WEB copy of FR WEB Tier 3 with 2160p and Not Remux gates.'),
+  ('FR 2160p Bluray Tier 1', '2160p Bluray copy of FR Bluray Tier 1 with 2160p and Not Remux gates.'),
+  ('FR 2160p Bluray Tier 2', '2160p Bluray copy of FR Bluray Tier 2 with 2160p and Not Remux gates.')
+)
+INSERT INTO custom_formats (name, description)
+SELECT name, description
+FROM new_cf
+WHERE NOT EXISTS (SELECT 1 FROM custom_formats WHERE custom_formats.name = new_cf.name);
+
+WITH tag_map(custom_format_name, tag_name) AS (
+  VALUES
+  ('FR 2160p Balanced WEB', 'French'), ('FR 2160p Balanced WEB', '2160p'), ('FR 2160p Balanced WEB', 'Balanced'), ('FR 2160p Balanced WEB', 'WEB-DL'),
+  ('FR 2160p Balanced Bluray', 'French'), ('FR 2160p Balanced Bluray', '2160p'), ('FR 2160p Balanced Bluray', 'Balanced'), ('FR 2160p Balanced Bluray', 'Bluray'),
+  ('FR 2160p WEB Top Tier', 'French'), ('FR 2160p WEB Top Tier', '2160p'), ('FR 2160p WEB Top Tier', 'WEB-DL'), ('FR 2160p WEB Top Tier', 'Release Group Tier'),
+  ('FR 2160p WEB Tier 1', 'French'), ('FR 2160p WEB Tier 1', '2160p'), ('FR 2160p WEB Tier 1', 'WEB-DL'), ('FR 2160p WEB Tier 1', 'Release Group Tier'),
+  ('FR 2160p WEB Tier 2', 'French'), ('FR 2160p WEB Tier 2', '2160p'), ('FR 2160p WEB Tier 2', 'WEB-DL'), ('FR 2160p WEB Tier 2', 'Release Group Tier'),
+  ('FR 2160p WEB Tier 3', 'French'), ('FR 2160p WEB Tier 3', '2160p'), ('FR 2160p WEB Tier 3', 'WEB-DL'), ('FR 2160p WEB Tier 3', 'Release Group Tier'),
+  ('FR 2160p Bluray Tier 1', 'French'), ('FR 2160p Bluray Tier 1', '2160p'), ('FR 2160p Bluray Tier 1', 'Bluray'), ('FR 2160p Bluray Tier 1', 'Release Group Tier'),
+  ('FR 2160p Bluray Tier 2', 'French'), ('FR 2160p Bluray Tier 2', '2160p'), ('FR 2160p Bluray Tier 2', 'Bluray'), ('FR 2160p Bluray Tier 2', 'Release Group Tier')
+)
+INSERT INTO custom_format_tags (custom_format_name, tag_name)
+SELECT custom_format_name, tag_name
+FROM tag_map
+WHERE NOT EXISTS (
+  SELECT 1 FROM custom_format_tags cft
+  WHERE cft.custom_format_name = tag_map.custom_format_name
+    AND cft.tag_name = tag_map.tag_name
+);
+
+WITH base_condition(custom_format_name, condition_name, type, negate, required) AS (
+  VALUES
+  ('FR 2160p Balanced WEB', '2160p', 'resolution', 0, 1),
+  ('FR 2160p Balanced WEB', 'WEB-DL', 'source', 0, 1),
+  ('FR 2160p Balanced WEB', 'h265', 'release_title', 0, 1),
+  ('FR 2160p Balanced Bluray', '2160p', 'resolution', 0, 1),
+  ('FR 2160p Balanced Bluray', 'Bluray', 'source', 0, 1),
+  ('FR 2160p Balanced Bluray', 'h265', 'release_title', 0, 1)
+)
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT custom_format_name, condition_name, type, 'all', negate, required
+FROM base_condition
+WHERE NOT EXISTS (
+  SELECT 1 FROM custom_format_conditions cfc
+  WHERE cfc.custom_format_name = base_condition.custom_format_name
+    AND cfc.name = base_condition.condition_name
+);
+
+WITH source_tier_condition(custom_format_name, condition_name, type, negate, required) AS (
+  VALUES
+  ('FR 2160p WEB Top Tier', '2160p', 'resolution', 0, 1),
+  ('FR 2160p WEB Top Tier', 'WEB Source', 'release_title', 0, 1),
+  ('FR 2160p WEB Top Tier', 'Not Remux', 'release_title', 1, 1),
+  ('FR 2160p WEB Tier 1', '2160p', 'resolution', 0, 1),
+  ('FR 2160p WEB Tier 1', 'WEB Source', 'release_title', 0, 1),
+  ('FR 2160p WEB Tier 1', 'Not Remux', 'release_title', 1, 1),
+  ('FR 2160p WEB Tier 2', '2160p', 'resolution', 0, 1),
+  ('FR 2160p WEB Tier 2', 'WEB Source', 'release_title', 0, 1),
+  ('FR 2160p WEB Tier 2', 'Not Remux', 'release_title', 1, 1),
+  ('FR 2160p WEB Tier 3', '2160p', 'resolution', 0, 1),
+  ('FR 2160p WEB Tier 3', 'WEB Source', 'release_title', 0, 1),
+  ('FR 2160p WEB Tier 3', 'Not Remux', 'release_title', 1, 1),
+  ('FR 2160p Bluray Tier 1', '2160p', 'resolution', 0, 1),
+  ('FR 2160p Bluray Tier 1', 'Bluray', 'source', 0, 1),
+  ('FR 2160p Bluray Tier 1', 'Not Remux', 'release_title', 1, 1),
+  ('FR 2160p Bluray Tier 2', '2160p', 'resolution', 0, 1),
+  ('FR 2160p Bluray Tier 2', 'Bluray', 'source', 0, 1),
+  ('FR 2160p Bluray Tier 2', 'Not Remux', 'release_title', 1, 1)
+)
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT custom_format_name, condition_name, type, 'all', negate, required
+FROM source_tier_condition
+WHERE NOT EXISTS (
+  SELECT 1 FROM custom_format_conditions cfc
+  WHERE cfc.custom_format_name = source_tier_condition.custom_format_name
+    AND cfc.name = source_tier_condition.condition_name
+);
+
+WITH resolution_map(custom_format_name, condition_name, resolution) AS (
+  VALUES
+  ('FR 2160p Balanced WEB', '2160p', '2160p'),
+  ('FR 2160p Balanced Bluray', '2160p', '2160p'),
+  ('FR 2160p WEB Top Tier', '2160p', '2160p'),
+  ('FR 2160p WEB Tier 1', '2160p', '2160p'),
+  ('FR 2160p WEB Tier 2', '2160p', '2160p'),
+  ('FR 2160p WEB Tier 3', '2160p', '2160p'),
+  ('FR 2160p Bluray Tier 1', '2160p', '2160p'),
+  ('FR 2160p Bluray Tier 2', '2160p', '2160p')
+)
+INSERT INTO condition_resolutions (custom_format_name, condition_name, resolution)
+SELECT custom_format_name, condition_name, resolution
+FROM resolution_map
+WHERE NOT EXISTS (
+  SELECT 1 FROM condition_resolutions cr
+  WHERE cr.custom_format_name = resolution_map.custom_format_name
+    AND cr.condition_name = resolution_map.condition_name
+);
+
+WITH source_map(custom_format_name, condition_name, source) AS (
+  VALUES
+  ('FR 2160p Balanced WEB', 'WEB-DL', 'web_dl'),
+  ('FR 2160p Balanced Bluray', 'Bluray', 'bluray'),
+  ('FR 2160p Bluray Tier 1', 'Bluray', 'bluray'),
+  ('FR 2160p Bluray Tier 2', 'Bluray', 'bluray')
+)
+INSERT INTO condition_sources (custom_format_name, condition_name, source)
+SELECT custom_format_name, condition_name, source
+FROM source_map
+WHERE NOT EXISTS (
+  SELECT 1 FROM condition_sources cs
+  WHERE cs.custom_format_name = source_map.custom_format_name
+    AND cs.condition_name = source_map.condition_name
+);
+
+WITH pattern_map(custom_format_name, condition_name, regular_expression_name) AS (
+  VALUES
+  ('FR 2160p Balanced WEB', 'h265', 'HEVC'),
+  ('FR 2160p Balanced Bluray', 'h265', 'HEVC'),
+  ('FR 2160p WEB Top Tier', 'WEB Source', 'WEB Source'),
+  ('FR 2160p WEB Top Tier', 'Not Remux', 'Remux'),
+  ('FR 2160p WEB Tier 1', 'WEB Source', 'WEB Source'),
+  ('FR 2160p WEB Tier 1', 'Not Remux', 'Remux'),
+  ('FR 2160p WEB Tier 2', 'WEB Source', 'WEB Source'),
+  ('FR 2160p WEB Tier 2', 'Not Remux', 'Remux'),
+  ('FR 2160p WEB Tier 3', 'WEB Source', 'WEB Source'),
+  ('FR 2160p WEB Tier 3', 'Not Remux', 'Remux'),
+  ('FR 2160p Bluray Tier 1', 'Not Remux', 'Remux'),
+  ('FR 2160p Bluray Tier 2', 'Not Remux', 'Remux')
+)
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT custom_format_name, condition_name, regular_expression_name
+FROM pattern_map
+WHERE NOT EXISTS (
+  SELECT 1 FROM condition_patterns cp
+  WHERE cp.custom_format_name = pattern_map.custom_format_name
+    AND cp.condition_name = pattern_map.condition_name
+);
+
+WITH tier_copy(target_cf, source_cf) AS (
+  VALUES
+  ('FR 2160p WEB Top Tier', 'FR WEB Top Tier'),
+  ('FR 2160p WEB Tier 1', 'FR WEB Tier 1'),
+  ('FR 2160p WEB Tier 2', 'FR WEB Tier 2'),
+  ('FR 2160p WEB Tier 3', 'FR WEB Tier 3'),
+  ('FR 2160p Bluray Tier 1', 'FR Bluray Tier 1'),
+  ('FR 2160p Bluray Tier 2', 'FR Bluray Tier 2')
+),
+source_condition AS (
+  SELECT DISTINCT
+    tier_copy.target_cf AS custom_format_name,
+    cfc.name AS condition_name,
+    cfc.type,
+    cfc.arr_type,
+    cfc.negate,
+    cfc.required
+  FROM tier_copy
+  JOIN custom_format_conditions cfc
+    ON cfc.custom_format_name = tier_copy.source_cf
+   AND cfc.type = 'release_group'
+)
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT custom_format_name, condition_name, type, arr_type, negate, required
+FROM source_condition
+WHERE NOT EXISTS (
+  SELECT 1 FROM custom_format_conditions cfc
+  WHERE cfc.custom_format_name = source_condition.custom_format_name
+    AND cfc.name = source_condition.condition_name
+);
+
+WITH tier_copy(target_cf, source_cf) AS (
+  VALUES
+  ('FR 2160p WEB Top Tier', 'FR WEB Top Tier'),
+  ('FR 2160p WEB Tier 1', 'FR WEB Tier 1'),
+  ('FR 2160p WEB Tier 2', 'FR WEB Tier 2'),
+  ('FR 2160p WEB Tier 3', 'FR WEB Tier 3'),
+  ('FR 2160p Bluray Tier 1', 'FR Bluray Tier 1'),
+  ('FR 2160p Bluray Tier 2', 'FR Bluray Tier 2')
+),
+source_pattern AS (
+  SELECT DISTINCT
+    tier_copy.target_cf AS custom_format_name,
+    cp.condition_name,
+    cp.regular_expression_name
+  FROM tier_copy
+  JOIN custom_format_conditions cfc
+    ON cfc.custom_format_name = tier_copy.source_cf
+   AND cfc.type = 'release_group'
+  JOIN condition_patterns cp
+    ON cp.custom_format_name = tier_copy.source_cf
+   AND cp.condition_name = cfc.name
+)
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT custom_format_name, condition_name, regular_expression_name
+FROM source_pattern
+WHERE NOT EXISTS (
+  SELECT 1 FROM condition_patterns cp
+  WHERE cp.custom_format_name = source_pattern.custom_format_name
+    AND cp.condition_name = source_pattern.condition_name
+);
+
+DELETE FROM condition_patterns
+WHERE custom_format_name = '2160p WEB-DL (Balanced)'
+  AND condition_name LIKE 'Not %';
+
+DELETE FROM custom_format_conditions
+WHERE custom_format_name = '2160p WEB-DL (Balanced)'
+  AND type = 'release_group'
+  AND name LIKE 'Not %';
+
+UPDATE custom_formats
+SET description = 'Deprecated by FR 2160p Balanced source/tier split. Kept only for FK-backed metadata compatibility.'
+WHERE name IN ('FR 2160p Balanced WEB Tier 1', 'FR 2160p Balanced Bluray Tier 1');
+
+DELETE FROM quality_profile_custom_formats
+WHERE quality_profile_name = '2160p Balanced FR'
+  AND custom_format_name IN (
+    'FR 2160p Balanced WEB Tier 1',
+    'FR 2160p Balanced Bluray Tier 1',
+    'FR 2160p Balanced WEB',
+    'FR 2160p Balanced Bluray',
+    '2160p WEB-DL (Efficient/Balanced)',
+    '2160p WEB-DL (Balanced)',
+    'FR UHD Bluray Tier 1',
+    'FR UHD Bluray Tier 2',
+    'FR 2160p WEB Top Tier',
+    'FR 2160p WEB Tier 1',
+    'FR 2160p WEB Tier 2',
+    'FR 2160p WEB Tier 3',
+    'FR 2160p Bluray Tier 1',
+    'FR 2160p Bluray Tier 2'
+  );
+
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+VALUES
+  ('2160p Balanced FR', 'FR 2160p Balanced WEB', 'all', 920000),
+  ('2160p Balanced FR', 'FR 2160p Balanced Bluray', 'all', 921000),
+  ('2160p Balanced FR', '2160p WEB-DL (Balanced)', 'all', 920000),
+  ('2160p Balanced FR', 'FR UHD Bluray Tier 1', 'all', 4200),
+  ('2160p Balanced FR', 'FR UHD Bluray Tier 2', 'all', 4100),
+  ('2160p Balanced FR', 'FR 2160p WEB Top Tier', 'all', 5000),
+  ('2160p Balanced FR', 'FR 2160p WEB Tier 1', 'all', 4300),
+  ('2160p Balanced FR', 'FR 2160p WEB Tier 2', 'all', 4200),
+  ('2160p Balanced FR', 'FR 2160p WEB Tier 3', 'all', 4100),
+  ('2160p Balanced FR', 'FR 2160p Bluray Tier 1', 'all', 4300),
+  ('2160p Balanced FR', 'FR 2160p Bluray Tier 2', 'all', 4200);
+
 -- --- END op 9022
