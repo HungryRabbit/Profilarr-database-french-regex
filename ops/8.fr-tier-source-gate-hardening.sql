@@ -19,7 +19,7 @@ WITH target(custom_format_name) AS (
   ('FR 1080p Compact TV Bluray Tier 1'), ('FR 1080p Compact TV Bluray Tier 2'),
   ('FR 1080p Compact TV WEB Tier 1'), ('FR 1080p Compact TV WEB Tier 2'),
   ('FR 1080p Bluray HEVC Tier 1'), ('FR 1080p WEB-DL HEVC Tier 1'),
-  ('FR 2160p Balanced Tier 1'),
+  ('FR 2160p Balanced Bluray Tier 1'), ('FR 2160p Balanced WEB Tier 1'),
   ('FR 2160p Efficient Movie Bluray Tier 1'), ('FR 2160p Efficient Movie WEB Tier 1'),
   ('FR 2160p Efficient TV Bluray Tier 1'), ('FR 2160p Efficient TV WEB Tier 1'),
   ('FR 2160p Quality Tier 1'), ('FR 2160p Quality Tier 2'), ('FR 2160p Quality Tier 3')
@@ -35,7 +35,7 @@ WITH target(custom_format_name) AS (
   ('FR 1080p Compact TV Bluray Tier 1'), ('FR 1080p Compact TV Bluray Tier 2'),
   ('FR 1080p Compact TV WEB Tier 1'), ('FR 1080p Compact TV WEB Tier 2'),
   ('FR 1080p Bluray HEVC Tier 1'), ('FR 1080p WEB-DL HEVC Tier 1'),
-  ('FR 2160p Balanced Tier 1'),
+  ('FR 2160p Balanced Bluray Tier 1'), ('FR 2160p Balanced WEB Tier 1'),
   ('FR 2160p Efficient Movie Bluray Tier 1'), ('FR 2160p Efficient Movie WEB Tier 1'),
   ('FR 2160p Efficient TV Bluray Tier 1'), ('FR 2160p Efficient TV WEB Tier 1'),
   ('FR 2160p Quality Tier 1'), ('FR 2160p Quality Tier 2'), ('FR 2160p Quality Tier 3')
@@ -50,7 +50,7 @@ WITH bluray_cf(custom_format_name) AS (
   ('FR 1080p Compact Movie Bluray Tier 1'), ('FR 1080p Compact Movie Bluray Tier 2'),
   ('FR 1080p Compact TV Bluray Tier 1'), ('FR 1080p Compact TV Bluray Tier 2'),
   ('FR 1080p Bluray HEVC Tier 1'),
-  ('FR 2160p Balanced Tier 1'),
+  ('FR 2160p Balanced Bluray Tier 1'),
   ('FR 2160p Efficient Movie Bluray Tier 1'), ('FR 2160p Efficient TV Bluray Tier 1'),
   ('FR 2160p Quality Tier 1'), ('FR 2160p Quality Tier 2'), ('FR 2160p Quality Tier 3')
 )
@@ -64,7 +64,7 @@ WITH bluray_cf(custom_format_name) AS (
   ('FR 1080p Compact Movie Bluray Tier 1'), ('FR 1080p Compact Movie Bluray Tier 2'),
   ('FR 1080p Compact TV Bluray Tier 1'), ('FR 1080p Compact TV Bluray Tier 2'),
   ('FR 1080p Bluray HEVC Tier 1'),
-  ('FR 2160p Balanced Tier 1'),
+  ('FR 2160p Balanced Bluray Tier 1'),
   ('FR 2160p Efficient Movie Bluray Tier 1'), ('FR 2160p Efficient TV Bluray Tier 1'),
   ('FR 2160p Quality Tier 1'), ('FR 2160p Quality Tier 2'), ('FR 2160p Quality Tier 3')
 )
@@ -77,6 +77,7 @@ WITH web_cf(custom_format_name) AS (
   ('FR 1080p Compact Movie WEB Tier 1'), ('FR 1080p Compact Movie WEB Tier 2'),
   ('FR 1080p Compact TV WEB Tier 1'), ('FR 1080p Compact TV WEB Tier 2'),
   ('FR 1080p WEB-DL HEVC Tier 1'),
+  ('FR 2160p Balanced WEB Tier 1'),
   ('FR 2160p Efficient Movie WEB Tier 1'), ('FR 2160p Efficient TV WEB Tier 1')
 )
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
@@ -88,6 +89,7 @@ WITH web_cf(custom_format_name) AS (
   ('FR 1080p Compact Movie WEB Tier 1'), ('FR 1080p Compact Movie WEB Tier 2'),
   ('FR 1080p Compact TV WEB Tier 1'), ('FR 1080p Compact TV WEB Tier 2'),
   ('FR 1080p WEB-DL HEVC Tier 1'),
+  ('FR 2160p Balanced WEB Tier 1'),
   ('FR 2160p Efficient Movie WEB Tier 1'), ('FR 2160p Efficient TV WEB Tier 1')
 )
 INSERT INTO condition_sources (custom_format_name, condition_name, source)

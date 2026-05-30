@@ -165,9 +165,29 @@ WHERE custom_format_name IN ('UHD Bluray (Efficient)', 'UHD Bluray (FR Validated
 DELETE FROM custom_formats
 WHERE name IN ('UHD Bluray (Efficient)', 'UHD Bluray (FR Validated)');
 
--- Balanced needs its own positive WEB-DL source CF. Its validated high-trust
--- tier is Bluray-only, so this generic WEB-DL score does not need team
--- exclusions.
+DELETE FROM quality_profile_custom_formats
+WHERE custom_format_name = 'FR 2160p Balanced Tier 1';
+
+DELETE FROM custom_format_tags
+WHERE custom_format_name = 'FR 2160p Balanced Tier 1';
+
+DELETE FROM condition_patterns
+WHERE custom_format_name = 'FR 2160p Balanced Tier 1';
+
+DELETE FROM condition_sources
+WHERE custom_format_name = 'FR 2160p Balanced Tier 1';
+
+DELETE FROM condition_resolutions
+WHERE custom_format_name = 'FR 2160p Balanced Tier 1';
+
+DELETE FROM custom_format_conditions
+WHERE custom_format_name = 'FR 2160p Balanced Tier 1';
+
+DELETE FROM custom_formats
+WHERE name = 'FR 2160p Balanced Tier 1';
+
+-- Balanced needs its own positive WEB-DL source CF. It excludes the validated
+-- WEB groups so they score through FR 2160p Balanced WEB Tier 1 instead.
 DELETE FROM quality_profile_custom_formats
 WHERE custom_format_name = '2160p WEB-DL (Efficient/Balanced)';
 
@@ -224,6 +244,34 @@ VALUES ('2160p WEB-DL (Balanced)', '2160p', '2160p');
 INSERT INTO condition_sources (custom_format_name, condition_name, source)
 VALUES ('2160p WEB-DL (Balanced)', 'WEB-DL', 'web_dl');
 
+WITH balanced_web_team(condition_name, regular_expression_name) AS (
+  VALUES
+  ('Not TyHD', 'TyHD'),
+  ('Not THESYNDICATE', 'THESYNDICATE'),
+  ('Not CHiLL', 'CHiLL'),
+  ('Not SUPPLY', 'SUPPLY'),
+  ('Not FW', 'FW'),
+  ('Not FORWARD', 'FORWARD'),
+  ('Not TFA', 'TFA')
+)
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT '2160p WEB-DL (Balanced)', condition_name, 'release_group', 'all', 1, 1
+FROM balanced_web_team;
+
+WITH balanced_web_team(condition_name, regular_expression_name) AS (
+  VALUES
+  ('Not TyHD', 'TyHD'),
+  ('Not THESYNDICATE', 'THESYNDICATE'),
+  ('Not CHiLL', 'CHiLL'),
+  ('Not SUPPLY', 'SUPPLY'),
+  ('Not FW', 'FW'),
+  ('Not FORWARD', 'FORWARD'),
+  ('Not TFA', 'TFA')
+)
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT '2160p WEB-DL (Balanced)', condition_name, regular_expression_name
+FROM balanced_web_team;
+
 INSERT INTO custom_format_tags (custom_format_name, tag_name)
 VALUES ('2160p WEB-DL (Balanced)', 'Source');
 
@@ -241,7 +289,7 @@ WHERE quality_profile_name = '2160p Balanced FR'
   AND custom_format_name = '2160p WEB-DL (Balanced)';
 
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-VALUES ('2160p Balanced FR', '2160p WEB-DL (Balanced)', 'all', 720000);
+VALUES ('2160p Balanced FR', '2160p WEB-DL (Balanced)', 'all', 920000);
 
 DELETE FROM quality_profile_custom_formats
 WHERE quality_profile_name IN (

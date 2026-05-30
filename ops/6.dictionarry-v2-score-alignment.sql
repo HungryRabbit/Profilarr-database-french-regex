@@ -59,16 +59,17 @@ VALUES ('2160p WEB-DL (Efficient)', 'WEB-DL', 'web_dl');
 INSERT INTO custom_format_tags (custom_format_name, tag_name)
 VALUES ('2160p WEB-DL (Efficient)', 'Source');
 
--- 2160p Balanced: the high-trust tier is a small validated Bluray HEVC group
--- list. Generic 2160p WEB-DL scoring is handled by a separate source CF.
+-- 2160p Balanced: the high-trust Bluray tier is a small validated HEVC group
+-- list. Generic and high-trust WEB-DL scoring are handled by separate source
+-- CFs.
 
 -- Replace earlier FR conversion scores with Dictionarry V2-aligned rows.
 DELETE FROM quality_profile_custom_formats
 WHERE quality_profile_name = '2160p Balanced FR'
-  AND custom_format_name IN ('FR 2160p Balanced Tier 1', 'FR 2160p Balanced Tier 2');
+  AND custom_format_name IN ('FR 2160p Balanced Tier 1', 'FR 2160p Balanced Bluray Tier 1', 'FR 2160p Balanced Tier 2');
 
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-VALUES ('2160p Balanced FR', 'FR 2160p Balanced Tier 1', 'all', 920000);
+VALUES ('2160p Balanced FR', 'FR 2160p Balanced Bluray Tier 1', 'all', 921000);
 
 DELETE FROM quality_profile_custom_formats
 WHERE quality_profile_name IN ('1080p Efficient FR', '2160p Efficient FR')

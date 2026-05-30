@@ -16,7 +16,8 @@ FROM custom_formats cf
 WHERE cf.name IN (
   'FR 1080p Balanced Tier 1',
   'FR 1080p Balanced Tier 2',
-  'FR 2160p Balanced Tier 1',
+  'FR 2160p Balanced Bluray Tier 1',
+  'FR 2160p Balanced WEB Tier 1',
   'FR 2160p Efficient Movie Bluray Tier 1',
   'FR 2160p Efficient Movie WEB Tier 1',
   'FR 2160p Efficient TV Bluray Tier 1',
@@ -33,7 +34,8 @@ FROM custom_formats cf
 WHERE cf.name IN (
   'FR 1080p Balanced Tier 1',
   'FR 1080p Balanced Tier 2',
-  'FR 2160p Balanced Tier 1',
+  'FR 2160p Balanced Bluray Tier 1',
+  'FR 2160p Balanced WEB Tier 1',
   'FR 2160p Efficient Movie Bluray Tier 1',
   'FR 2160p Efficient Movie WEB Tier 1',
   'FR 2160p Efficient TV Bluray Tier 1',
