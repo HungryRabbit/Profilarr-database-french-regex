@@ -581,11 +581,11 @@ VALUES
   ('2160p Compact FR', '4KLight WEBRip (Compact)', 'all', 900000),
   ('1080p Compact FR', 'HDLight Bluray (Compact)', 'all', 900000),
   ('1080p Compact FR', 'HDLight WEBRip (Compact)', 'all', 870000),
-  ('1080p Compact FR', '1080p WEBRip (Compact)', 'all', 860000),
-  ('2160p Compact FR', '1080p WEBRip (Compact)', 'all', 860000);
+  ('1080p Compact FR', '1080p WEBRip (Compact)', 'all', 865000),
+  ('2160p Compact FR', '1080p WEBRip (Compact)', 'all', 865000);
 
 UPDATE quality_profile_custom_formats
-SET score = 850000
+SET score = 840000
 WHERE quality_profile_name IN ('1080p Compact FR', '2160p Compact FR')
   AND custom_format_name = '1080p WEB-DL (Efficient)';
 
