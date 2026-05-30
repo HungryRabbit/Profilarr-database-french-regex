@@ -626,7 +626,7 @@
     "2160p Balanced FR": {
       "FR 2160p Balanced WEB": 920000,
       "FR 2160p Balanced Bluray": 921000,
-      "2160p WEB-DL (Balanced)": 920000,
+      "2160p WEB-DL (Balanced)": 910000,
       "FR UHD Bluray Tier 1": {
         "radarr": 4200,
         "sonarr": 4200

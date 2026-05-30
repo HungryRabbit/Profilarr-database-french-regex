@@ -1284,7 +1284,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 VALUES
   ('2160p Balanced FR', 'FR 2160p Balanced WEB', 'all', 920000),
   ('2160p Balanced FR', 'FR 2160p Balanced Bluray', 'all', 921000),
-  ('2160p Balanced FR', '2160p WEB-DL (Balanced)', 'all', 920000),
+  ('2160p Balanced FR', '2160p WEB-DL (Balanced)', 'all', 910000),
   ('2160p Balanced FR', 'FR UHD Bluray Tier 1', 'all', 4200),
   ('2160p Balanced FR', 'FR UHD Bluray Tier 2', 'all', 4100),
   ('2160p Balanced FR', 'FR 2160p WEB Top Tier', 'all', 5000),
@@ -1293,6 +1293,23 @@ VALUES
   ('2160p Balanced FR', 'FR 2160p WEB Tier 3', 'all', 4100),
   ('2160p Balanced FR', 'FR 2160p Bluray Tier 1', 'all', 4300),
   ('2160p Balanced FR', 'FR 2160p Bluray Tier 2', 'all', 4200);
+
+INSERT INTO regular_expressions (name, pattern, description)
+VALUES ('h264', '(?i)(?<=^|[\s.-])(?:x264|h[ ._-]?264|AVC)(?=$|[\s.-]|\d)', 'Matches h264, H.264, x264 and AVC codec markers.')
+ON CONFLICT(name) DO UPDATE
+SET pattern = excluded.pattern,
+    description = excluded.description;
+
+INSERT OR IGNORE INTO regular_expression_tags (regular_expression_name, tag_name)
+VALUES
+  ('h264', 'Codec'),
+  ('h264', 'Encoder');
+
+INSERT OR IGNORE INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+VALUES ('2160p WEB-DL (Balanced)', 'h264', 'release_title', 'all', 0, 1);
+
+INSERT OR IGNORE INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+VALUES ('2160p WEB-DL (Balanced)', 'h264', 'h264');
 
 INSERT INTO custom_formats (name, description)
 VALUES
