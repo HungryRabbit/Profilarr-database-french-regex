@@ -19,7 +19,7 @@
     "HDLight and 4KLight title markers are added in ops/21 and banned in Quality profiles so Quality does not accept light encodes.",
     "HDLight and 4KLight receive a light -50000 penalty in Balanced and Efficient profiles: allowed, but not prioritized.",
     "Generic non-tier Compact Light source CFs are added in ops/21: 4KLight Bluray/WEBRip for 2160p Compact FR and HDLight Bluray/WEBRip for 1080p Compact FR. Compact tier teams are excluded so these generic CFs do not double-score tiered groups.",
-    "FR Scene Tier is kept profile-specific: 15000 in 1080p Compact FR, 4000 in 2160p Compact FR and other high-ceiling 2160p/Remux profiles, while 99000 remains on the lower-ceiling Quality/Anime style profiles.",
+    "FR Scene Tier is kept profile-specific: 127000 in 1080p Quality profiles, 15000 in 1080p Compact FR, 4000 in 2160p Compact FR and other high-ceiling 2160p/Remux profiles, while 99000 remains on Anime style profiles.",
     "UHD Bluray is adapted for French usage in ops/21: it now requires 2160p instead of 1080p, and no longer requires an explicit HDR marker.",
     "2160p Efficient FR now uses FR 2160p Efficient WEB h265 and FR 2160p Efficient Bluray h265 as source passes without release-group conditions; teams are scored separately through the reusable FR WEB/Bluray tiers.",
     "2160p WEB-DL (Efficient/Balanced) replaces Dictionarry's US high-trust exclusions with FR Efficient team exclusions: TyHD, THESYNDICATE, CHiLL, SUPPLY, FW/FORWARD and TFA.",
@@ -583,7 +583,8 @@
       "1080p WEB-DL": {
         "radarr": 710000,
         "sonarr": 710000
-      }
+      },
+      "FR Scene Tier": 127000
     },
     "1080p Quality HDR FR": {
       "FR 1080p Quality Tier 1": 130000,
@@ -600,7 +601,8 @@
       "1080p WEB-DL": {
         "radarr": 710000,
         "sonarr": 710000
-      }
+      },
+      "FR Scene Tier": 127000
     },
     "1080p Remux FR": {
       "FR 1080p Quality Tier 1": 130000,

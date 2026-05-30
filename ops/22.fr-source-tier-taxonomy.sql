@@ -1409,4 +1409,13 @@ VALUES
   ('2160p Remux FR', 'FR UHD Bluray Tier 1', 'all', 4200),
   ('2160p Remux FR', 'FR UHD Bluray Tier 2', 'all', 4100);
 
+DELETE FROM quality_profile_custom_formats
+WHERE quality_profile_name IN ('1080p Quality FR', '1080p Quality HDR FR')
+  AND custom_format_name = 'FR Scene Tier';
+
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+VALUES
+  ('1080p Quality FR', 'FR Scene Tier', 'all', 127000),
+  ('1080p Quality HDR FR', 'FR Scene Tier', 'all', 127000);
+
 -- --- END op 9022
