@@ -59,22 +59,8 @@ VALUES ('2160p WEB-DL (Efficient)', 'WEB-DL', 'web_dl');
 INSERT INTO custom_format_tags (custom_format_name, tag_name)
 VALUES ('2160p WEB-DL (Efficient)', 'Source');
 
--- 2160p Balanced: FW/SUPPLY/TFA map to the Dictionarry V2 hallowed/BHDStudio
--- high-trust surface. The CF already exists from the FR conversion; only TFA
--- is promoted into Tier 1 here before the old Tier 1/Tier 2 scores are replaced.
-WITH team(condition_name, regex_name) AS (
-  VALUES ('TFA', 'TFA')
-)
-INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
-SELECT 'FR 2160p Balanced Tier 1', condition_name, 'release_group', 'all', 0, 0
-FROM team;
-
-WITH team(condition_name, regex_name) AS (
-  VALUES ('TFA', 'TFA')
-)
-INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR 2160p Balanced Tier 1', condition_name, regex_name
-FROM team;
+-- 2160p Balanced: the high-trust tier is a small validated Bluray HEVC group
+-- list. Generic 2160p WEB-DL scoring is handled by a separate source CF.
 
 -- Replace earlier FR conversion scores with Dictionarry V2-aligned rows.
 DELETE FROM quality_profile_custom_formats

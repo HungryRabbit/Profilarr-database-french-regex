@@ -142,87 +142,106 @@ INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expr
 SELECT '2160p WEB-DL (Efficient)', condition_name, regular_expression_name
 FROM efficient_team;
 
--- UHD Bluray (Efficient) mirrors the FR UHD Bluray technical shape, then
--- excludes the same validated FR Efficient teams so their Bluray tiers remain
--- the only premium match.
+-- UHD Bluray is not a generic Efficient/Balanced target. Those profiles target
+-- 2160p WEB-DL, while validated UHD Bluray groups score through their FR tiers.
 DELETE FROM condition_patterns
-WHERE custom_format_name = 'UHD Bluray (Efficient)';
+WHERE custom_format_name IN ('UHD Bluray (Efficient)', 'UHD Bluray (FR Validated)');
 
 DELETE FROM condition_resolutions
-WHERE custom_format_name = 'UHD Bluray (Efficient)';
+WHERE custom_format_name IN ('UHD Bluray (Efficient)', 'UHD Bluray (FR Validated)');
 
 DELETE FROM condition_sources
-WHERE custom_format_name = 'UHD Bluray (Efficient)';
+WHERE custom_format_name IN ('UHD Bluray (Efficient)', 'UHD Bluray (FR Validated)');
 
 DELETE FROM custom_format_conditions
-WHERE custom_format_name = 'UHD Bluray (Efficient)';
+WHERE custom_format_name IN ('UHD Bluray (Efficient)', 'UHD Bluray (FR Validated)');
+
+DELETE FROM custom_format_tags
+WHERE custom_format_name IN ('UHD Bluray (Efficient)', 'UHD Bluray (FR Validated)');
+
+DELETE FROM quality_profile_custom_formats
+WHERE custom_format_name IN ('UHD Bluray (Efficient)', 'UHD Bluray (FR Validated)');
+
+DELETE FROM custom_formats
+WHERE name IN ('UHD Bluray (Efficient)', 'UHD Bluray (FR Validated)');
+
+-- Balanced needs its own positive WEB-DL source CF. Its validated high-trust
+-- tier is Bluray-only, so this generic WEB-DL score does not need team
+-- exclusions.
+DELETE FROM quality_profile_custom_formats
+WHERE custom_format_name = '2160p WEB-DL (Efficient/Balanced)';
+
+DELETE FROM custom_format_tags
+WHERE custom_format_name = '2160p WEB-DL (Efficient/Balanced)';
+
+DELETE FROM condition_patterns
+WHERE custom_format_name = '2160p WEB-DL (Efficient/Balanced)';
+
+DELETE FROM condition_sources
+WHERE custom_format_name = '2160p WEB-DL (Efficient/Balanced)';
+
+DELETE FROM condition_resolutions
+WHERE custom_format_name = '2160p WEB-DL (Efficient/Balanced)';
+
+DELETE FROM custom_format_conditions
+WHERE custom_format_name = '2160p WEB-DL (Efficient/Balanced)';
+
+DELETE FROM custom_formats
+WHERE name = '2160p WEB-DL (Efficient/Balanced)';
+
+DELETE FROM quality_profile_custom_formats
+WHERE custom_format_name = '2160p WEB-DL (Balanced)';
+
+DELETE FROM custom_format_tags
+WHERE custom_format_name = '2160p WEB-DL (Balanced)';
+
+DELETE FROM condition_patterns
+WHERE custom_format_name = '2160p WEB-DL (Balanced)';
+
+DELETE FROM condition_sources
+WHERE custom_format_name = '2160p WEB-DL (Balanced)';
+
+DELETE FROM condition_resolutions
+WHERE custom_format_name = '2160p WEB-DL (Balanced)';
+
+DELETE FROM custom_format_conditions
+WHERE custom_format_name = '2160p WEB-DL (Balanced)';
+
+DELETE FROM custom_formats
+WHERE name = '2160p WEB-DL (Balanced)';
+
+INSERT INTO custom_formats (name, description)
+VALUES ('2160p WEB-DL (Balanced)', 'Matches 2160p WEB-DLs for Balanced profiles when the release group is not already covered by the FR Balanced tier.');
 
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 VALUES
-  ('UHD Bluray (Efficient)', '2160p', 'resolution', 'all', 0, 1),
-  ('UHD Bluray (Efficient)', 'UHD Bluray', 'release_title', 'all', 0, 1),
-  ('UHD Bluray (Efficient)', 'x265', 'release_title', 'all', 0, 1);
+  ('2160p WEB-DL (Balanced)', '2160p', 'resolution', 'all', 0, 1),
+  ('2160p WEB-DL (Balanced)', 'WEB-DL', 'source', 'all', 0, 1);
 
 INSERT INTO condition_resolutions (custom_format_name, condition_name, resolution)
-VALUES ('UHD Bluray (Efficient)', '2160p', '2160p');
+VALUES ('2160p WEB-DL (Balanced)', '2160p', '2160p');
 
-INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-VALUES
-  ('UHD Bluray (Efficient)', 'UHD Bluray', 'UHD Bluray'),
-  ('UHD Bluray (Efficient)', 'x265', 'x265');
+INSERT INTO condition_sources (custom_format_name, condition_name, source)
+VALUES ('2160p WEB-DL (Balanced)', 'WEB-DL', 'web_dl');
 
-WITH efficient_team(condition_name, regular_expression_name) AS (
-  VALUES
-  ('Not TyHD', 'TyHD'),
-  ('Not THESYNDICATE', 'THESYNDICATE'),
-  ('Not CHiLL', 'CHiLL'),
-  ('Not SUPPLY', 'SUPPLY'),
-  ('Not FW', 'FW'),
-  ('Not FORWARD', 'FORWARD'),
-  ('Not TFA', 'TFA')
-)
-INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
-SELECT 'UHD Bluray (Efficient)', condition_name, 'release_group', 'all', 1, 1
-FROM efficient_team;
-
-WITH efficient_team(condition_name, regular_expression_name) AS (
-  VALUES
-  ('Not TyHD', 'TyHD'),
-  ('Not THESYNDICATE', 'THESYNDICATE'),
-  ('Not CHiLL', 'CHiLL'),
-  ('Not SUPPLY', 'SUPPLY'),
-  ('Not FW', 'FW'),
-  ('Not FORWARD', 'FORWARD'),
-  ('Not TFA', 'TFA')
-)
-INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'UHD Bluray (Efficient)', condition_name, regular_expression_name
-FROM efficient_team;
-
-DELETE FROM quality_profile_custom_formats
-WHERE quality_profile_name = '2160p Efficient FR'
-  AND custom_format_name = 'UHD Bluray (Efficient)';
-
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-VALUES ('2160p Efficient FR', 'UHD Bluray (Efficient)', 'all', 720000);
-
--- This source CF is shared by Efficient and Balanced FR profiles.
-UPDATE custom_formats
-SET
-  name = '2160p WEB-DL (Efficient/Balanced)',
-  description = 'Matches 2160p WEB-DLs for Efficient and Balanced profiles.'
-WHERE name = '2160p WEB-DL (Efficient)';
+INSERT INTO custom_format_tags (custom_format_name, tag_name)
+VALUES ('2160p WEB-DL (Balanced)', 'Source');
 
 DELETE FROM quality_profile_custom_formats
 WHERE quality_profile_name = '2160p Balanced FR'
-  AND custom_format_name = 'UHD Bluray';
+  AND custom_format_name IN (
+    'UHD Bluray',
+    '2160p WEB-DL',
+    '2160p WEB-DL (Efficient/Balanced)',
+    '2160p WEB-DL (Balanced)'
+  );
 
 DELETE FROM quality_profile_custom_formats
 WHERE quality_profile_name = '2160p Balanced FR'
-  AND custom_format_name = '2160p WEB-DL (Efficient/Balanced)';
+  AND custom_format_name = '2160p WEB-DL (Balanced)';
 
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-VALUES ('2160p Balanced FR', '2160p WEB-DL (Efficient/Balanced)', 'all', 720000);
+VALUES ('2160p Balanced FR', '2160p WEB-DL (Balanced)', 'all', 720000);
 
 DELETE FROM quality_profile_custom_formats
 WHERE quality_profile_name IN (
