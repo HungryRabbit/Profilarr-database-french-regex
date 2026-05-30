@@ -74,7 +74,7 @@ INSERT INTO custom_formats (name, description) VALUES ('FR Movie UHD Bluray Tier
 INSERT INTO custom_formats (name, description) VALUES ('FR Movie UHD Bluray Tier 02', 'Matches French movie release groups who fall under UHD Bluray Tier 02');
 INSERT INTO custom_formats (name, description) VALUES ('FR Movie WEB Tier 01', 'Matches French movie release groups who fall under WEB Tier 01');
 INSERT INTO custom_formats (name, description) VALUES ('FR Movie WEB Tier 02', 'Matches French movie release groups who fall under WEB Tier 02');
-INSERT INTO custom_formats (name, description) VALUES ('FR Scene Groups', 'Matches known French scene release groups');
+INSERT INTO custom_formats (name, description) VALUES ('FR Scene Tier', 'Matches known French scene release groups');
 INSERT INTO custom_formats (name, description) VALUES ('FR TV HD Bluray Tier 01', 'Matches French TV release groups who fall under HD Bluray Tier 01');
 INSERT INTO custom_formats (name, description) VALUES ('FR TV Remux Tier 01', 'Matches French TV release groups who fall under Remux Tier 01');
 INSERT INTO custom_formats (name, description) VALUES ('FR TV WEB Tier 01', 'Matches French TV release groups who fall under WEB Tier 01');
@@ -2080,527 +2080,527 @@ WHERE cf.name = 'FR Movie WEB Tier 02';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, '4FR', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'AiR3D', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'AiRDOCS', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'AiRFORCE', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'AiRLiNE', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'AiRTV', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'AMB3R', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'ANMWR', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'AVON', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'AYMO', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'AZR', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'BANKAi', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'BAWLS', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'BiPOLAR', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'BLACKPANTERS', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'BODIE', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'BOOLZ', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'BRiNK', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'BTT', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'CARAPiLS', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'CiELOS', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'CiNEMA', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'CMBHD', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'CoRa', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'COUAC', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'CRYPT0', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'D4KiD', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'DEAL', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'DiEBEX', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'DUPLI', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'DUSS', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'ENJOi', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'EUBDS', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'FHD', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'FiDELiO', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'FiDO', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'ForceBleue', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'FREAMON', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'FRENCHDEADPOOL2', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'FRiES', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'FUTiL', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'FWDHD', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'GHOULS', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'GiMBAP', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'GLiMMER', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'Goatlove', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'HERC', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'HiggsBoson', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'HiRoSHiMa', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'HYBRiS', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'HyDe', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'JMT', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'JoKeR', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'JUSTICELEAGUE', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'KAZETV', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'L0SERNiGHT', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'LaoZi', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'LeON', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'LOFiDEL', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'LOST', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'LOWIMDB', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'LUCKY', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'LYPSG', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'MAGiCAL', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'MANGACiTY', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'MAXAGAZ', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'MaxiBeNoul', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'McNULTY', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'MELBA', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'MiND', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'MORELAND', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'MUNSTER', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'MUxHD', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'NERDHD', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'NERO', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'NrZ', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'NTK', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'OBSTACLE', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'OohLaLa', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'OOKAMI', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'PANZeR', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'PATHECROUTE', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'Penrose', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'PiNKPANTERS', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'PKPTRS', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'PRiDEHD', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'PROPJOE', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'PURE', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'PUREWASTEOFBW', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'ROUGH', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'RUDE', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'Ryotox', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'SAFETY', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'SASHiMi', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'SEiGHT', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'SESKAPiLE', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'SHEEEiT', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'SHiNiGAMi', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'SiGeRiS', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'SILVIODANTE', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'SLEEPINGFOREST', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'SODAPOP', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'S4LVE', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'SPINE', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'SPOiLER', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'STRINGERBELL', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'Sunday26th', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'SUNRiSE', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'tFR', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'THENiGHTMAREiNHD', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'THiNK', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'THREESOME', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'TiMELiNE', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'TSuNaMi', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'UKDHD', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'UKDTV', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'ULSHD', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'Ulysse', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'UNSKiLLED', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'URY', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'VENUE', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'VFC', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'VoMiT', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'Wednesday29th', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'ZEST', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'ZiRCON', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'AKLHD', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'N0Z00M', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'PHoQUE', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'SharpHD', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'USURY', 'release_group', 'all', 0, 0
 FROM custom_formats cf
-WHERE cf.name = 'FR Scene Groups';
+WHERE cf.name = 'FR Scene Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'Not 2160p', 'resolution', 'all', 1, 1
 FROM custom_formats cf
@@ -3960,15 +3960,15 @@ WHERE cf.name = 'FR Movie WEB Tier 02' AND t.name = 'WEB-DL';
 INSERT INTO custom_format_tags (custom_format_name, tag_name)
 SELECT cf.name, t.name
 FROM custom_formats cf, tags t
-WHERE cf.name = 'FR Scene Groups' AND t.name = 'French';
+WHERE cf.name = 'FR Scene Tier' AND t.name = 'French';
 INSERT INTO custom_format_tags (custom_format_name, tag_name)
 SELECT cf.name, t.name
 FROM custom_formats cf, tags t
-WHERE cf.name = 'FR Scene Groups' AND t.name = 'Release Group';
+WHERE cf.name = 'FR Scene Tier' AND t.name = 'Release Group';
 INSERT INTO custom_format_tags (custom_format_name, tag_name)
 SELECT cf.name, t.name
 FROM custom_formats cf, tags t
-WHERE cf.name = 'FR Scene Groups' AND t.name = 'Release Group Tier';
+WHERE cf.name = 'FR Scene Tier' AND t.name = 'Release Group Tier';
 INSERT INTO custom_format_tags (custom_format_name, tag_name)
 SELECT cf.name, t.name
 FROM custom_formats cf, tags t
@@ -6042,527 +6042,527 @@ SELECT 'FR Movie WEB Tier 02', 'WaCkS', re.name
 FROM regular_expressions re
 WHERE re.name = 'WaCkS';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', '4FR', re.name
+SELECT 'FR Scene Tier', '4FR', re.name
 FROM regular_expressions re
 WHERE re.name = '4FR';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'AiR3D', re.name
+SELECT 'FR Scene Tier', 'AiR3D', re.name
 FROM regular_expressions re
 WHERE re.name = 'AiR3D';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'AiRDOCS', re.name
+SELECT 'FR Scene Tier', 'AiRDOCS', re.name
 FROM regular_expressions re
 WHERE re.name = 'AiRDOCS';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'AiRFORCE', re.name
+SELECT 'FR Scene Tier', 'AiRFORCE', re.name
 FROM regular_expressions re
 WHERE re.name = 'AiRFORCE';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'AiRLiNE', re.name
+SELECT 'FR Scene Tier', 'AiRLiNE', re.name
 FROM regular_expressions re
 WHERE re.name = 'AiRLiNE';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'AiRTV', re.name
+SELECT 'FR Scene Tier', 'AiRTV', re.name
 FROM regular_expressions re
 WHERE re.name = 'AiRTV';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'AMB3R', re.name
+SELECT 'FR Scene Tier', 'AMB3R', re.name
 FROM regular_expressions re
 WHERE re.name = 'AMB3R';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'ANMWR', re.name
+SELECT 'FR Scene Tier', 'ANMWR', re.name
 FROM regular_expressions re
 WHERE re.name = 'ANMWR';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'AVON', re.name
+SELECT 'FR Scene Tier', 'AVON', re.name
 FROM regular_expressions re
 WHERE re.name = 'AVON';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'AYMO', re.name
+SELECT 'FR Scene Tier', 'AYMO', re.name
 FROM regular_expressions re
 WHERE re.name = 'AYMO';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'AZR', re.name
+SELECT 'FR Scene Tier', 'AZR', re.name
 FROM regular_expressions re
 WHERE re.name = 'AZR';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'BANKAi', re.name
+SELECT 'FR Scene Tier', 'BANKAi', re.name
 FROM regular_expressions re
 WHERE re.name = 'BANKAi';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'BAWLS', re.name
+SELECT 'FR Scene Tier', 'BAWLS', re.name
 FROM regular_expressions re
 WHERE re.name = 'BAWLS';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'BiPOLAR', re.name
+SELECT 'FR Scene Tier', 'BiPOLAR', re.name
 FROM regular_expressions re
 WHERE re.name = 'BiPOLAR';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'BLACKPANTERS', re.name
+SELECT 'FR Scene Tier', 'BLACKPANTERS', re.name
 FROM regular_expressions re
 WHERE re.name = 'BLACKPANTERS';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'BODIE', re.name
+SELECT 'FR Scene Tier', 'BODIE', re.name
 FROM regular_expressions re
 WHERE re.name = 'BODIE';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'BOOLZ', re.name
+SELECT 'FR Scene Tier', 'BOOLZ', re.name
 FROM regular_expressions re
 WHERE re.name = 'BOOLZ';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'BRiNK', re.name
+SELECT 'FR Scene Tier', 'BRiNK', re.name
 FROM regular_expressions re
 WHERE re.name = 'BRiNK';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'BTT', re.name
+SELECT 'FR Scene Tier', 'BTT', re.name
 FROM regular_expressions re
 WHERE re.name = 'BTT';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'CARAPiLS', re.name
+SELECT 'FR Scene Tier', 'CARAPiLS', re.name
 FROM regular_expressions re
 WHERE re.name = 'CARAPiLS';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'CiELOS', re.name
+SELECT 'FR Scene Tier', 'CiELOS', re.name
 FROM regular_expressions re
 WHERE re.name = 'CiELOS';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'CiNEMA', re.name
+SELECT 'FR Scene Tier', 'CiNEMA', re.name
 FROM regular_expressions re
 WHERE re.name = 'CiNEMA';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'CMBHD', re.name
+SELECT 'FR Scene Tier', 'CMBHD', re.name
 FROM regular_expressions re
 WHERE re.name = 'CMBHD';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'CoRa', re.name
+SELECT 'FR Scene Tier', 'CoRa', re.name
 FROM regular_expressions re
 WHERE re.name = 'CoRa';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'COUAC', re.name
+SELECT 'FR Scene Tier', 'COUAC', re.name
 FROM regular_expressions re
 WHERE re.name = 'COUAC';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'CRYPT0', re.name
+SELECT 'FR Scene Tier', 'CRYPT0', re.name
 FROM regular_expressions re
 WHERE re.name = 'CRYPT0';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'D4KiD', re.name
+SELECT 'FR Scene Tier', 'D4KiD', re.name
 FROM regular_expressions re
 WHERE re.name = 'D4KiD';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'DEAL', re.name
+SELECT 'FR Scene Tier', 'DEAL', re.name
 FROM regular_expressions re
 WHERE re.name = 'DEAL';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'DiEBEX', re.name
+SELECT 'FR Scene Tier', 'DiEBEX', re.name
 FROM regular_expressions re
 WHERE re.name = 'DiEBEX';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'DUPLI', re.name
+SELECT 'FR Scene Tier', 'DUPLI', re.name
 FROM regular_expressions re
 WHERE re.name = 'DUPLI';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'DUSS', re.name
+SELECT 'FR Scene Tier', 'DUSS', re.name
 FROM regular_expressions re
 WHERE re.name = 'DUSS';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'ENJOi', re.name
+SELECT 'FR Scene Tier', 'ENJOi', re.name
 FROM regular_expressions re
 WHERE re.name = 'ENJOi';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'EUBDS', re.name
+SELECT 'FR Scene Tier', 'EUBDS', re.name
 FROM regular_expressions re
 WHERE re.name = 'EUBDS';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'FHD', re.name
+SELECT 'FR Scene Tier', 'FHD', re.name
 FROM regular_expressions re
 WHERE re.name = 'FHD';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'FiDELiO', re.name
+SELECT 'FR Scene Tier', 'FiDELiO', re.name
 FROM regular_expressions re
 WHERE re.name = 'FiDELiO';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'FiDO', re.name
+SELECT 'FR Scene Tier', 'FiDO', re.name
 FROM regular_expressions re
 WHERE re.name = 'FiDO';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'ForceBleue', re.name
+SELECT 'FR Scene Tier', 'ForceBleue', re.name
 FROM regular_expressions re
 WHERE re.name = 'ForceBleue';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'FREAMON', re.name
+SELECT 'FR Scene Tier', 'FREAMON', re.name
 FROM regular_expressions re
 WHERE re.name = 'FREAMON';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'FRENCHDEADPOOL2', re.name
+SELECT 'FR Scene Tier', 'FRENCHDEADPOOL2', re.name
 FROM regular_expressions re
 WHERE re.name = 'FRENCHDEADPOOL2';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'FRiES', re.name
+SELECT 'FR Scene Tier', 'FRiES', re.name
 FROM regular_expressions re
 WHERE re.name = 'FRiES';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'FUTiL', re.name
+SELECT 'FR Scene Tier', 'FUTiL', re.name
 FROM regular_expressions re
 WHERE re.name = 'FUTiL';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'FWDHD', re.name
+SELECT 'FR Scene Tier', 'FWDHD', re.name
 FROM regular_expressions re
 WHERE re.name = 'FWDHD';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'GHOULS', re.name
+SELECT 'FR Scene Tier', 'GHOULS', re.name
 FROM regular_expressions re
 WHERE re.name = 'GHOULS';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'GiMBAP', re.name
+SELECT 'FR Scene Tier', 'GiMBAP', re.name
 FROM regular_expressions re
 WHERE re.name = 'GiMBAP';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'GLiMMER', re.name
+SELECT 'FR Scene Tier', 'GLiMMER', re.name
 FROM regular_expressions re
 WHERE re.name = 'GLiMMER';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'Goatlove', re.name
+SELECT 'FR Scene Tier', 'Goatlove', re.name
 FROM regular_expressions re
 WHERE re.name = 'Goatlove';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'HERC', re.name
+SELECT 'FR Scene Tier', 'HERC', re.name
 FROM regular_expressions re
 WHERE re.name = 'HERC';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'HiggsBoson', re.name
+SELECT 'FR Scene Tier', 'HiggsBoson', re.name
 FROM regular_expressions re
 WHERE re.name = 'HiggsBoson';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'HiRoSHiMa', re.name
+SELECT 'FR Scene Tier', 'HiRoSHiMa', re.name
 FROM regular_expressions re
 WHERE re.name = 'HiRoSHiMa';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'HYBRiS', re.name
+SELECT 'FR Scene Tier', 'HYBRiS', re.name
 FROM regular_expressions re
 WHERE re.name = 'HYBRiS';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'HyDe', re.name
+SELECT 'FR Scene Tier', 'HyDe', re.name
 FROM regular_expressions re
 WHERE re.name = 'HyDe';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'JMT', re.name
+SELECT 'FR Scene Tier', 'JMT', re.name
 FROM regular_expressions re
 WHERE re.name = 'JMT';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'JoKeR', re.name
+SELECT 'FR Scene Tier', 'JoKeR', re.name
 FROM regular_expressions re
 WHERE re.name = 'JoKeR';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'JUSTICELEAGUE', re.name
+SELECT 'FR Scene Tier', 'JUSTICELEAGUE', re.name
 FROM regular_expressions re
 WHERE re.name = 'JUSTICELEAGUE';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'KAZETV', re.name
+SELECT 'FR Scene Tier', 'KAZETV', re.name
 FROM regular_expressions re
 WHERE re.name = 'KAZETV';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'L0SERNiGHT', re.name
+SELECT 'FR Scene Tier', 'L0SERNiGHT', re.name
 FROM regular_expressions re
 WHERE re.name = 'L0SERNiGHT';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'LaoZi', re.name
+SELECT 'FR Scene Tier', 'LaoZi', re.name
 FROM regular_expressions re
 WHERE re.name = 'LaoZi';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'LeON', re.name
+SELECT 'FR Scene Tier', 'LeON', re.name
 FROM regular_expressions re
 WHERE re.name = 'LeON';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'LOFiDEL', re.name
+SELECT 'FR Scene Tier', 'LOFiDEL', re.name
 FROM regular_expressions re
 WHERE re.name = 'LOFiDEL';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'LOST', re.name
+SELECT 'FR Scene Tier', 'LOST', re.name
 FROM regular_expressions re
 WHERE re.name = 'LOST';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'LOWIMDB', re.name
+SELECT 'FR Scene Tier', 'LOWIMDB', re.name
 FROM regular_expressions re
 WHERE re.name = 'LOWIMDB';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'LUCKY', re.name
+SELECT 'FR Scene Tier', 'LUCKY', re.name
 FROM regular_expressions re
 WHERE re.name = 'LUCKY';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'LYPSG', re.name
+SELECT 'FR Scene Tier', 'LYPSG', re.name
 FROM regular_expressions re
 WHERE re.name = 'LYPSG';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'MAGiCAL', re.name
+SELECT 'FR Scene Tier', 'MAGiCAL', re.name
 FROM regular_expressions re
 WHERE re.name = 'MAGiCAL';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'MANGACiTY', re.name
+SELECT 'FR Scene Tier', 'MANGACiTY', re.name
 FROM regular_expressions re
 WHERE re.name = 'MANGACiTY';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'MAXAGAZ', re.name
+SELECT 'FR Scene Tier', 'MAXAGAZ', re.name
 FROM regular_expressions re
 WHERE re.name = 'MAXAGAZ';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'MaxiBeNoul', re.name
+SELECT 'FR Scene Tier', 'MaxiBeNoul', re.name
 FROM regular_expressions re
 WHERE re.name = 'MaxiBeNoul';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'McNULTY', re.name
+SELECT 'FR Scene Tier', 'McNULTY', re.name
 FROM regular_expressions re
 WHERE re.name = 'McNULTY';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'MELBA', re.name
+SELECT 'FR Scene Tier', 'MELBA', re.name
 FROM regular_expressions re
 WHERE re.name = 'MELBA';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'MiND', re.name
+SELECT 'FR Scene Tier', 'MiND', re.name
 FROM regular_expressions re
 WHERE re.name = 'MiND';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'MORELAND', re.name
+SELECT 'FR Scene Tier', 'MORELAND', re.name
 FROM regular_expressions re
 WHERE re.name = 'MORELAND';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'MUNSTER', re.name
+SELECT 'FR Scene Tier', 'MUNSTER', re.name
 FROM regular_expressions re
 WHERE re.name = 'MUNSTER';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'MUxHD', re.name
+SELECT 'FR Scene Tier', 'MUxHD', re.name
 FROM regular_expressions re
 WHERE re.name = 'MUxHD';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'NERDHD', re.name
+SELECT 'FR Scene Tier', 'NERDHD', re.name
 FROM regular_expressions re
 WHERE re.name = 'NERDHD';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'NERO', re.name
+SELECT 'FR Scene Tier', 'NERO', re.name
 FROM regular_expressions re
 WHERE re.name = 'NERO';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'NrZ', re.name
+SELECT 'FR Scene Tier', 'NrZ', re.name
 FROM regular_expressions re
 WHERE re.name = 'NrZ';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'NTK', re.name
+SELECT 'FR Scene Tier', 'NTK', re.name
 FROM regular_expressions re
 WHERE re.name = 'NTK';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'OBSTACLE', re.name
+SELECT 'FR Scene Tier', 'OBSTACLE', re.name
 FROM regular_expressions re
 WHERE re.name = 'OBSTACLE';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'OohLaLa', re.name
+SELECT 'FR Scene Tier', 'OohLaLa', re.name
 FROM regular_expressions re
 WHERE re.name = 'OohLaLa';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'OOKAMI', re.name
+SELECT 'FR Scene Tier', 'OOKAMI', re.name
 FROM regular_expressions re
 WHERE re.name = 'OOKAMI';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'PANZeR', re.name
+SELECT 'FR Scene Tier', 'PANZeR', re.name
 FROM regular_expressions re
 WHERE re.name = 'PANZeR';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'PATHECROUTE', re.name
+SELECT 'FR Scene Tier', 'PATHECROUTE', re.name
 FROM regular_expressions re
 WHERE re.name = 'PATHECROUTE';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'Penrose', re.name
+SELECT 'FR Scene Tier', 'Penrose', re.name
 FROM regular_expressions re
 WHERE re.name = 'Penrose';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'PiNKPANTERS', re.name
+SELECT 'FR Scene Tier', 'PiNKPANTERS', re.name
 FROM regular_expressions re
 WHERE re.name = 'PiNKPANTERS';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'PKPTRS', re.name
+SELECT 'FR Scene Tier', 'PKPTRS', re.name
 FROM regular_expressions re
 WHERE re.name = 'PKPTRS';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'PRiDEHD', re.name
+SELECT 'FR Scene Tier', 'PRiDEHD', re.name
 FROM regular_expressions re
 WHERE re.name = 'PRiDEHD';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'PROPJOE', re.name
+SELECT 'FR Scene Tier', 'PROPJOE', re.name
 FROM regular_expressions re
 WHERE re.name = 'PROPJOE';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'PURE', re.name
+SELECT 'FR Scene Tier', 'PURE', re.name
 FROM regular_expressions re
 WHERE re.name = 'PURE';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'PUREWASTEOFBW', re.name
+SELECT 'FR Scene Tier', 'PUREWASTEOFBW', re.name
 FROM regular_expressions re
 WHERE re.name = 'PUREWASTEOFBW';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'ROUGH', re.name
+SELECT 'FR Scene Tier', 'ROUGH', re.name
 FROM regular_expressions re
 WHERE re.name = 'ROUGH';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'RUDE', re.name
+SELECT 'FR Scene Tier', 'RUDE', re.name
 FROM regular_expressions re
 WHERE re.name = 'RUDE';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'Ryotox', re.name
+SELECT 'FR Scene Tier', 'Ryotox', re.name
 FROM regular_expressions re
 WHERE re.name = 'Ryotox';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'SAFETY', re.name
+SELECT 'FR Scene Tier', 'SAFETY', re.name
 FROM regular_expressions re
 WHERE re.name = 'SAFETY';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'SASHiMi', re.name
+SELECT 'FR Scene Tier', 'SASHiMi', re.name
 FROM regular_expressions re
 WHERE re.name = 'SASHiMi';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'SEiGHT', re.name
+SELECT 'FR Scene Tier', 'SEiGHT', re.name
 FROM regular_expressions re
 WHERE re.name = 'SEiGHT';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'SESKAPiLE', re.name
+SELECT 'FR Scene Tier', 'SESKAPiLE', re.name
 FROM regular_expressions re
 WHERE re.name = 'SESKAPiLE';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'SHEEEiT', re.name
+SELECT 'FR Scene Tier', 'SHEEEiT', re.name
 FROM regular_expressions re
 WHERE re.name = 'SHEEEiT';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'SHiNiGAMi', re.name
+SELECT 'FR Scene Tier', 'SHiNiGAMi', re.name
 FROM regular_expressions re
 WHERE re.name = 'SHiNiGAMi';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'SiGeRiS', re.name
+SELECT 'FR Scene Tier', 'SiGeRiS', re.name
 FROM regular_expressions re
 WHERE re.name = 'SiGeRiS';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'SILVIODANTE', re.name
+SELECT 'FR Scene Tier', 'SILVIODANTE', re.name
 FROM regular_expressions re
 WHERE re.name = 'SILVIODANTE';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'SLEEPINGFOREST', re.name
+SELECT 'FR Scene Tier', 'SLEEPINGFOREST', re.name
 FROM regular_expressions re
 WHERE re.name = 'SLEEPINGFOREST';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'SODAPOP', re.name
+SELECT 'FR Scene Tier', 'SODAPOP', re.name
 FROM regular_expressions re
 WHERE re.name = 'SODAPOP';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'S4LVE', re.name
+SELECT 'FR Scene Tier', 'S4LVE', re.name
 FROM regular_expressions re
 WHERE re.name = 'S4LVE';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'SPINE', re.name
+SELECT 'FR Scene Tier', 'SPINE', re.name
 FROM regular_expressions re
 WHERE re.name = 'SPINE';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'SPOiLER', re.name
+SELECT 'FR Scene Tier', 'SPOiLER', re.name
 FROM regular_expressions re
 WHERE re.name = 'SPOiLER';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'STRINGERBELL', re.name
+SELECT 'FR Scene Tier', 'STRINGERBELL', re.name
 FROM regular_expressions re
 WHERE re.name = 'STRINGERBELL';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'Sunday26th', re.name
+SELECT 'FR Scene Tier', 'Sunday26th', re.name
 FROM regular_expressions re
 WHERE re.name = 'Sunday26th';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'SUNRiSE', re.name
+SELECT 'FR Scene Tier', 'SUNRiSE', re.name
 FROM regular_expressions re
 WHERE re.name = 'SUNRiSE';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'tFR', re.name
+SELECT 'FR Scene Tier', 'tFR', re.name
 FROM regular_expressions re
 WHERE re.name = 'tFR';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'THENiGHTMAREiNHD', re.name
+SELECT 'FR Scene Tier', 'THENiGHTMAREiNHD', re.name
 FROM regular_expressions re
 WHERE re.name = 'THENiGHTMAREiNHD';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'THiNK', re.name
+SELECT 'FR Scene Tier', 'THiNK', re.name
 FROM regular_expressions re
 WHERE re.name = 'THiNK';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'THREESOME', re.name
+SELECT 'FR Scene Tier', 'THREESOME', re.name
 FROM regular_expressions re
 WHERE re.name = 'THREESOME';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'TiMELiNE', re.name
+SELECT 'FR Scene Tier', 'TiMELiNE', re.name
 FROM regular_expressions re
 WHERE re.name = 'TiMELiNE';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'TSuNaMi', re.name
+SELECT 'FR Scene Tier', 'TSuNaMi', re.name
 FROM regular_expressions re
 WHERE re.name = 'TSuNaMi';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'UKDHD', re.name
+SELECT 'FR Scene Tier', 'UKDHD', re.name
 FROM regular_expressions re
 WHERE re.name = 'UKDHD';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'UKDTV', re.name
+SELECT 'FR Scene Tier', 'UKDTV', re.name
 FROM regular_expressions re
 WHERE re.name = 'UKDTV';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'ULSHD', re.name
+SELECT 'FR Scene Tier', 'ULSHD', re.name
 FROM regular_expressions re
 WHERE re.name = 'ULSHD';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'Ulysse', re.name
+SELECT 'FR Scene Tier', 'Ulysse', re.name
 FROM regular_expressions re
 WHERE re.name = 'Ulysse';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'UNSKiLLED', re.name
+SELECT 'FR Scene Tier', 'UNSKiLLED', re.name
 FROM regular_expressions re
 WHERE re.name = 'UNSKiLLED';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'URY', re.name
+SELECT 'FR Scene Tier', 'URY', re.name
 FROM regular_expressions re
 WHERE re.name = 'URY';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'VENUE', re.name
+SELECT 'FR Scene Tier', 'VENUE', re.name
 FROM regular_expressions re
 WHERE re.name = 'VENUE';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'VFC', re.name
+SELECT 'FR Scene Tier', 'VFC', re.name
 FROM regular_expressions re
 WHERE re.name = 'VFC';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'VoMiT', re.name
+SELECT 'FR Scene Tier', 'VoMiT', re.name
 FROM regular_expressions re
 WHERE re.name = 'VoMiT';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'Wednesday29th', re.name
+SELECT 'FR Scene Tier', 'Wednesday29th', re.name
 FROM regular_expressions re
 WHERE re.name = 'Wednesday29th';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'ZEST', re.name
+SELECT 'FR Scene Tier', 'ZEST', re.name
 FROM regular_expressions re
 WHERE re.name = 'ZEST';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'ZiRCON', re.name
+SELECT 'FR Scene Tier', 'ZiRCON', re.name
 FROM regular_expressions re
 WHERE re.name = 'ZiRCON';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'AKLHD', re.name
+SELECT 'FR Scene Tier', 'AKLHD', re.name
 FROM regular_expressions re
 WHERE re.name = 'AKLHD';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'N0Z00M', re.name
+SELECT 'FR Scene Tier', 'N0Z00M', re.name
 FROM regular_expressions re
 WHERE re.name = 'N0Z00M';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'PHoQUE', re.name
+SELECT 'FR Scene Tier', 'PHoQUE', re.name
 FROM regular_expressions re
 WHERE re.name = 'PHoQUE';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'SharpHD', re.name
+SELECT 'FR Scene Tier', 'SharpHD', re.name
 FROM regular_expressions re
 WHERE re.name = 'SharpHD';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR Scene Groups', 'USURY', re.name
+SELECT 'FR Scene Tier', 'USURY', re.name
 FROM regular_expressions re
 WHERE re.name = 'USURY';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)

@@ -380,7 +380,7 @@ VALUES
   ('2160p Compact FR', '1080p Bluray (Efficient)', 'radarr', 700000),
   ('2160p Compact FR', '1080p HDTV', 'radarr', 80000),
   ('2160p Compact FR', '1080p HDTV', 'sonarr', 80000),
-  ('2160p Compact FR', 'FR Scene Groups', 'all', 4000),
+  ('2160p Compact FR', 'FR Scene Tier', 'all', 4000),
   ('2160p Compact FR', 'French MULTi', 'all', 0),
   ('2160p Compact FR', 'French Original', 'all', 0),
   ('2160p Compact FR', 'French Original Marker', 'all', 0),

@@ -1136,7 +1136,7 @@ WHERE qp.name = '1080p Balanced FR' AND cf.name = 'French VOSTFR';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 4000
 FROM quality_profiles qp, custom_formats cf
-WHERE qp.name = '1080p Balanced FR' AND cf.name = 'FR Scene Groups';
+WHERE qp.name = '1080p Balanced FR' AND cf.name = 'FR Scene Tier';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 101000
 FROM quality_profiles qp, custom_formats cf
@@ -1476,7 +1476,7 @@ WHERE qp.name = '1080p Compact FR' AND cf.name = 'French VOSTFR';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 4000
 FROM quality_profiles qp, custom_formats cf
-WHERE qp.name = '1080p Compact FR' AND cf.name = 'FR Scene Groups';
+WHERE qp.name = '1080p Compact FR' AND cf.name = 'FR Scene Tier';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 101000
 FROM quality_profiles qp, custom_formats cf
@@ -1836,7 +1836,7 @@ WHERE qp.name = '1080p Efficient FR' AND cf.name = 'French VOSTFR';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 4000
 FROM quality_profiles qp, custom_formats cf
-WHERE qp.name = '1080p Efficient FR' AND cf.name = 'FR Scene Groups';
+WHERE qp.name = '1080p Efficient FR' AND cf.name = 'FR Scene Tier';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 101000
 FROM quality_profiles qp, custom_formats cf
@@ -2184,7 +2184,7 @@ WHERE qp.name = '1080p Quality FR' AND cf.name = 'French VOSTFR';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 99000
 FROM quality_profiles qp, custom_formats cf
-WHERE qp.name = '1080p Quality FR' AND cf.name = 'FR Scene Groups';
+WHERE qp.name = '1080p Quality FR' AND cf.name = 'FR Scene Tier';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 101000
 FROM quality_profiles qp, custom_formats cf
@@ -2532,7 +2532,7 @@ WHERE qp.name = '1080p Quality HDR FR' AND cf.name = 'French VOSTFR';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 99000
 FROM quality_profiles qp, custom_formats cf
-WHERE qp.name = '1080p Quality HDR FR' AND cf.name = 'FR Scene Groups';
+WHERE qp.name = '1080p Quality HDR FR' AND cf.name = 'FR Scene Tier';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 101000
 FROM quality_profiles qp, custom_formats cf
@@ -2896,7 +2896,7 @@ WHERE qp.name = '1080p Remux FR' AND cf.name = 'French VOSTFR';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 4000
 FROM quality_profiles qp, custom_formats cf
-WHERE qp.name = '1080p Remux FR' AND cf.name = 'FR Scene Groups';
+WHERE qp.name = '1080p Remux FR' AND cf.name = 'FR Scene Tier';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 101000
 FROM quality_profiles qp, custom_formats cf
@@ -3296,7 +3296,7 @@ WHERE qp.name = '2160p Balanced FR' AND cf.name = 'French VOSTFR';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 4000
 FROM quality_profiles qp, custom_formats cf
-WHERE qp.name = '2160p Balanced FR' AND cf.name = 'FR Scene Groups';
+WHERE qp.name = '2160p Balanced FR' AND cf.name = 'FR Scene Tier';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 101000
 FROM quality_profiles qp, custom_formats cf
@@ -3736,7 +3736,7 @@ WHERE qp.name = '2160p Efficient FR' AND cf.name = 'French VOSTFR';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 4000
 FROM quality_profiles qp, custom_formats cf
-WHERE qp.name = '2160p Efficient FR' AND cf.name = 'FR Scene Groups';
+WHERE qp.name = '2160p Efficient FR' AND cf.name = 'FR Scene Tier';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 101000
 FROM quality_profiles qp, custom_formats cf
@@ -4136,7 +4136,7 @@ WHERE qp.name = '2160p Quality FR' AND cf.name = 'French VOSTFR';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 4000
 FROM quality_profiles qp, custom_formats cf
-WHERE qp.name = '2160p Quality FR' AND cf.name = 'FR Scene Groups';
+WHERE qp.name = '2160p Quality FR' AND cf.name = 'FR Scene Tier';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 101000
 FROM quality_profiles qp, custom_formats cf
@@ -4580,7 +4580,7 @@ WHERE qp.name = '2160p Remux FR' AND cf.name = 'French VOSTFR';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 4000
 FROM quality_profiles qp, custom_formats cf
-WHERE qp.name = '2160p Remux FR' AND cf.name = 'FR Scene Groups';
+WHERE qp.name = '2160p Remux FR' AND cf.name = 'FR Scene Tier';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 101000
 FROM quality_profiles qp, custom_formats cf
@@ -5044,7 +5044,7 @@ WHERE qp.name = '720p Quality FR' AND cf.name = 'French VOSTFR';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 99000
 FROM quality_profiles qp, custom_formats cf
-WHERE qp.name = '720p Quality FR' AND cf.name = 'FR Scene Groups';
+WHERE qp.name = '720p Quality FR' AND cf.name = 'FR Scene Tier';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 101000
 FROM quality_profiles qp, custom_formats cf
@@ -5396,7 +5396,7 @@ WHERE qp.name = 'Anime 1080p FR' AND cf.name = 'French VF';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 99000
 FROM quality_profiles qp, custom_formats cf
-WHERE qp.name = 'Anime 1080p FR' AND cf.name = 'FR Scene Groups';
+WHERE qp.name = 'Anime 1080p FR' AND cf.name = 'FR Scene Tier';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 101000
 FROM quality_profiles qp, custom_formats cf
@@ -5815,7 +5815,7 @@ WHERE qp.name = 'Anime 1080p VOSTFR FR' AND cf.name = 'French VF';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 99000
 FROM quality_profiles qp, custom_formats cf
-WHERE qp.name = 'Anime 1080p VOSTFR FR' AND cf.name = 'FR Scene Groups';
+WHERE qp.name = 'Anime 1080p VOSTFR FR' AND cf.name = 'FR Scene Tier';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 101000
 FROM quality_profiles qp, custom_formats cf

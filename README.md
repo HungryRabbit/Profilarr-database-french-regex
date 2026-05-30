@@ -71,7 +71,7 @@ Les Custom Formats FR sont séparés par usage:
 - `FR 2160p Efficient Movie/TV Bluray/WEB Tier ...`
 - `FR 2160p Quality Tier ...`
 - `FR Remux Tier ...`
-- `FR Scene Groups`
+- `FR Scene Tier`
 - `FR LQ`
 - `FR Anime Tier 01/02/03`
 - `FR Anime FanSub`
@@ -91,7 +91,7 @@ Les scores techniques des profils FR sont réalignés sur Dictionarry V2. Les sc
 
 Le profil `2160p Efficient FR` utilise des neutralizers WEB FR pour annuler le score source `2160p WEB-DL (Efficient)` quand un tier WEB composite FR est déjà appliqué.
 
-Dans les profils à score technique très élevé (`1080p Remux FR`, `2160p Balanced FR`, `2160p Efficient FR`, `2160p Quality FR`, `2160p Remux FR`), `FR Scene Groups` est volontairement plafonné car le score source est déjà proche du maximum.
+Dans les profils à score technique très élevé (`1080p Remux FR`, `2160p Balanced FR`, `2160p Efficient FR`, `2160p Quality FR`, `2160p Remux FR`), `FR Scene Tier` est volontairement plafonné car le score source est déjà proche du maximum.
 
 Les tiers `FR 1080p Quality` sont aussi plafonnés dans les profils Quality/Remux pour rester sous le score maximum avec une source `1080p WEB-DL`.
 

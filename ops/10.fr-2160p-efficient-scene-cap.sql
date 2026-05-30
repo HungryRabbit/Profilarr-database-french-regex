@@ -21,5 +21,5 @@ WHERE quality_profile_name IN (
     '2160p Quality FR',
     '2160p Remux FR'
   )
-  AND custom_format_name = 'FR Scene Groups';
+  AND custom_format_name = 'FR Scene Tier';
 -- --- END op 9010

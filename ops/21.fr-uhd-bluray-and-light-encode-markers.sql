@@ -222,11 +222,11 @@ WHERE name IN (
 );
 
 DELETE FROM condition_patterns
-WHERE custom_format_name = 'FR Scene Groups'
+WHERE custom_format_name = 'FR Scene Tier'
   AND condition_name IN ('FLOP', 'FRATERNiTY', 'FoX', 'Psaro');
 
 DELETE FROM custom_format_conditions
-WHERE custom_format_name = 'FR Scene Groups'
+WHERE custom_format_name = 'FR Scene Tier'
   AND name IN ('FLOP', 'FRATERNiTY', 'FoX', 'Psaro');
 
 DELETE FROM quality_profile_custom_formats
@@ -602,12 +602,12 @@ WHERE quality_profile_name IN (
     '2160p Quality FR',
     '2160p Remux FR'
   )
-  AND custom_format_name = 'FR Scene Groups';
+  AND custom_format_name = 'FR Scene Tier';
 
 UPDATE quality_profile_custom_formats
 SET score = 15000
 WHERE quality_profile_name = '1080p Compact FR'
-  AND custom_format_name = 'FR Scene Groups';
+  AND custom_format_name = 'FR Scene Tier';
 
 UPDATE custom_formats
 SET name = REPLACE(name, 'FR 1080p Compact Movie ', 'FR 1080p Compact ')
