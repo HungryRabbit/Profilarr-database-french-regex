@@ -1311,6 +1311,12 @@ VALUES ('2160p WEB-DL (Balanced)', 'h264', 'release_title', 'all', 0, 1);
 INSERT OR IGNORE INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
 VALUES ('2160p WEB-DL (Balanced)', 'h264', 'h264');
 
+INSERT OR IGNORE INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+VALUES ('2160p WEB-DL (Efficient)', 'h264', 'release_title', 'all', 0, 1);
+
+INSERT OR IGNORE INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+VALUES ('2160p WEB-DL (Efficient)', 'h264', 'h264');
+
 INSERT INTO custom_formats (name, description)
 VALUES
   ('FR 2160p Efficient WEB h265', '2160p WEB-DL h265 source pass for 2160p Efficient FR without release-group condition.'),
