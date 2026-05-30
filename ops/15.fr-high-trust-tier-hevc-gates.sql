@@ -18,8 +18,8 @@ WHERE cf.name IN (
   'FR 1080p Balanced Tier 2',
   'FR 2160p Balanced Bluray Tier 1',
   'FR 2160p Balanced WEB Tier 1',
-  'FR 2160p Efficient Movie Bluray Tier 1',
-  'FR 2160p Efficient Movie WEB Tier 1',
+  'FR 2160p Efficient Bluray Tier 1',
+  'FR 2160p Efficient WEB Tier 1',
   'FR 2160p Efficient TV Bluray Tier 1',
   'FR 2160p Efficient TV WEB Tier 1'
 )
@@ -36,8 +36,8 @@ WHERE cf.name IN (
   'FR 1080p Balanced Tier 2',
   'FR 2160p Balanced Bluray Tier 1',
   'FR 2160p Balanced WEB Tier 1',
-  'FR 2160p Efficient Movie Bluray Tier 1',
-  'FR 2160p Efficient Movie WEB Tier 1',
+  'FR 2160p Efficient Bluray Tier 1',
+  'FR 2160p Efficient WEB Tier 1',
   'FR 2160p Efficient TV Bluray Tier 1',
   'FR 2160p Efficient TV WEB Tier 1'
 )

@@ -166,6 +166,70 @@ DELETE FROM custom_formats
 WHERE name IN ('UHD Bluray (Efficient)', 'UHD Bluray (FR Validated)');
 
 DELETE FROM quality_profile_custom_formats
+WHERE custom_format_name IN (
+  'FR 2160p Efficient Movie Bluray Tier 1',
+  'FR 2160p Efficient Movie WEB Tier 1',
+  'FR 2160p Efficient TV Bluray Tier 1',
+  'FR 2160p Efficient TV WEB Tier 1'
+);
+
+DELETE FROM custom_format_tags
+WHERE custom_format_name IN (
+  'FR 2160p Efficient Movie Bluray Tier 1',
+  'FR 2160p Efficient Movie WEB Tier 1',
+  'FR 2160p Efficient TV Bluray Tier 1',
+  'FR 2160p Efficient TV WEB Tier 1'
+);
+
+DELETE FROM condition_patterns
+WHERE custom_format_name IN (
+  'FR 2160p Efficient Movie Bluray Tier 1',
+  'FR 2160p Efficient Movie WEB Tier 1',
+  'FR 2160p Efficient TV Bluray Tier 1',
+  'FR 2160p Efficient TV WEB Tier 1'
+);
+
+DELETE FROM condition_sources
+WHERE custom_format_name IN (
+  'FR 2160p Efficient Movie Bluray Tier 1',
+  'FR 2160p Efficient Movie WEB Tier 1',
+  'FR 2160p Efficient TV Bluray Tier 1',
+  'FR 2160p Efficient TV WEB Tier 1'
+);
+
+DELETE FROM condition_resolutions
+WHERE custom_format_name IN (
+  'FR 2160p Efficient Movie Bluray Tier 1',
+  'FR 2160p Efficient Movie WEB Tier 1',
+  'FR 2160p Efficient TV Bluray Tier 1',
+  'FR 2160p Efficient TV WEB Tier 1'
+);
+
+DELETE FROM custom_format_conditions
+WHERE custom_format_name IN (
+  'FR 2160p Efficient Movie Bluray Tier 1',
+  'FR 2160p Efficient Movie WEB Tier 1',
+  'FR 2160p Efficient TV Bluray Tier 1',
+  'FR 2160p Efficient TV WEB Tier 1'
+);
+
+DELETE FROM custom_formats
+WHERE name IN (
+  'FR 2160p Efficient Movie Bluray Tier 1',
+  'FR 2160p Efficient Movie WEB Tier 1',
+  'FR 2160p Efficient TV Bluray Tier 1',
+  'FR 2160p Efficient TV WEB Tier 1'
+);
+
+DELETE FROM condition_patterns
+WHERE custom_format_name = 'FR Scene Groups'
+  AND condition_name IN ('FLOP', 'FRATERNiTY', 'FoX', 'Psaro');
+
+DELETE FROM custom_format_conditions
+WHERE custom_format_name = 'FR Scene Groups'
+  AND name IN ('FLOP', 'FRATERNiTY', 'FoX', 'Psaro');
+
+DELETE FROM quality_profile_custom_formats
 WHERE custom_format_name = 'FR 2160p Balanced Tier 1';
 
 DELETE FROM custom_format_tags

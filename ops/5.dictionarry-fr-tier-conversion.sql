@@ -34,8 +34,8 @@ WITH cf(name, description) AS (
   ('FR 2160p Balanced Bluray Tier 1', 'Dictionarry-shaped FR 2160p Balanced Bluray Tier 1 for validated stable French groups.'),
   ('FR 2160p Balanced WEB Tier 1', 'Dictionarry-shaped FR 2160p Balanced WEB Tier 1 for validated stable French groups.'),
   ('FR 2160p Balanced Tier 2', 'Dictionarry-shaped FR 2160p Balanced Tier 2 for validated stable French groups.'),
-  ('FR 2160p Efficient Movie Bluray Tier 1', 'Dictionarry-shaped FR 2160p Efficient Movie Bluray Tier 1 for validated French HEVC groups.'),
-  ('FR 2160p Efficient Movie WEB Tier 1', 'Dictionarry-shaped FR 2160p Efficient Movie WEB Tier 1 for validated French HEVC groups.'),
+  ('FR 2160p Efficient Bluray Tier 1', 'Dictionarry-shaped FR 2160p Efficient Bluray Tier 1 for validated French HEVC groups.'),
+  ('FR 2160p Efficient WEB Tier 1', 'Dictionarry-shaped FR 2160p Efficient WEB Tier 1 for validated French HEVC groups.'),
   ('FR 2160p Efficient TV Bluray Tier 1', 'Dictionarry-shaped FR 2160p Efficient TV Bluray Tier 1 for validated French HEVC groups.'),
   ('FR 2160p Efficient TV WEB Tier 1', 'Dictionarry-shaped FR 2160p Efficient TV WEB Tier 1 for validated French HEVC groups.'),
   ('FR 2160p Quality Tier 1', 'Dictionarry-shaped FR 2160p Quality Tier 1 built from TRaSH FR source tiers.'),
@@ -88,7 +88,7 @@ CROSS JOIN tags;
 
 WITH efficient_tags(custom_format_name) AS (
   VALUES
-  ('FR 2160p Efficient Movie Bluray Tier 1'), ('FR 2160p Efficient Movie WEB Tier 1'),
+  ('FR 2160p Efficient Bluray Tier 1'), ('FR 2160p Efficient WEB Tier 1'),
   ('FR 2160p Efficient TV Bluray Tier 1'), ('FR 2160p Efficient TV WEB Tier 1')
 ),
 tags(tag_name) AS (
@@ -111,7 +111,7 @@ WITH resolution_gate(custom_format_name, resolution) AS (
   ('FR 1080p Bluray HEVC Tier 1', '1080p'), ('FR 1080p WEB-DL HEVC Tier 1', '1080p'),
   ('FR 1080p Quality Tier 1', '1080p'), ('FR 1080p Quality Tier 2', '1080p'), ('FR 1080p Quality Tier 3', '1080p'),
   ('FR 2160p Balanced Bluray Tier 1', '2160p'), ('FR 2160p Balanced WEB Tier 1', '2160p'), ('FR 2160p Balanced Tier 2', '2160p'),
-  ('FR 2160p Efficient Movie Bluray Tier 1', '2160p'), ('FR 2160p Efficient Movie WEB Tier 1', '2160p'),
+  ('FR 2160p Efficient Bluray Tier 1', '2160p'), ('FR 2160p Efficient WEB Tier 1', '2160p'),
   ('FR 2160p Efficient TV Bluray Tier 1', '2160p'), ('FR 2160p Efficient TV WEB Tier 1', '2160p'),
   ('FR 2160p Quality Tier 1', '2160p'), ('FR 2160p Quality Tier 2', '2160p'), ('FR 2160p Quality Tier 3', '2160p')
 )
@@ -129,7 +129,7 @@ WITH resolution_gate(custom_format_name, resolution) AS (
   ('FR 1080p Bluray HEVC Tier 1', '1080p'), ('FR 1080p WEB-DL HEVC Tier 1', '1080p'),
   ('FR 1080p Quality Tier 1', '1080p'), ('FR 1080p Quality Tier 2', '1080p'), ('FR 1080p Quality Tier 3', '1080p'),
   ('FR 2160p Balanced Bluray Tier 1', '2160p'), ('FR 2160p Balanced WEB Tier 1', '2160p'), ('FR 2160p Balanced Tier 2', '2160p'),
-  ('FR 2160p Efficient Movie Bluray Tier 1', '2160p'), ('FR 2160p Efficient Movie WEB Tier 1', '2160p'),
+  ('FR 2160p Efficient Bluray Tier 1', '2160p'), ('FR 2160p Efficient WEB Tier 1', '2160p'),
   ('FR 2160p Efficient TV Bluray Tier 1', '2160p'), ('FR 2160p Efficient TV WEB Tier 1', '2160p'),
   ('FR 2160p Quality Tier 1', '2160p'), ('FR 2160p Quality Tier 2', '2160p'), ('FR 2160p Quality Tier 3', '2160p')
 )
@@ -177,7 +177,7 @@ WITH hevc_cf(custom_format_name) AS (
   ('FR 1080p Compact TV Bluray Tier 1'), ('FR 1080p Compact TV Bluray Tier 2'),
   ('FR 1080p Compact TV WEB Tier 1'), ('FR 1080p Compact TV WEB Tier 2'),
   ('FR 1080p Bluray HEVC Tier 1'), ('FR 1080p WEB-DL HEVC Tier 1'),
-  ('FR 2160p Efficient Movie Bluray Tier 1'), ('FR 2160p Efficient Movie WEB Tier 1'),
+  ('FR 2160p Efficient Bluray Tier 1'), ('FR 2160p Efficient WEB Tier 1'),
   ('FR 2160p Efficient TV Bluray Tier 1'), ('FR 2160p Efficient TV WEB Tier 1')
 )
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
@@ -190,7 +190,7 @@ WITH hevc_cf(custom_format_name) AS (
   ('FR 1080p Compact TV Bluray Tier 1'), ('FR 1080p Compact TV Bluray Tier 2'),
   ('FR 1080p Compact TV WEB Tier 1'), ('FR 1080p Compact TV WEB Tier 2'),
   ('FR 1080p Bluray HEVC Tier 1'), ('FR 1080p WEB-DL HEVC Tier 1'),
-  ('FR 2160p Efficient Movie Bluray Tier 1'), ('FR 2160p Efficient Movie WEB Tier 1'),
+  ('FR 2160p Efficient Bluray Tier 1'), ('FR 2160p Efficient WEB Tier 1'),
   ('FR 2160p Efficient TV Bluray Tier 1'), ('FR 2160p Efficient TV WEB Tier 1')
 )
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
@@ -203,7 +203,7 @@ WITH source_gate(custom_format_name, condition_name, source) AS (
   ('FR 1080p Compact TV Bluray Tier 1', 'Bluray', 'bluray'),
   ('FR 1080p Compact TV Bluray Tier 2', 'Bluray', 'bluray'),
   ('FR 1080p Bluray HEVC Tier 1', 'Bluray', 'bluray'),
-  ('FR 2160p Efficient Movie Bluray Tier 1', 'Bluray', 'bluray'),
+  ('FR 2160p Efficient Bluray Tier 1', 'Bluray', 'bluray'),
   ('FR 2160p Efficient TV Bluray Tier 1', 'Bluray', 'bluray'),
   ('FR 1080p Compact Movie WEB Tier 1', 'WEB-DL', 'web_dl'),
   ('FR 1080p Compact Movie WEB Tier 1', 'WEBRip', 'webrip'),
@@ -215,8 +215,8 @@ WITH source_gate(custom_format_name, condition_name, source) AS (
   ('FR 1080p Compact TV WEB Tier 2', 'WEBRip', 'webrip'),
   ('FR 1080p WEB-DL HEVC Tier 1', 'WEB-DL', 'web_dl'),
   ('FR 1080p WEB-DL HEVC Tier 1', 'WEBRip', 'webrip'),
-  ('FR 2160p Efficient Movie WEB Tier 1', 'WEB-DL', 'web_dl'),
-  ('FR 2160p Efficient Movie WEB Tier 1', 'WEBRip', 'webrip'),
+  ('FR 2160p Efficient WEB Tier 1', 'WEB-DL', 'web_dl'),
+  ('FR 2160p Efficient WEB Tier 1', 'WEBRip', 'webrip'),
   ('FR 2160p Efficient TV WEB Tier 1', 'WEB-DL', 'web_dl'),
   ('FR 2160p Efficient TV WEB Tier 1', 'WEBRip', 'webrip')
 )
@@ -230,7 +230,7 @@ WITH source_gate(custom_format_name, condition_name, source) AS (
   ('FR 1080p Compact TV Bluray Tier 1', 'Bluray', 'bluray'),
   ('FR 1080p Compact TV Bluray Tier 2', 'Bluray', 'bluray'),
   ('FR 1080p Bluray HEVC Tier 1', 'Bluray', 'bluray'),
-  ('FR 2160p Efficient Movie Bluray Tier 1', 'Bluray', 'bluray'),
+  ('FR 2160p Efficient Bluray Tier 1', 'Bluray', 'bluray'),
   ('FR 2160p Efficient TV Bluray Tier 1', 'Bluray', 'bluray'),
   ('FR 1080p Compact Movie WEB Tier 1', 'WEB-DL', 'web_dl'),
   ('FR 1080p Compact Movie WEB Tier 1', 'WEBRip', 'webrip'),
@@ -242,8 +242,8 @@ WITH source_gate(custom_format_name, condition_name, source) AS (
   ('FR 1080p Compact TV WEB Tier 2', 'WEBRip', 'webrip'),
   ('FR 1080p WEB-DL HEVC Tier 1', 'WEB-DL', 'web_dl'),
   ('FR 1080p WEB-DL HEVC Tier 1', 'WEBRip', 'webrip'),
-  ('FR 2160p Efficient Movie WEB Tier 1', 'WEB-DL', 'web_dl'),
-  ('FR 2160p Efficient Movie WEB Tier 1', 'WEBRip', 'webrip'),
+  ('FR 2160p Efficient WEB Tier 1', 'WEB-DL', 'web_dl'),
+  ('FR 2160p Efficient WEB Tier 1', 'WEBRip', 'webrip'),
   ('FR 2160p Efficient TV WEB Tier 1', 'WEB-DL', 'web_dl'),
   ('FR 2160p Efficient TV WEB Tier 1', 'WEBRip', 'webrip')
 )
@@ -261,8 +261,8 @@ WITH team(custom_format_name, condition_name, regex_name) AS (
   ('FR 2160p Balanced Tier 2', 'TFA', 'TFA'),
   ('FR 1080p Bluray HEVC Tier 1', 'TyHD', 'TyHD'), ('FR 1080p Bluray HEVC Tier 1', 'THESYNDICATE', 'THESYNDICATE'), ('FR 1080p Bluray HEVC Tier 1', 'CHiLL', 'CHiLL'), ('FR 1080p Bluray HEVC Tier 1', 'SUPPLY', 'SUPPLY'), ('FR 1080p Bluray HEVC Tier 1', 'FW', 'FW'), ('FR 1080p Bluray HEVC Tier 1', 'FORWARD', 'FORWARD'), ('FR 1080p Bluray HEVC Tier 1', 'TFA', 'TFA'),
   ('FR 1080p WEB-DL HEVC Tier 1', 'TyHD', 'TyHD'), ('FR 1080p WEB-DL HEVC Tier 1', 'THESYNDICATE', 'THESYNDICATE'), ('FR 1080p WEB-DL HEVC Tier 1', 'CHiLL', 'CHiLL'), ('FR 1080p WEB-DL HEVC Tier 1', 'SUPPLY', 'SUPPLY'), ('FR 1080p WEB-DL HEVC Tier 1', 'FW', 'FW'), ('FR 1080p WEB-DL HEVC Tier 1', 'FORWARD', 'FORWARD'), ('FR 1080p WEB-DL HEVC Tier 1', 'TFA', 'TFA'),
-  ('FR 2160p Efficient Movie Bluray Tier 1', 'FLOP', 'FLOP'), ('FR 2160p Efficient Movie Bluray Tier 1', 'FRATERNiTY', 'FRATERNiTY'), ('FR 2160p Efficient Movie Bluray Tier 1', 'FoX', 'FoX'), ('FR 2160p Efficient Movie Bluray Tier 1', 'Psaro', 'Psaro'),
-  ('FR 2160p Efficient Movie WEB Tier 1', 'TyHD', 'TyHD'), ('FR 2160p Efficient Movie WEB Tier 1', 'THESYNDICATE', 'THESYNDICATE'), ('FR 2160p Efficient Movie WEB Tier 1', 'CHiLL', 'CHiLL'), ('FR 2160p Efficient Movie WEB Tier 1', 'SUPPLY', 'SUPPLY'), ('FR 2160p Efficient Movie WEB Tier 1', 'FW', 'FW'), ('FR 2160p Efficient Movie WEB Tier 1', 'FORWARD', 'FORWARD'), ('FR 2160p Efficient Movie WEB Tier 1', 'TFA', 'TFA'),
+  ('FR 2160p Efficient Bluray Tier 1', 'FLOP', 'FLOP'), ('FR 2160p Efficient Bluray Tier 1', 'FRATERNiTY', 'FRATERNiTY'), ('FR 2160p Efficient Bluray Tier 1', 'FoX', 'FoX'), ('FR 2160p Efficient Bluray Tier 1', 'Psaro', 'Psaro'),
+  ('FR 2160p Efficient WEB Tier 1', 'TyHD', 'TyHD'), ('FR 2160p Efficient WEB Tier 1', 'THESYNDICATE', 'THESYNDICATE'), ('FR 2160p Efficient WEB Tier 1', 'CHiLL', 'CHiLL'), ('FR 2160p Efficient WEB Tier 1', 'SUPPLY', 'SUPPLY'), ('FR 2160p Efficient WEB Tier 1', 'FW', 'FW'), ('FR 2160p Efficient WEB Tier 1', 'FORWARD', 'FORWARD'), ('FR 2160p Efficient WEB Tier 1', 'TFA', 'TFA'),
   ('FR 2160p Efficient TV Bluray Tier 1', 'TyHD', 'TyHD'), ('FR 2160p Efficient TV Bluray Tier 1', 'THESYNDICATE', 'THESYNDICATE'), ('FR 2160p Efficient TV Bluray Tier 1', 'CHiLL', 'CHiLL'), ('FR 2160p Efficient TV Bluray Tier 1', 'SUPPLY', 'SUPPLY'), ('FR 2160p Efficient TV Bluray Tier 1', 'FW', 'FW'), ('FR 2160p Efficient TV Bluray Tier 1', 'FORWARD', 'FORWARD'), ('FR 2160p Efficient TV Bluray Tier 1', 'TFA', 'TFA'),
   ('FR 2160p Efficient TV WEB Tier 1', 'TyHD', 'TyHD'), ('FR 2160p Efficient TV WEB Tier 1', 'THESYNDICATE', 'THESYNDICATE'), ('FR 2160p Efficient TV WEB Tier 1', 'CHiLL', 'CHiLL'), ('FR 2160p Efficient TV WEB Tier 1', 'SUPPLY', 'SUPPLY'), ('FR 2160p Efficient TV WEB Tier 1', 'FW', 'FW'), ('FR 2160p Efficient TV WEB Tier 1', 'FORWARD', 'FORWARD'), ('FR 2160p Efficient TV WEB Tier 1', 'TFA', 'TFA'),
   -- Compact from HDLight
@@ -287,8 +287,8 @@ WITH team(custom_format_name, condition_name, regex_name) AS (
   ('FR 2160p Balanced Tier 2', 'TFA', 'TFA'),
   ('FR 1080p Bluray HEVC Tier 1', 'TyHD', 'TyHD'), ('FR 1080p Bluray HEVC Tier 1', 'THESYNDICATE', 'THESYNDICATE'), ('FR 1080p Bluray HEVC Tier 1', 'CHiLL', 'CHiLL'), ('FR 1080p Bluray HEVC Tier 1', 'SUPPLY', 'SUPPLY'), ('FR 1080p Bluray HEVC Tier 1', 'FW', 'FW'), ('FR 1080p Bluray HEVC Tier 1', 'FORWARD', 'FORWARD'), ('FR 1080p Bluray HEVC Tier 1', 'TFA', 'TFA'),
   ('FR 1080p WEB-DL HEVC Tier 1', 'TyHD', 'TyHD'), ('FR 1080p WEB-DL HEVC Tier 1', 'THESYNDICATE', 'THESYNDICATE'), ('FR 1080p WEB-DL HEVC Tier 1', 'CHiLL', 'CHiLL'), ('FR 1080p WEB-DL HEVC Tier 1', 'SUPPLY', 'SUPPLY'), ('FR 1080p WEB-DL HEVC Tier 1', 'FW', 'FW'), ('FR 1080p WEB-DL HEVC Tier 1', 'FORWARD', 'FORWARD'), ('FR 1080p WEB-DL HEVC Tier 1', 'TFA', 'TFA'),
-  ('FR 2160p Efficient Movie Bluray Tier 1', 'FLOP', 'FLOP'), ('FR 2160p Efficient Movie Bluray Tier 1', 'FRATERNiTY', 'FRATERNiTY'), ('FR 2160p Efficient Movie Bluray Tier 1', 'FoX', 'FoX'), ('FR 2160p Efficient Movie Bluray Tier 1', 'Psaro', 'Psaro'),
-  ('FR 2160p Efficient Movie WEB Tier 1', 'TyHD', 'TyHD'), ('FR 2160p Efficient Movie WEB Tier 1', 'THESYNDICATE', 'THESYNDICATE'), ('FR 2160p Efficient Movie WEB Tier 1', 'CHiLL', 'CHiLL'), ('FR 2160p Efficient Movie WEB Tier 1', 'SUPPLY', 'SUPPLY'), ('FR 2160p Efficient Movie WEB Tier 1', 'FW', 'FW'), ('FR 2160p Efficient Movie WEB Tier 1', 'FORWARD', 'FORWARD'), ('FR 2160p Efficient Movie WEB Tier 1', 'TFA', 'TFA'),
+  ('FR 2160p Efficient Bluray Tier 1', 'FLOP', 'FLOP'), ('FR 2160p Efficient Bluray Tier 1', 'FRATERNiTY', 'FRATERNiTY'), ('FR 2160p Efficient Bluray Tier 1', 'FoX', 'FoX'), ('FR 2160p Efficient Bluray Tier 1', 'Psaro', 'Psaro'),
+  ('FR 2160p Efficient WEB Tier 1', 'TyHD', 'TyHD'), ('FR 2160p Efficient WEB Tier 1', 'THESYNDICATE', 'THESYNDICATE'), ('FR 2160p Efficient WEB Tier 1', 'CHiLL', 'CHiLL'), ('FR 2160p Efficient WEB Tier 1', 'SUPPLY', 'SUPPLY'), ('FR 2160p Efficient WEB Tier 1', 'FW', 'FW'), ('FR 2160p Efficient WEB Tier 1', 'FORWARD', 'FORWARD'), ('FR 2160p Efficient WEB Tier 1', 'TFA', 'TFA'),
   ('FR 2160p Efficient TV Bluray Tier 1', 'TyHD', 'TyHD'), ('FR 2160p Efficient TV Bluray Tier 1', 'THESYNDICATE', 'THESYNDICATE'), ('FR 2160p Efficient TV Bluray Tier 1', 'CHiLL', 'CHiLL'), ('FR 2160p Efficient TV Bluray Tier 1', 'SUPPLY', 'SUPPLY'), ('FR 2160p Efficient TV Bluray Tier 1', 'FW', 'FW'), ('FR 2160p Efficient TV Bluray Tier 1', 'FORWARD', 'FORWARD'), ('FR 2160p Efficient TV Bluray Tier 1', 'TFA', 'TFA'),
   ('FR 2160p Efficient TV WEB Tier 1', 'TyHD', 'TyHD'), ('FR 2160p Efficient TV WEB Tier 1', 'THESYNDICATE', 'THESYNDICATE'), ('FR 2160p Efficient TV WEB Tier 1', 'CHiLL', 'CHiLL'), ('FR 2160p Efficient TV WEB Tier 1', 'SUPPLY', 'SUPPLY'), ('FR 2160p Efficient TV WEB Tier 1', 'FW', 'FW'), ('FR 2160p Efficient TV WEB Tier 1', 'FORWARD', 'FORWARD'), ('FR 2160p Efficient TV WEB Tier 1', 'TFA', 'TFA'),
   ('FR 1080p Compact Movie Bluray Tier 1', 'LiDHL', 'LiDHL'), ('FR 1080p Compact Movie Bluray Tier 1', 'mHDgz', 'mHDgz'), ('FR 1080p Compact Movie Bluray Tier 1', 'QTZ', 'QTZ'), ('FR 1080p Compact Movie Bluray Tier 1', 'RiFiFi', 'RiFiFi'),
@@ -382,8 +382,10 @@ WITH score(quality_profile_name, custom_format_name, arr_type, score) AS (
   ('2160p Balanced FR', 'FR 1080p Quality Tier 1', 'all', 185000),
   ('2160p Balanced FR', 'FR 1080p Quality Tier 2', 'all', 184000),
   ('2160p Balanced FR', 'FR 1080p Quality Tier 3', 'all', 183000),
-  ('2160p Efficient FR', 'FR 2160p Efficient Movie Bluray Tier 1', 'radarr', 982000),
-  ('2160p Efficient FR', 'FR 2160p Efficient Movie WEB Tier 1', 'radarr', 983000),
+  ('2160p Efficient FR', 'FR 2160p Efficient Bluray Tier 1', 'radarr', 982000),
+  ('2160p Efficient FR', 'FR 2160p Efficient Bluray Tier 1', 'sonarr', 982000),
+  ('2160p Efficient FR', 'FR 2160p Efficient WEB Tier 1', 'radarr', 983000),
+  ('2160p Efficient FR', 'FR 2160p Efficient WEB Tier 1', 'sonarr', 983000),
   ('2160p Efficient FR', 'FR 2160p Efficient TV Bluray Tier 1', 'sonarr', 980000),
   ('2160p Efficient FR', 'FR 2160p Efficient TV WEB Tier 1', 'sonarr', 980000),
   ('2160p Quality FR', 'FR 2160p Quality Tier 1', 'all', 945000),

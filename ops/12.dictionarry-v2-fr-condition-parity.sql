@@ -126,7 +126,7 @@ WHERE custom_format_name IN (
   'FR 1080p Compact TV WEB Tier 1',
   'FR 1080p Compact TV WEB Tier 2',
   'FR 1080p WEB-DL HEVC Tier 1',
-  'FR 2160p Efficient Movie WEB Tier 1',
+  'FR 2160p Efficient WEB Tier 1',
   'FR 2160p Efficient TV WEB Tier 1'
 );
 
@@ -137,7 +137,7 @@ WHERE custom_format_name IN (
   'FR 1080p Compact TV WEB Tier 1',
   'FR 1080p Compact TV WEB Tier 2',
   'FR 1080p WEB-DL HEVC Tier 1',
-  'FR 2160p Efficient Movie WEB Tier 1',
+  'FR 2160p Efficient WEB Tier 1',
   'FR 2160p Efficient TV WEB Tier 1'
 )
   AND type = 'source';
@@ -152,7 +152,7 @@ WHERE cf.name IN (
   'FR 1080p Compact TV WEB Tier 1',
   'FR 1080p Compact TV WEB Tier 2',
   'FR 1080p WEB-DL HEVC Tier 1',
-  'FR 2160p Efficient Movie WEB Tier 1',
+  'FR 2160p Efficient WEB Tier 1',
   'FR 2160p Efficient TV WEB Tier 1'
 )
   AND NOT EXISTS (
@@ -169,7 +169,7 @@ WHERE cf.name IN (
   'FR 1080p Compact TV WEB Tier 1',
   'FR 1080p Compact TV WEB Tier 2',
   'FR 1080p WEB-DL HEVC Tier 1',
-  'FR 2160p Efficient Movie WEB Tier 1',
+  'FR 2160p Efficient WEB Tier 1',
   'FR 2160p Efficient TV WEB Tier 1'
 )
   AND NOT EXISTS (
@@ -185,7 +185,7 @@ WHERE cf.name IN (
   'FR 1080p Compact Movie WEB Tier 2',
   'FR 1080p Compact TV WEB Tier 1',
   'FR 1080p Compact TV WEB Tier 2',
-  'FR 2160p Efficient Movie WEB Tier 1',
+  'FR 2160p Efficient WEB Tier 1',
   'FR 2160p Efficient TV WEB Tier 1'
 )
   AND NOT EXISTS (
@@ -201,7 +201,7 @@ WHERE cf.name IN (
   'FR 1080p Compact Movie WEB Tier 2',
   'FR 1080p Compact TV WEB Tier 1',
   'FR 1080p Compact TV WEB Tier 2',
-  'FR 2160p Efficient Movie WEB Tier 1',
+  'FR 2160p Efficient WEB Tier 1',
   'FR 2160p Efficient TV WEB Tier 1'
 )
   AND NOT EXISTS (
@@ -233,8 +233,8 @@ WHERE custom_format_name IN (
 -- condition shape aligned as well.
 DELETE FROM condition_patterns
 WHERE custom_format_name IN (
-  'FR 2160p Efficient Movie Bluray Tier 1',
-  'FR 2160p Efficient Movie WEB Tier 1',
+  'FR 2160p Efficient Bluray Tier 1',
+  'FR 2160p Efficient WEB Tier 1',
   'FR 2160p Efficient TV Bluray Tier 1',
   'FR 2160p Efficient TV WEB Tier 1'
 )
@@ -242,8 +242,8 @@ WHERE custom_format_name IN (
 
 DELETE FROM custom_format_conditions
 WHERE custom_format_name IN (
-  'FR 2160p Efficient Movie Bluray Tier 1',
-  'FR 2160p Efficient Movie WEB Tier 1',
+  'FR 2160p Efficient Bluray Tier 1',
+  'FR 2160p Efficient WEB Tier 1',
   'FR 2160p Efficient TV Bluray Tier 1',
   'FR 2160p Efficient TV WEB Tier 1'
 )
