@@ -13,9 +13,9 @@
 
 UPDATE quality_profile_custom_formats
 SET score = CASE custom_format_name
-  WHEN 'FR 1080p Quality Tier 1' THEN 185000
-  WHEN 'FR 1080p Quality Tier 2' THEN 184000
-  WHEN 'FR 1080p Quality Tier 3' THEN 183000
+  WHEN 'FR 1080p Quality Tier 1' THEN 130000
+  WHEN 'FR 1080p Quality Tier 2' THEN 129000
+  WHEN 'FR 1080p Quality Tier 3' THEN 128000
 END
 WHERE custom_format_name IN (
   'FR 1080p Quality Tier 1',
