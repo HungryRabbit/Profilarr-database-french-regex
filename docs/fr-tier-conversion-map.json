@@ -29,7 +29,7 @@
     "The 1080p and 2160p Compact tier names are normalized in ops/21 by removing Movie/TV from the final CF names, then reinserted for both Radarr and Sonarr.",
     "2160p Compact FR keeps 1080p Efficient fallback below all 4KLight paths: 1080p source Efficient is 840000 and validated 1080p HEVC team tiers are lightweight 50000 bonuses, so the combined 890000 remains below 4KLight WEBRip at 900000.",
     "Historical FR source tiers are rebuilt without Global or Movie/TV splits: WEB Top, WEB, Bluray, UHD Bluray, Light, DVD and Unknown are the reusable source buckets.",
-    "1080p Balanced FR is normalized in ops/22: FR 1080p Balanced is the source/codec base without release-group conditions, while reusable FR WEB tiers add small team bonuses."
+    "1080p Balanced FR is normalized in ops/22: reusable FR WEB tiers add small team bonuses, while the obsolete FR 1080p Balanced composite CF is removed."
   ],
   "aliases": {
     "FORWARD": "FW",
@@ -43,7 +43,6 @@
   },
   "custom_formats": {
     "balanced": {
-      "FR 1080p Balanced": "1080p WEB-DL h264 base without release-group conditions.",
       "FR WEB Top Tier": "Reusable WEB team tier scored separately in Balanced, Compact and Efficient profiles.",
       "FR WEB Tier 1": "Reusable WEB team tier scored separately in Balanced, Compact and Efficient profiles.",
       "FR WEB Tier 2": "Reusable WEB team tier scored separately in Balanced, Compact and Efficient profiles.",
@@ -508,7 +507,6 @@
       "FR 720p Quality Tier 3": 143000
     },
     "1080p Balanced FR": {
-      "FR 1080p Balanced": 861000,
       "FR WEB Top Tier": 5000,
       "FR WEB Tier 1": 4300,
       "FR WEB Tier 2": 4200,

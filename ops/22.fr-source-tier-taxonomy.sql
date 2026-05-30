@@ -32,7 +32,6 @@ WHERE EXISTS (SELECT 1 FROM regular_expressions WHERE name = 'ALPIATE')
 
 WITH new_cf(name, description) AS (
   VALUES
-  ('FR 1080p Balanced', 'Matches 1080p WEB-DL h264 releases for the French 1080p Balanced profile without release-group gating.'),
   ('FR WEB Top Tier', 'Matches the most trusted French WEB release groups. Kept separate from FR WEB Tier 1.'),
   ('FR WEB Tier 1', 'Matches trusted French WEB release groups.'),
   ('FR WEB Tier 2', 'Matches good French WEB release groups.'),
@@ -53,7 +52,6 @@ WHERE NOT EXISTS (SELECT 1 FROM custom_formats WHERE custom_formats.name = new_c
 
 WITH new_cf(custom_format_name) AS (
   VALUES
-  ('FR 1080p Balanced'),
   ('FR WEB Top Tier'),
   ('FR WEB Tier 1'),
   ('FR WEB Tier 2'),
@@ -81,7 +79,6 @@ WHERE NOT EXISTS (
 
 WITH source_tag(custom_format_name, tag_name) AS (
   VALUES
-  ('FR 1080p Balanced', 'WEB-DL'),
   ('FR WEB Top Tier', 'WEB-DL'),
   ('FR WEB Tier 1', 'WEB-DL'),
   ('FR WEB Tier 2', 'WEB-DL'),
@@ -102,22 +99,6 @@ WHERE NOT EXISTS (
     AND tag_name = source_tag.tag_name
 );
 
-INSERT INTO custom_format_tags (custom_format_name, tag_name)
-SELECT 'FR 1080p Balanced', '1080p'
-WHERE NOT EXISTS (
-  SELECT 1 FROM custom_format_tags
-  WHERE custom_format_name = 'FR 1080p Balanced'
-    AND tag_name = '1080p'
-);
-
-INSERT INTO custom_format_tags (custom_format_name, tag_name)
-SELECT 'FR 1080p Balanced', 'Balanced'
-WHERE NOT EXISTS (
-  SELECT 1 FROM custom_format_tags
-  WHERE custom_format_name = 'FR 1080p Balanced'
-    AND tag_name = 'Balanced'
-);
-
 WITH uhd_tag(custom_format_name, tag_name) AS (
   VALUES
   ('FR UHD Bluray Tier 1', '2160p'),
@@ -130,51 +111,6 @@ WHERE NOT EXISTS (
   SELECT 1 FROM custom_format_tags
   WHERE custom_format_name = uhd_tag.custom_format_name
     AND tag_name = uhd_tag.tag_name
-);
-
-INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
-SELECT 'FR 1080p Balanced', '1080p', 'resolution', 'all', 0, 1
-WHERE NOT EXISTS (
-  SELECT 1 FROM custom_format_conditions
-  WHERE custom_format_name = 'FR 1080p Balanced' AND name = '1080p'
-);
-
-INSERT INTO condition_resolutions (custom_format_name, condition_name, resolution)
-SELECT 'FR 1080p Balanced', '1080p', '1080p'
-WHERE NOT EXISTS (
-  SELECT 1 FROM condition_resolutions
-  WHERE custom_format_name = 'FR 1080p Balanced'
-    AND condition_name = '1080p'
-);
-
-INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
-SELECT 'FR 1080p Balanced', 'WEB-DL', 'source', 'all', 0, 1
-WHERE NOT EXISTS (
-  SELECT 1 FROM custom_format_conditions
-  WHERE custom_format_name = 'FR 1080p Balanced' AND name = 'WEB-DL'
-);
-
-INSERT INTO condition_sources (custom_format_name, condition_name, source)
-SELECT 'FR 1080p Balanced', 'WEB-DL', 'web_dl'
-WHERE NOT EXISTS (
-  SELECT 1 FROM condition_sources
-  WHERE custom_format_name = 'FR 1080p Balanced'
-    AND condition_name = 'WEB-DL'
-);
-
-INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
-SELECT 'FR 1080p Balanced', 'h264', 'release_title', 'all', 0, 1
-WHERE NOT EXISTS (
-  SELECT 1 FROM custom_format_conditions
-  WHERE custom_format_name = 'FR 1080p Balanced' AND name = 'h264'
-);
-
-INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'FR 1080p Balanced', 'h264', 'AVC'
-WHERE NOT EXISTS (
-  SELECT 1 FROM condition_patterns
-  WHERE custom_format_name = 'FR 1080p Balanced'
-    AND condition_name = 'h264'
 );
 
 WITH web_cf(custom_format_name) AS (
@@ -754,11 +690,31 @@ WHERE quality_profile_name = '1080p Balanced FR'
 
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 VALUES
-  ('1080p Balanced FR', 'FR 1080p Balanced', 'all', 861000),
   ('1080p Balanced FR', 'FR WEB Top Tier', 'all', 5000),
   ('1080p Balanced FR', 'FR WEB Tier 1', 'all', 4300),
   ('1080p Balanced FR', 'FR WEB Tier 2', 'all', 4200),
   ('1080p Balanced FR', 'FR WEB Tier 3', 'all', 4100);
+
+DELETE FROM quality_profile_custom_formats
+WHERE custom_format_name = 'FR 1080p Balanced';
+
+DELETE FROM custom_format_tags
+WHERE custom_format_name = 'FR 1080p Balanced';
+
+DELETE FROM condition_patterns
+WHERE custom_format_name = 'FR 1080p Balanced';
+
+DELETE FROM condition_sources
+WHERE custom_format_name = 'FR 1080p Balanced';
+
+DELETE FROM condition_resolutions
+WHERE custom_format_name = 'FR 1080p Balanced';
+
+DELETE FROM custom_format_conditions
+WHERE custom_format_name = 'FR 1080p Balanced';
+
+DELETE FROM custom_formats
+WHERE name = 'FR 1080p Balanced';
 
 -- 1080p Compact keeps its HDLight/WEBRip compact ladder, but can now reward
 -- normal FR WEB tiers without making them outrank compact-specialized teams.
