@@ -908,13 +908,25 @@ WHERE quality_profile_name = '2160p Compact FR'
     'FR 1080p Bluray HEVC Tier 1',
     'FR 1080p WEB-DL HEVC Tier 1',
     'FR 1080p Bluray HEVC',
-    'FR 1080p WEB-DL HEVC'
+    'FR 1080p WEB-DL HEVC',
+    'FR WEB Top Tier',
+    'FR WEB Tier 1',
+    'FR WEB Tier 2',
+    'FR WEB Tier 3',
+    'FR Bluray Tier 1',
+    'FR Bluray Tier 2'
   );
 
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 VALUES
   ('2160p Compact FR', 'FR 1080p Bluray HEVC', 'all', 50000),
-  ('2160p Compact FR', 'FR 1080p WEB-DL HEVC', 'all', 50000);
+  ('2160p Compact FR', 'FR 1080p WEB-DL HEVC', 'all', 50000),
+  ('2160p Compact FR', 'FR WEB Top Tier', 'all', 5000),
+  ('2160p Compact FR', 'FR WEB Tier 1', 'all', 4300),
+  ('2160p Compact FR', 'FR WEB Tier 2', 'all', 4200),
+  ('2160p Compact FR', 'FR WEB Tier 3', 'all', 4100),
+  ('2160p Compact FR', 'FR Bluray Tier 1', 'all', 4300),
+  ('2160p Compact FR', 'FR Bluray Tier 2', 'all', 4200);
 
 -- 1080p Quality tiers follow the reusable FR source taxonomy:
 -- Tier 1 = WEB Top + WEB Tier 1 + Bluray Tier 1
@@ -1325,5 +1337,120 @@ VALUES
   ('2160p Balanced FR', 'FR 2160p WEB Tier 3', 'all', 4100),
   ('2160p Balanced FR', 'FR 2160p Bluray Tier 1', 'all', 4300),
   ('2160p Balanced FR', 'FR 2160p Bluray Tier 2', 'all', 4200);
+
+INSERT INTO custom_formats (name, description)
+VALUES
+  ('FR 2160p Efficient WEB h265', '2160p WEB-DL h265 source pass for 2160p Efficient FR without release-group condition.'),
+  ('FR 2160p Efficient Bluray h265', '2160p Bluray h265 source pass for 2160p Efficient FR without release-group condition.')
+ON CONFLICT(name) DO UPDATE SET description = excluded.description;
+
+INSERT OR IGNORE INTO custom_format_tags (custom_format_name, tag_name)
+VALUES
+  ('FR 2160p Efficient WEB h265', 'French'), ('FR 2160p Efficient WEB h265', '2160p'), ('FR 2160p Efficient WEB h265', 'Efficient'), ('FR 2160p Efficient WEB h265', 'WEB-DL'), ('FR 2160p Efficient WEB h265', 'h265'),
+  ('FR 2160p Efficient Bluray h265', 'French'), ('FR 2160p Efficient Bluray h265', '2160p'), ('FR 2160p Efficient Bluray h265', 'Efficient'), ('FR 2160p Efficient Bluray h265', 'Bluray'), ('FR 2160p Efficient Bluray h265', 'h265');
+
+DELETE FROM condition_patterns
+WHERE custom_format_name IN ('FR 2160p Efficient WEB h265', 'FR 2160p Efficient Bluray h265');
+
+DELETE FROM condition_sources
+WHERE custom_format_name IN ('FR 2160p Efficient WEB h265', 'FR 2160p Efficient Bluray h265');
+
+DELETE FROM condition_resolutions
+WHERE custom_format_name IN ('FR 2160p Efficient WEB h265', 'FR 2160p Efficient Bluray h265');
+
+DELETE FROM custom_format_conditions
+WHERE custom_format_name IN ('FR 2160p Efficient WEB h265', 'FR 2160p Efficient Bluray h265');
+
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+VALUES
+  ('FR 2160p Efficient WEB h265', '2160p', 'resolution', 'all', 0, 1),
+  ('FR 2160p Efficient WEB h265', 'WEB-DL', 'source', 'all', 0, 1),
+  ('FR 2160p Efficient WEB h265', 'h265', 'release_title', 'all', 0, 1),
+  ('FR 2160p Efficient Bluray h265', '2160p', 'resolution', 'all', 0, 1),
+  ('FR 2160p Efficient Bluray h265', 'Bluray', 'source', 'all', 0, 1),
+  ('FR 2160p Efficient Bluray h265', 'h265', 'release_title', 'all', 0, 1);
+
+INSERT INTO condition_resolutions (custom_format_name, condition_name, resolution)
+VALUES
+  ('FR 2160p Efficient WEB h265', '2160p', '2160p'),
+  ('FR 2160p Efficient Bluray h265', '2160p', '2160p');
+
+INSERT INTO condition_sources (custom_format_name, condition_name, source)
+VALUES
+  ('FR 2160p Efficient WEB h265', 'WEB-DL', 'web_dl'),
+  ('FR 2160p Efficient Bluray h265', 'Bluray', 'bluray');
+
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+VALUES
+  ('FR 2160p Efficient WEB h265', 'h265', 'HEVC'),
+  ('FR 2160p Efficient Bluray h265', 'h265', 'HEVC');
+
+DELETE FROM condition_patterns
+WHERE custom_format_name = '2160p WEB-DL (Efficient)'
+  AND condition_name LIKE 'Not %';
+
+DELETE FROM custom_format_conditions
+WHERE custom_format_name = '2160p WEB-DL (Efficient)'
+  AND type = 'release_group'
+  AND name LIKE 'Not %';
+
+UPDATE custom_formats
+SET description = 'Deprecated by FR 2160p Efficient source/tier split. Kept only for FK-backed metadata compatibility.'
+WHERE name IN ('FR 2160p Efficient WEB Tier 1', 'FR 2160p Efficient Bluray Tier 1');
+
+DELETE FROM quality_profile_custom_formats
+WHERE quality_profile_name = '2160p Efficient FR'
+  AND custom_format_name IN (
+    'FR 2160p Efficient WEB Tier 1',
+    'FR 2160p Efficient Bluray Tier 1',
+    'FR 2160p Efficient Movie WEB Tier 1',
+    'FR 2160p Efficient Movie Bluray Tier 1',
+    'FR 2160p Efficient TV WEB Tier 1',
+    'FR 2160p Efficient TV Bluray Tier 1',
+    'FR 2160p Efficient WEB h265',
+    'FR 2160p Efficient Bluray h265',
+    '2160p WEB-DL (Efficient)',
+    'FR UHD Bluray Tier 1',
+    'FR UHD Bluray Tier 2',
+    'FR WEB Top Tier',
+    'FR WEB Tier 1',
+    'FR WEB Tier 2',
+    'FR WEB Tier 3',
+    'FR Bluray Tier 1',
+    'FR Bluray Tier 2'
+  );
+
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+VALUES
+  ('2160p Efficient FR', 'FR 2160p Efficient WEB h265', 'all', 983000),
+  ('2160p Efficient FR', 'FR 2160p Efficient Bluray h265', 'all', 982000),
+  ('2160p Efficient FR', '2160p WEB-DL (Efficient)', 'radarr', 980000),
+  ('2160p Efficient FR', '2160p WEB-DL (Efficient)', 'sonarr', 960000),
+  ('2160p Efficient FR', 'FR UHD Bluray Tier 1', 'all', 4200),
+  ('2160p Efficient FR', 'FR UHD Bluray Tier 2', 'all', 4100),
+  ('2160p Efficient FR', 'FR WEB Top Tier', 'all', 5000),
+  ('2160p Efficient FR', 'FR WEB Tier 1', 'all', 4300),
+  ('2160p Efficient FR', 'FR WEB Tier 2', 'all', 4200),
+  ('2160p Efficient FR', 'FR WEB Tier 3', 'all', 4100),
+  ('2160p Efficient FR', 'FR Bluray Tier 1', 'all', 4300),
+  ('2160p Efficient FR', 'FR Bluray Tier 2', 'all', 4200);
+
+DELETE FROM quality_profile_custom_formats
+WHERE quality_profile_name = '2160p Quality FR'
+  AND custom_format_name IN ('FR UHD Bluray Tier 1', 'FR UHD Bluray Tier 2');
+
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+VALUES
+  ('2160p Quality FR', 'FR UHD Bluray Tier 1', 'all', 4200),
+  ('2160p Quality FR', 'FR UHD Bluray Tier 2', 'all', 4100);
+
+DELETE FROM quality_profile_custom_formats
+WHERE quality_profile_name = '2160p Remux FR'
+  AND custom_format_name IN ('FR UHD Bluray Tier 1', 'FR UHD Bluray Tier 2');
+
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+VALUES
+  ('2160p Remux FR', 'FR UHD Bluray Tier 1', 'all', 4200),
+  ('2160p Remux FR', 'FR UHD Bluray Tier 2', 'all', 4100);
 
 -- --- END op 9022
