@@ -6136,15 +6136,14 @@ UPDATE quality_profile_custom_formats SET score = 540000 WHERE quality_profile_n
 UPDATE quality_profile_custom_formats SET score = 660000 WHERE quality_profile_name IN ('1080p Balanced FR', '1080p Compact FR', '1080p Efficient FR', '1080p Quality FR', '1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR', '720p Quality FR') AND custom_format_name = '720p WEB-DL';
 UPDATE quality_profile_custom_formats SET score = 700000 WHERE quality_profile_name IN ('1080p Quality FR', '1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Quality FR', '2160p Remux FR') AND custom_format_name IN ('1080p Bluray', '1080p WEBRip');
 UPDATE quality_profile_custom_formats SET score = 860000 WHERE quality_profile_name IN ('1080p Balanced FR', '1080p Quality FR', '1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Quality FR', '2160p Remux FR') AND custom_format_name = '1080p WEB-DL';
-UPDATE quality_profile_custom_formats SET score = 710000 WHERE quality_profile_name IN ('1080p Remux FR', '2160p Remux FR') AND custom_format_name = '1080p Bluray';
-UPDATE quality_profile_custom_formats SET score = 720000 WHERE quality_profile_name IN ('1080p Remux FR', '2160p Remux FR') AND custom_format_name = '1080p WEB-DL';
-DELETE FROM quality_profile_custom_formats WHERE quality_profile_name IN ('1080p Remux FR', '2160p Remux FR') AND custom_format_name = '1080p WEBRip';
+UPDATE quality_profile_custom_formats SET score = 720000 WHERE quality_profile_name IN ('1080p Remux FR', '2160p Remux FR') AND custom_format_name = '1080p Bluray';
+UPDATE quality_profile_custom_formats SET score = 710000 WHERE quality_profile_name IN ('1080p Remux FR', '2160p Remux FR') AND custom_format_name = '1080p WEB-DL';
 UPDATE quality_profile_custom_formats SET score = 860000 WHERE quality_profile_name IN ('1080p Compact FR', '1080p Efficient FR', '2160p Efficient FR') AND custom_format_name = '1080p WEB-DL (h264)';
 UPDATE quality_profile_custom_formats SET score = 840000 WHERE quality_profile_name IN ('1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Quality FR', '2160p Remux FR') AND custom_format_name = 'UHD Bluray';
 UPDATE quality_profile_custom_formats SET score = 920000 WHERE quality_profile_name IN ('2160p Balanced FR', '2160p Quality FR', '2160p Remux FR') AND custom_format_name = '2160p WEB-DL';
 UPDATE quality_profile_custom_formats SET score = 920000 WHERE quality_profile_name IN ('1080p Remux FR', '2160p Remux FR') AND custom_format_name = '1080p Remux';
 UPDATE quality_profile_custom_formats SET score = 980000 WHERE quality_profile_name = '2160p Remux FR' AND custom_format_name = '2160p Remux';
-UPDATE quality_profile_custom_formats SET arr_type = 'radarr' WHERE quality_profile_name IN ('1080p Balanced FR', '1080p Compact FR', '1080p Efficient FR', '1080p Quality FR', '1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR', '720p Quality FR') AND custom_format_name = '1080p WEBRip' AND arr_type = 'all';
+UPDATE quality_profile_custom_formats SET arr_type = 'radarr' WHERE quality_profile_name IN ('1080p Balanced FR', '1080p Compact FR', '1080p Efficient FR', '1080p Quality FR', '1080p Quality HDR FR', '2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '720p Quality FR') AND custom_format_name = '1080p WEBRip' AND arr_type = 'all';
 
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 300000 FROM quality_profiles qp, custom_formats cf
