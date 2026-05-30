@@ -717,4 +717,173 @@ WHERE custom_format_name = '720p WEBRip'
     '2160p Remux FR',
     '720p Quality FR'
   );
+
+UPDATE custom_formats
+SET name = REPLACE(name, 'FR 2160p Compact Movie ', 'FR 2160p Compact ')
+WHERE name LIKE 'FR 2160p Compact Movie %';
+
+UPDATE quality_profile_custom_formats
+SET custom_format_name = REPLACE(custom_format_name, 'FR 2160p Compact Movie ', 'FR 2160p Compact ')
+WHERE custom_format_name LIKE 'FR 2160p Compact Movie %';
+
+UPDATE custom_format_tags
+SET custom_format_name = REPLACE(custom_format_name, 'FR 2160p Compact Movie ', 'FR 2160p Compact ')
+WHERE custom_format_name LIKE 'FR 2160p Compact Movie %';
+
+UPDATE custom_format_conditions
+SET custom_format_name = REPLACE(custom_format_name, 'FR 2160p Compact Movie ', 'FR 2160p Compact ')
+WHERE custom_format_name LIKE 'FR 2160p Compact Movie %';
+
+UPDATE condition_patterns
+SET custom_format_name = REPLACE(custom_format_name, 'FR 2160p Compact Movie ', 'FR 2160p Compact ')
+WHERE custom_format_name LIKE 'FR 2160p Compact Movie %';
+
+UPDATE condition_resolutions
+SET custom_format_name = REPLACE(custom_format_name, 'FR 2160p Compact Movie ', 'FR 2160p Compact ')
+WHERE custom_format_name LIKE 'FR 2160p Compact Movie %';
+
+UPDATE condition_sources
+SET custom_format_name = REPLACE(custom_format_name, 'FR 2160p Compact Movie ', 'FR 2160p Compact ')
+WHERE custom_format_name LIKE 'FR 2160p Compact Movie %';
+
+UPDATE custom_formats
+SET description = REPLACE(description, 'Movie ', '')
+WHERE name LIKE 'FR 2160p Compact %';
+
+DELETE FROM quality_profile_custom_formats
+WHERE quality_profile_name = '2160p Compact FR'
+  AND custom_format_name IN (
+    'FR 2160p Compact TV Bluray Tier 1',
+    'FR 2160p Compact TV Bluray Tier 2',
+    'FR 2160p Compact TV WEB Tier 1',
+    'FR 2160p Compact TV WEB Tier 2'
+  );
+
+DELETE FROM condition_patterns
+WHERE custom_format_name IN (
+    'FR 2160p Compact TV Bluray Tier 1',
+    'FR 2160p Compact TV Bluray Tier 2',
+    'FR 2160p Compact TV WEB Tier 1',
+    'FR 2160p Compact TV WEB Tier 2'
+  );
+
+DELETE FROM condition_resolutions
+WHERE custom_format_name IN (
+    'FR 2160p Compact TV Bluray Tier 1',
+    'FR 2160p Compact TV Bluray Tier 2',
+    'FR 2160p Compact TV WEB Tier 1',
+    'FR 2160p Compact TV WEB Tier 2'
+  );
+
+DELETE FROM condition_sources
+WHERE custom_format_name IN (
+    'FR 2160p Compact TV Bluray Tier 1',
+    'FR 2160p Compact TV Bluray Tier 2',
+    'FR 2160p Compact TV WEB Tier 1',
+    'FR 2160p Compact TV WEB Tier 2'
+  );
+
+DELETE FROM custom_format_conditions
+WHERE custom_format_name IN (
+    'FR 2160p Compact TV Bluray Tier 1',
+    'FR 2160p Compact TV Bluray Tier 2',
+    'FR 2160p Compact TV WEB Tier 1',
+    'FR 2160p Compact TV WEB Tier 2'
+  );
+
+DELETE FROM custom_format_tags
+WHERE custom_format_name IN (
+    'FR 2160p Compact TV Bluray Tier 1',
+    'FR 2160p Compact TV Bluray Tier 2',
+    'FR 2160p Compact TV WEB Tier 1',
+    'FR 2160p Compact TV WEB Tier 2'
+  );
+
+DELETE FROM custom_formats
+WHERE name IN (
+    'FR 2160p Compact TV Bluray Tier 1',
+    'FR 2160p Compact TV Bluray Tier 2',
+    'FR 2160p Compact TV WEB Tier 1',
+    'FR 2160p Compact TV WEB Tier 2'
+  );
+
+DELETE FROM condition_patterns
+WHERE custom_format_name IN (
+    'FR 2160p Compact Bluray Tier 1',
+    'FR 2160p Compact Bluray Tier 2',
+    'FR 2160p Compact WEB Tier 1',
+    'FR 2160p Compact WEB Tier 2'
+  )
+  AND condition_name = '4KLight';
+
+DELETE FROM custom_format_conditions
+WHERE custom_format_name IN (
+    'FR 2160p Compact Bluray Tier 1',
+    'FR 2160p Compact Bluray Tier 2',
+    'FR 2160p Compact WEB Tier 1',
+    'FR 2160p Compact WEB Tier 2'
+  )
+  AND name = '4KLight';
+
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+VALUES
+  ('FR 2160p Compact Bluray Tier 1', '4KLight', 'release_title', 'all', 0, 1),
+  ('FR 2160p Compact Bluray Tier 2', '4KLight', 'release_title', 'all', 0, 1),
+  ('FR 2160p Compact WEB Tier 1', '4KLight', 'release_title', 'all', 0, 1),
+  ('FR 2160p Compact WEB Tier 2', '4KLight', 'release_title', 'all', 0, 1);
+
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+VALUES
+  ('FR 2160p Compact Bluray Tier 1', '4KLight', '4KLight'),
+  ('FR 2160p Compact Bluray Tier 2', '4KLight', '4KLight'),
+  ('FR 2160p Compact WEB Tier 1', '4KLight', '4KLight'),
+  ('FR 2160p Compact WEB Tier 2', '4KLight', '4KLight');
+
+DELETE FROM quality_profile_custom_formats
+WHERE quality_profile_name = '2160p Compact FR'
+  AND custom_format_name IN (
+    'FR 2160p Compact Bluray Tier 1',
+    'FR 2160p Compact Bluray Tier 2',
+    'FR 2160p Compact WEB Tier 1',
+    'FR 2160p Compact WEB Tier 2',
+    'FR 1080p Compact Bluray Tier 1',
+    'FR 1080p Compact Bluray Tier 2',
+    'FR 1080p Compact WEB Tier 1',
+    'FR 1080p Compact WEB Tier 2',
+    '1080p Bluray (Efficient)'
+  );
+
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+VALUES
+  ('2160p Compact FR', 'FR 2160p Compact Bluray Tier 1', 'radarr', 970000),
+  ('2160p Compact FR', 'FR 2160p Compact Bluray Tier 1', 'sonarr', 970000),
+  ('2160p Compact FR', 'FR 2160p Compact Bluray Tier 2', 'radarr', 969000),
+  ('2160p Compact FR', 'FR 2160p Compact Bluray Tier 2', 'sonarr', 969000),
+  ('2160p Compact FR', 'FR 2160p Compact WEB Tier 1', 'radarr', 970000),
+  ('2160p Compact FR', 'FR 2160p Compact WEB Tier 1', 'sonarr', 970000),
+  ('2160p Compact FR', 'FR 2160p Compact WEB Tier 2', 'radarr', 969000),
+  ('2160p Compact FR', 'FR 2160p Compact WEB Tier 2', 'sonarr', 969000),
+  ('2160p Compact FR', 'FR 1080p Compact Bluray Tier 1', 'radarr', 830000),
+  ('2160p Compact FR', 'FR 1080p Compact Bluray Tier 1', 'sonarr', 830000),
+  ('2160p Compact FR', 'FR 1080p Compact Bluray Tier 2', 'radarr', 829000),
+  ('2160p Compact FR', 'FR 1080p Compact Bluray Tier 2', 'sonarr', 829000),
+  ('2160p Compact FR', 'FR 1080p Compact WEB Tier 1', 'radarr', 830000),
+  ('2160p Compact FR', 'FR 1080p Compact WEB Tier 1', 'sonarr', 830000),
+  ('2160p Compact FR', 'FR 1080p Compact WEB Tier 2', 'radarr', 829000),
+  ('2160p Compact FR', 'FR 1080p Compact WEB Tier 2', 'sonarr', 829000),
+  ('2160p Compact FR', '1080p Bluray (Efficient)', 'radarr', 840000),
+  ('2160p Compact FR', '1080p Bluray (Efficient)', 'sonarr', 840000);
+
+UPDATE quality_profile_custom_formats
+SET score = 50000
+WHERE quality_profile_name = '2160p Compact FR'
+  AND custom_format_name IN (
+    'FR 1080p WEB-DL HEVC Tier 1',
+    'FR 1080p Bluray HEVC Tier 1'
+  );
+
+UPDATE quality_profile_custom_formats
+SET score = 820000
+WHERE quality_profile_name = '2160p Compact FR'
+  AND custom_format_name = '1080p WEBRip (Compact)';
 -- --- END op 9021
