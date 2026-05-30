@@ -567,7 +567,9 @@ VALUES
 UPDATE quality_profile_custom_formats
 SET score = 4000
 WHERE quality_profile_name IN (
+    '1080p Balanced FR',
     '1080p Compact FR',
+    '1080p Efficient FR',
     '1080p Remux FR',
     '2160p Balanced FR',
     '2160p Compact FR',
@@ -576,4 +578,118 @@ WHERE quality_profile_name IN (
     '2160p Remux FR'
   )
   AND custom_format_name = 'FR Scene Groups';
+
+UPDATE quality_profile_custom_formats
+SET score = 15000
+WHERE quality_profile_name = '1080p Compact FR'
+  AND custom_format_name = 'FR Scene Groups';
+
+UPDATE custom_formats
+SET name = REPLACE(name, 'FR 1080p Compact Movie ', 'FR 1080p Compact ')
+WHERE name LIKE 'FR 1080p Compact Movie %';
+
+UPDATE quality_profile_custom_formats
+SET custom_format_name = REPLACE(custom_format_name, 'FR 1080p Compact Movie ', 'FR 1080p Compact ')
+WHERE custom_format_name LIKE 'FR 1080p Compact Movie %';
+
+UPDATE custom_format_tags
+SET custom_format_name = REPLACE(custom_format_name, 'FR 1080p Compact Movie ', 'FR 1080p Compact ')
+WHERE custom_format_name LIKE 'FR 1080p Compact Movie %';
+
+UPDATE custom_format_conditions
+SET custom_format_name = REPLACE(custom_format_name, 'FR 1080p Compact Movie ', 'FR 1080p Compact ')
+WHERE custom_format_name LIKE 'FR 1080p Compact Movie %';
+
+UPDATE condition_patterns
+SET custom_format_name = REPLACE(custom_format_name, 'FR 1080p Compact Movie ', 'FR 1080p Compact ')
+WHERE custom_format_name LIKE 'FR 1080p Compact Movie %';
+
+UPDATE condition_resolutions
+SET custom_format_name = REPLACE(custom_format_name, 'FR 1080p Compact Movie ', 'FR 1080p Compact ')
+WHERE custom_format_name LIKE 'FR 1080p Compact Movie %';
+
+UPDATE condition_sources
+SET custom_format_name = REPLACE(custom_format_name, 'FR 1080p Compact Movie ', 'FR 1080p Compact ')
+WHERE custom_format_name LIKE 'FR 1080p Compact Movie %';
+
+DELETE FROM quality_profile_custom_formats
+WHERE quality_profile_name = '1080p Compact FR'
+  AND custom_format_name IN (
+    'FR 1080p Compact TV Bluray Tier 1',
+    'FR 1080p Compact TV Bluray Tier 2',
+    'FR 1080p Compact TV WEB Tier 1',
+    'FR 1080p Compact TV WEB Tier 2'
+  );
+
+DELETE FROM condition_patterns
+WHERE custom_format_name IN (
+    'FR 1080p Compact TV Bluray Tier 1',
+    'FR 1080p Compact TV Bluray Tier 2',
+    'FR 1080p Compact TV WEB Tier 1',
+    'FR 1080p Compact TV WEB Tier 2'
+  );
+
+DELETE FROM condition_resolutions
+WHERE custom_format_name IN (
+    'FR 1080p Compact TV Bluray Tier 1',
+    'FR 1080p Compact TV Bluray Tier 2',
+    'FR 1080p Compact TV WEB Tier 1',
+    'FR 1080p Compact TV WEB Tier 2'
+  );
+
+DELETE FROM condition_sources
+WHERE custom_format_name IN (
+    'FR 1080p Compact TV Bluray Tier 1',
+    'FR 1080p Compact TV Bluray Tier 2',
+    'FR 1080p Compact TV WEB Tier 1',
+    'FR 1080p Compact TV WEB Tier 2'
+  );
+
+DELETE FROM custom_format_conditions
+WHERE custom_format_name IN (
+    'FR 1080p Compact TV Bluray Tier 1',
+    'FR 1080p Compact TV Bluray Tier 2',
+    'FR 1080p Compact TV WEB Tier 1',
+    'FR 1080p Compact TV WEB Tier 2'
+  );
+
+DELETE FROM custom_format_tags
+WHERE custom_format_name IN (
+    'FR 1080p Compact TV Bluray Tier 1',
+    'FR 1080p Compact TV Bluray Tier 2',
+    'FR 1080p Compact TV WEB Tier 1',
+    'FR 1080p Compact TV WEB Tier 2'
+  );
+
+DELETE FROM custom_formats
+WHERE name IN (
+    'FR 1080p Compact TV Bluray Tier 1',
+    'FR 1080p Compact TV Bluray Tier 2',
+    'FR 1080p Compact TV WEB Tier 1',
+    'FR 1080p Compact TV WEB Tier 2'
+  );
+
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+VALUES
+  ('1080p Compact FR', 'FR 1080p Compact Bluray Tier 1', 'sonarr', 943000),
+  ('1080p Compact FR', 'FR 1080p Compact Bluray Tier 2', 'sonarr', 942000),
+  ('1080p Compact FR', 'FR 1080p Compact WEB Tier 1', 'sonarr', 883000),
+  ('1080p Compact FR', 'FR 1080p Compact WEB Tier 2', 'sonarr', 882000);
+
+DELETE FROM quality_profile_custom_formats
+WHERE custom_format_name = '720p WEBRip'
+  AND arr_type = 'radarr'
+  AND quality_profile_name IN (
+    '1080p Balanced FR',
+    '1080p Compact FR',
+    '1080p Efficient FR',
+    '1080p Quality FR',
+    '1080p Quality HDR FR',
+    '1080p Remux FR',
+    '2160p Balanced FR',
+    '2160p Efficient FR',
+    '2160p Quality FR',
+    '2160p Remux FR',
+    '720p Quality FR'
+  );
 -- --- END op 9021

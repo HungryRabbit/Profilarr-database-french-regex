@@ -1134,7 +1134,7 @@ SELECT qp.name, cf.name, 'all', 60000
 FROM quality_profiles qp, custom_formats cf
 WHERE qp.name = '1080p Balanced FR' AND cf.name = 'French VOSTFR';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-SELECT qp.name, cf.name, 'all', 99000
+SELECT qp.name, cf.name, 'all', 4000
 FROM quality_profiles qp, custom_formats cf
 WHERE qp.name = '1080p Balanced FR' AND cf.name = 'FR Scene Groups';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
@@ -1834,7 +1834,7 @@ SELECT qp.name, cf.name, 'all', 60000
 FROM quality_profiles qp, custom_formats cf
 WHERE qp.name = '1080p Efficient FR' AND cf.name = 'French VOSTFR';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-SELECT qp.name, cf.name, 'all', 99000
+SELECT qp.name, cf.name, 'all', 4000
 FROM quality_profiles qp, custom_formats cf
 WHERE qp.name = '1080p Efficient FR' AND cf.name = 'FR Scene Groups';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
@@ -5366,19 +5366,19 @@ SELECT qp.name, cf.name, 'sonarr', 10
 FROM quality_profiles qp, custom_formats cf
 WHERE qp.name = '720p Quality FR' AND cf.name = 'Season Pack';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-SELECT qp.name, cf.name, 'all', 101000
+SELECT qp.name, cf.name, 'all', 103000
 FROM quality_profiles qp, custom_formats cf
 WHERE qp.name = 'Anime 1080p FR' AND cf.name = 'FR Anime Tier 01';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-SELECT qp.name, cf.name, 'all', 100000
+SELECT qp.name, cf.name, 'all', 102000
 FROM quality_profiles qp, custom_formats cf
 WHERE qp.name = 'Anime 1080p FR' AND cf.name = 'FR Anime Tier 02';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-SELECT qp.name, cf.name, 'all', 99000
+SELECT qp.name, cf.name, 'all', 101000
 FROM quality_profiles qp, custom_formats cf
 WHERE qp.name = 'Anime 1080p FR' AND cf.name = 'FR Anime Tier 03';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-SELECT qp.name, cf.name, 'all', 98000
+SELECT qp.name, cf.name, 'all', 100000
 FROM quality_profiles qp, custom_formats cf
 WHERE qp.name = 'Anime 1080p FR' AND cf.name = 'FR Anime FanSub';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
@@ -5785,19 +5785,19 @@ SELECT qp.name, l.name, 'simple'
 FROM quality_profiles qp, languages l
 WHERE qp.name = 'Anime 1080p VOSTFR FR' AND l.name = 'Any';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-SELECT qp.name, cf.name, 'all', 101000
+SELECT qp.name, cf.name, 'all', 103000
 FROM quality_profiles qp, custom_formats cf
 WHERE qp.name = 'Anime 1080p VOSTFR FR' AND cf.name = 'FR Anime Tier 01';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-SELECT qp.name, cf.name, 'all', 100000
+SELECT qp.name, cf.name, 'all', 102000
 FROM quality_profiles qp, custom_formats cf
 WHERE qp.name = 'Anime 1080p VOSTFR FR' AND cf.name = 'FR Anime Tier 02';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-SELECT qp.name, cf.name, 'all', 99000
+SELECT qp.name, cf.name, 'all', 101000
 FROM quality_profiles qp, custom_formats cf
 WHERE qp.name = 'Anime 1080p VOSTFR FR' AND cf.name = 'FR Anime Tier 03';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-SELECT qp.name, cf.name, 'all', 98000
+SELECT qp.name, cf.name, 'all', 100000
 FROM quality_profiles qp, custom_formats cf
 WHERE qp.name = 'Anime 1080p VOSTFR FR' AND cf.name = 'FR Anime FanSub';
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
@@ -6141,7 +6141,7 @@ UPDATE quality_profile_custom_formats SET score = 840000 WHERE quality_profile_n
 UPDATE quality_profile_custom_formats SET score = 920000 WHERE quality_profile_name IN ('2160p Balanced FR', '2160p Quality FR', '2160p Remux FR') AND custom_format_name = '2160p WEB-DL';
 UPDATE quality_profile_custom_formats SET score = 920000 WHERE quality_profile_name IN ('1080p Remux FR', '2160p Remux FR') AND custom_format_name = '1080p Remux';
 UPDATE quality_profile_custom_formats SET score = 980000 WHERE quality_profile_name = '2160p Remux FR' AND custom_format_name = '2160p Remux';
-UPDATE quality_profile_custom_formats SET arr_type = 'radarr' WHERE quality_profile_name IN ('1080p Balanced FR', '1080p Compact FR', '1080p Efficient FR', '1080p Quality FR', '1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR', '720p Quality FR') AND custom_format_name IN ('720p WEBRip', '1080p WEBRip') AND arr_type = 'all';
+UPDATE quality_profile_custom_formats SET arr_type = 'radarr' WHERE quality_profile_name IN ('1080p Balanced FR', '1080p Compact FR', '1080p Efficient FR', '1080p Quality FR', '1080p Quality HDR FR', '1080p Remux FR', '2160p Balanced FR', '2160p Efficient FR', '2160p Quality FR', '2160p Remux FR', '720p Quality FR') AND custom_format_name = '1080p WEBRip' AND arr_type = 'all';
 
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 SELECT qp.name, cf.name, 'all', 300000 FROM quality_profiles qp, custom_formats cf
