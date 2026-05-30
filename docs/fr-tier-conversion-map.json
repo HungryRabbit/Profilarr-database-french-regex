@@ -28,7 +28,8 @@
     "FR 2160p Balanced uses Tier 1 naming, not Tier 3, because the profile has one FR balanced tier and it replaces the Dictionarry hallowed/BHDStudio-style pass.",
     "The 1080p and 2160p Compact tier names are normalized in ops/21 by removing Movie/TV from the final CF names, then reinserted for both Radarr and Sonarr.",
     "2160p Compact FR keeps 1080p Efficient fallback below all 4KLight paths: 1080p source Efficient is 840000 and validated 1080p HEVC team tiers are lightweight 50000 bonuses, so the combined 890000 remains below 4KLight WEBRip at 900000.",
-    "Historical FR source tiers are rebuilt without Global or Movie/TV splits: WEB Top, WEB, Bluray, UHD Bluray, Light, DVD and Unknown are the reusable source buckets."
+    "Historical FR source tiers are rebuilt without Global or Movie/TV splits: WEB Top, WEB, Bluray, UHD Bluray, Light, DVD and Unknown are the reusable source buckets.",
+    "1080p Balanced FR is normalized in ops/22: FR 1080p Balanced is the source/codec base without release-group conditions, while reusable FR WEB tiers add small team bonuses."
   ],
   "aliases": {
     "FORWARD": "FW",
@@ -42,14 +43,11 @@
   },
   "custom_formats": {
     "balanced": {
-      "FR 1080p Balanced Tier 1": [
-        "FW",
-        "FORWARD",
-        "SUPPLY"
-      ],
-      "FR 1080p Balanced Tier 2": [
-        "TFA"
-      ],
+      "FR 1080p Balanced": "1080p WEB-DL h264 base without release-group conditions.",
+      "FR WEB Top Tier": "Reusable WEB team tier scored separately in 1080p Balanced FR.",
+      "FR WEB Tier 1": "Reusable WEB team tier scored separately in 1080p Balanced FR.",
+      "FR WEB Tier 2": "Reusable WEB team tier scored separately in 1080p Balanced FR.",
+      "FR WEB Tier 3": "Reusable WEB team tier scored separately in 1080p Balanced FR.",
       "FR 2160p Balanced Tier 1": [
         "FW",
         "FORWARD",
@@ -467,8 +465,11 @@
       "FR 720p Quality Tier 3": 143000
     },
     "1080p Balanced FR": {
-      "FR 1080p Balanced Tier 1": 861000,
-      "FR 1080p Balanced Tier 2": 860000
+      "FR 1080p Balanced": 861000,
+      "FR WEB Top Tier": 5000,
+      "FR WEB Tier 1": 4300,
+      "FR WEB Tier 2": 4200,
+      "FR WEB Tier 3": 4100
     },
     "1080p Compact FR": {
       "FR 1080p Compact Bluray Tier 1": 943000,
@@ -642,7 +643,7 @@
       "scope": "These tiers replace the old TRaSH-shaped Global/Movie/TV custom formats for reusable French source buckets. Movie/TV is removed from names, but UHD Bluray remains separate from standard Bluray.",
       "web_top": "FW/FORWARD, CHiLL, TyHD, TFA and THESYNDICATE are removed from normal WEB Tier 1 and live in FR WEB Top Tier only.",
       "source_policy": "WEB tiers require a WEB title marker; Bluray tiers require a Bluray source; UHD Bluray tiers require 2160p + Bluray and keep the historical Not Remux / Not SDR gates; Light, DVD and Unknown stay release-group based.",
-      "deleted": "HYPERION is removed entirely from the final DB because it releases games, not video."
+      "deleted": "HYPERION is removed from every functional tier/tag and its regex is neutralized because it releases games, not video. The regex row is kept only to avoid Profilarr FK compilation failures."
     }
   },
   "deprecated_custom_formats": [

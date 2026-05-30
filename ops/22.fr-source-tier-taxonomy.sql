@@ -713,8 +713,10 @@ WITH old_cf(name) AS (
 DELETE FROM custom_formats
 WHERE name IN (SELECT name FROM old_cf);
 
--- HYPERION releases games, not video. Remove it entirely from the final DB
--- instead of keeping it in any media tier or LQ list.
+-- HYPERION releases games, not video. Remove it from every functional tier and
+-- tag, then neutralize the regex instead of deleting the parent row. Profilarr
+-- keeps FK-backed regex metadata tables, so deleting the regex row can break
+-- PCD compilation even after conditions are removed.
 DELETE FROM condition_patterns
 WHERE regular_expression_name = 'HYPERION'
    OR condition_name = 'HYPERION';
@@ -725,7 +727,9 @@ WHERE name = 'HYPERION';
 DELETE FROM regular_expression_tags
 WHERE regular_expression_name = 'HYPERION';
 
-DELETE FROM regular_expressions
+UPDATE regular_expressions
+SET pattern = '(?!)',
+    description = 'Disabled: HYPERION releases games, not video.'
 WHERE name = 'HYPERION';
 
 DELETE FROM quality_profile_custom_formats
