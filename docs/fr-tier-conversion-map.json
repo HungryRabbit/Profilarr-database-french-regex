@@ -429,7 +429,11 @@
       "FR WEB Top Tier": 5000,
       "FR WEB Tier 1": 4300,
       "FR WEB Tier 2": 4200,
-      "FR WEB Tier 3": 4100
+      "FR WEB Tier 3": 4100,
+      "1080p WEB-DL": {
+        "radarr": 710000,
+        "sonarr": 710000
+      }
     },
     "1080p Compact FR": {
       "FR 1080p Compact Bluray Tier 1": 943000,
@@ -488,6 +492,10 @@
       "1080p Bluray": {
         "radarr": 720000,
         "sonarr": 720000
+      },
+      "1080p WEB-DL": {
+        "radarr": 710000,
+        "sonarr": 710000
       }
     },
     "1080p Quality HDR FR": {
@@ -501,6 +509,10 @@
       "1080p Bluray": {
         "radarr": 720000,
         "sonarr": 720000
+      },
+      "1080p WEB-DL": {
+        "radarr": 710000,
+        "sonarr": 710000
       }
     },
     "1080p Remux FR": {
@@ -534,6 +546,10 @@
       "1080p Bluray": {
         "radarr": 720000,
         "sonarr": 720000
+      },
+      "1080p WEB-DL": {
+        "radarr": 710000,
+        "sonarr": 710000
       }
     },
     "2160p Efficient FR": {
@@ -567,6 +583,10 @@
       "1080p Bluray": {
         "radarr": 720000,
         "sonarr": 720000
+      },
+      "1080p WEB-DL": {
+        "radarr": 710000,
+        "sonarr": 710000
       }
     },
     "2160p Remux FR": {

@@ -1049,4 +1049,26 @@ VALUES
   ('2160p Remux FR', '1080p WEBRip', 'all', 700000),
   ('2160p Remux FR', '1080p Bluray', 'all', 720000);
 
+DELETE FROM quality_profile_custom_formats
+WHERE quality_profile_name IN (
+    '1080p Balanced FR',
+    '1080p Quality FR',
+    '1080p Quality HDR FR',
+    '1080p Remux FR',
+    '2160p Balanced FR',
+    '2160p Quality FR',
+    '2160p Remux FR'
+  )
+  AND custom_format_name = '1080p WEB-DL';
+
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+VALUES
+  ('1080p Balanced FR', '1080p WEB-DL', 'all', 710000),
+  ('1080p Quality FR', '1080p WEB-DL', 'all', 710000),
+  ('1080p Quality HDR FR', '1080p WEB-DL', 'all', 710000),
+  ('1080p Remux FR', '1080p WEB-DL', 'all', 710000),
+  ('2160p Balanced FR', '1080p WEB-DL', 'all', 710000),
+  ('2160p Quality FR', '1080p WEB-DL', 'all', 710000),
+  ('2160p Remux FR', '1080p WEB-DL', 'all', 710000);
+
 -- --- END op 9022
