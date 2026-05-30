@@ -44,10 +44,10 @@
   "custom_formats": {
     "balanced": {
       "FR 1080p Balanced": "1080p WEB-DL h264 base without release-group conditions.",
-      "FR WEB Top Tier": "Reusable WEB team tier scored separately in 1080p Balanced FR.",
-      "FR WEB Tier 1": "Reusable WEB team tier scored separately in 1080p Balanced FR.",
-      "FR WEB Tier 2": "Reusable WEB team tier scored separately in 1080p Balanced FR.",
-      "FR WEB Tier 3": "Reusable WEB team tier scored separately in 1080p Balanced FR.",
+      "FR WEB Top Tier": "Reusable WEB team tier scored separately in Balanced, Compact and Efficient profiles.",
+      "FR WEB Tier 1": "Reusable WEB team tier scored separately in Balanced, Compact and Efficient profiles.",
+      "FR WEB Tier 2": "Reusable WEB team tier scored separately in Balanced, Compact and Efficient profiles.",
+      "FR WEB Tier 3": "Reusable WEB team tier scored separately in Balanced, Compact and Efficient profiles.",
       "FR 2160p Balanced Tier 1": [
         "FW",
         "FORWARD",
@@ -128,24 +128,8 @@
       ]
     },
     "efficient": {
-      "FR 1080p Bluray HEVC Tier 1": [
-        "TyHD",
-        "THESYNDICATE",
-        "CHiLL",
-        "SUPPLY",
-        "FW",
-        "FORWARD",
-        "TFA"
-      ],
-      "FR 1080p WEB-DL HEVC Tier 1": [
-        "TyHD",
-        "THESYNDICATE",
-        "CHiLL",
-        "SUPPLY",
-        "FW",
-        "FORWARD",
-        "TFA"
-      ],
+      "FR 1080p Bluray HEVC": "1080p Bluray HEVC source pass without release-group condition. WEB/Bluray team preference is scored through reusable FR tiers.",
+      "FR 1080p WEB-DL HEVC": "1080p WEB-DL HEVC source pass without release-group condition. WEB/Bluray team preference is scored through reusable FR tiers.",
       "FR 2160p Efficient Movie Bluray Tier 1": [
         "TyHD",
         "THESYNDICATE",
@@ -480,6 +464,10 @@
       "HDLight WEBRip (Compact)": 870000,
       "1080p WEBRip (Compact)": 865000,
       "1080p WEB-DL (Efficient)": 840000,
+      "FR WEB Top Tier": 160100,
+      "FR WEB Tier 1": 15300,
+      "FR WEB Tier 2": 15200,
+      "FR WEB Tier 3": 15100,
       "FR Scene Tier": 15000
     },
     "2160p Compact FR": {
@@ -492,8 +480,8 @@
       "2160p WEB-DL": -999999,
       "1080p WEB-DL (Efficient)": 840000,
       "1080p Bluray (Efficient)": 840000,
-      "FR 1080p WEB-DL HEVC Tier 1": 50000,
-      "FR 1080p Bluray HEVC Tier 1": 50000,
+      "FR 1080p WEB-DL HEVC": 50000,
+      "FR 1080p Bluray HEVC": 50000,
       "FR 1080p Compact Bluray Tier 1": 830000,
       "FR 1080p Compact Bluray Tier 2": 829000,
       "FR 1080p Compact WEB Tier 1": 830000,
@@ -502,12 +490,16 @@
       "FR Scene Tier": 4000
     },
     "1080p Efficient FR": {
-      "FR 1080p Bluray HEVC Tier 1": 960000,
-      "FR 1080p WEB-DL HEVC Tier 1": 940000,
-      "1080p WEB-DL (Efficient)": {
-        "radarr": 880000,
-        "sonarr": 860000
-      }
+      "FR 1080p Bluray HEVC": 960000,
+      "FR 1080p WEB-DL HEVC": 940000,
+      "1080p WEB-DL (Efficient)": 920000,
+      "1080p Bluray (Efficient)": 900000,
+      "FR WEB Top Tier": 5000,
+      "FR WEB Tier 1": 4300,
+      "FR WEB Tier 2": 4200,
+      "FR WEB Tier 3": 4100,
+      "FR Bluray Tier 1": 4300,
+      "FR Bluray Tier 2": 4200
     },
     "1080p Quality FR": {
       "FR 1080p Quality Tier 1": 130000,

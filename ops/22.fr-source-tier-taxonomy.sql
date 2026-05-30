@@ -763,4 +763,160 @@ VALUES
   ('1080p Balanced FR', 'FR WEB Tier 2', 'all', 4200),
   ('1080p Balanced FR', 'FR WEB Tier 3', 'all', 4100);
 
+-- 1080p Compact keeps its HDLight/WEBRip compact ladder, but can now reward
+-- normal FR WEB tiers without making them outrank compact-specialized teams.
+DELETE FROM quality_profile_custom_formats
+WHERE quality_profile_name = '1080p Compact FR'
+  AND custom_format_name IN (
+    'FR WEB Top Tier',
+    'FR WEB Tier 1',
+    'FR WEB Tier 2',
+    'FR WEB Tier 3'
+  );
+
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+VALUES
+  ('1080p Compact FR', 'FR WEB Top Tier', 'all', 160100),
+  ('1080p Compact FR', 'FR WEB Tier 1', 'all', 15300),
+  ('1080p Compact FR', 'FR WEB Tier 2', 'all', 15200),
+  ('1080p Compact FR', 'FR WEB Tier 3', 'all', 15100);
+
+-- Efficient 1080p: the HEVC source passes are no longer team-specific. Team
+-- preference is carried separately by the reusable WEB/Bluray tiers below.
+INSERT INTO custom_formats (name, description)
+SELECT 'FR 1080p Bluray HEVC', 'FR 1080p HEVC Bluray source pass without release-group condition.'
+WHERE NOT EXISTS (SELECT 1 FROM custom_formats WHERE name = 'FR 1080p Bluray HEVC');
+
+INSERT INTO custom_formats (name, description)
+SELECT 'FR 1080p WEB-DL HEVC', 'FR 1080p HEVC WEB-DL source pass without release-group condition.'
+WHERE NOT EXISTS (SELECT 1 FROM custom_formats WHERE name = 'FR 1080p WEB-DL HEVC');
+
+WITH tag_map(custom_format_name, tag_name) AS (
+  VALUES
+  ('FR 1080p Bluray HEVC', 'French'),
+  ('FR 1080p Bluray HEVC', '1080p'),
+  ('FR 1080p Bluray HEVC', 'HEVC'),
+  ('FR 1080p WEB-DL HEVC', 'French'),
+  ('FR 1080p WEB-DL HEVC', '1080p'),
+  ('FR 1080p WEB-DL HEVC', 'HEVC')
+)
+INSERT INTO custom_format_tags (custom_format_name, tag_name)
+SELECT custom_format_name, tag_name
+FROM tag_map
+WHERE NOT EXISTS (
+  SELECT 1
+  FROM custom_format_tags cft
+  WHERE cft.custom_format_name = tag_map.custom_format_name
+    AND cft.tag_name = tag_map.tag_name
+);
+
+WITH condition_map(custom_format_name, condition_name, type, negate, required) AS (
+  VALUES
+  ('FR 1080p Bluray HEVC', '1080p', 'resolution', 0, 1),
+  ('FR 1080p Bluray HEVC', 'Bluray', 'source', 0, 1),
+  ('FR 1080p Bluray HEVC', 'h265', 'release_title', 0, 1),
+  ('FR 1080p WEB-DL HEVC', '1080p', 'resolution', 0, 1),
+  ('FR 1080p WEB-DL HEVC', 'WEB-DL', 'source', 0, 1),
+  ('FR 1080p WEB-DL HEVC', 'h265', 'release_title', 0, 1)
+)
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT custom_format_name, condition_name, type, 'all', negate, required
+FROM condition_map
+WHERE NOT EXISTS (
+  SELECT 1
+  FROM custom_format_conditions cfc
+  WHERE cfc.custom_format_name = condition_map.custom_format_name
+    AND cfc.name = condition_map.condition_name
+);
+
+INSERT INTO condition_resolutions (custom_format_name, condition_name, resolution)
+SELECT 'FR 1080p Bluray HEVC', '1080p', '1080p'
+WHERE NOT EXISTS (
+  SELECT 1 FROM condition_resolutions
+  WHERE custom_format_name = 'FR 1080p Bluray HEVC' AND condition_name = '1080p'
+);
+
+INSERT INTO condition_resolutions (custom_format_name, condition_name, resolution)
+SELECT 'FR 1080p WEB-DL HEVC', '1080p', '1080p'
+WHERE NOT EXISTS (
+  SELECT 1 FROM condition_resolutions
+  WHERE custom_format_name = 'FR 1080p WEB-DL HEVC' AND condition_name = '1080p'
+);
+
+INSERT INTO condition_sources (custom_format_name, condition_name, source)
+SELECT 'FR 1080p Bluray HEVC', 'Bluray', 'bluray'
+WHERE NOT EXISTS (
+  SELECT 1 FROM condition_sources
+  WHERE custom_format_name = 'FR 1080p Bluray HEVC' AND condition_name = 'Bluray'
+);
+
+INSERT INTO condition_sources (custom_format_name, condition_name, source)
+SELECT 'FR 1080p WEB-DL HEVC', 'WEB-DL', 'web_dl'
+WHERE NOT EXISTS (
+  SELECT 1 FROM condition_sources
+  WHERE custom_format_name = 'FR 1080p WEB-DL HEVC' AND condition_name = 'WEB-DL'
+);
+
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT 'FR 1080p Bluray HEVC', 'h265', 'HEVC'
+WHERE NOT EXISTS (
+  SELECT 1 FROM condition_patterns
+  WHERE custom_format_name = 'FR 1080p Bluray HEVC' AND condition_name = 'h265'
+);
+
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT 'FR 1080p WEB-DL HEVC', 'h265', 'HEVC'
+WHERE NOT EXISTS (
+  SELECT 1 FROM condition_patterns
+  WHERE custom_format_name = 'FR 1080p WEB-DL HEVC' AND condition_name = 'h265'
+);
+
+UPDATE custom_formats
+SET description = 'Deprecated by FR 1080p Efficient source/tier split. Kept only for FK-backed metadata compatibility.'
+WHERE name IN ('FR 1080p Bluray HEVC Tier 1', 'FR 1080p WEB-DL HEVC Tier 1');
+
+DELETE FROM quality_profile_custom_formats
+WHERE quality_profile_name = '1080p Efficient FR'
+  AND custom_format_name IN (
+    'FR 1080p Bluray HEVC Tier 1',
+    'FR 1080p WEB-DL HEVC Tier 1',
+    'FR 1080p Bluray HEVC',
+    'FR 1080p WEB-DL HEVC',
+    '1080p WEB-DL (Efficient)',
+    '1080p Bluray (Efficient)',
+    'FR WEB Top Tier',
+    'FR WEB Tier 1',
+    'FR WEB Tier 2',
+    'FR WEB Tier 3',
+    'FR Bluray Tier 1',
+    'FR Bluray Tier 2'
+  );
+
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+VALUES
+  ('1080p Efficient FR', 'FR 1080p Bluray HEVC', 'all', 960000),
+  ('1080p Efficient FR', 'FR 1080p WEB-DL HEVC', 'all', 940000),
+  ('1080p Efficient FR', '1080p WEB-DL (Efficient)', 'all', 920000),
+  ('1080p Efficient FR', '1080p Bluray (Efficient)', 'all', 900000),
+  ('1080p Efficient FR', 'FR WEB Top Tier', 'all', 5000),
+  ('1080p Efficient FR', 'FR WEB Tier 1', 'all', 4300),
+  ('1080p Efficient FR', 'FR WEB Tier 2', 'all', 4200),
+  ('1080p Efficient FR', 'FR WEB Tier 3', 'all', 4100),
+  ('1080p Efficient FR', 'FR Bluray Tier 1', 'all', 4300),
+  ('1080p Efficient FR', 'FR Bluray Tier 2', 'all', 4200);
+
+DELETE FROM quality_profile_custom_formats
+WHERE quality_profile_name = '2160p Compact FR'
+  AND custom_format_name IN (
+    'FR 1080p Bluray HEVC Tier 1',
+    'FR 1080p WEB-DL HEVC Tier 1',
+    'FR 1080p Bluray HEVC',
+    'FR 1080p WEB-DL HEVC'
+  );
+
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+VALUES
+  ('2160p Compact FR', 'FR 1080p Bluray HEVC', 'all', 50000),
+  ('2160p Compact FR', 'FR 1080p WEB-DL HEVC', 'all', 50000);
+
 -- --- END op 9022
