@@ -382,14 +382,16 @@ VALUES
   ('4KLight Bluray (Compact)', 'Matches non-tier 2160p 4KLight Bluray releases for 2160p Compact FR.'),
   ('4KLight WEBRip (Compact)', 'Matches non-tier 2160p 4KLight WEBRip releases for 2160p Compact FR.'),
   ('HDLight Bluray (Compact)', 'Matches non-tier 1080p HDLight Bluray releases for 1080p Compact FR.'),
-  ('HDLight WEBRip (Compact)', 'Matches non-tier 1080p HDLight WEBRip releases for 1080p Compact FR.');
+  ('HDLight WEBRip (Compact)', 'Matches non-tier 1080p HDLight WEB releases for 1080p Compact FR.'),
+  ('1080p WEBRip (Compact)', 'Matches non-tier 1080p WEBRip releases for Compact FR fallback.');
 
 WITH compact_light_cf(custom_format_name) AS (
   VALUES
   ('4KLight Bluray (Compact)'),
   ('4KLight WEBRip (Compact)'),
   ('HDLight Bluray (Compact)'),
-  ('HDLight WEBRip (Compact)')
+  ('HDLight WEBRip (Compact)'),
+  ('1080p WEBRip (Compact)')
 ),
 tags(tag_name) AS (
   VALUES ('French'), ('Compact'), ('Source')
@@ -412,28 +414,32 @@ VALUES
   ('HDLight Bluray (Compact)', 'Bluray', 'source', 'all', 0, 1),
   ('HDLight WEBRip (Compact)', 'HDLight', 'release_title', 'all', 0, 1),
   ('HDLight WEBRip (Compact)', '1080p', 'resolution', 'all', 0, 1),
-  ('HDLight WEBRip (Compact)', 'WEBRip', 'source', 'all', 0, 1);
+  ('HDLight WEBRip (Compact)', 'WEB Source', 'release_title', 'all', 0, 1),
+  ('1080p WEBRip (Compact)', '1080p', 'resolution', 'all', 0, 1),
+  ('1080p WEBRip (Compact)', 'WEBRip', 'source', 'all', 0, 1);
 
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
 VALUES
   ('4KLight Bluray (Compact)', '4KLight', '4KLight'),
   ('4KLight WEBRip (Compact)', '4KLight', '4KLight'),
   ('HDLight Bluray (Compact)', 'HDLight', 'HDLight'),
-  ('HDLight WEBRip (Compact)', 'HDLight', 'HDLight');
+  ('HDLight WEBRip (Compact)', 'HDLight', 'HDLight'),
+  ('HDLight WEBRip (Compact)', 'WEB Source', 'WEB Source');
 
 INSERT INTO condition_resolutions (custom_format_name, condition_name, resolution)
 VALUES
   ('4KLight Bluray (Compact)', '2160p', '2160p'),
   ('4KLight WEBRip (Compact)', '2160p', '2160p'),
   ('HDLight Bluray (Compact)', '1080p', '1080p'),
-  ('HDLight WEBRip (Compact)', '1080p', '1080p');
+  ('HDLight WEBRip (Compact)', '1080p', '1080p'),
+  ('1080p WEBRip (Compact)', '1080p', '1080p');
 
 INSERT INTO condition_sources (custom_format_name, condition_name, source)
 VALUES
   ('4KLight Bluray (Compact)', 'Bluray', 'bluray'),
   ('4KLight WEBRip (Compact)', 'WEBRip', 'webrip'),
   ('HDLight Bluray (Compact)', 'Bluray', 'bluray'),
-  ('HDLight WEBRip (Compact)', 'WEBRip', 'webrip');
+  ('1080p WEBRip (Compact)', 'WEBRip', 'webrip');
 
 WITH compact_cf_team(custom_format_name, condition_name, regular_expression_name) AS (
   VALUES
@@ -557,12 +563,31 @@ INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expr
 SELECT custom_format_name, condition_name, regular_expression_name
 FROM compact_cf_team;
 
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT '1080p WEBRip (Compact)', name, type, arr_type, negate, required
+FROM custom_format_conditions
+WHERE custom_format_name = 'HDLight WEBRip (Compact)'
+  AND type = 'release_group';
+
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT '1080p WEBRip (Compact)', condition_name, regular_expression_name
+FROM condition_patterns
+WHERE custom_format_name = 'HDLight WEBRip (Compact)'
+  AND condition_name LIKE 'Not %';
+
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 VALUES
   ('2160p Compact FR', '4KLight Bluray (Compact)', 'all', 940000),
   ('2160p Compact FR', '4KLight WEBRip (Compact)', 'all', 900000),
   ('1080p Compact FR', 'HDLight Bluray (Compact)', 'all', 900000),
-  ('1080p Compact FR', 'HDLight WEBRip (Compact)', 'all', 870000);
+  ('1080p Compact FR', 'HDLight WEBRip (Compact)', 'all', 870000),
+  ('1080p Compact FR', '1080p WEBRip (Compact)', 'all', 860000),
+  ('2160p Compact FR', '1080p WEBRip (Compact)', 'all', 860000);
+
+UPDATE quality_profile_custom_formats
+SET score = 850000
+WHERE quality_profile_name IN ('1080p Compact FR', '2160p Compact FR')
+  AND custom_format_name = '1080p WEB-DL (Efficient)';
 
 UPDATE quality_profile_custom_formats
 SET score = 4000
