@@ -1,5 +1,5 @@
 name: Feature Request
-description: Proposer une nouvelle fonctionnalite ou une amelioration
+description: Proposer une nouvelle fonctionnalité ou une amélioration
 title: "[Feature]: "
 labels: ["type: feature"]
 
@@ -8,7 +8,7 @@ body:
     id: request
     attributes:
       label: Quoi ajouter ?
-      placeholder: "Decris la fonctionnalite ou l'amelioration souhaitee."
+      placeholder: "Décris la fonctionnalité ou l'amélioration souhaitée."
     validations:
       required: true
 
@@ -16,14 +16,14 @@ body:
     id: why
     attributes:
       label: Pourquoi c'est utile ?
-      placeholder: "Explique le cas d'usage et le probleme que ca resout."
+      placeholder: "Explique le cas d'usage et le problème que ça résout."
     validations:
       required: true
 
   - type: dropdown
     id: scope
     attributes:
-      label: Zone concernee
+      label: Zone concernée
       options:
         - Regex
         - Custom Formats
@@ -38,6 +38,6 @@ body:
   - type: textarea
     id: references
     attributes:
-      label: References
+      label: Références
       description: Liens vers TRaSH, Dictionarry, un repo FR, une release exemple ou une discussion.
       placeholder: "https://..."
