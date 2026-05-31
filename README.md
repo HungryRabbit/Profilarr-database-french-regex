@@ -40,6 +40,7 @@ Les opérations SQL V2 sont séparées par grandes familles pour garder le proje
 ⚠️ Attention : la première version V2 publiée utilisait un unique fichier SQL. Ce fichier a été remplacé par une structure plus claire avant stabilisation de la V2.
 
 Si vous aviez déjà lié la DB V2 avant ce changement, Profilarr applique les nouvelles opérations lors de la synchronisation. En cas de problème d'import uniquement, supprimez puis ajoutez à nouveau la DB. Les utilisateurs de la branche `Profilarr-V1` ne sont pas concernés.
+Un renommages des options a aussi eu lieu, il faut donc refaire la synchronisation dans la partie Arrs de profilarr V2.
 
 ## Sources FR
 
