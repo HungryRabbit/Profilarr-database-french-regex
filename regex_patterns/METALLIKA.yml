@@ -1,8 +1,0 @@
-name: METALLIKA
-pattern: '(?<=^|[\s.-])METALLIKA\b'
-description: Matches "METALLIKA" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

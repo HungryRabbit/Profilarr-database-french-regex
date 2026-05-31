@@ -1,7 +1,0 @@
-name: HiRoSHiMa
-pattern: '(?<=^|[\s.-])HiRoSHiMa\b'
-description: Matches "HiRoSHiMa" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

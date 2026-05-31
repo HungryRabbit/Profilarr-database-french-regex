@@ -1,7 +1,0 @@
-name: PURE
-pattern: '(?<=^|[\s.-])PURE\b'
-description: Matches "PURE" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

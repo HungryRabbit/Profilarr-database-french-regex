@@ -1,7 +1,0 @@
-name: AZR
-pattern: '(?<=^|[\s.-])AZR\b'
-description: Matches "AZR" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

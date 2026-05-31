@@ -1,8 +1,0 @@
-name: GAIA
-pattern: '(?<=^|[\s.-])GA(\xCF|I)A\b'
-description: Matches "GAIA" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

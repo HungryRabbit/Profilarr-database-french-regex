@@ -1,8 +1,0 @@
-name: FReeZeR
-pattern: '(?<=^|[\s.-])FReeZeR\b'
-description: Matches "FReeZeR" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

@@ -1,7 +1,0 @@
-name: AiRLiNE
-pattern: '(?<=^|[\s.-])AiRLiNE\b'
-description: Matches "AiRLiNE" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

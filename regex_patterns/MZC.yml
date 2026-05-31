@@ -1,8 +1,0 @@
-name: MZC
-pattern: '(?<=^|[\s.-])MZC\b'
-description: Matches "MZC" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

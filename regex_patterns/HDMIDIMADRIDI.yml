@@ -1,8 +1,0 @@
-name: HDMIDIMADRIDI
-pattern: '(?<=^|[\s.-])HDMIDIMADRIDI\b'
-description: Matches "HDMIDIMADRIDI" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

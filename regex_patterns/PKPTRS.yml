@@ -1,7 +1,0 @@
-name: PKPTRS
-pattern: '(?<=^|[\s.-])PKPTRS\b'
-description: Matches "PKPTRS" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

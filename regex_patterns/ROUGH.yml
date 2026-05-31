@@ -1,7 +1,0 @@
-name: ROUGH
-pattern: '(?<=^|[\s.-])ROUGH\b'
-description: Matches "ROUGH" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

@@ -1,8 +1,0 @@
-name: NeoSG
-pattern: '(?<=^|[\s.-])NeoSG\b'
-description: Matches "NeoSG" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Anime
-tests: []

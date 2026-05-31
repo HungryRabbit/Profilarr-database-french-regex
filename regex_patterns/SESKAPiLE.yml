@@ -1,7 +1,0 @@
-name: SESKAPiLE
-pattern: '(?<=^|[\s.-])SESKAPiLE\b'
-description: Matches "SESKAPiLE" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

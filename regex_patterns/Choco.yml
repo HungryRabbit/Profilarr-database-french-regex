@@ -1,8 +1,0 @@
-name: Choco
-pattern: '(?<=^|[\s.-])Choco\b'
-description: Matches "Choco" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Remux
-tests: []

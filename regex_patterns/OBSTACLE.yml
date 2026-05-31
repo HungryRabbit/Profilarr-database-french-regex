@@ -1,7 +1,0 @@
-name: OBSTACLE
-pattern: '(?<=^|[\s.-])OBSTACLE\b'
-description: Matches "OBSTACLE" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

@@ -1,7 +1,0 @@
-name: PHoQUE
-pattern: '(?<=^|[\s.-])PHoQUE\b'
-description: Matches "PHoQUE" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

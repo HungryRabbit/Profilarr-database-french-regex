@@ -1,7 +1,0 @@
-name: SPOiLER
-pattern: '(?<=^|[\s.-])SPOiLER\b'
-description: Matches "SPOiLER" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

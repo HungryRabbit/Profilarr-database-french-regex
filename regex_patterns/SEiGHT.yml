@@ -1,7 +1,0 @@
-name: SEiGHT
-pattern: '(?<=^|[\s.-])SEiGHT\b'
-description: Matches "SEiGHT" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

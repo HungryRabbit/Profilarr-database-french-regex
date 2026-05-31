@@ -1,8 +1,0 @@
-name: Zapax
-pattern: '(?<=^|[\s.-])Zapax\b'
-description: Matches "Zapax" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Remux
-tests: []

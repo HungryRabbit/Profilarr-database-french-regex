@@ -1,7 +1,0 @@
-name: PROPJOE
-pattern: '(?<=^|[\s.-])PROPJOE\b'
-description: Matches "PROPJOE" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

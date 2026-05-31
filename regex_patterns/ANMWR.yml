@@ -1,7 +1,0 @@
-name: ANMWR
-pattern: '(?<=^|[\s.-])ANMWR\b'
-description: Matches "ANMWR" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

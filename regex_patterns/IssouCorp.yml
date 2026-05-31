@@ -1,8 +1,0 @@
-name: IssouCorp
-pattern: '(?<=^|[\s.-])IssouCorp\b'
-description: Matches "IssouCorp" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Anime
-tests: []

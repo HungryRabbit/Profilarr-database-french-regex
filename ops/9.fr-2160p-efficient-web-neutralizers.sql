@@ -1,0 +1,15 @@
+-- @operation: export
+-- @entity: batch
+-- @name: fr 2160p efficient web neutralizers
+-- @exportedAt: 2026-05-28T00:00:00.000Z
+-- @opIds: 9009
+
+-- --- BEGIN op 9009 ( batch fr 2160p efficient web neutralizers )
+-- ============================================================================
+-- Deprecated no-op
+--
+-- The former negative WEB source neutralizers were removed. Double scoring is
+-- now avoided by positive technical CFs, which use required negate team
+-- conditions.
+-- ============================================================================
+-- --- END op 9009

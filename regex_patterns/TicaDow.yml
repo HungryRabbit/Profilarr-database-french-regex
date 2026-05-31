@@ -1,8 +1,0 @@
-name: TicaDow
-pattern: '(?<=^|[\s.-])TicaDow\b'
-description: Matches "TicaDow" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

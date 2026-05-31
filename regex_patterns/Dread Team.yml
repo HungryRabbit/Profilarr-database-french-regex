@@ -1,8 +1,0 @@
-name: Dread Team
-pattern: '(?<=^|[\s.-])Dread[\.-]?Team\b'
-description: Matches "Dread Team" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

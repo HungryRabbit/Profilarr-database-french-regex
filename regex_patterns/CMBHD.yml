@@ -1,7 +1,0 @@
-name: CMBHD
-pattern: '(?<=^|[\s.-])CMBHD\b'
-description: Matches "CMBHD" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

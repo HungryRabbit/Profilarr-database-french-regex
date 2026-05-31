@@ -1,8 +1,0 @@
-name: OMERTA
-pattern: '(?<=^|[\s.-])OMERTA\b'
-description: Matches "OMERTA" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

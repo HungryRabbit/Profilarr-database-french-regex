@@ -1,8 +1,0 @@
-name: MACK4
-pattern: '(?<=^|[\s.-])MACK4\b'
-description: Matches "MACK4" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

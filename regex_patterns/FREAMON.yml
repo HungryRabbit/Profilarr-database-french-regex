@@ -1,7 +1,0 @@
-name: FREAMON
-pattern: '(?<=^|[\s.-])FREAMON\b'
-description: Matches "FREAMON" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

@@ -1,8 +1,0 @@
-name: EZTV re
-pattern: '(?<=^|[\s.-])EZTV([ ._-]re)?\b'
-description: Matches "EZTV re" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

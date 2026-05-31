@@ -1,7 +1,0 @@
-name: PRESTiGE
-pattern: '(?<=^|[\s.-])PRESTiGE\b'
-description: Matches "PRESTiGE" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

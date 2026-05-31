@@ -1,8 +1,0 @@
-name: Yangire Raws
-pattern: '(?<=^|[\s.-])Yangire[ .-]?Raws\b'
-description: Matches "Yangire Raws" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Anime
-tests: []

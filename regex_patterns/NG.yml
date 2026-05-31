@@ -1,8 +1,0 @@
-name: NG
-pattern: '(?<=^|[\s.-])NG\b'
-description: Matches "NG" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

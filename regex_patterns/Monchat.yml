@@ -1,8 +1,0 @@
-name: Monchat
-pattern: '(?<=^|[\s.-])Monchat\b'
-description: Matches "Monchat" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

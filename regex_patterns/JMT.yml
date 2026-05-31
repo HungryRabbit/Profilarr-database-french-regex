@@ -1,7 +1,0 @@
-name: JMT
-pattern: '(?<=^|[\s.-])JMT\b'
-description: Matches "JMT" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

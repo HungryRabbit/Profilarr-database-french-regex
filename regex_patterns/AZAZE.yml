@@ -1,8 +1,0 @@
-name: AZAZE
-pattern: '(?<=^|[\s.-])AZAZE\b'
-description: Matches "AZAZE" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

@@ -1,8 +1,0 @@
-name: Cortex91
-pattern: '(?<=^|[\s.-])Cortex91\b'
-description: Matches "Cortex91" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

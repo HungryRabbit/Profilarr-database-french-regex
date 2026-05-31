@@ -1,9 +1,0 @@
-name: HDForever
-pattern: '(?<=^|[\s.-])HDForever\b'
-description: Matches "HDForever" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Bluray
-- Remux
-tests: []

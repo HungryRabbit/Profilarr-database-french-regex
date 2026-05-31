@@ -1,8 +1,0 @@
-name: Onii ChanSub
-pattern: '(?<=^|[\s.-])Onii[ .-]?ChanSub\b'
-description: Matches "Onii ChanSub" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Anime
-tests: []

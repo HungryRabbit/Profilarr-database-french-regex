@@ -1,8 +1,0 @@
-name: NEO
-pattern: '(?<=^|[\s.-])NEO\b'
-description: Matches "NEO" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- WEB-DL
-tests: []

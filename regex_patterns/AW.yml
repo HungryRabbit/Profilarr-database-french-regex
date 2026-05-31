@@ -1,7 +1,0 @@
-name: AW
-pattern: '(?<=^|[\s.-])AW\b'
-description: Matches "AW" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

@@ -1,8 +1,0 @@
-name: Dropse
-pattern: '(?<=^|[\s.-])Dropse\b'
-description: Matches "Dropse" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

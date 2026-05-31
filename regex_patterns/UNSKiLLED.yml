@@ -1,7 +1,0 @@
-name: UNSKiLLED
-pattern: '(?<=^|[\s.-])(US)?UNSKiLLED\b'
-description: Matches "UNSKiLLED" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

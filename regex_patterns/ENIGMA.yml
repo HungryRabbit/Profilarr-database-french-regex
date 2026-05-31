@@ -1,7 +1,0 @@
-name: ENIGMA
-pattern: '(?<=^|[\s.-])ENIGMA\b'
-description: Matches "ENIGMA" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

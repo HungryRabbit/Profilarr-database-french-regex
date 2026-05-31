@@ -1,8 +1,0 @@
-name: SANCTUAIRE
-pattern: '(?<=^|[\s.-])SANCTUAIRE\b'
-description: Matches "SANCTUAIRE" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

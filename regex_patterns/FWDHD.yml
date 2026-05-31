@@ -1,7 +1,0 @@
-name: FWDHD
-pattern: '(?<=^|[\s.-])FWDHD\b'
-description: Matches "FWDHD" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

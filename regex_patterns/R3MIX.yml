@@ -1,7 +1,0 @@
-name: R3MIX
-pattern: '(?<=^|[\s.-])R3MIX\b'
-description: Matches "R3MIX" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

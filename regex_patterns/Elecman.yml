@@ -1,8 +1,0 @@
-name: Elecman
-pattern: '(?<=^|[\s.-])Elecman\b'
-description: Matches "Elecman" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Anime
-tests: []

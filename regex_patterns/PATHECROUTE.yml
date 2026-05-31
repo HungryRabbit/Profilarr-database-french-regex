@@ -1,7 +1,0 @@
-name: PATHECROUTE
-pattern: '(?<=^|[\s.-])PATHECROUTE\b'
-description: Matches "PATHECROUTE" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

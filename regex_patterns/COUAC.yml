@@ -1,7 +1,0 @@
-name: COUAC
-pattern: '(?<=^|[\s.-])COUAC\b'
-description: Matches "COUAC" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

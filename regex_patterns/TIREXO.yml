@@ -1,8 +1,0 @@
-name: TIREXO
-pattern: '(?<=^|[\s.-])TIREXO\b'
-description: Matches "TIREXO" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

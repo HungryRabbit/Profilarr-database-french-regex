@@ -1,7 +1,0 @@
-name: Themouche
-pattern: '(?<=^|[\s.-])Themouche\b'
-description: Matches "Themouche" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

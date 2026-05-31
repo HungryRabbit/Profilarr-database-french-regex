@@ -1,7 +1,0 @@
-name: PATOMiEL
-pattern: '(?<=^|[\s.-])PATOMiEL\b'
-description: Matches "PATOMiEL" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

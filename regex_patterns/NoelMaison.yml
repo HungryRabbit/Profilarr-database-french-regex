@@ -1,8 +1,0 @@
-name: NoelMaison
-pattern: '(?<=^|[\s.-])NoelMaison\b'
-description: Matches "NoelMaison" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

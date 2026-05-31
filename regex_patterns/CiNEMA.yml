@@ -1,7 +1,0 @@
-name: CiNEMA
-pattern: '(?<=^|[\s.-])CiNEMA\b'
-description: Matches "CiNEMA" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

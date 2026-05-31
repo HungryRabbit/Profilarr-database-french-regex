@@ -1,8 +1,0 @@
-name: NewZT
-pattern: '(?<=^|[\s.-])NewZT\b'
-description: Matches "NewZT" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Banned
-tests: []

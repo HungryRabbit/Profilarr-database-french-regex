@@ -1,7 +1,0 @@
-name: M@x
-pattern: '(?<=^|[\s.-])M@x\b'
-description: Matches "M@x" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []

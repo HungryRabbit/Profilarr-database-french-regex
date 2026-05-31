@@ -1,8 +1,0 @@
-name: D3T3R10R1TY
-pattern: '(?<=^|[\s.-])D3T3R10R1TY\b'
-description: Matches "D3T3R10R1TY" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Anime
-tests: []

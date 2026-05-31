@@ -1,8 +1,0 @@
-name: Tezcat74
-pattern: '(?<=^|[\s.-])Tezcat74\b'
-description: Matches "Tezcat74" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-- Remux
-tests: []

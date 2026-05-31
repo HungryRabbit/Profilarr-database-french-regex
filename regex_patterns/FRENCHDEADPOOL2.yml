@@ -1,7 +1,0 @@
-name: FRENCHDEADPOOL2
-pattern: '(?<=^|[\s.-])FRENCHDEADPOOL2\b'
-description: Matches "FRENCHDEADPOOL2" when preceded by whitespace, a hyphen or dot
-tags:
-- Release Group
-- French
-tests: []
