@@ -82,6 +82,11 @@ Les Custom Formats FR sont séparés par usage:
 - `French VOSTFR`
 - `French VFQ`
 - `French Missing`
+- `French MULTi + Team FR (INTL)`
+- `French MULTi + Marker FR (INTL)`
+- `French Missing (INTL)`
+
+Les Custom Formats `INTL` sont destinés aux trackers internationaux. Ils évitent de faire confiance à un simple tag `MULTi`, qui peut vouloir dire plusieurs langues sans français. Sur ces trackers, une release `MULTi` est considérée fiable si elle vient d'une team FR connue ou si elle contient un marqueur français explicite comme `MULTi.FRENCH`, `MULTi.TRUEFRENCH`, `MULTi.VFF`, `MULTi.VFI`, `MULTi.VFQ`, `MULTi.VOF` ou `MULTi.VOQ`.
 
 Les anciens Custom Formats FR issus des sources TRaSH/DBFR (`FR Movie ...`, `FR TV ...`, `FR Global Tier ...`, `FR HDLight Tier`) restent disponibles comme historique de migration, mais les profils FR principaux utilisent les nouveaux noms alignés sur Dictionarry avec `FR` en préfixe.
 
