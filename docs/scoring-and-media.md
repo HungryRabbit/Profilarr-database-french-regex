@@ -80,9 +80,25 @@ La DB conserve la logique Media Management de Dictionarry V2:
 
 - presets `Radarr` et `Sonarr`;
 - preset `Radarr / Editionless`;
-- Delay Profiles `Radarr` et `Sonarr` en `prefer_torrent`;
-- délai de `360` minutes;
+- Delay Profiles `Radarr` et `Sonarr` en `prefer_torrent`, conservés pour compatibilité;
+- Delay Profiles FR supplémentaires: `Ratio Boost`, `Balanced`, `Quality`;
 - protection `Full Disc` contre certaines correspondances incorrectes.
+
+## Delay Profiles
+
+La DB fournit plusieurs Delay Profiles pour adapter le délai à votre usage:
+
+```text
+Ratio Boost : torrent immédiat, usenet retardé de 360 minutes
+Balanced    : torrent et usenet retardés de 120 minutes
+Quality     : torrent et usenet retardés de 360 minutes
+```
+
+`Quality` reprend la logique Dictionarry: attendre plus longtemps laisse davantage de temps aux meilleures releases pour apparaître.
+
+`Balanced` réduit l'attente tout en gardant un petit délai pour éviter de prendre trop vite la première release disponible.
+
+`Ratio Boost` sert surtout aux setups orientés torrents: les torrents peuvent être pris immédiatement, tandis que l'usenet attend pour laisser la priorité au torrent.
 
 ## Taille des fichiers
 
