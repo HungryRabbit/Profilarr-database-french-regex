@@ -104,10 +104,14 @@ VO + plusieurs sous-titres
 
 Dans ce cas, faire confiance à `MULTi` seul peut accepter des releases sans français.
 
+La même prudence s'applique à `MultiSub`: le tag indique plusieurs sous-titres, mais pas forcément des sous-titres français.
+
 ## Custom Formats INTL
 
 - `French MULTi + Team FR (INTL)`
 - `French MULTi + Marker FR (INTL)`
+- `French MultiSub + Team FR (INTL)`
+- `French MultiSub + Marker FR (INTL)`
 - `French Missing (INTL)`
 
 `French MULTi + Team FR (INTL)` matche si le titre contient `MULTi` et que la release vient d'une team FR connue. Les teams sont récupérées automatiquement depuis les regex taggées `French` + `Release Group`.
@@ -125,9 +129,22 @@ MULTi.VOF
 MULTi.VOQ
 ```
 
-`MULTi` seul ne suffit pas.
+`French MultiSub + Team FR (INTL)` fonctionne de la même manière, mais avec un tag `MultiSub` à la place de `MULTi`.
 
-`French Missing (INTL)` se déclenche quand il n'y a ni marqueur français explicite après `MULTi`, ni team FR connue, ni `VF`, ni `VOSTFR`, ni `VFQ`, ni `VOF` / `VOQ`.
+`French MultiSub + Marker FR (INTL)` matche uniquement si `MultiSub` est accompagné d'un marqueur français explicite:
+
+```text
+MultiSub.FR
+MultiSub.FRENCH
+MultiSub.VOSTFR
+MultiSub.SUBFR
+MultiSub.SUBFRENCH
+MultiSub.FRSUB
+```
+
+`MULTi` seul ne suffit pas, et `MultiSub` seul ne suffit pas non plus.
+
+`French Missing (INTL)` se déclenche quand il n'y a ni marqueur français explicite après `MULTi` ou `MultiSub`, ni team FR connue, ni `VF`, ni `VOSTFR`, ni `VFQ`, ni `VOF` / `VOQ`.
 
 ## Comment utiliser les CF INTL
 
@@ -140,6 +157,8 @@ Ces Custom Formats sont optionnels. Pour un profil dédié aux trackers internat
 ```text
 French MULTi + Team FR (INTL)
 French MULTi + Marker FR (INTL)
+French MultiSub + Team FR (INTL)
+French MultiSub + Marker FR (INTL)
 French Missing (INTL)
 ```
 
@@ -148,6 +167,8 @@ Exemple de logique:
 ```text
 French MULTi + Team FR (INTL)     + même score que MULTi
 French MULTi + Marker FR (INTL)   + même score que MULTi
+French MultiSub + Team FR (INTL)  + score de fallback VOSTFR/anime selon votre usage
+French MultiSub + Marker FR (INTL)+ même score qu'un VOSTFR explicite
 French Missing (INTL)             - gros malus ou ban
 French VFQ                        - ban si vous ne voulez pas de VFQ
 ```
