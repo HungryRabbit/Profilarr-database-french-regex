@@ -32,7 +32,7 @@ Pour une nouvelle installation, utilisez `stable`.
 - Custom Formats `INTL` pour les trackers internationaux.
 - Tiers FR inspirés et recoupés avec plusieurs sources francophones.
 - Profils FR basés sur la logique Dictionarry V2.
-- Media Management et Delay Profiles alignés sur Dictionarry.
+- Media Management aligné sur Dictionarry et Delay Profiles FR prêts à l'emploi.
 - Profils anglophones et tiers US retirés de la publication V2 FR pour garder une base plus légère.
 
 ## Profils disponibles
