@@ -934,6 +934,10 @@ SELECT cf.name, 'D3T3R10R1TY', 'release_title', 'all', 0, 0
 FROM custom_formats cf
 WHERE cf.name = 'FR Anime Tier 03';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT cf.name, 'Erai-raws', 'release_title', 'all', 0, 0
+FROM custom_formats cf
+WHERE cf.name = 'FR Anime Tier 03';
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'Galactic', 'release_title', 'all', 0, 0
 FROM custom_formats cf
 WHERE cf.name = 'FR Anime Tier 03';
@@ -974,7 +978,15 @@ SELECT cf.name, 'TheFantastics', 'release_title', 'all', 0, 0
 FROM custom_formats cf
 WHERE cf.name = 'FR Anime Tier 03';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT cf.name, 'ToonsHub', 'release_title', 'all', 0, 0
+FROM custom_formats cf
+WHERE cf.name = 'FR Anime Tier 03';
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'TTN', 'release_title', 'all', 0, 0
+FROM custom_formats cf
+WHERE cf.name = 'FR Anime Tier 03';
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT cf.name, 'VARYG', 'release_title', 'all', 0, 0
 FROM custom_formats cf
 WHERE cf.name = 'FR Anime Tier 03';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
@@ -4954,6 +4966,10 @@ SELECT 'FR Anime Tier 03', 'D3T3R10R1TY', re.name
 FROM regular_expressions re
 WHERE re.name = 'D3T3R10R1TY';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT 'FR Anime Tier 03', 'Erai-raws', re.name
+FROM regular_expressions re
+WHERE re.name = 'Erai-raws';
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
 SELECT 'FR Anime Tier 03', 'Galactic', re.name
 FROM regular_expressions re
 WHERE re.name = 'Galactic';
@@ -4994,9 +5010,17 @@ SELECT 'FR Anime Tier 03', 'TheFantastics', re.name
 FROM regular_expressions re
 WHERE re.name = 'TheFantastics';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT 'FR Anime Tier 03', 'ToonsHub', re.name
+FROM regular_expressions re
+WHERE re.name = 'ToonsHub';
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
 SELECT 'FR Anime Tier 03', 'TTN', re.name
 FROM regular_expressions re
 WHERE re.name = 'TTN';
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT 'FR Anime Tier 03', 'VARYG', re.name
+FROM regular_expressions re
+WHERE re.name = 'VARYG';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
 SELECT 'FR Global Tier 01', 'AMEN', re.name
 FROM regular_expressions re

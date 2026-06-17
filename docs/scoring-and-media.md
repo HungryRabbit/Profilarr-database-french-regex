@@ -67,6 +67,8 @@ Pour les trackers internationaux, utilisez plutôt:
 ```text
 French MULTi + Team FR (INTL)
 French MULTi + Marker FR (INTL)
+French MultiSub + Team FR (INTL)
+French MultiSub + Marker FR (INTL)
 French Missing (INTL)
 ```
 
