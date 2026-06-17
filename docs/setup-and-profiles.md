@@ -36,11 +36,11 @@ Anime 1080p VOSTFR FR
 
 ## Quel profil choisir
 
-- `1080p Balanced FR`: usage général 1080p, stable et raisonnable.
+- `1080p Balanced FR`: usage général 1080p WEB-DL AVC/x264. 
 - `1080p Compact FR`: fichiers plus petits, logique HDLight.
-- `1080p Efficient FR`: 1080p efficace, plutôt orienté WEB-DL/HEVC fiable.
+- `1080p Efficient FR`: 1080p efficace, orienté HEVC/x265 fiable.
 - `1080p Quality FR`: qualité 1080p plus haute.
-- `1080p Remux FR`: priorité aux remux 1080p.
+- `1080p Remux FR`: priorité aux remux 1080p, fallback qualité.
 - `2160p Balanced FR`: 4K WEB-DL stable.
 - `2160p Compact FR`: 4KLight en priorité, avec fallback 1080p.
 - `2160p Efficient FR`: 4K efficace.
@@ -65,7 +65,7 @@ Profils anime:
 MULTi / French Original > VOSTFR > VF
 ```
 
-`VFQ` est pénalisé ou banni selon les profils. Un contenu original francophone, y compris québécois, peut être reconnu via `French Original` ou les marqueurs `VOF` / `VOQ`.
+`VFQ` est pénalisé ou banni sur tout les profils. Un contenu original francophone, y compris québécois, peut être reconnu via `French Original` ou les marqueurs `VOF` / `VOQ`.
 
 ## Logique de tiers
 
