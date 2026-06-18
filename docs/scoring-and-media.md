@@ -80,6 +80,7 @@ La DB conserve la logique Media Management de Dictionarry V2:
 
 - presets `Radarr` et `Sonarr`;
 - preset `Radarr / Editionless`;
+- preset `Radarr / Jellyfin-Emby` avec identifiant `[tmdbid-{TmdbId}]`;
 - Delay Profiles `Radarr` et `Sonarr` en `prefer_torrent`, conservés pour compatibilité;
 - Delay Profiles FR supplémentaires: `Ratio Boost`, `Balanced`, `Quality`;
 - protection `Full Disc` contre certaines correspondances incorrectes.
