@@ -61,6 +61,7 @@
       ],
       "FR 1080p Compact Bluray Tier 2": [
         "AW",
+        "Floppy",
         "GHT",
         "PATOMiEL",
         "PiXEL",
@@ -77,6 +78,7 @@
       ],
       "FR 1080p Compact WEB Tier 2": [
         "AW",
+        "Floppy",
         "GHT",
         "PATOMiEL",
         "PiXEL",
@@ -95,6 +97,7 @@
       "FR 2160p Compact Bluray Tier 2": [
         "AW",
         "BONBON",
+        "Floppy",
         "GHT",
         "PATOMiEL",
         "PiXEL",
@@ -114,6 +117,7 @@
       "FR 2160p Compact WEB Tier 2": [
         "AW",
         "BONBON",
+        "Floppy",
         "GHT",
         "PATOMiEL",
         "PiXEL",
@@ -400,6 +404,7 @@
       ],
       "FR Light Tier 2": [
         "D4RK",
+        "Floppy",
         "J4CK",
         "Maxadonf"
       ],

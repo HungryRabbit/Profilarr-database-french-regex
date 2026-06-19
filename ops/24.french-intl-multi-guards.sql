@@ -59,6 +59,23 @@ WHERE re.name IN ('French MultiSub (INTL)', 'French MultiSub Explicit Marker (IN
         AND ret.tag_name = t.name
   );
 
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT 'French VOSTFR', 'Not French MultiSub (INTL)', 'release_title', 'all', 1, 1
+WHERE NOT EXISTS (
+    SELECT 1 FROM custom_format_conditions
+    WHERE custom_format_name = 'French VOSTFR'
+      AND name = 'Not French MultiSub (INTL)'
+);
+
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT 'French VOSTFR', 'Not French MultiSub (INTL)', 'French MultiSub (INTL)'
+WHERE NOT EXISTS (
+    SELECT 1 FROM condition_patterns
+    WHERE custom_format_name = 'French VOSTFR'
+      AND condition_name = 'Not French MultiSub (INTL)'
+      AND regular_expression_name = 'French MultiSub (INTL)'
+);
+
 INSERT INTO custom_formats (name, description)
 SELECT 'French MULTi + Team FR (INTL)',
        'Matches INTL MULTi releases only when MULTi is present and the release group is one of the known French teams.'
