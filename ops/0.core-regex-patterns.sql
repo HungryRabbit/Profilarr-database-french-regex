@@ -215,6 +215,7 @@ INSERT INTO regular_expressions (name, pattern, description) VALUES ('FiND', '(?
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('Firetown', '(?<=^|[\s.-])Firetown\b', 'Matches "Firetown" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('FLAC', '\bFLAC(\b|\d)', '');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('FLOP', '(?<=^|[\s.-])FLOP\b', 'Matches "FLOP" when preceded by whitespace, a hyphen or dot');
+INSERT INTO regular_expressions (name, pattern, description) VALUES ('Floppy', '(?<=^|[\s.-])Floppy\b', 'Matches "Floppy" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('ForceBleue', '(?<=^|[\s.-])ForceBleue\b', 'Matches "ForceBleue" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('FORWARD', '(?<=^|[\s.-])FORWARD\b', 'Matches "FORWARD" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('FoX', '(?<=^|[\s.-])FoX\b', 'Matches "FoX" when preceded by whitespace, a hyphen or dot');
@@ -1929,6 +1930,14 @@ INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
 SELECT re.name, t.name
 FROM regular_expressions re, tags t
 WHERE re.name = 'FLOP' AND t.name = 'WEB-DL';
+INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
+SELECT re.name, t.name
+FROM regular_expressions re, tags t
+WHERE re.name = 'Floppy' AND t.name = 'French';
+INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
+SELECT re.name, t.name
+FROM regular_expressions re, tags t
+WHERE re.name = 'Floppy' AND t.name = 'Release Group';
 INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
 SELECT re.name, t.name
 FROM regular_expressions re, tags t

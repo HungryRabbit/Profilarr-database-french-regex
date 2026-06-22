@@ -1138,6 +1138,10 @@ SELECT cf.name, 'GHT', 'release_group', 'all', 0, 0
 FROM custom_formats cf
 WHERE cf.name = 'FR HDLight Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT cf.name, 'Floppy', 'release_group', 'all', 0, 0
+FROM custom_formats cf
+WHERE cf.name = 'FR HDLight Tier';
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'PATOMiEL', 'release_group', 'all', 0, 0
 FROM custom_formats cf
 WHERE cf.name = 'FR HDLight Tier';
@@ -5169,6 +5173,10 @@ INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expr
 SELECT 'FR HDLight Tier', 'GHT', re.name
 FROM regular_expressions re
 WHERE re.name = 'GHT';
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT 'FR HDLight Tier', 'Floppy', re.name
+FROM regular_expressions re
+WHERE re.name = 'Floppy';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
 SELECT 'FR HDLight Tier', 'PATOMiEL', re.name
 FROM regular_expressions re
