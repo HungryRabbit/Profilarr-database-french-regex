@@ -103,20 +103,38 @@ Quality     : torrent et usenet retardés de 360 minutes
 
 ## Taille des fichiers
 
-Il y a deux manières de gérer les tailles.
+Avant de toucher aux tailles ou aux scores, il faut distinguer trois couches:
 
-### Quality Definitions
+- **Quality Definitions = garde-fou de taille.** Elles évitent les fichiers absurdes: trop petits, trop compressés, ou trop gros.
+- **Custom Formats = vraie logique de préférence.** C'est là que vous favorisez `x265`, les bonnes teams, le `WEB-DL` plutôt que le `WEBRip`, le `Bluray`, le `MULTi` FR propre, l'audio, le HDR, etc.
+- **Quality Profile = hiérarchie des qualités.** C'est lui qui dit si un `Bluray-1080p` doit remplacer un `WEB-1080p`, si un `Remux` est autorisé, où se trouve le cutoff, et quels Custom Formats sont scorés.
 
-Les Quality Definitions Radarr/Sonarr sont le meilleur endroit pour mettre des limites dures par qualité:
+### Quality Profiles et Quality Definitions
+
+Les Quality Definitions définissent les limites de taille globales par qualité, en Mo/min, pour toute l'instance Radarr ou Sonarr. Ce n'est pas un réglage par profil: si vous changez la limite du `1080p WEB-DL`, elle s'applique à tous les profils qui utilisent cette qualité.
+
+Il vaut donc mieux les utiliser comme garde-fou large, par exemple pour refuser un fichier beaucoup trop petit ou beaucoup trop gros. Le choix fin entre deux bonnes releases doit rester dans les Custom Formats et les scores du profil.
+
+Exemples de réglages de départ, à adapter selon vos trackers et votre stockage:
 
 ```text
-1080p WEB-DL
-1080p Bluray
-2160p WEB-DL
-2160p Remux
+Usage Compact / Light
+1080p WEB-DL / WEBRip : max ~ 80 à 120 Mo/min
+1080p Bluray          : max ~ 100 à 150 Mo/min
+2160p WEBRip / 4KLight: max ~ 150 à 250 Mo/min
+
+Usage Balanced / Efficient
+1080p WEB-DL / WEBRip : max ~ 120 à 180 Mo/min
+1080p Bluray          : max ~ 150 à 220 Mo/min
+2160p WEB-DL          : max ~ 250 à 450 Mo/min
+
+Usage Quality / Remux
+1080p WEB-DL / Bluray : max ~ 180 à 350 Mo/min
+2160p WEB-DL / Bluray : max ~ 400 à 800 Mo/min
+Remux                 : laissez très permissif si vous utilisez un profil Remux
 ```
 
-C'est la méthode recommandée pour éviter les fichiers trop gros ou trop petits.
+Pour Sonarr, soyez plus souple que pour Radarr: un épisode de 20 minutes, un épisode de 55 minutes, un double épisode et un season pack ne se comportent pas pareil. Des limites trop agressives peuvent rejeter de bonnes releases avant même que les Custom Formats aient pu les classer.
 
 ### Custom Formats de taille
 
@@ -143,6 +161,6 @@ Un seul seuil de taille peut donc être trompeur.
 
 ## Recommandation taille
 
-- Utilisez les Quality Definitions pour les garde-fous principaux.
-- Utilisez les Custom Formats de taille seulement comme bonus optionnel.
-- Soyez très prudent avec les tailles Sonarr, surtout pour les season packs.
+- Utilisez les Quality Definitions pour empêcher les tailles clairement hors cible.
+- Gardez les Custom Formats de taille comme bonus optionnel, surtout côté Radarr.
+- Soyez prudent avec Sonarr, particulièrement pour les season packs.
