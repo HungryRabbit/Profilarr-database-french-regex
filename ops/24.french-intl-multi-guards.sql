@@ -184,6 +184,23 @@ WHERE NOT EXISTS (
 );
 
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT 'French MULTi + Team FR (INTL)', 'Not French MULTi Explicit Marker (INTL)', 'release_title', 'all', 1, 1
+WHERE NOT EXISTS (
+    SELECT 1 FROM custom_format_conditions
+    WHERE custom_format_name = 'French MULTi + Team FR (INTL)'
+      AND name = 'Not French MULTi Explicit Marker (INTL)'
+);
+
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT 'French MULTi + Team FR (INTL)', 'Not French MULTi Explicit Marker (INTL)', 'French MULTi Explicit Marker (INTL)'
+WHERE NOT EXISTS (
+    SELECT 1 FROM condition_patterns
+    WHERE custom_format_name = 'French MULTi + Team FR (INTL)'
+      AND condition_name = 'Not French MULTi Explicit Marker (INTL)'
+      AND regular_expression_name = 'French MULTi Explicit Marker (INTL)'
+);
+
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT 'French MULTi + Team FR (INTL)', re.name, 'release_group', 'all', 0, 0
 FROM regular_expressions re
 WHERE EXISTS (
