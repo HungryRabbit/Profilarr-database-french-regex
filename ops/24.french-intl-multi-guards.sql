@@ -59,6 +59,73 @@ WHERE re.name IN ('French MultiSub (INTL)', 'French MultiSub Explicit Marker (IN
         AND ret.tag_name = t.name
   );
 
+INSERT INTO regular_expressions (name, pattern, description)
+SELECT 'French MULTi + Team FR Marker (INTL)',
+       '(?!)',
+       'Matches INTL releases that contain both a MULTi marker and a known French release group. The pattern is regenerated from French release-group regexes.'
+WHERE NOT EXISTS (
+    SELECT 1 FROM regular_expressions
+    WHERE name = 'French MULTi + Team FR Marker (INTL)'
+);
+
+UPDATE regular_expressions
+SET pattern = (
+    SELECT '(?=.*(?:' || marker.pattern || '))(?=.*(?:' || group_concat('(?:' || team.pattern || ')', '|') || ')).*'
+    FROM regular_expressions marker
+    JOIN regular_expressions team
+    WHERE marker.name = 'French MULTi'
+      AND EXISTS (
+          SELECT 1 FROM regular_expression_tags ret
+          WHERE ret.regular_expression_name = team.name
+            AND ret.tag_name = 'French'
+      )
+      AND EXISTS (
+          SELECT 1 FROM regular_expression_tags ret
+          WHERE ret.regular_expression_name = team.name
+            AND ret.tag_name = 'Release Group'
+      )
+)
+WHERE name = 'French MULTi + Team FR Marker (INTL)';
+
+INSERT INTO regular_expressions (name, pattern, description)
+SELECT 'French MultiSub + Team FR Marker (INTL)',
+       '(?!)',
+       'Matches INTL releases that contain both a MultiSub marker and a known French release group. The pattern is regenerated from French release-group regexes.'
+WHERE NOT EXISTS (
+    SELECT 1 FROM regular_expressions
+    WHERE name = 'French MultiSub + Team FR Marker (INTL)'
+);
+
+UPDATE regular_expressions
+SET pattern = (
+    SELECT '(?=.*(?:' || marker.pattern || '))(?=.*(?:' || group_concat('(?:' || team.pattern || ')', '|') || ')).*'
+    FROM regular_expressions marker
+    JOIN regular_expressions team
+    WHERE marker.name = 'French MultiSub (INTL)'
+      AND EXISTS (
+          SELECT 1 FROM regular_expression_tags ret
+          WHERE ret.regular_expression_name = team.name
+            AND ret.tag_name = 'French'
+      )
+      AND EXISTS (
+          SELECT 1 FROM regular_expression_tags ret
+          WHERE ret.regular_expression_name = team.name
+            AND ret.tag_name = 'Release Group'
+      )
+)
+WHERE name = 'French MultiSub + Team FR Marker (INTL)';
+
+INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
+SELECT re.name, t.name
+FROM regular_expressions re, tags t
+WHERE re.name IN ('French MULTi + Team FR Marker (INTL)', 'French MultiSub + Team FR Marker (INTL)')
+  AND t.name IN ('French', 'Language')
+  AND NOT EXISTS (
+      SELECT 1 FROM regular_expression_tags ret
+      WHERE ret.regular_expression_name = re.name
+        AND ret.tag_name = t.name
+  );
+
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT 'French VOSTFR', 'Not French MultiSub (INTL)', 'release_title', 'all', 1, 1
 WHERE NOT EXISTS (
@@ -362,41 +429,61 @@ WHERE NOT EXISTS (
       AND cp.regular_expression_name = wanted.regex_name
 );
 
-INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
-SELECT 'French Missing (INTL)', 'Not ' || re.name, 'release_group', 'all', 1, 1
-FROM regular_expressions re
-WHERE EXISTS (
-    SELECT 1 FROM regular_expression_tags ret
-    WHERE ret.regular_expression_name = re.name
-      AND ret.tag_name = 'French'
-)
-  AND EXISTS (
-    SELECT 1 FROM regular_expression_tags ret
-    WHERE ret.regular_expression_name = re.name
-      AND ret.tag_name = 'Release Group'
-)
-  AND NOT EXISTS (
-      SELECT 1 FROM custom_format_conditions cfc
-      WHERE cfc.custom_format_name = 'French Missing (INTL)'
-        AND cfc.name = 'Not ' || re.name
+DELETE FROM condition_patterns
+WHERE custom_format_name = 'French Missing (INTL)'
+  AND condition_name IN (
+      SELECT 'Not ' || re.name
+      FROM regular_expressions re
+      WHERE EXISTS (
+          SELECT 1 FROM regular_expression_tags ret
+          WHERE ret.regular_expression_name = re.name
+            AND ret.tag_name = 'French'
+      )
+        AND EXISTS (
+          SELECT 1 FROM regular_expression_tags ret
+          WHERE ret.regular_expression_name = re.name
+            AND ret.tag_name = 'Release Group'
+      )
   );
 
-INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
-SELECT 'French Missing (INTL)', 'Not ' || re.name, re.name
-FROM regular_expressions re
-WHERE EXISTS (
-    SELECT 1 FROM regular_expression_tags ret
-    WHERE ret.regular_expression_name = re.name
-      AND ret.tag_name = 'French'
-)
-  AND EXISTS (
-    SELECT 1 FROM regular_expression_tags ret
-    WHERE ret.regular_expression_name = re.name
-      AND ret.tag_name = 'Release Group'
-)
-  AND NOT EXISTS (
-      SELECT 1 FROM condition_patterns cp
-      WHERE cp.custom_format_name = 'French Missing (INTL)'
-        AND cp.condition_name = 'Not ' || re.name
-        AND cp.regular_expression_name = re.name
+DELETE FROM custom_format_conditions
+WHERE custom_format_name = 'French Missing (INTL)'
+  AND name IN (
+      SELECT 'Not ' || re.name
+      FROM regular_expressions re
+      WHERE EXISTS (
+          SELECT 1 FROM regular_expression_tags ret
+          WHERE ret.regular_expression_name = re.name
+            AND ret.tag_name = 'French'
+      )
+        AND EXISTS (
+          SELECT 1 FROM regular_expression_tags ret
+          WHERE ret.regular_expression_name = re.name
+            AND ret.tag_name = 'Release Group'
+      )
   );
+
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT 'French Missing (INTL)', wanted.condition_name, 'release_title', 'all', 1, 1
+FROM (
+    SELECT 'Not French MULTi + Team FR (INTL)' AS condition_name
+    UNION ALL SELECT 'Not French MultiSub + Team FR (INTL)'
+) wanted
+WHERE NOT EXISTS (
+    SELECT 1 FROM custom_format_conditions cfc
+    WHERE cfc.custom_format_name = 'French Missing (INTL)'
+      AND cfc.name = wanted.condition_name
+);
+
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT 'French Missing (INTL)', wanted.condition_name, wanted.regex_name
+FROM (
+    SELECT 'Not French MULTi + Team FR (INTL)' AS condition_name, 'French MULTi + Team FR Marker (INTL)' AS regex_name
+    UNION ALL SELECT 'Not French MultiSub + Team FR (INTL)', 'French MultiSub + Team FR Marker (INTL)'
+) wanted
+WHERE NOT EXISTS (
+    SELECT 1 FROM condition_patterns cp
+    WHERE cp.custom_format_name = 'French Missing (INTL)'
+      AND cp.condition_name = wanted.condition_name
+      AND cp.regular_expression_name = wanted.regex_name
+);

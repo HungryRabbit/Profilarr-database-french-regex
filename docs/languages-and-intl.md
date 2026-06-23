@@ -116,6 +116,8 @@ La même prudence s'applique à `MultiSub`: le tag indique plusieurs sous-titres
 
 `French MULTi + Team FR (INTL)` matche si le titre contient `MULTi` et que la release vient d'une team FR connue. Les teams sont récupérées automatiquement depuis les regex taggées `French` + `Release Group`.
 
+Une team FR seule ne suffit pas à valider la langue sur un tracker international. Une release comme `Batwheels.S01E23.1080p.MAX.WEB-DL.DDP5.1.H.264-VARYG` reste donc considérée comme `French Missing (INTL)` parce qu'elle n'a ni `MULTi`, ni `MultiSub`, ni marqueur français explicite.
+
 `French MULTi + Marker FR (INTL)` matche uniquement si `MULTi` est accompagné d'un marqueur français explicite:
 
 ```text
@@ -142,9 +144,9 @@ MultiSub.SUBFRENCH
 MultiSub.FRSUB
 ```
 
-`MULTi` seul ne suffit pas, et `MultiSub` seul ne suffit pas non plus.
+`MULTi` seul ne suffit pas, `MultiSub` seul ne suffit pas non plus, et une team FR seule ne suffit pas non plus.
 
-`French Missing (INTL)` se déclenche quand il n'y a ni marqueur français explicite après `MULTi` ou `MultiSub`, ni team FR connue, ni `VF`, ni `VOSTFR`, ni `VFQ`, ni `VOF` / `VOQ`.
+`French Missing (INTL)` se déclenche quand il n'y a ni marqueur français explicite après `MULTi` ou `MultiSub`, ni combinaison fiable `MULTi + team FR` ou `MultiSub + team FR`, ni `VF`, ni `VOSTFR`, ni `VFQ`, ni `VOF` / `VOQ`.
 
 ## Comment utiliser les CF INTL
 
