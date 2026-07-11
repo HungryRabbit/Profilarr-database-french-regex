@@ -144,6 +144,7 @@ INSERT INTO regular_expressions (name, pattern, description) VALUES ('Bravia Cor
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('BRiNK', '(?<=^|[\s.-])BRiNK\b', 'Matches "BRiNK" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('BTN Atmos', '\bTrue[ .-]?HDA[ .-]?[57]\.1', 'Matches BroadcastTheNet Atmos naming convention');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('BTT', '(?<=^|[\s.-])BTT\b', 'Matches "BTT" when preceded by whitespace, a hyphen or dot');
+INSERT INTO regular_expressions (name, pattern, description) VALUES ('BY_ORDER', '(?i)(?<=^|[\s.-])(?:BY[ ._-]?ORDER|BYOR)\b', 'Matches "BY_ORDER" and the common "byor" abbreviation when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('CARAPiLS', '(?<=^|[\s.-])CARAPiLS\b', 'Matches "CARAPiLS" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('Champion9', '(?<=^|[\s.-])Champion9\b', 'Matches "Champion9" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('CHiLL', '(?<=^|[\s.-])CHiLL\b', 'Matches "CHiLL" when preceded by whitespace, a hyphen or dot');
@@ -423,6 +424,7 @@ INSERT INTO regular_expressions (name, pattern, description) VALUES ('Penrose', 
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('PHoQUE', '(?<=^|[\s.-])PHoQUE\b', 'Matches "PHoQUE" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('PEPiTE', '(?<=^|[\s.-])PEPiTE\b', 'Matches "PEPiTE" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('pERsO', '(?<=^|[\s.-])pERsO\b', 'Matches "pERsO" when preceded by whitespace, a hyphen or dot');
+INSERT INTO regular_expressions (name, pattern, description) VALUES ('PiouPiou', '(?<=^|[\s.-])PiouPiou\b', 'Matches "PiouPiou" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('PiCKLES', '(?<=^|[\s.-])PiCKLES\b', 'Matches "PiCKLES" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('PIKACHU', '(?<=^|[\s.-])PIKACHU\b', 'Matches "PIKACHU" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('Pikari Teshima', '(?<=^|[\s.-])Pikari[ .-]?Teshima\b', 'Matches "Pikari Teshima" when preceded by whitespace, a hyphen or dot');
@@ -521,6 +523,7 @@ INSERT INTO regular_expressions (name, pattern, description) VALUES ('SUPPLY', '
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('T3KASHi', '(?<=^|[\s.-])T3KASHi\b', 'Matches "T3KASHi" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('T9', '(?<=^|[\s.-])T9\b', 'Matches "T9" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('TANOSHii', '(?<=^|[\s.-])TANOSHii\b', 'Matches "TANOSHii" when preceded by whitespace, a hyphen or dot');
+INSERT INTO regular_expressions (name, pattern, description) VALUES ('TARDiS', '(?<=^|[\s.-])TARDiS\b', 'Matches "TARDiS" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('TAT', '(?<=^|[\s.-])TAT\b', 'Matches "TAT" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('TeamSuW', '(?<=^|[\s.-])TeamSuW\b', 'Matches "TeamSuW" when preceded by whitespace, a hyphen or dot');
 INSERT INTO regular_expressions (name, pattern, description) VALUES ('Tezcat74', '(?<=^|[\s.-])Tezcat74\b', 'Matches "Tezcat74" when preceded by whitespace, a hyphen or dot');
@@ -1254,6 +1257,14 @@ INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
 SELECT re.name, t.name
 FROM regular_expressions re, tags t
 WHERE re.name = 'BTT' AND t.name = 'Release Group';
+INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
+SELECT re.name, t.name
+FROM regular_expressions re, tags t
+WHERE re.name = 'BY_ORDER' AND t.name = 'French';
+INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
+SELECT re.name, t.name
+FROM regular_expressions re, tags t
+WHERE re.name = 'BY_ORDER' AND t.name = 'Release Group';
 INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
 SELECT re.name, t.name
 FROM regular_expressions re, tags t
@@ -3957,6 +3968,18 @@ WHERE re.name = 'pERsO' AND t.name = 'WEB-DL';
 INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
 SELECT re.name, t.name
 FROM regular_expressions re, tags t
+WHERE re.name = 'PiouPiou' AND t.name = 'French';
+INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
+SELECT re.name, t.name
+FROM regular_expressions re, tags t
+WHERE re.name = 'PiouPiou' AND t.name = 'Release Group';
+INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
+SELECT re.name, t.name
+FROM regular_expressions re, tags t
+WHERE re.name = 'PiouPiou' AND t.name = 'Remux';
+INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
+SELECT re.name, t.name
+FROM regular_expressions re, tags t
 WHERE re.name = 'PiCKLES' AND t.name = 'Banned';
 INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
 SELECT re.name, t.name
@@ -4830,6 +4853,14 @@ INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
 SELECT re.name, t.name
 FROM regular_expressions re, tags t
 WHERE re.name = 'TANOSHii' AND t.name = 'Release Group';
+INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
+SELECT re.name, t.name
+FROM regular_expressions re, tags t
+WHERE re.name = 'TARDiS' AND t.name = 'French';
+INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
+SELECT re.name, t.name
+FROM regular_expressions re, tags t
+WHERE re.name = 'TARDiS' AND t.name = 'Release Group';
 INSERT INTO regular_expression_tags (regular_expression_name, tag_name)
 SELECT re.name, t.name
 FROM regular_expressions re, tags t

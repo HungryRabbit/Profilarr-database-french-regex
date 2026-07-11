@@ -42,7 +42,8 @@
     ],
     "JACK": "J4CK",
     "Maxadom": "Maxadonf",
-    "PRESTIGE": "PRESTiGE"
+    "PRESTIGE": "PRESTiGE",
+    "byor": "BY_ORDER"
   },
   "custom_formats": {
     "balanced": {
@@ -63,6 +64,7 @@
       "FR 1080p Compact Bluray Tier 2": [
         "AW",
         "Floppy",
+        "TARDiS",
         "GHT",
         "PATOMiEL",
         "PiXEL",
@@ -80,6 +82,7 @@
       "FR 1080p Compact WEB Tier 2": [
         "AW",
         "Floppy",
+        "TARDiS",
         "GHT",
         "PATOMiEL",
         "PiXEL",
@@ -99,6 +102,7 @@
         "AW",
         "BONBON",
         "Floppy",
+        "TARDiS",
         "GHT",
         "PATOMiEL",
         "PiXEL",
@@ -119,6 +123,7 @@
         "AW",
         "BONBON",
         "Floppy",
+        "TARDiS",
         "GHT",
         "PATOMiEL",
         "PiXEL",
@@ -253,6 +258,7 @@
         "MUSTANG",
         "Obi",
         "PEPiTE",
+        "PiouPiou",
         "QUEBEC63",
         "ROMKENT"
       ]
@@ -407,7 +413,8 @@
         "D4RK",
         "Floppy",
         "J4CK",
-        "Maxadonf"
+        "Maxadonf",
+        "TARDiS"
       ],
       "FR DVD Tier 1": [
         "GORE",
@@ -417,6 +424,7 @@
       "FR Unknown Tier 1": [
         "AMEN",
         "B@tman",
+        "BY_ORDER",
         "GKS",
         "ALPIATE",
         "M@x",

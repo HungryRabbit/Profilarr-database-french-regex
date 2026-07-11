@@ -1142,6 +1142,10 @@ SELECT cf.name, 'Floppy', 'release_group', 'all', 0, 0
 FROM custom_formats cf
 WHERE cf.name = 'FR HDLight Tier';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT cf.name, 'TARDiS', 'release_group', 'all', 0, 0
+FROM custom_formats cf
+WHERE cf.name = 'FR HDLight Tier';
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'PATOMiEL', 'release_group', 'all', 0, 0
 FROM custom_formats cf
 WHERE cf.name = 'FR HDLight Tier';
@@ -1891,6 +1895,10 @@ FROM custom_formats cf
 WHERE cf.name = 'FR Movie Remux Tier 02';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
 SELECT cf.name, 'PEPiTE', 'release_group', 'all', 0, 0
+FROM custom_formats cf
+WHERE cf.name = 'FR Movie Remux Tier 02';
+INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
+SELECT cf.name, 'PiouPiou', 'release_group', 'all', 0, 0
 FROM custom_formats cf
 WHERE cf.name = 'FR Movie Remux Tier 02';
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
@@ -5178,6 +5186,10 @@ SELECT 'FR HDLight Tier', 'Floppy', re.name
 FROM regular_expressions re
 WHERE re.name = 'Floppy';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT 'FR HDLight Tier', 'TARDiS', re.name
+FROM regular_expressions re
+WHERE re.name = 'TARDiS';
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
 SELECT 'FR HDLight Tier', 'PATOMiEL', re.name
 FROM regular_expressions re
 WHERE re.name = 'PATOMiEL';
@@ -5913,6 +5925,10 @@ INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expr
 SELECT 'FR Movie Remux Tier 02', 'PEPiTE', re.name
 FROM regular_expressions re
 WHERE re.name = 'PEPiTE';
+INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
+SELECT 'FR Movie Remux Tier 02', 'PiouPiou', re.name
+FROM regular_expressions re
+WHERE re.name = 'PiouPiou';
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name)
 SELECT 'FR Movie Remux Tier 02', 'QUEBEC63', re.name
 FROM regular_expressions re
