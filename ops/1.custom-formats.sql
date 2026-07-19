@@ -7629,11 +7629,9 @@ INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, 
 INSERT INTO condition_patterns (custom_format_name, condition_name, regular_expression_name) VALUES ('French Original', 'Not French Original Marker', 'French Original Marker');
 INSERT INTO custom_format_tags (custom_format_name, tag_name) SELECT cf.name, t.name FROM custom_formats cf, tags t WHERE cf.name = 'French Original' AND t.name IN ('French', 'Language');
 
--- An original French or Quebec release must not be downgraded as VF/VFQ/VOSTFR.
+-- An original French release must not be downgraded as VF/VOSTFR.
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required) VALUES ('French VF', 'Not Original', 'language', 'all', 1, 1);
 INSERT INTO condition_languages (custom_format_name, condition_name, language_name, except_language) VALUES ('French VF', 'Not Original', 'Original', 0);
-INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required) VALUES ('French VFQ', 'Not Original', 'language', 'all', 1, 1);
-INSERT INTO condition_languages (custom_format_name, condition_name, language_name, except_language) VALUES ('French VFQ', 'Not Original', 'Original', 0);
 INSERT INTO custom_format_conditions (custom_format_name, name, type, arr_type, negate, required) VALUES ('French VOSTFR', 'Not Original', 'language', 'all', 1, 1);
 INSERT INTO condition_languages (custom_format_name, condition_name, language_name, except_language) VALUES ('French VOSTFR', 'Not Original', 'Original', 0);
 
