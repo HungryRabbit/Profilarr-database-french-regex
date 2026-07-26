@@ -72,6 +72,8 @@ French MultiSub + Marker FR (INTL)
 French Missing (INTL)
 ```
 
+Sur les trackers internationaux, une team FR connue seule ne suffit pas à valider la langue. Il faut soit un marqueur français explicite, soit une combinaison `MULTi + team FR` ou `MultiSub + team FR`.
+
 Voir [Langues FR et trackers internationaux](languages-and-intl.md).
 
 ## Media Management
